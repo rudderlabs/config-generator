@@ -4,6 +4,7 @@ import { action, observable, autorun } from 'mobx';
 import { IRootStore } from '.';
 import { DestinationStore, IDestinationStore } from './destination';
 import { ISourceStore } from './source';
+import KSUID from 'ksuid';
 
 export interface IDestinationsListStore {
   destinations: IDestinationStore[];
@@ -43,21 +44,31 @@ export class DestinationsListStore implements IDestinationsListStore {
 
   @action.bound
   public async createDestination(dest: any) {
-    const res = await apiAuthCaller('token').post(`/destinations/`, {
-      name: dest.name,
-      destinationDefinitionId: dest.destinationDefinitionId,
+    // const res = await apiAuthCaller('token').post(`/destinations/`, {
+    //   name: dest.name,
+    //   destinationDefinitionId: dest.destinationDefinitionId,
+    //   config: dest.config,
+    // });
+    dest = {
       config: dest.config,
-    });
-    const savedDest = res.data;
-    this.destinations.push(new DestinationStore(savedDest, this.rootStore));
-    return savedDest;
+      name: dest.name,
+      enabled: true,
+      destinationDefinition: this.rootStore.destinationDefsListStore.getDestinationDef(dest.destinationDefinitionId),
+      id: KSUID.randomSync().string,
+      createdAt: Date(),
+      updatedAt: Date(),
+      deleted: false
+    }
+
+    this.destinations.push(new DestinationStore(dest, this.rootStore));
+    return dest;
   }
 
   @action.bound
   public async createDestinationConnections(dest: any, sourceIds: string[]) {
-    await apiAuthCaller('token').post(`/destinations/${dest.id}/connect`, {
-      sourceIds,
-    });
+    // await apiAuthCaller('token').post(`/destinations/${dest.id}/connect`, {
+    //   sourceIds,
+    // });
     // update connections store
     sourceIds.map((source, key) => {
       if (!this.rootStore.connectionsStore.connections[sourceIds[key]]) {
@@ -87,5 +98,5 @@ export class DestinationsListStore implements IDestinationsListStore {
   public async deleteConnection(
     destination: IDestinationStore,
     source: ISourceStore,
-  ) {}
+  ) { }
 }

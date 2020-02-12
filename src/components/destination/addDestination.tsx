@@ -105,14 +105,6 @@ class AddDestination extends React.Component<IAddDestinationProps, any> {
     if (currentStep === 3) {
       this.setState({ showNextLoader: true });
       await this.enableConnection();
-      this.setState({
-        currentStep: currentStep + 1,
-        enableNextButton: true,
-        showNextLoader: false,
-      });
-    } else if (currentStep === 4) {
-      this.setState({ showNextLoader: true });
-      await this.connectTransformation();
       this.props.history.push(`/`);
     } else {
       this.setState({
@@ -371,35 +363,6 @@ class AddDestination extends React.Component<IAddDestinationProps, any> {
                   ></DestinationSettings>
                 </FormContainer>
               </FormBody>
-            )}
-          </Step>
-          <Step>
-            {this.state.selectedDestDef && (
-              <>
-                <Flex
-                  justifyContentCenter
-                  className="p-t-lg"
-                  alignItems="center"
-                >
-                  <DottedCircle solid />
-                  <Flex className="selected-source-icons" alignItems="center">
-                    {this.state.selectedSources.map(
-                      (source: ISourceStore, index: number) => {
-                        return (
-                          <IconCircle
-                            name={source.sourceDef.name}
-                            listIndex={index}
-                          />
-                        );
-                      },
-                    )}
-                  </Flex>
-                  <div className="p-l-sm p-r-sm">
-                    <Svg name="forward-thick" />
-                  </div>
-                  <IconCircle name={this.state.selectedDestDef!.name} />
-                </Flex>
-              </>
             )}
           </Step>
         </Steps>
