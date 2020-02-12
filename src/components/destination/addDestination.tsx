@@ -88,18 +88,6 @@ class AddDestination extends React.Component<IAddDestinationProps, any> {
     this.setState({ destinationId: dest.id });
   };
 
-  public connectTransformation = async () => {
-    // const { transformation, destinationId } = this.state;
-    // const { transformationsListStore } = this.props;
-    // if (transformation) {
-    //   //If No transformation needed is selected, dont connect to any destination
-    //   transformationsListStore.connectTransformationToDestination(
-    //     transformation.id,
-    //     destinationId,
-    //   );
-    // }
-  };
-
   public handleNext = async (event?: React.MouseEvent<HTMLElement>) => {
     const { currentStep } = this.state;
     if (currentStep === 3) {
