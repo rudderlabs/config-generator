@@ -1,4 +1,4 @@
-import { ButtonSmall } from '@components/common/button';
+import { ButtonSmall, Button } from '@components/common/button';
 import { Flex } from '@components/common/misc';
 import { IDestinationsListStore } from '@stores/destinationsList';
 import { ISourcesListStore } from '@stores/sourcesList';
@@ -12,6 +12,7 @@ import { Container, PageTitle } from './styles';
 import { ISourceStore } from '@stores/source';
 import { IDestinationStore } from '@stores/destination';
 import { IMessageStore } from '@stores/messages';
+var fileDownload = require('js-file-download');
 
 interface IConfiguredSourcesProps extends RouteComponentProps<any> {
   sourcesListStore: ISourcesListStore;
@@ -73,32 +74,6 @@ class SourceDetails extends Component<IConfiguredSourcesProps, any> {
     }
   };
 
-  public renderButtons = () => {
-    const { overview } = this.state;
-
-    return (
-      <div className={'m-b-md'}>
-        <Flex flexDirection="row" spaceBetween={true}>
-          {overview ? (
-            <>
-              <ButtonSmall pink={true}>Overview</ButtonSmall>
-              <ButtonSmall onClick={() => this.toggle({ overview: false })}>
-                Live Events
-              </ButtonSmall>
-            </>
-          ) : (
-            <>
-              <ButtonSmall onClick={() => this.toggle({ overview: true })}>
-                Overview
-              </ButtonSmall>
-              <ButtonSmall pink={true}>Live Events</ButtonSmall>
-            </>
-          )}
-        </Flex>
-      </div>
-    );
-  };
-
   public renderOverView = () => {
     const { sourceId, stats, overview } = this.state;
     const { sourcesListStore } = this.props;
@@ -124,9 +99,32 @@ class SourceDetails extends Component<IConfiguredSourcesProps, any> {
     return null;
   };
 
-  public toggleRender = () => {
-    const { overview } = this.state;
-    return this.renderOverView();
+  handleExportSourceConfig = () => {
+    const { sourceId } = this.state;
+    const { sourcesListStore } = this.props;
+    const { sources } = sourcesListStore;
+    const source = sources.find(source => source.id === sourceId);
+    if (source) {
+      const sourceConfig = {
+        source: {
+          config: source.config,
+          id: source.id,
+          name: source.name,
+          writeKey: source.writeKey,
+          enabled: source.enabled,
+          sourceDefinitionId: source.sourceDefinitionId,
+          deleted: false,
+          createdAt: Date(),
+          updatedAt: Date(),
+          sourceDefinition: source.sourceDef,
+          destinations: source.destinations,
+        },
+      };
+      fileDownload(
+        JSON.stringify(sourceConfig),
+        `${source.name}_Source_Config.json`,
+      );
+    }
   };
 
   public render() {
@@ -138,9 +136,13 @@ class SourceDetails extends Component<IConfiguredSourcesProps, any> {
       <Container>
         <Flex flexDirection="row" spaceBetween={true}>
           <PageTitle>Source {overview ? 'Details' : 'Debugger'}</PageTitle>
-          <div style={{ width: '260px' }}>{this.renderButtons()}</div>
+          <div style={{ width: '260px' }}>
+            <ButtonSmall pink onClick={this.handleExportSourceConfig}>
+              Export Source config
+            </ButtonSmall>
+          </div>
         </Flex>
-        <Flex flexDirection="column">{this.toggleRender()}</Flex>
+        <Flex flexDirection="column">{this.renderOverView()}</Flex>
       </Container>
     );
   }

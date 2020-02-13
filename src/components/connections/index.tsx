@@ -9,7 +9,10 @@ import { inject, observer } from 'mobx-react';
 import React, { Component } from 'react';
 
 import { BodyContainer, Container, Heading } from './styles';
-import { Icon } from 'antd';
+import { Flex } from '@components/common/misc';
+import { ButtonSmall } from '@components/common/button';
+import { IDestinationDefsListStore } from '../../stores/destinationDefsList';
+var fileDownload = require('js-file-download');
 
 declare var LeaderLine: any;
 
@@ -17,12 +20,14 @@ interface IConnectionsProps {
   sourcesListStore: ISourcesListStore;
   destinationsListStore: IDestinationsListStore;
   sourceDefinitionsListStore: ISourceDefinitionsListStore;
+  destinationDefsListStore: IDestinationDefsListStore;
 }
 
 @inject(
   'sourcesListStore',
   'destinationsListStore',
   'sourceDefinitionsListStore',
+  'destinationDefsListStore',
 )
 @observer
 class Connections extends Component<IConnectionsProps, any> {
@@ -31,6 +36,7 @@ class Connections extends Component<IConnectionsProps, any> {
   constructor(props: IConnectionsProps) {
     super(props);
     this.linesMap = {};
+    this.state = {};
   }
 
   componentDidMount() {
@@ -70,11 +76,39 @@ class Connections extends Component<IConnectionsProps, any> {
     Object.values(this.linesMap).forEach((l: any) => l.remove());
   };
 
+  handleExportWorkspaceConfig = () => {
+    const workspaceConfig = {
+      sources: [] as any,
+    };
+    this.props.sourcesListStore!.sources.forEach(source => {
+      let obj = {
+        config: source.config,
+        id: source.id,
+        name: source.name,
+        writeKey: source.writeKey,
+        enabled: source.enabled,
+        sourceDefinitionId: source.sourceDefinitionId,
+        deleted: false,
+        createdAt: Date(),
+        updatedAt: Date(),
+        sourceDefinition: source.sourceDef,
+        destinations: source.destinations,
+      };
+      workspaceConfig.sources.push(obj);
+    });
+    fileDownload(JSON.stringify(workspaceConfig), 'workspaceConfig.json');
+  };
+
   public render() {
     return (
       <Container>
         <Heading>
-          <HeaderDiv color={theme.color.primary}>Connections</HeaderDiv>
+          <Flex flexDirection="row" spaceBetween>
+            <HeaderDiv color={theme.color.primary}>Connections</HeaderDiv>
+            <ButtonSmall onClick={this.handleExportWorkspaceConfig}>
+              Export workspace config
+            </ButtonSmall>
+          </Flex>
         </Heading>
         <BodyContainer>
           <SourcesList linesMap={this.linesMap} />
