@@ -117,7 +117,10 @@ class SourceDetails extends Component<IConfiguredSourcesProps, any> {
           createdAt: Date(),
           updatedAt: Date(),
           sourceDefinition: source.sourceDef,
-          destinations: source.destinations,
+          destinations: source.destinations.map(dest => {
+            delete dest.rootStore;
+            return dest;
+          }),
         },
       };
       fileDownload(
