@@ -36,6 +36,7 @@ export class ConnectionsStore implements IConnectionsStore {
 
   constructor(rootStore: IRootStore) {
     this.rootStore = rootStore;
+    this.loadAndSave();
   }
 
   public loadAndSave() {
