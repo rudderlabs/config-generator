@@ -112,16 +112,14 @@ class Home extends Component<IHomeProps> {
       sourceDefinitionsListStore.getSourceDefinitions(),
       destinationDefsListStore.getDestinationDefs(),
     ]);
-    await sourcesListStore.getSources();
-    await destinationsListStore.getDestinations();
+    await sourcesListStore.loadAndSave();
+    await destinationsListStore.loadAndSave();
   }
 
   public isReadyToRender() {
     return (
       this.props.sourceDefinitionsListStore.sourceDefinitions.length > 0 &&
-      this.props.destinationDefsListStore.destinationDefs.length > 0 &&
-      this.props.sourcesListStore.firstLoad &&
-      this.props.destinationsListStore.firstLoad
+      this.props.destinationDefsListStore.destinationDefs.length > 0
     );
   }
 

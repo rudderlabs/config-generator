@@ -1,5 +1,5 @@
 import { apiAuthCaller } from '@services/apiCaller';
-import { action, observable, autorun } from 'mobx';
+import { action, observable, autorun, toJS, set } from 'mobx';
 
 import { IRootStore } from '.';
 import { DestinationStore, IDestinationStore } from './destination';
@@ -15,6 +15,25 @@ export interface IDestinationsListStore {
   createDestination(dest: any): any;
   createDestinationConnections(dest: any, ids: string[]): any;
   deleteDestination(dest: any): any;
+  loadAndSave(): any;
+}
+
+function autoSave(store: any, save: any) {
+  let firstRun = true;
+  autorun(() => {
+    const destinationsListStore = toJS(store);
+    delete destinationsListStore.rootStore;
+    destinationsListStore.destinations.forEach(
+      (destination: IDestinationStore) => {
+        delete destination.rootStore;
+      },
+    );
+    const json = JSON.stringify(destinationsListStore);
+    if (!firstRun) {
+      save(json);
+    }
+    firstRun = false;
+  });
 }
 
 export class DestinationsListStore implements IDestinationsListStore {
@@ -29,6 +48,25 @@ export class DestinationsListStore implements IDestinationsListStore {
   @action.bound
   public setDestinations(destinations: IDestinationStore[]): void {
     this.destinations = destinations;
+  }
+
+  public loadAndSave() {
+    this.load();
+    autoSave(this, this.save.bind(this));
+  }
+
+  public load() {
+    const destinationsListStore = localStorage.getItem('destinationsListStore');
+    if (destinationsListStore) {
+      const store: IDestinationsListStore = JSON.parse(destinationsListStore);
+      this.destinations = store.destinations.map(
+        destination => new DestinationStore(destination, this.rootStore),
+      );
+    }
+  }
+
+  public save(json: string) {
+    localStorage.setItem('destinationsListStore', json);
   }
 
   @action.bound
@@ -53,12 +91,14 @@ export class DestinationsListStore implements IDestinationsListStore {
       config: dest.config,
       name: dest.name,
       enabled: true,
-      destinationDefinition: this.rootStore.destinationDefsListStore.getDestinationDef(dest.destinationDefinitionId),
+      destinationDefinition: this.rootStore.destinationDefsListStore.getDestinationDef(
+        dest.destinationDefinitionId,
+      ),
       id: KSUID.randomSync().string,
       createdAt: Date(),
       updatedAt: Date(),
-      deleted: false
-    }
+      deleted: false,
+    };
 
     this.destinations.push(new DestinationStore(dest, this.rootStore));
     return dest;
@@ -98,5 +138,5 @@ export class DestinationsListStore implements IDestinationsListStore {
   public async deleteConnection(
     destination: IDestinationStore,
     source: ISourceStore,
-  ) { }
+  ) {}
 }

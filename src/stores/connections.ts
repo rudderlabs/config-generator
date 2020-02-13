@@ -1,4 +1,4 @@
-import { action, observable, trace } from 'mobx';
+import { action, observable, trace, autorun, set, toJS } from 'mobx';
 
 import { IRootStore } from '.';
 import { ISourceStore } from './source';
@@ -10,10 +10,24 @@ export interface IConnectionsStore {
   rootStore: IRootStore;
   setConnections(sources: ISourceStore[]): void;
   removeConnections(source: ISourceStore, destination: IDestinationStore): void;
+  loadAndSave(): any;
 }
 
 export interface ISourceConnections {
   [key: string]: string[];
+}
+
+function autoSave(store: any, save: any) {
+  let firstRun = true;
+  autorun(() => {
+    const connectionsStore = toJS(store);
+    delete connectionsStore.rootStore;
+    const json = JSON.stringify(connectionsStore);
+    if (!firstRun) {
+      save(json);
+    }
+    firstRun = false;
+  });
 }
 
 export class ConnectionsStore implements IConnectionsStore {
@@ -22,6 +36,23 @@ export class ConnectionsStore implements IConnectionsStore {
 
   constructor(rootStore: IRootStore) {
     this.rootStore = rootStore;
+  }
+
+  public loadAndSave() {
+    this.load();
+    autoSave(this, this.save.bind(this));
+  }
+
+  public load() {
+    const connectionsStore = localStorage.getItem('connectionsStore');
+    if (connectionsStore) {
+      const store: IConnectionsStore = JSON.parse(connectionsStore);
+      set(this, store);
+    }
+  }
+
+  public save(json: string) {
+    localStorage.setItem('connectionsStore', json);
   }
 
   @action.bound

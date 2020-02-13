@@ -1,7 +1,7 @@
 import { apiAuthCaller } from '@services/apiCaller';
 import { IRootStore } from '@stores/index';
 import { ISourceStore, SourceStore } from '@stores/source';
-import { action, observable } from 'mobx';
+import { action, autorun, observable, set, toJS } from 'mobx';
 import KSUID from 'ksuid';
 
 export interface ISourcesListStore {
@@ -12,6 +12,23 @@ export interface ISourcesListStore {
   getSources(): void;
   createSource(source: any): any;
   deleteSource(source: ISourceStore): any;
+  loadAndSave(): any;
+}
+
+function autoSave(store: any, save: any) {
+  let firstRun = true;
+  autorun(() => {
+    const sourcesListStore = toJS(store);
+    delete sourcesListStore.rootStore;
+    sourcesListStore.sources.forEach((source: ISourceStore) => {
+      delete source.rootStore;
+    });
+    const json = JSON.stringify(sourcesListStore);
+    if (!firstRun) {
+      save(json);
+    }
+    firstRun = false;
+  });
 }
 
 export class SourcesListStore implements ISourcesListStore {
@@ -21,6 +38,25 @@ export class SourcesListStore implements ISourcesListStore {
 
   constructor(rootStore: IRootStore) {
     this.rootStore = rootStore;
+  }
+
+  public loadAndSave() {
+    this.load();
+    autoSave(this, this.save.bind(this));
+  }
+
+  public load() {
+    const sourcesListStore = localStorage.getItem('sourcesListStore');
+    if (sourcesListStore) {
+      const store: ISourcesListStore = JSON.parse(sourcesListStore);
+      this.sources = store.sources.map(
+        source => new SourceStore(source, this.rootStore),
+      );
+    }
+  }
+
+  public save(json: string) {
+    localStorage.setItem('sourcesListStore', json);
   }
 
   @action.bound
@@ -41,21 +77,17 @@ export class SourcesListStore implements ISourcesListStore {
 
   @action.bound
   public async createSource(source: any) {
-    // const res = await apiAuthCaller('token').post(`/sources/`, {
-    //   name: source.name,
-    //   sourceDefinitionId: source.sourceDefinitionId,
-    // });
     source = {
       ...source,
       id: KSUID.randomSync().string,
       writeKey: KSUID.randomSync().string,
       enabled: true,
       config: {},
+      destinations: [],
       createdAt: Date(),
       updatedAt: Date(),
     };
 
-    console.log('Source is ', source);
     // const savedSource = res.data;
     this.sources.push(new SourceStore(source, this.rootStore));
     return source;
