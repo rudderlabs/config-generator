@@ -66,21 +66,14 @@ export class DestinationStore implements IDestinationStore {
    * toggleEnabled
    */
   public async toggleEnabled() {
-    try {
-      if (
-        this.enabled == false &&
-        (!this.config || Object.keys(this.config).length === 0)
-      ) {
-        alert('Please update your destination settings to enable');
-        return;
-      }
-      await apiAuthCaller('token').post(`/destinations/${this.id}`, {
-        enabled: !this.enabled,
-      });
-      this.enabled = !this.enabled;
-    } catch (error) {
-      console.log('ERROR', error);
+    if (
+      this.enabled == false &&
+      (!this.config || Object.keys(this.config).length === 0)
+    ) {
+      alert('Please update your destination settings to enable');
+      return;
     }
+    this.enabled = !this.enabled;
   }
 
   @action.bound
@@ -88,16 +81,6 @@ export class DestinationStore implements IDestinationStore {
    * updateConfig
    */
   public async updateConfig(config: any) {
-    try {
-      const res = await apiAuthCaller('token').post(
-        `/destinations/${this.id}`,
-        {
-          config,
-        },
-      );
-      this.config = res.data.config;
-    } catch (error) {
-      console.log('ERROR', error);
-    }
+    this.config = config;
   }
 }

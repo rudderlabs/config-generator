@@ -5,6 +5,7 @@ import { IRootStore } from '.';
 import { DestinationStore, IDestinationStore } from './destination';
 import { ISourceStore } from './source';
 import KSUID from 'ksuid';
+import { RootStore } from './index';
 
 export interface IDestinationsListStore {
   destinations: IDestinationStore[];
@@ -33,22 +34,12 @@ export class DestinationsListStore implements IDestinationsListStore {
 
   @action.bound
   public async getDestinations() {
-    // const res = await apiAuthCaller('token').get(`/destinations?workspace_id=`);
-    // this.destinations = res.data.destinations.map(
-    //   (destination: IDestinationStore) =>
-    //     new DestinationStore(destination, this.rootStore),
-    // );
     this.destinations = [];
     this.firstLoad = true;
   }
 
   @action.bound
   public async createDestination(dest: any) {
-    // const res = await apiAuthCaller('token').post(`/destinations/`, {
-    //   name: dest.name,
-    //   destinationDefinitionId: dest.destinationDefinitionId,
-    //   config: dest.config,
-    // });
     dest = {
       config: dest.config,
       name: dest.name,
@@ -66,9 +57,6 @@ export class DestinationsListStore implements IDestinationsListStore {
 
   @action.bound
   public async createDestinationConnections(dest: any, sourceIds: string[]) {
-    // await apiAuthCaller('token').post(`/destinations/${dest.id}/connect`, {
-    //   sourceIds,
-    // });
     // update connections store
     sourceIds.map((source, key) => {
       if (!this.rootStore.connectionsStore.connections[sourceIds[key]]) {
@@ -80,18 +68,10 @@ export class DestinationsListStore implements IDestinationsListStore {
 
   @action.bound
   public async deleteDestination(destination: IDestinationStore) {
-    const res = await apiAuthCaller('token').delete(
-      `/destinations/${destination.id}`,
-    );
-    const isDest: IDestinationStore = res.data;
-    if (isDest.id) {
-      this.destinations = this.destinations.filter(existingDest => {
-        return existingDest.id != destination.id;
-      });
-      await this.rootStore.sourcesListStore.getSources();
-    } else {
-      console.log('deleting destination failed');
-    }
+    this.destinations = this.destinations.filter(existingDest => {
+      return existingDest.id != destination.id;
+    });
+
     return true;
   }
 

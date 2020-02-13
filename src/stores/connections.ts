@@ -39,12 +39,6 @@ export class ConnectionsStore implements IConnectionsStore {
     destination: IDestinationStore,
   ) {
     const sourceIds = [source.id];
-    await apiAuthCaller('token').post(
-      `/destinations/${destination.id}/disconnect`,
-      {
-        sourceIds,
-      },
-    );
     let destinations: any = this.connections[source.id];
     let remainingDestinations = destinations.filter((destId: any) => {
       return destId != destination.id;
