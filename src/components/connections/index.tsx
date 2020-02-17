@@ -119,7 +119,10 @@ class Connections extends Component<IConnectionsProps, any> {
           <Heading>
             <Flex flexDirection="row" spaceBetween>
               <HeaderDiv color={theme.color.primary}>Connections</HeaderDiv>
-              <ButtonPrimary onClick={this.handleExportWorkspaceConfig}>
+              <ButtonPrimary
+                onClick={this.handleExportWorkspaceConfig}
+                style={{ height: '40px', fontSize: theme.fontSize.sm }}
+              >
                 Export workspace config
               </ButtonPrimary>
             </Flex>

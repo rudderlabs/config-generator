@@ -92,7 +92,7 @@ class Sidebar extends React.Component<ISidebarProps> {
                 name="file"
                 onChange={this.handleFileChosen}
               />
-              Import workspaceConfig
+              Import Workspace Config
             </ImportConfigContainer>
           </div>
         </Flex>
