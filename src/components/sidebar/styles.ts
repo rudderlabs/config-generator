@@ -83,7 +83,7 @@ export const MenuItem = styled(Menu.Item)`
 
 export const ImportConfigContainer = styled.div`
 background-color: ${({ theme }) => theme.color.grey50}
-  margin: 8px 16px !important;
+  margin: 8px 8px !important;
   width: 263px !important;
   padding: 10px 40px !important;
   border-radius: 20px;
@@ -107,5 +107,5 @@ export const ImportInputButton = styled.input`
   position: absolute;
   cursor: pointer;
   width: 263px
-  left: 16px
+  left: 8px
 `;
