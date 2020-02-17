@@ -43,6 +43,12 @@ export class MessagesStore implements IMessageStore {
   public showSuccessMessage(infoString: string) {
     this.setInfoString(infoString);
     this.setSuccess(true);
+    setTimeout(() => {
+      if (this.isSuccess === true) {
+        this.setInfoString('');
+        this.setSuccess(false);
+      }
+    }, 3000);
   }
 
   @action.bound
@@ -54,6 +60,12 @@ export class MessagesStore implements IMessageStore {
   public showErrorMessage(infoString: string) {
     this.setInfoString(infoString);
     this.setError(true);
+    setTimeout(() => {
+      if (this.isError === true) {
+        this.setInfoString('');
+        this.setError(false);
+      }
+    }, 3000);
   }
 
   @action.bound
