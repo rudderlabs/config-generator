@@ -112,30 +112,6 @@ class Connections extends Component<IConnectionsProps, any> {
     fileDownload(JSON.stringify(workspaceConfig), 'workspaceConfig.json');
   };
 
-  handleFileChosen = (event: any) => {
-    const file = event.target.files[0];
-    let fileReader = new FileReader();
-    fileReader.onloadend = e => {
-      const content = fileReader.result;
-      this.setupWorkspace(content);
-    };
-    fileReader.readAsText(file);
-  };
-
-  setupWorkspace = (jsonContent: any) => {
-    const content = JSON.parse(jsonContent);
-    this.props.sourcesListStore!.loadImportedFile(
-      content.metadata.sourceListStore.sources,
-    );
-    this.props.destinationsListStore!.loadImportedFile(
-      content.metadata.destinationListStore.destinations,
-    );
-    this.props.connectionsStore!.loadImportedFile(
-      content.metadata.connectionsStore.connections,
-    );
-    this.props.connectionsStore!.setConnections(content.sources);
-  };
-
   public render() {
     return (
       <Container>
@@ -152,12 +128,6 @@ class Connections extends Component<IConnectionsProps, any> {
             <SourcesList linesMap={this.linesMap} />
             <DestinationsList linesMap={this.linesMap} />
           </BodyContainer>
-        </Flex>
-        <Flex
-          flexDirection="row"
-          style={{ height: '5vh', justifyContent: 'flex-end' }}
-        >
-          <input type="file" name="file" onChange={this.handleFileChosen} />
         </Flex>
       </Container>
     );
