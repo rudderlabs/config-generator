@@ -27,6 +27,7 @@ export const EnabledText = styled(Text)`
 export const EmptyStyledCard = styled(StyledCard)`
   border: 3px solid #e0e0e0;
   background-color: #f0f2f5;
+  height: auto;
 `;
 
 export const ButtonText = styled(Label)`
