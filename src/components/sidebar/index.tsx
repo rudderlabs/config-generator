@@ -68,7 +68,7 @@ class Sidebar extends React.Component<ISidebarProps> {
           <div>
             <AvatarContainer>
               <SidebarAvatar icon="user" />
-              <UserName>RUDDER</UserName>
+              <UserName>RUDDERSTACK</UserName>
             </AvatarContainer>
             <SidebarLinksContainer>
               <SidebarLink to="/home" exact>
