@@ -5,6 +5,7 @@ import theme from '@css/theme';
 import { IDestinationsListStore } from '@stores/destinationsList';
 import { ISourceDefinitionsListStore } from '@stores/sourceDefinitionsList';
 import { ISourcesListStore } from '@stores/sourcesList';
+import { IConnectionsStore } from '@stores/connections';
 import { inject, observer } from 'mobx-react';
 import React, { Component } from 'react';
 
@@ -12,6 +13,7 @@ import { BodyContainer, Container, Heading } from './styles';
 import { Flex } from '@components/common/misc';
 import { ButtonSmall } from '@components/common/button';
 import { IDestinationDefsListStore } from '../../stores/destinationDefsList';
+import { ButtonPrimary } from '../common/button';
 var fileDownload = require('js-file-download');
 
 declare var LeaderLine: any;
@@ -21,6 +23,7 @@ interface IConnectionsProps {
   destinationsListStore: IDestinationsListStore;
   sourceDefinitionsListStore: ISourceDefinitionsListStore;
   destinationDefsListStore: IDestinationDefsListStore;
+  connectionsStore: IConnectionsStore;
 }
 
 @inject(
@@ -28,6 +31,7 @@ interface IConnectionsProps {
   'destinationsListStore',
   'sourceDefinitionsListStore',
   'destinationDefsListStore',
+  'connectionsStore',
 )
 @observer
 class Connections extends Component<IConnectionsProps, any> {
@@ -79,7 +83,13 @@ class Connections extends Component<IConnectionsProps, any> {
   handleExportWorkspaceConfig = () => {
     const workspaceConfig = {
       sources: [] as any,
+      metadata: {
+        sourceListStore: this.props.sourcesListStore.returnWithoutRootStore(),
+        destinationListStore: this.props.destinationsListStore.returnWithoutRootStore(),
+        connectionsStore: this.props.connectionsStore.returnWithoutRootStore(),
+      },
     };
+
     this.props.sourcesListStore!.sources.forEach(source => {
       let obj = {
         config: source.config,
@@ -92,28 +102,63 @@ class Connections extends Component<IConnectionsProps, any> {
         createdAt: Date(),
         updatedAt: Date(),
         sourceDefinition: source.sourceDef,
-        destinations: source.destinations,
+        destinations: source.destinations.map(dest => {
+          delete dest.rootStore;
+          return dest;
+        }),
       };
       workspaceConfig.sources.push(obj);
     });
     fileDownload(JSON.stringify(workspaceConfig), 'workspaceConfig.json');
   };
 
+  handleFileChosen = (event: any) => {
+    const file = event.target.files[0];
+    let fileReader = new FileReader();
+    fileReader.onloadend = e => {
+      const content = fileReader.result;
+      this.setupWorkspace(content);
+    };
+    fileReader.readAsText(file);
+  };
+
+  setupWorkspace = (jsonContent: any) => {
+    const content = JSON.parse(jsonContent);
+    this.props.sourcesListStore!.loadImportedFile(
+      content.metadata.sourceListStore.sources,
+    );
+    this.props.destinationsListStore!.loadImportedFile(
+      content.metadata.destinationListStore.destinations,
+    );
+    this.props.connectionsStore!.loadImportedFile(
+      content.metadata.connectionsStore.connections,
+    );
+    this.props.connectionsStore!.setConnections(content.sources);
+  };
+
   public render() {
     return (
       <Container>
-        <Heading>
-          <Flex flexDirection="row" spaceBetween>
-            <HeaderDiv color={theme.color.primary}>Connections</HeaderDiv>
-            <ButtonSmall onClick={this.handleExportWorkspaceConfig}>
-              Export workspace config
-            </ButtonSmall>
-          </Flex>
-        </Heading>
-        <BodyContainer>
-          <SourcesList linesMap={this.linesMap} />
-          <DestinationsList linesMap={this.linesMap} />
-        </BodyContainer>
+        <Flex flexDirection="column" style={{ height: '80vh' }}>
+          <Heading>
+            <Flex flexDirection="row" spaceBetween>
+              <HeaderDiv color={theme.color.primary}>Connections</HeaderDiv>
+              <ButtonPrimary onClick={this.handleExportWorkspaceConfig}>
+                Export workspace config
+              </ButtonPrimary>
+            </Flex>
+          </Heading>
+          <BodyContainer>
+            <SourcesList linesMap={this.linesMap} />
+            <DestinationsList linesMap={this.linesMap} />
+          </BodyContainer>
+        </Flex>
+        <Flex
+          flexDirection="row"
+          style={{ height: '5vh', justifyContent: 'flex-end' }}
+        >
+          <input type="file" name="file" onChange={this.handleFileChosen} />
+        </Flex>
       </Container>
     );
   }

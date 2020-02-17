@@ -13,6 +13,8 @@ export interface ISourcesListStore {
   createSource(source: any): any;
   deleteSource(source: ISourceStore): any;
   loadAndSave(): any;
+  loadImportedFile(sources: any): any;
+  returnWithoutRootStore(): any
 }
 
 function autoSave(store: any, save: any) {
@@ -45,6 +47,15 @@ export class SourcesListStore implements ISourcesListStore {
     autoSave(this, this.save.bind(this));
   }
 
+  public returnWithoutRootStore() {
+    const sourcesListStore = toJS(this);
+    delete sourcesListStore.rootStore;
+    sourcesListStore.sources.forEach((source: ISourceStore) => {
+      delete source.rootStore;
+    });
+    return sourcesListStore
+  }
+
   public load() {
     const sourcesListStore = localStorage.getItem('sourcesListStore');
     if (sourcesListStore) {
@@ -53,6 +64,12 @@ export class SourcesListStore implements ISourcesListStore {
         source => new SourceStore(source, this.rootStore),
       );
     }
+  }
+
+  public loadImportedFile(sources: any) {
+    this.sources = sources.map(
+      (source: any) => new SourceStore(source, this.rootStore),
+    );
   }
 
   public save(json: string) {
@@ -66,11 +83,6 @@ export class SourcesListStore implements ISourcesListStore {
 
   @action.bound
   public async getSources() {
-    // const res = await apiAuthCaller('token').get(`/sources?workspace_id=`);
-    // this.sources = res.data.sources.map(
-    //   (source: ISourceStore) => new SourceStore(source, this.rootStore),
-    // );
-    // this.rootStore.connectionsStore.setConnections(res.data.sources);
     this.sources = [];
     this.firstLoad = true;
   }

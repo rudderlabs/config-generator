@@ -11,6 +11,8 @@ export interface IConnectionsStore {
   setConnections(sources: ISourceStore[]): void;
   removeConnections(source: ISourceStore, destination: IDestinationStore): void;
   loadAndSave(): any;
+  loadImportedFile(sources: any): any;
+  returnWithoutRootStore(): any
 }
 
 export interface ISourceConnections {
@@ -44,12 +46,22 @@ export class ConnectionsStore implements IConnectionsStore {
     autoSave(this, this.save.bind(this));
   }
 
+  public returnWithoutRootStore() {
+    const connectionsStore = toJS(this);
+    delete connectionsStore.rootStore;
+    return connectionsStore
+  }
+
   public load() {
     const connectionsStore = localStorage.getItem('connectionsStore');
     if (connectionsStore) {
       const store: IConnectionsStore = JSON.parse(connectionsStore);
       set(this, store);
     }
+  }
+
+  public loadImportedFile(connections: any) {
+    this.connections = connections[0];
   }
 
   public save(json: string) {

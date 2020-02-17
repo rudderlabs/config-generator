@@ -17,6 +17,8 @@ export interface IDestinationsListStore {
   createDestinationConnections(dest: any, ids: string[]): any;
   deleteDestination(dest: any): any;
   loadAndSave(): any;
+  loadImportedFile(sources: any): any;
+  returnWithoutRootStore(): any
 }
 
 function autoSave(store: any, save: any) {
@@ -56,6 +58,17 @@ export class DestinationsListStore implements IDestinationsListStore {
     autoSave(this, this.save.bind(this));
   }
 
+  public returnWithoutRootStore() {
+    const destinationsListStore = toJS(this);
+    delete destinationsListStore.rootStore;
+    destinationsListStore.destinations.forEach(
+      (destination: IDestinationStore) => {
+        delete destination.rootStore;
+      },
+    );
+    return destinationsListStore
+  }
+
   public load() {
     const destinationsListStore = localStorage.getItem('destinationsListStore');
     if (destinationsListStore) {
@@ -64,6 +77,11 @@ export class DestinationsListStore implements IDestinationsListStore {
         destination => new DestinationStore(destination, this.rootStore),
       );
     }
+  }
+  public loadImportedFile(destinations: any) {
+    this.destinations = destinations.map(
+      (destination: any) => new DestinationStore(destination, this.rootStore),
+    );
   }
 
   public save(json: string) {
@@ -118,5 +136,5 @@ export class DestinationsListStore implements IDestinationsListStore {
   public async deleteConnection(
     destination: IDestinationStore,
     source: ISourceStore,
-  ) {}
+  ) { }
 }
