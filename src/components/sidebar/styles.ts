@@ -80,32 +80,3 @@ export const MenuItem = styled(Menu.Item)`
     background-color: ${({ theme }) => theme.color.primary400};
   }
 `;
-
-export const ImportConfigContainer = styled.div`
-background-color: ${({ theme }) => theme.color.grey50}
-  margin: 8px 8px !important;
-  width: 263px !important;
-  padding: 10px 40px !important;
-  border-radius: 20px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  height: 40px;
-  color: ${({ theme }) => theme.color.primary400};
-  font-size: ${({ theme }) => theme.fontSize.sm};
-  font-weight: ${({ theme }) => theme.fontWeight.md};
-  &:hover {
-    background-color: ${({ theme }) => theme.color.white};
-    border-radius: 20px;
-    color: ${({ theme }) => theme.color.primary400};
-  }
-`;
-
-export const ImportInputButton = styled.input`
-  height: 40px;
-  opacity: 0;
-  position: absolute;
-  cursor: pointer;
-  width: 263px
-  left: 8px
-`;

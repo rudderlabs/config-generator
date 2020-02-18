@@ -9,7 +9,13 @@ import { IConnectionsStore } from '@stores/connections';
 import { inject, observer } from 'mobx-react';
 import React, { Component } from 'react';
 
-import { BodyContainer, Container, Heading } from './styles';
+import {
+  BodyContainer,
+  Container,
+  Heading,
+  ImportConfigContainer,
+  ImportInputButton,
+} from './styles';
 import { Flex } from '@components/common/misc';
 import { ButtonSmall } from '@components/common/button';
 import { IDestinationDefsListStore } from '../../stores/destinationDefsList';
@@ -112,19 +118,58 @@ class Connections extends Component<IConnectionsProps, any> {
     fileDownload(JSON.stringify(workspaceConfig), 'workspaceConfig.json');
   };
 
+  handleFileChosen = (event: any) => {
+    const file = event.target.files[0];
+    let fileReader = new FileReader();
+    fileReader.onloadend = e => {
+      const content = fileReader.result;
+      this.setupWorkspace(content);
+    };
+    fileReader.readAsText(file);
+  };
+
+  setupWorkspace = (jsonContent: any) => {
+    const content = JSON.parse(jsonContent);
+    this.props.sourcesListStore!.loadImportedFile(
+      content.metadata.sourceListStore.sources,
+    );
+    this.props.destinationsListStore!.loadImportedFile(
+      content.metadata.destinationListStore.destinations,
+    );
+    this.props.connectionsStore!.loadImportedFile(
+      content.metadata.connectionsStore.connections,
+    );
+    this.props.connectionsStore!.setConnections(content.sources);
+  };
+
   public render() {
     return (
       <Container>
-        <Flex flexDirection="column" style={{ height: '80vh' }}>
+        <Flex flexDirection="column">
           <Heading>
             <Flex flexDirection="row" spaceBetween>
               <HeaderDiv color={theme.color.primary}>Connections</HeaderDiv>
-              <ButtonPrimary
-                onClick={this.handleExportWorkspaceConfig}
-                style={{ height: '40px', fontSize: theme.fontSize.sm }}
+              <Flex
+                flexDirection="row"
+                style={{ justifyContent: 'space-around' }}
               >
-                Export workspace config
-              </ButtonPrimary>
+                <ButtonPrimary
+                  onClick={this.handleExportWorkspaceConfig}
+                  style={{ height: '40px', fontSize: theme.fontSize.sm }}
+                >
+                  Export
+                </ButtonPrimary>
+
+                <ImportInputButton
+                  type="file"
+                  name="file"
+                  onChange={this.handleFileChosen}
+                  id="myuniqueid"
+                />
+                <ImportConfigContainer htmlFor="myuniqueid">
+                  IMPORT
+                </ImportConfigContainer>
+              </Flex>
             </Flex>
           </Heading>
           <BodyContainer>
