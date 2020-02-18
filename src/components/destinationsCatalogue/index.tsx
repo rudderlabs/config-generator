@@ -10,6 +10,7 @@ import theme from '@css/theme';
 import IconCardList from '@components/iconCardList';
 import { Drawer } from 'antd';
 import DestinationConfigure from './destinationsConfigure/index';
+import formTemplatesMap from '../destination/destinationSettings/destinationSettings.json';
 
 export interface IDestinationsCatalogueProps {
   destinationDefsListStore?: IDestinationDefsListStore;
@@ -18,6 +19,7 @@ export interface IDestinationsCatalogueProps {
 export interface IDestinationsCatalogueState {
   modalVisible: boolean;
   selected?: IDestinationDef;
+  filteredDestinationDefs?: Array<object>;
 }
 
 @inject('destinationDefsListStore')
@@ -30,6 +32,7 @@ export default class DestinationsCatalogue extends React.Component<
     super(props);
     this.state = {
       modalVisible: false,
+      filteredDestinationDefs: [],
     };
   }
   handleCancel = () => {
@@ -40,10 +43,26 @@ export default class DestinationsCatalogue extends React.Component<
     this.setState({ modalVisible: true, selected: destinationDef });
   };
 
+  componentDidMount() {
+    const { destinationDefsListStore } = this.props;
+
+    if (destinationDefsListStore) {
+      const destinationDefs = destinationDefsListStore!.destinationDefs;
+      const destinationSettingsArr = Object.keys(formTemplatesMap);
+      const filteredArr = [] as Array<object>;
+      destinationDefs.map(def => {
+        if (destinationSettingsArr.includes(def.name)) {
+          filteredArr.push(def);
+        }
+      });
+      this.setState({ filteredDestinationDefs: filteredArr });
+    }
+  }
+
   public render() {
     const { destinationDefsListStore } = this.props;
-    const { selected } = this.state;
-    if (destinationDefsListStore)
+    const { selected, filteredDestinationDefs } = this.state;
+    if (destinationDefsListStore && filteredDestinationDefs) {
       return (
         <div>
           <Drawer
@@ -63,17 +82,16 @@ export default class DestinationsCatalogue extends React.Component<
           <IconCardList
             type="destination"
             selectionMode="none"
-            icons={destinationDefsListStore.destinationDefs.map(
-              destinationDef => ({
-                id: destinationDef.id,
-                type: destinationDef.name,
-                title: destinationDef.displayName,
-                onClick: () => this.onClick(destinationDef),
-              }),
-            )}
+            icons={filteredDestinationDefs.map((destinationDef: any) => ({
+              id: destinationDef.id,
+              type: destinationDef.name,
+              title: destinationDef.displayName,
+              onClick: () => this.onClick(destinationDef),
+            }))}
             onSelectionChange={() => {}}
           />
         </div>
       );
+    }
   }
 }
