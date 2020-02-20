@@ -305,7 +305,7 @@
           "label": "AWS Access Key ID",
           "value": "accessKeyID",
           "regex": ".*",
-          "required": true,
+          "required": false,
           "placeholder": "e.g: access-key-id"
         },
         {
@@ -313,7 +313,7 @@
           "label": "AWS Secret Access Key",
           "value": "accessKey",
           "regex": ".*",
-          "required": true,
+          "required": false,
           "placeholder": "e.g: secret-access-key"
         }
       ]
@@ -345,7 +345,7 @@
           "labelNote": "GCP Service Account credentials JSON for Rudder to use in loading data into your Google Cloud Storage",
           "value": "credentials",
           "regex": ".*",
-          "required": true,
+          "required": false,
           "footerNote": "Create a service account in your GCP Project for Rudder with roles of 'storage.objectCreator'"
         }
       ]
