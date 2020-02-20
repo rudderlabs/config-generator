@@ -117,10 +117,17 @@ class SourceDetails extends Component<IConfiguredSourcesProps, any> {
           createdAt: Date(),
           updatedAt: Date(),
           sourceDefinition: source.sourceDef,
-          destinations: source.destinations.map(dest => {
-            delete dest.rootStore;
-            return dest;
-          }),
+          // Filter only useNativeSDK enabled destinations and
+          // includes only includeKeys (from definition) in the config
+          destinations: source.destinations
+            .filter(dest => {
+              return dest.config ? dest.config.useNativeSDK : false;
+            })
+            .map(dest => {
+              delete dest.rootStore;
+
+              return { ...dest, config: dest.filteredConfig() };
+            }),
         },
       };
       fileDownload(

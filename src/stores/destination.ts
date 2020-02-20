@@ -3,11 +3,16 @@ import { action, computed, observable, trace } from 'mobx';
 import { IRootStore } from './index';
 import { ISourceStore } from './source';
 
+const get = require('get-value');
+const set = require('set-value');
+const unset = require('unset-value');
+
 export interface IDestinationStore {
   id: string;
   name: string;
   enabled: boolean;
-  config: IDestinationConfig;
+  config: any;
+  filteredConfig(): any;
   destinationDefinition: any;
   sources: ISourceStore[];
   rootStore: IRootStore;
@@ -26,7 +31,7 @@ export class DestinationStore implements IDestinationStore {
   @observable public id: string;
   @observable public name: string;
   @observable public enabled: boolean;
-  @observable public config: IDestinationConfig;
+  @observable public config: any;
   @observable public destinationDefinition: any;
   @observable public rootStore: IRootStore;
   @observable public state: string;
@@ -81,5 +86,37 @@ export class DestinationStore implements IDestinationStore {
    */
   public async updateConfig(config: any) {
     this.config = config;
+  }
+
+  // Filters based on includeKeys and excludeKeys
+  filteredConfig() {
+    let filteredConfig: any = {};
+    const originalConfig = this.config;
+
+    if (!originalConfig) {
+      return;
+    }
+
+    const destinationDefinitionConfig = this.destinationDefinition.config;
+
+    if (destinationDefinitionConfig) {
+      const includeKeysForDestination =
+        destinationDefinitionConfig['includeKeys'];
+      for (var j in includeKeysForDestination) {
+        set(
+          filteredConfig,
+          includeKeysForDestination[j],
+          get(originalConfig, includeKeysForDestination[j]),
+        );
+      }
+
+      const excludeKeysForDestination =
+        destinationDefinitionConfig['excludeKeys'];
+      for (var j in excludeKeysForDestination) {
+        unset(filteredConfig, excludeKeysForDestination[j]);
+      }
+    }
+
+    return filteredConfig;
   }
 }
