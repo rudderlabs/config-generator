@@ -26,10 +26,12 @@ import AddDestination from './destination/addDestination';
 import { IMessageStore, MessagesStore } from '@stores/messages';
 import styled from 'styled-components';
 import { Flex } from './common/misc';
+import { IConnectionsStore } from '../stores/connections';
 
 interface IHomeProps extends RouteComponentProps {
   sourcesListStore: ISourcesListStore;
   destinationsListStore: IDestinationsListStore;
+  connectionsStore: IConnectionsStore;
   sourceDefinitionsListStore: ISourceDefinitionsListStore;
   destinationDefsListStore: IDestinationDefsListStore;
   messagesStore: IMessageStore;
@@ -95,6 +97,7 @@ const RenderLayout = withRouter(({ history }) => {
 @inject(
   'sourcesListStore',
   'destinationsListStore',
+  'connectionsStore',
   'sourceDefinitionsListStore',
   'destinationDefsListStore',
   'messagesStore',
@@ -105,15 +108,17 @@ class Home extends Component<IHomeProps> {
     const {
       sourcesListStore,
       destinationsListStore,
+      connectionsStore,
       sourceDefinitionsListStore,
       destinationDefsListStore,
     } = this.props;
+    sourcesListStore.loadAndSave();
+    destinationsListStore.loadAndSave();
+    connectionsStore.loadAndSave();
     await Promise.all([
       sourceDefinitionsListStore.getSourceDefinitions(),
       destinationDefsListStore.getDestinationDefs(),
     ]);
-    await sourcesListStore.loadAndSave();
-    await destinationsListStore.loadAndSave();
   }
 
   public isReadyToRender() {
