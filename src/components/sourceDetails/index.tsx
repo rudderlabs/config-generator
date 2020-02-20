@@ -124,9 +124,13 @@ class SourceDetails extends Component<IConfiguredSourcesProps, any> {
               return dest.config ? dest.config.useNativeSDK : false;
             })
             .map(dest => {
-              delete dest.rootStore;
-
-              return { ...dest, config: dest.filteredConfig() };
+              return {
+                id: dest.id,
+                name: dest.name,
+                enabled: dest.enabled,
+                config: dest.filteredConfig(), // Very Very Important to use filterConfig instead of config
+                destinationDefinition: dest.destinationDefinition,
+              };
             }),
         },
       };

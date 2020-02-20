@@ -109,8 +109,7 @@ class Connections extends Component<IConnectionsProps, any> {
         updatedAt: Date(),
         sourceDefinition: source.sourceDef,
         destinations: source.destinations.map(dest => {
-          delete dest.rootStore;
-          return dest;
+          return { ...dest, rootStore: null };
         }),
       };
       workspaceConfig.sources.push(obj);
