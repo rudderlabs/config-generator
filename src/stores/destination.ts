@@ -1,4 +1,3 @@
-import { apiAuthCaller } from '@services/apiCaller';
 import { action, computed, observable, trace } from 'mobx';
 
 import { IRootStore } from './index';

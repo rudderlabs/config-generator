@@ -1,4 +1,3 @@
-import { apiAuthCaller } from '@services/apiCaller';
 import { IRootStore } from '@stores/index';
 import { ISourceStore, SourceStore } from '@stores/source';
 import { action, autorun, observable, set, toJS } from 'mobx';
@@ -14,7 +13,7 @@ export interface ISourcesListStore {
   deleteSource(source: ISourceStore): any;
   loadAndSave(): any;
   loadImportedFile(sources: any): any;
-  returnWithoutRootStore(): any
+  returnWithoutRootStore(): any;
 }
 
 function autoSave(store: any, save: any) {
@@ -53,7 +52,7 @@ export class SourcesListStore implements ISourcesListStore {
     sourcesListStore.sources.forEach((source: ISourceStore) => {
       delete source.rootStore;
     });
-    return sourcesListStore
+    return sourcesListStore;
   }
 
   public load() {
@@ -107,8 +106,6 @@ export class SourcesListStore implements ISourcesListStore {
 
   @action.bound
   public async deleteSource(source: ISourceStore) {
-    // const res = await apiAuthCaller('token').delete(`/sources/${source.id}`);
-    // const isSource: ISourceStore = res.data;
     this.sources = this.sources.filter(existingSource => {
       return existingSource.id != source.id;
     });

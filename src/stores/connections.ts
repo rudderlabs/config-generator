@@ -3,7 +3,6 @@ import { action, observable, trace, autorun, set, toJS } from 'mobx';
 import { IRootStore } from '.';
 import { ISourceStore } from './source';
 import { IDestinationStore } from './destination';
-import { apiAuthCaller } from '@services/apiCaller';
 
 export interface IConnectionsStore {
   connections: ISourceConnections;
@@ -12,7 +11,7 @@ export interface IConnectionsStore {
   removeConnections(source: ISourceStore, destination: IDestinationStore): void;
   loadAndSave(): any;
   loadImportedFile(sources: any): any;
-  returnWithoutRootStore(): any
+  returnWithoutRootStore(): any;
 }
 
 export interface ISourceConnections {
@@ -49,7 +48,7 @@ export class ConnectionsStore implements IConnectionsStore {
   public returnWithoutRootStore() {
     const connectionsStore = toJS(this);
     delete connectionsStore.rootStore;
-    return connectionsStore
+    return connectionsStore;
   }
 
   public load() {

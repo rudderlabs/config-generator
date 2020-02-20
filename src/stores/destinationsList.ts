@@ -1,4 +1,3 @@
-import { apiAuthCaller } from '@services/apiCaller';
 import { action, observable, autorun, toJS, set } from 'mobx';
 
 import { IRootStore } from '.';
@@ -18,7 +17,7 @@ export interface IDestinationsListStore {
   deleteDestination(dest: any): any;
   loadAndSave(): any;
   loadImportedFile(sources: any): any;
-  returnWithoutRootStore(): any
+  returnWithoutRootStore(): any;
 }
 
 function autoSave(store: any, save: any) {
@@ -66,7 +65,7 @@ export class DestinationsListStore implements IDestinationsListStore {
         delete destination.rootStore;
       },
     );
-    return destinationsListStore
+    return destinationsListStore;
   }
 
   public load() {
@@ -136,5 +135,5 @@ export class DestinationsListStore implements IDestinationsListStore {
   public async deleteConnection(
     destination: IDestinationStore,
     source: ISourceStore,
-  ) { }
+  ) {}
 }

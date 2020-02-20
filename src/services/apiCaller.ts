@@ -11,15 +11,4 @@ const apiCaller = () => {
   });
 };
 
-const apiAuthCaller = (token: string) => {
-  return Axios.create({
-    baseURL: BACKEND_BASE_URL,
-    timeout: 4000,
-    headers: {
-      'Content-Type': 'application/json',
-      authorization: `Bearer ${token}`,
-    },
-  });
-};
-
-export { apiCaller, apiAuthCaller };
+export { apiCaller };

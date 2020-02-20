@@ -1,4 +1,3 @@
-import { apiAuthCaller } from '@services/apiCaller';
 import { ISourceDefintion } from '@stores/sourceDefinitionsList';
 import { action, computed, observable, reaction, trace } from 'mobx';
 
