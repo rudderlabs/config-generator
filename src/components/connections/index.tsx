@@ -20,6 +20,7 @@ import { Flex } from '@components/common/misc';
 import { ButtonSmall } from '@components/common/button';
 import { IDestinationDefsListStore } from '../../stores/destinationDefsList';
 import { ButtonPrimary } from '../common/button';
+import { version } from '@services/version';
 var fileDownload = require('js-file-download');
 
 declare var LeaderLine: any;
@@ -93,6 +94,7 @@ class Connections extends Component<IConnectionsProps, any> {
         sourceListStore: this.props.sourcesListStore.returnWithoutRootStore(),
         destinationListStore: this.props.destinationsListStore.returnWithoutRootStore(),
         connectionsStore: this.props.connectionsStore.returnWithoutRootStore(),
+        version,
       },
     };
 

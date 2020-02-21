@@ -12,6 +12,7 @@ import { Container, PageTitle } from './styles';
 import { ISourceStore } from '@stores/source';
 import { IDestinationStore } from '@stores/destination';
 import { IMessageStore } from '@stores/messages';
+import { version } from '@services/version';
 var fileDownload = require('js-file-download');
 
 interface IConfiguredSourcesProps extends RouteComponentProps<any> {
@@ -132,6 +133,9 @@ class SourceDetails extends Component<IConfiguredSourcesProps, any> {
                 destinationDefinition: dest.destinationDefinition,
               };
             }),
+        },
+        metadata: {
+          version: version,
         },
       };
       fileDownload(
