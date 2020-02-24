@@ -658,22 +658,6 @@
         },
         {
           "type": "textInput",
-          "label": "Consumer Key",
-          "value": "consumerKey",
-          "regex": ".*",
-          "required": true,
-          "placeholder": "Consumer key from salesforce"
-        },
-        {
-          "type": "textInput",
-          "label": "Consumer Secret",
-          "value": "consumerSecret",
-          "regex": ".*",
-          "required": true,
-          "placeholder": "Consumer secret from salesforce"
-        },
-        {
-          "type": "textInput",
           "label": "Initial Access Token",
           "value": "initialAccessToken",
           "regex": ".*",
