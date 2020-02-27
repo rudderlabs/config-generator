@@ -13,7 +13,7 @@ import { Flex } from '../../common/misc';
 import { Header, TextDiv } from '../../common/typography';
 
 // @ts-ignore
-const markdown = {
+export const markdown = {
   Android: raw('./Android.md'),
   iOS: raw('./iOS.md'),
   Javascript: raw('./Javascript.md'),

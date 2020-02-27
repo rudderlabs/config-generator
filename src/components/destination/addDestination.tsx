@@ -16,6 +16,7 @@ import queryString from 'query-string';
 import * as React from 'react';
 import { RouteComponentProps, withRouter } from 'react-router';
 import { withTheme } from 'styled-components';
+import formTemplatesMap from '../destination/destinationSettings/destinationSettings.json';
 
 import {
   AddDestDialogBody,
@@ -65,7 +66,24 @@ class AddDestination extends React.Component<IAddDestinationProps, any> {
       selectedSources,
       config: {},
       showNextLoader: false,
+      filteredDestinationDefs: [],
     };
+  }
+
+  componentDidMount() {
+    const { destinationDefsListStore } = this.props;
+
+    if (destinationDefsListStore) {
+      const destinationDefs = destinationDefsListStore!.destinationDefs;
+      const destinationSettingsArr = Object.keys(formTemplatesMap);
+      const filteredArr = [] as Array<object>;
+      destinationDefs.map(def => {
+        if (destinationSettingsArr.includes(def.name)) {
+          filteredArr.push(def);
+        }
+      });
+      this.setState({ filteredDestinationDefs: filteredArr });
+    }
   }
 
   public enableConnection = async () => {
@@ -116,8 +134,8 @@ class AddDestination extends React.Component<IAddDestinationProps, any> {
       this.setState({
         enableNextButton: true,
         selectedDestDefintionId: destDefId,
-        selectedDestDef: this.props.destinationDefsListStore.destinationDefs.filter(
-          def => def.id === destDefId,
+        selectedDestDef: this.state.filteredDestinationDefs.filter(
+          (def: any) => def.id === destDefId,
         )[0],
       });
     } else {
@@ -163,7 +181,12 @@ class AddDestination extends React.Component<IAddDestinationProps, any> {
   // };
 
   public render() {
-    const { selectedSources, selectedDestDef, destinationId } = this.state;
+    const {
+      selectedSources,
+      selectedDestDef,
+      destinationId,
+      filteredDestinationDefs,
+    } = this.state;
     let icon;
     if (selectedSources.length > 0) {
       icon = selectedSources.map((source: any) => source.sourceDef.name);
@@ -204,13 +227,11 @@ class AddDestination extends React.Component<IAddDestinationProps, any> {
                 <IconCardList
                   type="destination"
                   selectionMode="single"
-                  icons={this.props.destinationDefsListStore.destinationDefs.map(
-                    def => ({
-                      id: def.id,
-                      type: def.name,
-                      title: def.displayName,
-                    }),
-                  )}
+                  icons={filteredDestinationDefs.map((def: any) => ({
+                    id: def.id,
+                    type: def.name,
+                    title: def.displayName,
+                  }))}
                   onSelectionChange={this.handleSelection}
                 />
               </IconCardListContainer>

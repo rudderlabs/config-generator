@@ -12,7 +12,6 @@ import queryString from 'query-string';
 import * as React from 'react';
 import { RouteComponentProps, withRouter } from 'react-router';
 import { withTheme } from 'styled-components';
-
 import {
   IconCardListContainer,
   SourceNameInputContainer,
@@ -48,6 +47,7 @@ class AddSource extends React.Component<IAddSourceProps, any> {
       sourceName: '',
       selectedSourceDefintionId: parsed.sourceDefId || null,
       showNextLoader: false,
+      filteredSources: [],
     };
   }
 
@@ -58,6 +58,11 @@ class AddSource extends React.Component<IAddSourceProps, any> {
       this.props.history.push('/');
     }
   };
+
+  async componentDidMount() {
+    const filteredSources = await this.props.sourceDefinitionsListStore.getFilteredSourceDefinitions();
+    this.setState({ filteredSources });
+  }
 
   createConnection = async (source: any) => {
     const { ref } = this.state;
@@ -130,54 +135,61 @@ class AddSource extends React.Component<IAddSourceProps, any> {
   };
 
   public render() {
-    return (
-      <StyledContainer>
-        <HeaderDiv className="p-b-lg">Add Source</HeaderDiv>
-        <Steps
-          onCancel={this.handleCancel}
-          onNext={this.handleNext}
-          current={this.state.currentStep}
-          enableNext={this.state.enableNextButton}
-          showNextLoader={this.state.showNextLoader}
-        >
-          <Step>
-            <HeaderDiv className="text-center p-t-lg">
-              Choose a source
-            </HeaderDiv>
-            <IconCardListContainer>
-              <IconCardList
-                type="source"
-                selectionMode="single"
-                icons={this.props.sourceDefinitionsListStore.sourceDefinitions.map(
-                  s => ({ id: s.id, type: s.name, title: s.name }),
-                )}
-                onSelectionChange={this.handleSelection}
-              />
-            </IconCardListContainer>
-          </Step>
-          <Step>
-            <HeaderDiv className="text-center p-t-lg">
-              Name your source
-            </HeaderDiv>
-            <SourceNameInputContainer>
-              <Input
-                placeholder="eg. Android Dev"
-                onChange={this.handleNameChange}
-                autoFocus
-                onKeyDown={this.handleKeyDown}
-              />
-              <TextDiv
-                color={this.props.theme.color.grey300}
-                className="p-t-sm"
-              >
-                Identifies this source within your workspace, and typically
-                includes the product area and environment.
-              </TextDiv>
-            </SourceNameInputContainer>
-          </Step>
-        </Steps>
-      </StyledContainer>
-    );
+    const { filteredSources } = this.state;
+    if (filteredSources.length > 0) {
+      return (
+        <StyledContainer>
+          <HeaderDiv className="p-b-lg">Add Source</HeaderDiv>
+          <Steps
+            onCancel={this.handleCancel}
+            onNext={this.handleNext}
+            current={this.state.currentStep}
+            enableNext={this.state.enableNextButton}
+            showNextLoader={this.state.showNextLoader}
+          >
+            <Step>
+              <HeaderDiv className="text-center p-t-lg">
+                Choose a source
+              </HeaderDiv>
+              <IconCardListContainer>
+                <IconCardList
+                  type="source"
+                  selectionMode="single"
+                  icons={filteredSources.map((s: any) => ({
+                    id: s.id,
+                    type: s.name,
+                    title: s.name,
+                  }))}
+                  onSelectionChange={this.handleSelection}
+                />
+              </IconCardListContainer>
+            </Step>
+            <Step>
+              <HeaderDiv className="text-center p-t-lg">
+                Name your source
+              </HeaderDiv>
+              <SourceNameInputContainer>
+                <Input
+                  placeholder="eg. Android Dev"
+                  onChange={this.handleNameChange}
+                  autoFocus
+                  onKeyDown={this.handleKeyDown}
+                />
+                <TextDiv
+                  color={this.props.theme.color.grey300}
+                  className="p-t-sm"
+                >
+                  Identifies this source within your workspace, and typically
+                  includes the product area and environment.
+                </TextDiv>
+              </SourceNameInputContainer>
+            </Step>
+          </Steps>
+        </StyledContainer>
+      );
+    } else {
+      return <div></div>;
+    }
   }
 }
 
