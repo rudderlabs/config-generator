@@ -553,6 +553,73 @@
       ]
     }
   ],
+  "SNOWFLAKE": [
+    {
+      "title": "1. Connection Credentials",
+      "fields": [
+        {
+          "type": "textInput",
+          "label": "Account",
+          "value": "account",
+          "regex": ".*",
+          "required": true
+        },
+        {
+          "type": "textInput",
+          "label": "Database",
+          "value": "database",
+          "regex": ".*",
+          "required": true
+        },
+        {
+          "type": "textInput",
+          "label": "Warehouse",
+          "value": "warehouse",
+          "regex": ".*",
+          "required": true
+        },
+        {
+          "type": "textInput",
+          "label": "User",
+          "value": "user",
+          "regex": ".*",
+          "required": true
+        },
+        {
+          "type": "textInput",
+          "label": "Password",
+          "value": "password",
+          "regex": ".*",
+          "required": true
+        },
+        {
+          "type": "textInput",
+          "label": "Staging S3 Storage Bucket Name",
+          "labelNote": "S3 Bucket to storage data before loading into Redshift",
+          "value": "bucketName",
+          "regex": ".*",
+          "required": true,
+          "footerNote": "Please make sure the bucket exists in your S3"
+        },
+        {
+          "type": "textInput",
+          "label": "AWS Access Key ID",
+          "value": "accessKeyID",
+          "regex": ".*",
+          "required": true,
+          "placeholder": "e.g: access-key-id"
+        },
+        {
+          "type": "textInput",
+          "label": "AWS Secret Access Key",
+          "value": "accessKey",
+          "regex": ".*",
+          "required": true,
+          "placeholder": "e.g: secret-access-key"
+        }
+      ]
+    }
+  ],
   "AF": [
     {
       "title": "1. Connection Settings",
@@ -1108,6 +1175,204 @@
           "label": "Prefix the properties with page or event name",
           "value": "prefixProperties",
           "default": false
+        }
+      ]
+    }
+  ],
+  "CUSTOMERIO": [
+    {
+      "title": "1. Connection Settings",
+      "fields": [
+        {
+          "type": "textInput",
+          "label": "API Key",
+          "value": "apiKey",
+          "regex": ".*",
+          "required": true,
+          "placeholder": "e.g: ABCDEFG"
+        },
+        {
+          "type": "textInput",
+          "label": "Site ID",
+          "value": "siteID",
+          "regex": ".*",
+          "required": true,
+          "placeholder": "e.g: ABCDEFG"
+        }
+      ]
+    },
+    {
+      "title": "2. Native SDK",
+      "fields": [
+        {
+          "type": "checkbox",
+          "label": "Use native SDK to send events",
+          "value": "useNativeSDK",
+          "default": false
+        }
+      ]
+    }
+  ],
+  "CHARTBEAT": [
+    {
+      "title": "1. Connection Settings",
+      "fields": [
+        {
+          "type": "textInput",
+          "label": "Domain",
+          "value": "domain",
+          "regex": ".*",
+          "required": true,
+          "placeholder": "e.g: ABCDEFG"
+        },
+        {
+          "type": "textInput",
+          "label": "UID",
+          "value": "uid",
+          "regex": ".*",
+          "required": true,
+          "placeholder": "e.g: ABCDEFG"
+        }
+      ]
+    },
+    {
+      "title": "2. Native SDK",
+      "fields": [
+        {
+          "type": "checkbox",
+          "label": "Use native SDK to send events",
+          "value": "useNativeSDK",
+          "default": false
+        }
+      ]
+    },
+    {
+      "title": "3. Other Settings",
+      "fields": [
+        {
+          "type": "checkbox",
+          "label": "Send Name and Category as Title",
+          "value": "sendNameAndCategoryAsTitle",
+          "default": false
+        },
+        {
+          "type": "checkbox",
+          "label": "Use Chartbeat video script",
+          "value": "video",
+          "default": false
+        }
+      ]
+    }
+  ],
+  "COMSCORE": [
+    {
+      "title": "1. Connection Settings",
+      "fields": [
+        {
+          "type": "textInput",
+          "label": "c2 ID",
+          "value": "c2ID",
+          "regex": ".*",
+          "required": true,
+          "placeholder": "e.g: ABCDEFG"
+        },
+        {
+          "type": "textInput",
+          "label": "Publisher Secret",
+          "value": "publisherSecret",
+          "regex": ".*",
+          "required": true,
+          "placeholder": "e.g: ABCDEFG"
+        }
+      ]
+    },
+    {
+      "title": "2. Native SDK",
+      "fields": [
+        {
+          "type": "checkbox",
+          "label": "Use native SDK to send events",
+          "value": "useNativeSDK",
+          "default": false
+        }
+      ]
+    },
+    {
+      "title": "3. Configure Beacon Param Map",
+      "fields": [
+        {
+          "type": "dynamicForm",
+          "labelLeft": "Event Property",
+          "labelRight": "Beacon Parameter",
+          "keyLeft": "from",
+          "keyRight": "to",
+          "placeholderLeft": "event prop",
+          "placeholderRight": "c0",
+          "value": "comScoreBeaconParam"
+        }
+      ]
+    }
+  ],
+  "LEANPLUM": [
+    {
+      "title": "1. Connection Settings",
+      "fields": [
+        {
+          "type": "textInput",
+          "label": "Application ID",
+          "value": "applicationId",
+          "regex": ".*",
+          "required": true,
+          "placeholder": "e.g: ABCDEFG"
+        },
+        {
+          "type": "textInput",
+          "label": "Client Key",
+          "value": "clientKey",
+          "regex": ".*",
+          "required": true,
+          "placeholder": "e.g: ABCDEFG"
+        }
+      ]
+    },
+    {
+      "title": "2. Native SDK",
+      "fields": [
+        {
+          "type": "checkbox",
+          "label": "Initialize Native SDK to send automated events",
+          "value": "useNativeSDK",
+          "default": true
+        },
+        {
+          "type": "checkbox",
+          "label": "Use native SDK to send user generated events",
+          "value": "sendEvents",
+          "default": false
+        }
+      ]
+    },
+    {
+      "title": "3. Development Mode",
+      "fields": [
+        {
+          "type": "checkbox",
+          "label": "Use in Development Environment",
+          "value": "isDevelop",
+          "default": false
+        }
+      ]
+    }
+  ],
+  "FIREBASE": [
+    {
+      "title": "1. Native SDK",
+      "fields": [
+        {
+          "type": "checkbox",
+          "label": "Use native SDK to send events",
+          "value": "useNativeSDK",
+          "default": true
         }
       ]
     }

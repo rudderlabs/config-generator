@@ -10,6 +10,7 @@ import { ReactComponent as GCS } from '@svg/gcs.svg';
 import { ReactComponent as Minio } from '@svg/minio.svg';
 import { ReactComponent as Redshift } from '@svg/rs.svg';
 import { ReactComponent as BigQuery } from '@svg/bq.svg';
+import { ReactComponent as Snowflake } from '@svg/snowflake.svg';
 import { ReactComponent as AppsFlyer } from '@svg/af.svg';
 import { ReactComponent as Mailchimp } from '@svg/mc.svg';
 import { ReactComponent as HotJar } from '@svg/hotjar.svg';
@@ -27,6 +28,11 @@ import { ReactComponent as GTM } from '@svg/gtm.svg';
 import { ReactComponent as Braze } from '@svg/braze.svg';
 import { ReactComponent as KEEN } from '@svg/keen.svg';
 import { ReactComponent as KissMetrics } from '@svg/kissmetrics.svg';
+import { ReactComponent as CustomerIO } from '@svg/customerio.svg';
+import { ReactComponent as Chartbeat } from '@svg/chartbeat.svg';
+import { ReactComponent as Comscore } from '@svg/heap.svg';
+import { ReactComponent as Firebase } from '@svg/firebase.svg';
+import { ReactComponent as Leanplum } from '@svg/leanplum.svg';
 import theme from '@css/theme';
 
 const DestinationIcon = (props: any) => {
@@ -57,6 +63,8 @@ const DestinationIcon = (props: any) => {
       return <Redshift width={width} height={height} />;
     case 'bq':
       return <BigQuery width={width} height={height} />;
+    case 'snowflake':
+      return <Snowflake width={width} height={height} />;
     case 'af':
       return <AppsFlyer height={height} />;
     case 'mailchimp':
@@ -91,6 +99,16 @@ const DestinationIcon = (props: any) => {
       return <Kochava width={width} height={height} />;
     case 'kissmetrics':
       return <KissMetrics width={width} height={height} />;
+    case 'customerio':
+      return <CustomerIO width={width} height={height} />;
+    case 'chartbeat':
+      return <Chartbeat width={width} height={height} />;
+    case 'comscore':
+      return <Comscore width={width} height={height} />;
+    case 'firebase':
+      return <Firebase width={width} height={height} />;
+    case 'leanplum':
+      return <Leanplum width={width} height={height} />;
     default:
       break;
   }

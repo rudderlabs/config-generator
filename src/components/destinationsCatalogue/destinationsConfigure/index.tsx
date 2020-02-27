@@ -21,6 +21,8 @@ const markdown = {
   S3: raw('./S3.md'),
   MINIO: raw('./MINIO.md'),
   RS: raw('./RS.md'),
+  BQ: raw('./BQ.md'),
+  SNOWFLAKE: raw('./SNOWFLAKE.md'),
   AF: raw('./AF.md'),
   MAILCHIMP: raw('./MAILCHIMP.md'),
   HOTJAR: raw('./HOTJAR.md'),
@@ -37,6 +39,11 @@ const markdown = {
   KEEN: raw('./KEEN.md'),
   KOCHAVA: raw('./KOCHAVA.md'),
   KISSMETRICS: raw('./KISSMETRICS.md'),
+  CUSTOMERIO: raw('./CUSTOMERIO.md'),
+  CHARTBEAT: raw('./CHARTBEAT.md'),
+  COMSCORE: raw('./COMSCORE.md'),
+  FIREBASE: raw('./FIREBASE.md'),
+  LEANPLUM: raw('./LEANPLUM.md'),
 };
 
 export interface IDestinationConfigureProps {

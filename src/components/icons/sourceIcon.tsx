@@ -2,6 +2,7 @@ import React from 'react';
 import { ReactComponent as Android } from '@svg/android.svg';
 import { ReactComponent as Ios } from '@svg/ios.svg';
 import { ReactComponent as Javascript } from '@svg/javascript.svg';
+import { ReactComponent as Unity } from '@svg/unity.svg';
 import theme from '@css/theme';
 
 const SourceIcon = (props: any) => {
@@ -14,6 +15,8 @@ const SourceIcon = (props: any) => {
       return <Ios width={width} height={height} />;
     case 'javascript':
       return <Javascript width={width} height={height} />;
+    case 'unity':
+      return <Unity width={width} height={height} />;
     default:
       break;
   }
