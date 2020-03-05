@@ -111,7 +111,15 @@ class Connections extends Component<IConnectionsProps, any> {
         updatedAt: Date(),
         sourceDefinition: source.sourceDef,
         destinations: source.destinations.map(dest => {
-          return { ...dest, rootStore: null };
+          return {
+            ...dest,
+            isProcessorEnabled:
+              dest.enabled &&
+              source.enabled &&
+              !dest.config.useNativeSDK &&
+              !dest.destinationDefinition.config.deviceModeOnly,
+            rootStore: null,
+          };
         }),
       };
       workspaceConfig.sources.push(obj);
