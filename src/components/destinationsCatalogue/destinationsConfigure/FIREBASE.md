@@ -1,7 +1,7 @@
 - Collect, configure, and analyze your data to reach the right audience.
 - Create custom reports.
 
-## Get more out of Firebase with Rudder!
+## Get more out of Firebase with RudderStack!
 
 ## Related links
 

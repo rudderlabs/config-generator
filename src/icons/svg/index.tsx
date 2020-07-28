@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { ReactComponent as Enabled } from './enabled.svg';
-import { ReactComponent as Error } from './error.svg';
+import { ReactComponent as ErrorIcon } from './error.svg';
 import { ReactComponent as ForwardThick } from './ic-forward-thick.svg';
 import { ReactComponent as Forward } from './ic-forward.svg';
 import { ReactComponent as Connection } from './ic-menu-connections.svg';
@@ -19,51 +19,118 @@ import { ReactComponent as EmptyDestinations } from './emptyDestinations.svg';
 import { ReactComponent as NoData } from './no-data.svg';
 import { ReactComponent as NoDataGraph } from './no-data-graph.svg';
 import { ReactComponent as LogoRudder } from './logo-rudder.svg';
+import { ReactComponent as CaretDown } from './caret-down.svg';
+import { ReactComponent as ChevronDown } from './chevron-down.svg';
+import { ReactComponent as Bell } from './bell.svg';
+import { ReactComponent as Close } from './close.svg';
+import { ReactComponent as Check } from './check.svg';
+import { ReactComponent as Checkbox } from './checkbox.svg';
+import { ReactComponent as Edit } from './edit.svg';
+import { ReactComponent as DotsHor } from './dots-hor.svg';
+import { ReactComponent as ChartBar } from './chart-bar.svg';
 
-const Svg = (props: any) => {
-  switch (props.name.toLowerCase()) {
+interface SvgProps extends React.SVGAttributes<any> {
+  name: string;
+  size?: number;
+}
+
+const Svg: React.FC<SvgProps> = ({ name, size, ...svgProps }: any) => {
+  let Icon;
+  switch (name.toLowerCase()) {
+    case 'chart':
+      Icon = ChartBar;
+      break;
     case 'rudder':
-      return <Rudder />;
+      Icon = Rudder;
+      break;
     case 'connection':
-      return <Connection />;
+      Icon = Connection;
+      break;
     case 'source':
-      return <Source />;
+      Icon = Source;
+      break;
     case 'destination':
-      return <Destination />;
+      Icon = Destination;
+      break;
     case 'ed':
-      return <EmptyDestinations />;
+      Icon = EmptyDestinations;
+      break;
     case 'transformation':
-      return <Transformation />;
+      Icon = Transformation;
+      break;
     case 'selected':
-      return <Selected />;
+      Icon = Selected;
+      break;
     case 'signout':
-      return <Signout />;
+      Icon = Signout;
+      break;
     case 'forward':
-      return <Forward />;
+      Icon = Forward;
+      break;
     case 'forward-thick':
-      return <ForwardThick />;
+      Icon = ForwardThick;
+      break;
     case 'settings':
-      return <Settings />;
+      Icon = Settings;
+      break;
     case 'side-arrow':
-      return <SideArrow />;
+      Icon = SideArrow;
+      break;
     case 'plus':
-      return <Plus />;
+      Icon = Plus;
+      break;
     case 'error':
-      return <Error />;
+      Icon = ErrorIcon;
+      break;
     case 'enabled':
-      return <Enabled />;
+      Icon = Enabled;
+      break;
     case 'no-data':
-      return <NoData />;
+      Icon = NoData;
+      break;
     case 'no-data-graph':
-      return <NoDataGraph />;
+      Icon = NoDataGraph;
+      break;
     case 'logo-rudder':
-      return <LogoRudder />;
+      Icon = LogoRudder;
+      break;
     case 'delete':
-      return <Delete />;
+      Icon = Delete;
+      break;
+    case 'chevron-down':
+      Icon = ChevronDown;
+      break;
+    case 'bell':
+      Icon = Bell;
+      break;
+    case 'close':
+      Icon = Close;
+      break;
+    case 'check':
+      Icon = Check;
+      break;
+    case 'checkbox':
+      Icon = Checkbox;
+      break;
+    case 'caret-down':
+      Icon = CaretDown;
+      break;
+    case 'edit':
+      Icon = Edit;
+      break;
+    case 'dots-hor':
+      Icon = DotsHor;
+      break;
     default:
       break;
   }
-  return <div />;
+  const sizeProps =
+    (size && {
+      width: size,
+      height: size,
+    }) ||
+    {};
+  return Icon ? <Icon {...sizeProps} {...svgProps} /> : <div />;
 };
 
 export default Svg;

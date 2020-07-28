@@ -1,9 +1,9 @@
-Send data to Segment using Rudder.
+Send data to Segment using RudderStack.
 
 #### Best used for
 
 - Sending events to required destinations using segment's infra.
-- Non-open source alternative to rudder.
+- Non-open source alternative to RudderStack.
 
 #### What you’ll need
 
@@ -17,5 +17,5 @@ Send data to Segment using Rudder.
 
 [//]: # "These are reference links used in the body of this note and get stripped out when the markdown processor does its job. There is no need to format nicely because it shouldn't be seen. Thanks SO - http://stackoverflow.com/questions/4823468/store-comments-in-markdown-syntax"
 [segment website]: https://segment.com/
-[documentation]: https://docs.rudderlabs.com
+[documentation]: https://docs.rudderstack.com
 [view on github]: https://github.com/rudderlabs/rudder-server

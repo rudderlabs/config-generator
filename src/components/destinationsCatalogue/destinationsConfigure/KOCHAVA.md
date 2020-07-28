@@ -2,10 +2,6 @@
 - Reach most valuable audiences using Audience Builder
 - Tie each user to the ads they interact with
 
-## Get more out of Kochava with Rudder!
-
-Set your event name to event token mapping on rudder destination settings, so you don't need to release a new version of your mobile app to update these mappings.
-
 ## Related links
 
 [Kochava Website][]  

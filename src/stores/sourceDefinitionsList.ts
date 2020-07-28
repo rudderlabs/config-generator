@@ -1,7 +1,7 @@
 import { action, observable } from 'mobx';
-import { apiCaller } from '@services/apiCaller';
 import { IRootStore } from '.';
 import { markdown } from '@components/sourcesCatalogue/sourcesConfigure';
+import sources from './sources.json';
 
 export interface ISourceDefinitionsListStore {
   sourceDefinitions: ISourceDefintion[];
@@ -27,8 +27,7 @@ export class SourceDefinitionsListStore implements ISourceDefinitionsListStore {
 
   @action.bound
   public async getSourceDefinitions() {
-    const res = await apiCaller().get(`/open-source-definitions`);
-    this.sourceDefinitions = res.data;
+    this.sourceDefinitions = sources;
   }
 
   @action.bound
@@ -37,9 +36,9 @@ export class SourceDefinitionsListStore implements ISourceDefinitionsListStore {
     const acceptedSources = Object.keys(markdown);
     this.sourceDefinitions.map((source: any) => {
       if (acceptedSources.includes(source.name)) {
-        filteredSourcesArr.push(source)
+        filteredSourcesArr.push(source);
       }
-    })
+    });
     return filteredSourcesArr;
   }
 

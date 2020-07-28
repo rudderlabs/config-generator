@@ -52,6 +52,9 @@ import { ReactComponent as Zendesk } from '@svg/zendesk.svg';
 import { ReactComponent as Kafka } from '@svg/kafka.svg';
 import { ReactComponent as AzureEventHub } from '@svg/azure_event_hub.svg';
 import { ReactComponent as Iterable } from '@svg/iterable.svg';
+import { ReactComponent as Clickhouse } from '@svg/clickhouse.svg';
+import { ReactComponent as Firehose } from '@svg/firehose.svg';
+import { ReactComponent as EventBridge } from '@svg/eventbridge.svg';
 import theme from '@css/theme';
 
 const DestinationIcon = (props: any) => {
@@ -168,6 +171,14 @@ const DestinationIcon = (props: any) => {
       return <AzureEventHub width={width} height={height} />;
     case 'iterable':
       return <Iterable width={width} height={height} />;
+    case 'clickhouse':
+      return <Clickhouse width={width} height={height} />;
+    case 'lotame_mobile':
+      return <Lotame width={width} height={height} />;
+    case 'firehose':
+      return <Firehose width={width} height={height} />;
+    case 'eventbridge':
+      return <EventBridge width={width} height={height} />;
     default:
       break;
   }

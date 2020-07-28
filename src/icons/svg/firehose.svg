@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="450px" height="400px" viewBox="0 0 450 400" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="background: #FFFFFF;">
+  <title>AWS-Kinesis_Firehose_Purple</title>
+  <desc>Created with Sketch.</desc>
+  <defs>
+    <radialGradient cx="51.2105525%" cy="50%" fx="51.2105525%" fy="50%" r="64.4102608%" id="radialGradient-1">
+      <stop stop-color="#FFFFFF" offset="0%"></stop>
+      <stop stop-color="#4BA7FA" offset="100%"></stop>
+    </radialGradient>
+    <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="60.8048397%" id="radialGradient-2">
+      <stop stop-color="#FFFFFF" offset="0%"></stop>
+      <stop stop-color="#46A8FA" offset="100%"></stop>
+    </radialGradient>
+    <path d="M348,139.441319 C331.811931,59.8991558 260.837235,0 175.733002,0 C78.678345,0 0,77.9024535 0,174 C0,270.097546 78.678345,348 175.733002,348 L175.733002,348 C260.188027,348 330.728264,289.011226 347.619987,210.375569" id="path-3"></path>
+    <circle id="path-5" cx="45.5" cy="45.5" r="45.5"></circle>
+  </defs>
+  <g id="Page-1-Copy" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+    <g id="AWS-Kinesis_Firehose_Purple">
+      <g id="Group-4" transform="translate(26.000000, 26.000000)">
+        <g id="Group-3">
+          <mask id="mask-4" fill="white">
+            <use xlink:href="#path-3"></use>
+          </mask>
+          <g id="Oval">
+            <use fill="#FCFEFE" xlink:href="#path-3"></use>
+            <use stroke="url(#radialGradient-2)" stroke-width="6" fill-opacity="0.0199999996" fill="url(#radialGradient-1)" xlink:href="#path-3"></use>
+          </g>
+          <text id="10100010101011111000" opacity="0.071727808" mask="url(#mask-4)" font-family=".SFNSDisplay, .SF NS Display" font-size="28" font-weight="normal" line-spacing="32" letter-spacing="3.20000005" fill="#3D556B">
+            <tspan x="-6.96" y="30.9771429">101000101010111110000</tspan>
+            <tspan x="-6.96" y="62.9771429">0011101000101010111110</tspan>
+            <tspan x="-6.96" y="94.9771429">000001110100010101011</tspan>
+            <tspan x="-6.96" y="126.977143">111000000111010001010</tspan>
+            <tspan x="-6.96" y="158.977143">1011111000000111010001</tspan>
+            <tspan x="-6.96" y="190.977143">0101011111000000111010</tspan>
+            <tspan x="-6.96" y="222.977143">0010101011111000000111</tspan>
+            <tspan x="-6.96" y="254.977143">010001010101111100000</tspan>
+            <tspan x="-6.96" y="286.977143">0111010001010101111100</tspan>
+            <tspan x="-6.96" y="318.977143">0000111010001010101111</tspan>
+            <tspan x="-6.96" y="350.977143">100000011</tspan>
+          </text>
+        </g>
+        <path d="M288.370366,163 C282.378313,106.233402 234.354789,62 176,62 C113.591823,62 63,112.591823 63,175 C63,237.408177 113.591823,288 176,288 C234.354789,288 282.378313,243.766598 288.370366,187 L338,187 L338,163 L288.370366,163 Z" id="Combined-Shape" stroke="#444444" stroke-width="6" fill="#E3E5EB"></path>
+        <path d="M264.5,187 L289.5,187" id="Path" stroke="#444444" stroke-width="6"></path>
+        <rect id="Rectangle-3-Copy" stroke="#444444" stroke-width="6" transform="translate(347.500000, 175.500000) scale(-1, 1) translate(-347.500000, -175.500000) " x="338" y="152" width="19" height="47" rx="1"></rect>
+        <polygon id="Rectangle-3-Copy-2" stroke="#444444" stroke-width="6" fill="#D4C1FF" points="357 159.045917 384 166.025287 384 184.02063 357 191"></polygon>
+        <circle id="Oval-Copy-2" stroke="#444444" stroke-width="6" fill="#D4C1FF" cx="174.5" cy="175.5" r="90.5"></circle>
+        <circle id="Oval-Copy-3" stroke="#444444" stroke-width="6" fill="#A260FF" cx="174" cy="176" r="68"></circle>
+        <g id="Group-2" transform="translate(129.000000, 130.000000)">
+          <mask id="mask-6" fill="white">
+            <use xlink:href="#path-5"></use>
+          </mask>
+          <use id="Oval-Copy-4" stroke="#444444" stroke-width="6" fill="#FFFFFF" xlink:href="#path-5"></use>
+          <g id="Group" mask="url(#mask-6)">
+            <g transform="translate(21.000000, 21.000000)">
+              <rect id="Rectangle-2" fill="#444444" x="0" y="0" width="48" height="41" rx="2"></rect>
+              <rect id="Rectangle-2-Copy" fill="#444444" x="13" y="41" width="22" height="29"></rect>
+              <rect id="Rectangle-Copy" fill="#D4C1FF" x="5" y="18" width="38" height="16"></rect>
+              <rect id="Rectangle-Copy-2" fill="#A260FF" x="18" y="41" width="12" height="25.2925166"></rect>
+              <rect id="Rectangle-Copy-3" fill="#F8F8F6" x="4" y="6" width="40" height="5"></rect>
+            </g>
+          </g>
+        </g>
+        <rect id="Rectangle-4" fill="#444444" x="392" y="165" width="6" height="20"></rect>
+      </g>
+    </g>
+  </g>
+</svg>

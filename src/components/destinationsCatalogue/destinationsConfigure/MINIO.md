@@ -1,4 +1,4 @@
-Send data to a Minio bucket from Rudder
+Send data to a Minio bucket from RudderStack
 
 #### Best used for
 
@@ -19,5 +19,5 @@ Send data to a Minio bucket from Rudder
 
 [//]: # "These are reference links used in the body of this note and get stripped out when the markdown processor does its job. There is no need to format nicely because it shouldn't be seen. Thanks SO - http://stackoverflow.com/questions/4823468/store-comments-in-markdown-syntax"
 [minio website]: https://docs.min.io/docs/minio-quickstart-guide.html
-[documentation]: https://docs.rudderlabs.com/
+[documentation]: https://docs.rudderstack.com/
 [view on github]: https://github.com/rudderlabs/rudder-server

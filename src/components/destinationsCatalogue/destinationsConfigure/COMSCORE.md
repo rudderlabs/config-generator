@@ -3,7 +3,7 @@
 
 ## Get more out of Comscore with Rudder!
 
-Comscore can be blocked by browsers, browser extensions, and firewalls. Use an on-prem hosted version of rudder to avoid this.
+Comscore can be blocked by browsers, browser extensions, and firewalls. Use an on-prem hosted version of RudderStack to avoid this.
 
 ## Related links
 
@@ -13,5 +13,5 @@ Comscore can be blocked by browsers, browser extensions, and firewalls. Use an o
 
 [//]: # "These are reference links used in the body of this note and get stripped out when the markdown processor does its job. There is no need to format nicely because it shouldn't be seen. Thanks SO - http://stackoverflow.com/questions/4823468/store-comments-in-markdown-syntax"
 [comscore website]: https://chartbeat.com/
-[documentation]: https://docs.rudderlabs.com/
+[documentation]: https://docs.rudderstack.com/
 [view on github]: https://github.com/rudderlabs/rudder-sdk-js/blob/master/integrations/chartbeat/browser.js
