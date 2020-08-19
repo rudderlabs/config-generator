@@ -13,6 +13,8 @@ import { ReactComponent as AMP } from '@svg/amp.svg';
 import { ReactComponent as CustomerIO } from '@svg/customerio.svg';
 import { ReactComponent as Looker } from '@svg/looker.svg';
 import { ReactComponent as Java } from '@svg/java.svg';
+import { ReactComponent as Auth0 } from '@svg/auth0.svg';
+import { ReactComponent as Segment } from '@svg/segment.svg';
 import theme from '@css/theme';
 
 const SourceIcon = (props: any) => {
@@ -47,6 +49,10 @@ const SourceIcon = (props: any) => {
       return <Looker width={width} height={height} />;
     case 'java':
       return <Java width={width} height={height} />;
+    case 'auth0':
+      return <Auth0 width={width} height={height} />;
+    case 'segment':
+      return <Segment width={width} height={height} />;
     default:
       break;
   }

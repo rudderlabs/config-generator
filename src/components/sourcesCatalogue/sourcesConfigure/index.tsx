@@ -14,19 +14,22 @@ import { Header, TextDiv } from '../../common/typography';
 
 // @ts-ignore
 export const markdown = {
-  Android: raw('./Android.md'),
-  iOS: raw('./iOS.md'),
-  Javascript: raw('./Javascript.md'),
-  Unity: raw('./Unity.md'),
-  Go: raw('./Go.md'),
-  Node: raw('./Node.md'),
-  Ruby: raw('./Ruby.md'),
-  ReactNative: raw('./ReactNative.md'),
-  Python: raw('./Python.md'),
-  HTTP: raw('./HTTP.md'),
   AMP: raw('./AMP.md'),
-  LOOKER: raw('./LOOKER.md'),
+  Android: raw('./Android.md'),
+  Auth0: raw('./Auth0.md'),
+  Customerio: raw('./Customerio.md'),
+  Go: raw('./Go.md'),
+  HTTP: raw('./HTTP.md'),
   JAVA: raw('./JAVA.md'),
+  Javascript: raw('./Javascript.md'),
+  LOOKER: raw('./LOOKER.md'),
+  Node: raw('./Node.md'),
+  Python: raw('./Python.md'),
+  ReactNative: raw('./ReactNative.md'),
+  Ruby: raw('./Ruby.md'),
+  Segment: raw('./SegmentSource.md'),
+  Unity: raw('./Unity.md'),
+  iOS: raw('./iOS.md'),
 };
 
 export interface ISourceConfigureProps {

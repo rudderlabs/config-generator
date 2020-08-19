@@ -2,30 +2,17 @@
   {
     "config": {
       "destConfig": {
-        "ios": [
-          "useNativeSDK"
-        ],
-        "android": [
-          "useNativeSDK"
-        ],
+        "ios": ["useNativeSDK"],
+        "android": ["useNativeSDK"],
         "defaultConfig": [
           "bcpUrlSettingsPixel",
           "dspUrlSettingsPixel",
           "mappings"
         ]
       },
-      "excludeKeys": [
-
-      ],
-      "includeKeys": [
-        "bcpUrlSettingsPixel",
-        "dspUrlSettingsPixel",
-        "mappings"
-      ],
-      "supportedSourceTypes": [
-        "android",
-        "ios"
-      ]
+      "excludeKeys": [],
+      "includeKeys": ["bcpUrlSettingsPixel", "dspUrlSettingsPixel", "mappings"],
+      "supportedSourceTypes": ["android", "ios"]
     },
     "id": "1fBa1LLyLbbwAnLDIrAs78Ymhax",
     "name": "LOTAME_MOBILE",
@@ -35,238 +22,67 @@
   },
   {
     "config": {
-      "destConfig": {
-        "defaultConfig": [
-          "webhookUrl",
-          "headers"
-        ]
-      },
-      "excludeKeys": [
-
-      ],
-      "includeKeys": [
-
-      ],
-      "supportedSourceTypes": [
-        "android",
-        "ios",
-        "web",
-        "unity",
-        "amp",
-        "cloud"
-      ]
+      "destConfig": { "defaultConfig": ["apiKey"] },
+      "secretKeys": ["apiKey"],
+      "excludeKeys": [],
+      "includeKeys": [],
+      "supportedSourceTypes": ["android", "ios", "web", "unity", "amp", "cloud"]
     },
-    "id": "1aIXpUrvpGno4gEuF2GvI3O9dOe",
-    "name": "WEBHOOK",
-    "displayName": "Webhook",
-    "createdAt": "2020-04-09T09:24:24.090Z",
-    "updatedAt": "2020-07-22T07:18:55.666Z"
+    "id": "1QGzO4fWSyq3lsyFHf4eQAMDSr9",
+    "name": "AM",
+    "displayName": "Amplitude",
+    "createdAt": "2019-09-02T08:08:05.613Z",
+    "updatedAt": "2020-08-07T07:03:33.855Z"
+  },
+  {
+    "config": {
+      "destConfig": { "defaultConfig": ["token", "groupKey", "apiSecret"] },
+      "secretKeys": ["token"],
+      "excludeKeys": [],
+      "includeKeys": [],
+      "supportedSourceTypes": ["android", "ios", "web", "unity", "amp", "cloud"]
+    },
+    "id": "1QmWaiefYgYqxl9JGUe5PQio6bx",
+    "name": "MP",
+    "displayName": "Mixpanel",
+    "createdAt": "2019-09-13T12:05:16.230Z",
+    "updatedAt": "2020-08-07T07:03:35.043Z"
   },
   {
     "config": {
       "destConfig": {
-        "defaultConfig": [
-          "apiKey",
-          "audienceId",
-          "datacenterId"
-        ]
+        "ios": ["useNativeSDK"],
+        "unity": ["useNativeSDK"],
+        "android": ["useNativeSDK"],
+        "defaultConfig": ["appToken", "customMappings", "delay"]
       },
-      "excludeKeys": [
-
-      ],
-      "includeKeys": [
-
-      ],
-      "supportedSourceTypes": [
-        "android",
-        "ios",
-        "web",
-        "unity",
-        "amp",
-        "cloud"
-      ]
+      "secretKeys": [],
+      "excludeKeys": [],
+      "includeKeys": ["appToken", "customMappings", "delay"],
+      "supportedSourceTypes": ["android", "ios", "unity"]
     },
-    "id": "1WhodbviDWg8unseq00IbQZuCgH",
-    "name": "MAILCHIMP",
-    "displayName": "Mailchimp",
-    "createdAt": "2020-01-21T12:54:35.362Z",
-    "updatedAt": "2020-07-22T07:18:41.705Z"
+    "id": "1QmWay7IJwRwBUk827WSEYvfyOb",
+    "name": "ADJ",
+    "displayName": "Adjust",
+    "createdAt": "2019-09-13T12:05:18.672Z",
+    "updatedAt": "2020-08-07T07:03:37.110Z"
   },
   {
     "config": {
       "destConfig": {
-        "web": [
-          "useNativeSDK"
-        ],
-        "defaultConfig": [
-          "hubID",
-          "apiKey"
-        ]
+        "web": ["useNativeSDK"],
+        "defaultConfig": ["hubID", "apiKey"]
       },
-      "excludeKeys": [
-
-      ],
-      "includeKeys": [
-        "hubID"
-      ],
-      "supportedSourceTypes": [
-        "android",
-        "ios",
-        "web",
-        "unity",
-        "amp",
-        "cloud"
-      ]
+      "secretKeys": [],
+      "excludeKeys": [],
+      "includeKeys": ["hubID"],
+      "supportedSourceTypes": ["android", "ios", "web", "unity", "amp", "cloud"]
     },
     "id": "1QmWb5LccF6r8U4cTkEV3UUDr5X",
     "name": "HS",
     "displayName": "HubSpot",
-    "createdAt": "2019-09-13T12:05:19.916Z",
-    "updatedAt": "2020-07-22T07:18:28.398Z"
-  },
-  {
-    "config": {
-      "destConfig": {
-        "defaultConfig": [
-          "appId"
-        ]
-      },
-      "excludeKeys": [
-
-      ],
-      "includeKeys": [
-
-      ],
-      "supportedSourceTypes": [
-        "android",
-        "ios",
-        "web",
-        "unity",
-        "amp",
-        "cloud"
-      ]
-    },
-    "id": "1X6kW6RioSJQuXjk5N0zwfvxg3T",
-    "name": "HEAP",
-    "displayName": "Heap.io",
-    "createdAt": "2020-01-30T08:45:59.939Z",
-    "updatedAt": "2020-07-22T07:18:25.983Z"
-  },
-  {
-    "config": {
-      "destConfig": {
-        "defaultConfig": [
-          "apiKey"
-        ]
-      },
-      "excludeKeys": [
-
-      ],
-      "includeKeys": [
-
-      ],
-      "supportedSourceTypes": [
-        "android",
-        "ios",
-        "unity"
-      ]
-    },
-    "id": "1X6kXttCU0Ok9hZeoibVaPve8HF",
-    "name": "KOCHAVA",
-    "displayName": "Kochava",
-    "createdAt": "2020-01-30T08:46:14.764Z",
-    "updatedAt": "2020-07-22T07:18:38.370Z"
-  },
-  {
-    "config": {
-      "destConfig": {
-        "web": [
-          "useNativeSDK"
-        ],
-        "defaultConfig": [
-          "containerID"
-        ]
-      },
-      "excludeKeys": [
-
-      ],
-      "includeKeys": [
-        "containerID"
-      ],
-      "supportedSourceTypes": [
-        "web"
-      ]
-    },
-    "id": "1X6kXapk8Sf8yZTJn1dYZO3OXFt",
-    "name": "GTM",
-    "displayName": "Google Tag Manager",
-    "createdAt": "2020-01-30T08:46:11.787Z",
-    "updatedAt": "2020-07-22T07:18:24.871Z"
-  },
-  {
-    "config": {
-      "destConfig": {
-        "ios": [
-          "useNativeSDK"
-        ],
-        "android": [
-          "useNativeSDK"
-        ],
-        "defaultConfig": [
-          "branchKey"
-        ]
-      },
-      "excludeKeys": [
-
-      ],
-      "includeKeys": [
-        "branchKey"
-      ],
-      "supportedSourceTypes": [
-        "android",
-        "ios",
-        "unity"
-      ]
-    },
-    "id": "1X1URNGSyBOs8aoIE5ZhcLoPl9d",
-    "name": "BRANCH",
-    "displayName": "Branch Metrics",
-    "createdAt": "2020-01-28T12:04:44.965Z",
-    "updatedAt": "2020-07-22T07:18:07.353Z"
-  },
-  {
-    "config": {
-      "destConfig": {
-        "ios": [
-          "useNativeSDK"
-        ],
-        "unity": [
-          "useNativeSDK"
-        ],
-        "android": [
-          "useNativeSDK"
-        ],
-        "defaultConfig": [
-
-        ]
-      },
-      "excludeKeys": [
-
-      ],
-      "includeKeys": [
-
-      ],
-      "supportedSourceTypes": [
-        "android",
-        "ios",
-        "unity"
-      ]
-    },
-    "id": "1YL4j4RpSLloVaMwKrOoXLfiryj",
-    "name": "FIREBASE",
-    "displayName": "Firebase",
-    "createdAt": "2020-02-26T09:17:52.232Z",
-    "updatedAt": "2020-07-22T07:18:18.231Z"
+    "createdAt": "2019-09-13T12:05:19.915Z",
+    "updatedAt": "2020-08-07T07:03:38.429Z"
   },
   {
     "config": {
@@ -279,26 +95,16 @@
           "enableSSE"
         ]
       },
-      "excludeKeys": [
-
-      ],
-      "includeKeys": [
-
-      ],
-      "supportedSourceTypes": [
-        "android",
-        "ios",
-        "web",
-        "unity",
-        "amp",
-        "cloud"
-      ]
+      "secretKeys": ["accessKeyID", "accessKey"],
+      "excludeKeys": [],
+      "includeKeys": [],
+      "supportedSourceTypes": ["android", "ios", "web", "unity", "amp", "cloud"]
     },
     "id": "1RGyRVfXNj5cpOYB6nz5qmWhC5G",
     "name": "S3",
     "displayName": "Amazon S3",
-    "createdAt": "2019-09-24T06:48:38.335Z",
-    "updatedAt": "2020-07-22T07:18:48.406Z"
+    "createdAt": "2019-09-24T06:48:38.334Z",
+    "updatedAt": "2020-08-07T07:03:39.211Z"
   },
   {
     "config": {
@@ -310,196 +116,32 @@
           "accountKey"
         ]
       },
-      "excludeKeys": [
-
-      ],
-      "includeKeys": [
-
-      ],
-      "supportedSourceTypes": [
-        "android",
-        "ios",
-        "web",
-        "unity",
-        "amp",
-        "cloud"
-      ]
+      "secretKeys": ["accountKey"],
+      "excludeKeys": [],
+      "includeKeys": [],
+      "supportedSourceTypes": ["android", "ios", "web", "unity", "amp", "cloud"]
     },
     "id": "1VNwDPD3UyIvbc08dhdfRtkvz2M",
     "name": "AZURE_BLOB",
     "displayName": "Azure Blob Storage",
-    "createdAt": "2019-12-23T13:12:19.047Z",
-    "updatedAt": "2020-07-22T07:18:04.131Z"
+    "createdAt": "2019-12-23T13:12:19.046Z",
+    "updatedAt": "2020-08-07T07:03:41.226Z"
   },
   {
     "config": {
       "destConfig": {
-        "defaultConfig": [
-          "apiKey"
-        ]
+        "defaultConfig": ["apiKey", "audienceId", "datacenterId"]
       },
-      "excludeKeys": [
-
-      ],
-      "includeKeys": [
-
-      ],
-      "supportedSourceTypes": [
-        "android",
-        "ios",
-        "web",
-        "unity",
-        "amp",
-        "cloud"
-      ]
+      "secretKeys": [],
+      "excludeKeys": [],
+      "includeKeys": [],
+      "supportedSourceTypes": ["android", "ios", "web", "unity", "amp", "cloud"]
     },
-    "id": "1QGzO4fWSyq3lsyFHf4eQAMDSr9",
-    "name": "AM",
-    "displayName": "Amplitude",
-    "createdAt": "2019-09-02T08:08:05.614Z",
-    "updatedAt": "2020-07-22T07:18:01.675Z"
-  },
-  {
-    "config": {
-      "destConfig": {
-        "ios": [
-          "useNativeSDK"
-        ],
-        "unity": [
-          "useNativeSDK"
-        ],
-        "android": [
-          "useNativeSDK"
-        ],
-        "defaultConfig": [
-          "appToken",
-          "customMappings",
-          "delay"
-        ]
-      },
-      "excludeKeys": [
-
-      ],
-      "includeKeys": [
-        "appToken",
-        "customMappings",
-        "delay"
-      ],
-      "supportedSourceTypes": [
-        "android",
-        "ios",
-        "unity"
-      ]
-    },
-    "id": "1QmWay7IJwRwBUk827WSEYvfyOb",
-    "name": "ADJ",
-    "displayName": "Adjust",
-    "createdAt": "2019-09-13T12:05:18.672Z",
-    "updatedAt": "2020-07-22T07:17:59.428Z"
-  },
-  {
-    "config": {
-      "destConfig": {
-        "web": [
-          "useNativeSDK"
-        ],
-        "defaultConfig": [
-          "apiKey",
-          "siteID"
-        ]
-      },
-      "excludeKeys": [
-
-      ],
-      "includeKeys": [
-        "apiKey",
-        "siteID"
-      ],
-      "supportedSourceTypes": [
-        "android",
-        "ios",
-        "web",
-        "unity",
-        "amp",
-        "cloud"
-      ]
-    },
-    "id": "1YL4iM8nd0wYQY6zB29lOf8sALB",
-    "name": "CUSTOMERIO",
-    "displayName": "Customer IO",
-    "createdAt": "2020-02-26T09:17:46.292Z",
-    "updatedAt": "2020-07-22T07:18:13.823Z"
-  },
-  {
-    "config": {
-      "destConfig": {
-        "defaultConfig": [
-          "token",
-          "groupKey",
-          "apiSecret"
-        ]
-      },
-      "excludeKeys": [
-
-      ],
-      "includeKeys": [
-
-      ],
-      "supportedSourceTypes": [
-        "android",
-        "ios",
-        "web",
-        "unity",
-        "amp",
-        "cloud"
-      ]
-    },
-    "id": "1QmWaiefYgYqxl9JGUe5PQio6bx",
-    "name": "MP",
-    "displayName": "Mixpanel",
-    "createdAt": "2019-09-13T12:05:16.231Z",
-    "updatedAt": "2020-07-22T07:18:43.880Z"
-  },
-  {
-    "config": {
-      "destConfig": {
-        "web": [
-          "useNativeSDK"
-        ],
-        "defaultConfig": [
-          "projectID",
-          "writeKey",
-          "ipAddon",
-          "uaAddon",
-          "urlAddon",
-          "referrerAddon"
-        ]
-      },
-      "excludeKeys": [
-
-      ],
-      "includeKeys": [
-        "projectID",
-        "writeKey",
-        "ipAddon",
-        "uaAddon",
-        "urlAddon",
-        "referrerAddon"
-      ],
-      "supportedSourceTypes": [
-        "android",
-        "ios",
-        "web",
-        "unity",
-        "amp",
-        "cloud"
-      ]
-    },
-    "id": "1X6kYCYjIyt3CTNK3LDmZQPYdAr",
-    "name": "KEEN",
-    "displayName": "Keen",
-    "createdAt": "2020-01-30T08:46:16.302Z",
-    "updatedAt": "2020-07-22T07:18:33.615Z"
+    "id": "1WhodbviDWg8unseq00IbQZuCgH",
+    "name": "MAILCHIMP",
+    "displayName": "Mailchimp",
+    "createdAt": "2020-01-21T12:54:35.362Z",
+    "updatedAt": "2020-08-07T07:03:46.511Z"
   },
   {
     "config": {
@@ -513,99 +155,202 @@
           "customMappings"
         ]
       },
-      "excludeKeys": [
-
-      ],
-      "includeKeys": [
-
-      ],
-      "supportedSourceTypes": [
-        "android",
-        "ios",
-        "web",
-        "unity",
-        "amp",
-        "cloud"
-      ]
+      "secretKeys": ["accessKeyId", "secretAccessKey"],
+      "excludeKeys": [],
+      "includeKeys": [],
+      "supportedSourceTypes": ["android", "ios", "web", "unity", "amp", "cloud"]
     },
     "id": "1aIXpX96tdkzhA6bzbxEovHPs9F",
     "name": "PERSONALIZE",
     "displayName": "AWS Personalize",
     "createdAt": "2020-04-09T09:24:24.883Z",
-    "updatedAt": "2020-07-22T07:18:45.170Z"
+    "updatedAt": "2020-08-07T07:04:08.913Z"
   },
   {
     "config": {
-      "destConfig": {
-        "defaultConfig": [
-          "writeKey"
-        ]
-      },
-      "excludeKeys": [
-
-      ],
-      "includeKeys": [
-
-      ],
-      "supportedSourceTypes": [
-        "android",
-        "ios",
-        "web",
-        "unity",
-        "amp",
-        "cloud"
-      ]
+      "destConfig": { "defaultConfig": ["writeKey"] },
+      "secretKeys": [],
+      "excludeKeys": [],
+      "includeKeys": [],
+      "supportedSourceTypes": ["android", "ios", "web", "unity", "amp", "cloud"]
     },
     "id": "1X6kVr34ovq4pyj2T6xyewNwJUs",
     "name": "SEGMENT",
     "displayName": "Segment",
-    "createdAt": "2020-01-30T08:45:57.154Z",
-    "updatedAt": "2020-07-22T07:18:50.628Z"
+    "createdAt": "2020-01-30T08:45:57.153Z",
+    "updatedAt": "2020-08-07T07:03:49.968Z"
   },
   {
     "config": {
-      "preview": true
+      "destConfig": { "defaultConfig": ["appId"] },
+      "secretKeys": [],
+      "excludeKeys": [],
+      "includeKeys": [],
+      "supportedSourceTypes": ["android", "ios", "web", "unity", "amp", "cloud"]
     },
-    "id": "1aIXpqAQTFgNXAjCkbqdMwaazoU",
-    "name": "ADOBE_ANALYTICS",
-    "displayName": "Adobe Analytics",
-    "createdAt": "2020-04-09T09:24:26.142Z",
-    "updatedAt": "2020-04-09T09:24:26.142Z"
+    "id": "1X6kW6RioSJQuXjk5N0zwfvxg3T",
+    "name": "HEAP",
+    "displayName": "Heap.io",
+    "createdAt": "2020-01-30T08:45:59.938Z",
+    "updatedAt": "2020-08-07T07:03:52.229Z"
   },
   {
     "config": {
-      "preview": true
+      "destConfig": {
+        "ios": ["useNativeSDK"],
+        "android": ["useNativeSDK"],
+        "defaultConfig": ["branchKey"]
+      },
+      "secretKeys": [],
+      "excludeKeys": [],
+      "includeKeys": ["branchKey"],
+      "supportedSourceTypes": ["android", "ios", "unity"]
     },
-    "id": "1aIXpwwBsxUmZImmnISqa5i970I",
-    "name": "TWITTER_ADS",
-    "displayName": "Twitter Ads",
-    "createdAt": "2020-04-09T09:24:27.779Z",
-    "updatedAt": "2020-04-09T09:24:27.779Z"
+    "id": "1X1URNGSyBOs8aoIE5ZhcLoPl9d",
+    "name": "BRANCH",
+    "displayName": "Branch Metrics",
+    "createdAt": "2020-01-28T12:04:44.965Z",
+    "updatedAt": "2020-08-07T07:03:53.271Z"
   },
   {
     "config": {
-      "preview": true
+      "destConfig": {
+        "web": ["useNativeSDK"],
+        "defaultConfig": ["containerID"]
+      },
+      "secretKeys": [],
+      "excludeKeys": [],
+      "includeKeys": ["containerID"],
+      "supportedSourceTypes": ["web"]
+    },
+    "id": "1X6kXapk8Sf8yZTJn1dYZO3OXFt",
+    "name": "GTM",
+    "displayName": "Google Tag Manager",
+    "createdAt": "2020-01-30T08:46:11.787Z",
+    "updatedAt": "2020-08-07T07:03:56.698Z"
+  },
+  {
+    "config": {
+      "destConfig": { "defaultConfig": ["apiKey"] },
+      "secretKeys": [],
+      "excludeKeys": [],
+      "includeKeys": [],
+      "supportedSourceTypes": ["android", "ios", "unity"]
+    },
+    "id": "1X6kXttCU0Ok9hZeoibVaPve8HF",
+    "name": "KOCHAVA",
+    "displayName": "Kochava",
+    "createdAt": "2020-01-30T08:46:14.764Z",
+    "updatedAt": "2020-08-07T07:03:58.314Z"
+  },
+  {
+    "config": {
+      "destConfig": {
+        "web": ["useNativeSDK"],
+        "defaultConfig": ["apiKey", "siteID"]
+      },
+      "secretKeys": [],
+      "excludeKeys": [],
+      "includeKeys": ["apiKey", "siteID"],
+      "supportedSourceTypes": ["android", "ios", "web", "unity", "amp", "cloud"]
+    },
+    "id": "1YL4iM8nd0wYQY6zB29lOf8sALB",
+    "name": "CUSTOMERIO",
+    "displayName": "Customer IO",
+    "createdAt": "2020-02-26T09:17:46.291Z",
+    "updatedAt": "2020-08-07T07:04:00.394Z"
+  },
+  {
+    "config": {
+      "destConfig": {
+        "ios": ["useNativeSDK"],
+        "unity": ["useNativeSDK"],
+        "android": ["useNativeSDK"],
+        "defaultConfig": []
+      },
+      "secretKeys": [],
+      "excludeKeys": [],
+      "includeKeys": [],
+      "supportedSourceTypes": ["android", "ios", "unity"]
+    },
+    "id": "1YL4j4RpSLloVaMwKrOoXLfiryj",
+    "name": "FIREBASE",
+    "displayName": "Firebase",
+    "createdAt": "2020-02-26T09:17:52.231Z",
+    "updatedAt": "2020-08-07T07:04:05.071Z"
+  },
+  {
+    "config": {
+      "destConfig": { "defaultConfig": ["webhookUrl", "headers"] },
+      "secretKeys": [],
+      "excludeKeys": [],
+      "includeKeys": [],
+      "supportedSourceTypes": ["android", "ios", "web", "unity", "amp", "cloud"]
+    },
+    "id": "1aIXpUrvpGno4gEuF2GvI3O9dOe",
+    "name": "WEBHOOK",
+    "displayName": "Webhook",
+    "createdAt": "2020-04-09T09:24:24.089Z",
+    "updatedAt": "2020-08-07T07:04:06.121Z"
+  },
+  {
+    "config": {
+      "destConfig": {
+        "web": ["useNativeSDK"],
+        "defaultConfig": [
+          "sendExperimentTrack",
+          "sendExperimentTrackAsNonInteractive",
+          "revenueOnlyOnOrderCompleted",
+          "trackCategorizedPages",
+          "trackNamedPages",
+          "sendExperimentIdentify",
+          "customCampaignProperties"
+        ]
+      },
+      "excludeKeys": [],
+      "includeKeys": [
+        "sendExperimentTrack",
+        "sendExperimentTrackAsNonInteractive",
+        "revenueOnlyOnOrderCompleted",
+        "trackCategorizedPages",
+        "trackNamedPages",
+        "sendExperimentIdentify",
+        "customCampaignProperties"
+      ],
+      "supportedSourceTypes": ["web"]
     },
     "id": "1aIXqAvqyMZPvPWFx6bz0xZjuxm",
     "name": "OPTIMIZELY",
     "displayName": "Optimizely Web",
     "createdAt": "2020-04-09T09:24:29.491Z",
-    "updatedAt": "2020-04-09T09:24:29.491Z"
+    "updatedAt": "2020-08-12T12:52:23.219Z"
   },
   {
-    "config": {
-      "preview": true
-    },
+    "config": { "preview": true },
+    "id": "1aIXpqAQTFgNXAjCkbqdMwaazoU",
+    "name": "ADOBE_ANALYTICS",
+    "displayName": "Adobe Analytics",
+    "createdAt": "2020-04-09T09:24:26.141Z",
+    "updatedAt": "2020-04-09T09:24:26.141Z"
+  },
+  {
+    "config": { "preview": true },
+    "id": "1aIXpwwBsxUmZImmnISqa5i970I",
+    "name": "TWITTER_ADS",
+    "displayName": "Twitter Ads",
+    "createdAt": "2020-04-09T09:24:27.778Z",
+    "updatedAt": "2020-04-09T09:24:27.778Z"
+  },
+  {
+    "config": { "preview": true },
     "id": "1aIXqGvi6YgkvskBK3tG3O8Oxmp",
     "name": "TAPLYTICS",
     "displayName": "Taplytics",
-    "createdAt": "2020-04-09T09:24:30.528Z",
-    "updatedAt": "2020-04-09T09:24:30.528Z"
+    "createdAt": "2020-04-09T09:24:30.527Z",
+    "updatedAt": "2020-04-09T09:24:30.527Z"
   },
   {
-    "config": {
-      "preview": true
-    },
+    "config": { "preview": true },
     "id": "1aIXqT6OdnoGGlRxuhOS6c61wHl",
     "name": "DRIFT",
     "displayName": "Drift",
@@ -613,9 +358,7 @@
     "updatedAt": "2020-04-09T09:24:31.164Z"
   },
   {
-    "config": {
-      "preview": true
-    },
+    "config": { "preview": true },
     "id": "1aIXqM806xAVm92nx07YwKbRrO9",
     "name": "MARKETO",
     "displayName": "Marketo",
@@ -623,14 +366,43 @@
     "updatedAt": "2020-04-09T09:24:31.794Z"
   },
   {
-    "config": {
-      "preview": true
-    },
+    "config": { "preview": true },
     "id": "1aIXqUw2VaNQMnJPg87Wr3YoJYT",
     "name": "PARDOT",
     "displayName": "Pardot",
-    "createdAt": "2020-04-09T09:24:32.437Z",
-    "updatedAt": "2020-04-09T09:24:32.437Z"
+    "createdAt": "2020-04-09T09:24:32.436Z",
+    "updatedAt": "2020-04-09T09:24:32.436Z"
+  },
+  {
+    "config": {
+      "destConfig": { "defaultConfig": ["apiKey"] },
+      "excludeKeys": [],
+      "includeKeys": [],
+      "supportedSourceTypes": ["android", "ios", "web", "unity", "amp", "cloud"]
+    },
+    "id": "1faMelb2UpdCSCsrbLUSl6U9J9Y",
+    "name": "INDICATIVE",
+    "displayName": "Indicative",
+    "createdAt": "2020-08-03T10:50:47.161Z",
+    "updatedAt": "2020-08-03T10:50:47.161Z"
+  },
+  {
+    "config": {
+      "destConfig": {
+        "ios": ["useNativeSDK"],
+        "android": ["useNativeSDK"],
+        "defaultConfig": ["appID"]
+      },
+      "secretKeys": [],
+      "excludeKeys": [],
+      "includeKeys": ["appID"],
+      "supportedSourceTypes": ["android", "ios", "unity", "amp", "cloud"]
+    },
+    "id": "1QmWamxaZqD8RquMRIAUL0fgcle",
+    "name": "FB",
+    "displayName": "Facebook App Events",
+    "createdAt": "2019-09-13T12:05:17.452Z",
+    "updatedAt": "2020-08-07T07:03:36.338Z"
   },
   {
     "config": {
@@ -641,445 +413,31 @@
           "eventHubsConnectionString"
         ]
       },
-      "excludeKeys": [
-
-      ],
-      "includeKeys": [
-
-      ],
-      "supportedSourceTypes": [
-        "android",
-        "ios",
-        "web",
-        "unity",
-        "amp",
-        "cloud"
-      ]
+      "excludeKeys": [],
+      "includeKeys": [],
+      "supportedSourceTypes": ["android", "ios", "web", "unity", "amp", "cloud"]
     },
     "id": "1cRiZGdoSLc70fDPj5fHndq5ZYm",
     "name": "AZURE_EVENT_HUB",
     "displayName": "Azure Event Hubs",
-    "createdAt": "2020-05-26T12:57:39.634Z",
+    "createdAt": "2020-05-26T12:57:39.633Z",
     "updatedAt": "2020-07-22T07:18:05.219Z"
   },
   {
     "config": {
       "destConfig": {
-        "defaultConfig": [
-          "apiKey",
-          "triggerId",
-          "customMappings"
-        ]
+        "defaultConfig": ["bucketName", "prefix", "credentials"]
       },
-      "excludeKeys": [
-
-      ],
-      "includeKeys": [
-
-      ],
-      "supportedSourceTypes": [
-        "android",
-        "ios",
-        "web",
-        "unity",
-        "amp",
-        "cloud"
-      ]
-    },
-    "id": "1X6kVYgRUIsz6upwC0gN3m54C43",
-    "name": "AUTOPILOT",
-    "displayName": "Autopilot",
-    "createdAt": "2020-01-30T08:45:55.619Z",
-    "updatedAt": "2020-07-22T07:18:02.897Z"
-  },
-  {
-    "config": {
-      "destConfig": {
-        "defaultConfig": [
-          "hostName",
-          "port",
-          "topic",
-          "sslEnabled",
-          "caCertificate"
-        ]
-      },
-      "excludeKeys": [
-
-      ],
-      "includeKeys": [
-
-      ],
-      "supportedSourceTypes": [
-        "android",
-        "ios",
-        "web",
-        "unity",
-        "amp",
-        "cloud"
-      ]
-    },
-    "id": "1c81NzcId5roSqvQ1R57zhIsC01",
-    "name": "KAFKA",
-    "displayName": "Apache Kafka",
-    "createdAt": "2020-05-19T13:36:10.777Z",
-    "updatedAt": "2020-07-22T07:18:31.899Z"
-  },
-  {
-    "config": {
-      "destConfig": {
-        "ios": [
-          "useNativeSDK"
-        ],
-        "web": [
-          "useNativeSDK"
-        ],
-        "android": [
-          "useNativeSDK"
-        ],
-        "defaultConfig": [
-          "appKey",
-          "dataCenter",
-          "restApiKey"
-        ]
-      },
-      "excludeKeys": [
-
-      ],
-      "includeKeys": [
-        "appKey",
-        "dataCenter"
-      ],
-      "supportedSourceTypes": [
-        "android",
-        "ios",
-        "web",
-        "unity",
-        "amp",
-        "cloud"
-      ]
-    },
-    "id": "1XQoHKJnI6Uf67wN20RlvAQSUB9",
-    "name": "BRAZE",
-    "displayName": "Braze",
-    "createdAt": "2020-02-06T11:13:09.247Z",
-    "updatedAt": "2020-07-22T07:18:08.507Z"
-  },
-  {
-    "config": {
-      "destConfig": {
-        "ios": [
-          "useNativeSDK",
-          "appleAppId"
-        ],
-        "android": [
-          "useNativeSDK",
-          "androidAppId"
-        ],
-        "defaultConfig": [
-          "devKey"
-        ]
-      },
-      "excludeKeys": [
-
-      ],
-      "includeKeys": [
-        "devKey",
-        "appleAppId"
-      ],
-      "supportedSourceTypes": [
-        "android",
-        "ios"
-      ]
-    },
-    "id": "1SNKkG47o5ydExyumrkRFrqWNJ0",
-    "name": "AF",
-    "displayName": "AppsFlyer",
-    "createdAt": "2019-10-18T11:39:14.800Z",
-    "updatedAt": "2020-07-22T07:18:00.537Z"
-  },
-  {
-    "config": {
-      "destConfig": {
-        "defaultConfig": [
-          "bucketName",
-          "prefix",
-          "credentials"
-        ]
-      },
-      "excludeKeys": [
-
-      ],
-      "includeKeys": [
-
-      ],
-      "supportedSourceTypes": [
-        "android",
-        "ios",
-        "web",
-        "unity",
-        "amp",
-        "cloud"
-      ]
+      "secretKeys": ["credentials"],
+      "excludeKeys": [],
+      "includeKeys": [],
+      "supportedSourceTypes": ["android", "ios", "web", "unity", "amp", "cloud"]
     },
     "id": "1VNwO6BXb2X71navTWFYEiUyXZz",
     "name": "GCS",
     "displayName": "Google Cloud Storage",
-    "createdAt": "2019-12-23T13:13:45.812Z",
-    "updatedAt": "2020-07-22T07:18:22.717Z"
-  },
-  {
-    "config": {
-      "destConfig": {
-        "ios": [
-          "useNativeSDK"
-        ],
-        "android": [
-          "useNativeSDK"
-        ],
-        "defaultConfig": [
-          "appID"
-        ]
-      },
-      "excludeKeys": [
-
-      ],
-      "includeKeys": [
-        "appID"
-      ],
-      "supportedSourceTypes": [
-        "android",
-        "ios",
-        "unity",
-        "amp",
-        "cloud"
-      ]
-    },
-    "id": "1QmWamxaZqD8RquMRIAUL0fgcle",
-    "name": "FB",
-    "displayName": "Facebook App Events",
-    "createdAt": "2019-09-13T12:05:17.452Z",
-    "updatedAt": "2020-07-22T07:18:17.153Z"
-  },
-  {
-    "config": {
-      "destConfig": {
-        "defaultConfig": [
-          "region",
-          "stream",
-          "accessKeyID",
-          "accessKey",
-          "useMessageId"
-        ]
-      },
-      "excludeKeys": [
-
-      ],
-      "includeKeys": [
-
-      ],
-      "supportedSourceTypes": [
-        "android",
-        "ios",
-        "web",
-        "unity",
-        "amp",
-        "cloud"
-      ]
-    },
-    "id": "1aIXq4KRCBNvw6m2vTI2KRDjj3O",
-    "name": "KINESIS",
-    "displayName": "Amazon Kinesis",
-    "createdAt": "2020-04-09T09:24:28.395Z",
-    "updatedAt": "2020-07-22T07:18:35.506Z"
-  },
-  {
-    "config": {
-      "destConfig": {
-        "web": [
-          "useNativeSDK"
-        ],
-        "defaultConfig": [
-          "domain",
-          "uid",
-          "sendNameAndCategoryAsTitle",
-          "video"
-        ]
-      },
-      "excludeKeys": [
-
-      ],
-      "includeKeys": [
-        "domain",
-        "uid",
-        "sendNameAndCategoryAsTitle",
-        "video"
-      ],
-      "supportedSourceTypes": [
-        "web"
-      ]
-    },
-    "id": "1YL4iTQ63Nd7Z8tDQVGfVHNtIqn",
-    "name": "CHARTBEAT",
-    "displayName": "Chartbeat",
-    "createdAt": "2020-02-26T09:17:47.687Z",
-    "updatedAt": "2020-07-22T07:18:11.156Z"
-  },
-  {
-    "config": {
-      "destConfig": {
-        "web": [
-          "useNativeSDK"
-        ],
-        "defaultConfig": [
-          "fs_debug_mode",
-          "fs_org"
-        ]
-      },
-      "excludeKeys": [
-
-      ],
-      "includeKeys": [
-        "fs_debug_mode",
-        "fs_org"
-      ],
-      "supportedSourceTypes": [
-        "web"
-      ]
-    },
-    "id": "1aIY8UDEW1vZJ6n21ZO9BmRHgAp",
-    "name": "FULLSTORY",
-    "displayName": "Fullstory",
-    "createdAt": "2020-04-09T09:26:55.187Z",
-    "updatedAt": "2020-07-22T07:18:20.503Z"
-  },
-  {
-    "config": {
-      "destConfig": {
-        "web": [
-          "useNativeSDK"
-        ],
-        "defaultConfig": [
-          "conversionID",
-          "pageLoadConversions",
-          "clickEventConversions",
-          "defaultPageConversion"
-        ]
-      },
-      "excludeKeys": [
-
-      ],
-      "includeKeys": [
-        "conversionID",
-        "pageLoadConversions",
-        "clickEventConversions",
-        "defaultPageConversion"
-      ],
-      "supportedSourceTypes": [
-        "web"
-      ]
-    },
-    "id": "1X6kXNpFwP2NmnjWGuVWb8qoJ8L",
-    "name": "GOOGLEADS",
-    "displayName": "Google Ads",
-    "createdAt": "2020-01-30T08:46:10.260Z",
-    "updatedAt": "2020-07-22T07:18:23.817Z"
-  },
-  {
-    "config": {
-      "destConfig": {
-        "web": [
-          "useNativeSDK"
-        ],
-        "defaultConfig": [
-          "siteID"
-        ]
-      },
-      "excludeKeys": [
-
-      ],
-      "includeKeys": [
-        "siteID"
-      ],
-      "supportedSourceTypes": [
-        "web"
-      ]
-    },
-    "id": "1SxbQXdfQ2NzIdqNO3GceshF4V0",
-    "name": "HOTJAR",
-    "displayName": "Hotjar",
-    "createdAt": "2019-10-31T07:49:37.450Z",
-    "updatedAt": "2020-07-22T07:18:27.280Z"
-  },
-  {
-    "config": {
-      "destConfig": {
-        "web": [
-          "useNativeSDK"
-        ],
-        "defaultConfig": [
-          "apiKey",
-          "prefixProperties"
-        ]
-      },
-      "excludeKeys": [
-
-      ],
-      "includeKeys": [
-        "apiKey",
-        "prefixProperties"
-      ],
-      "supportedSourceTypes": [
-        "android",
-        "ios",
-        "web",
-        "unity",
-        "amp",
-        "cloud"
-      ]
-    },
-    "id": "1X6lTvySRXRVFRTPhQOn3YmkyB1",
-    "name": "KISSMETRICS",
-    "displayName": "Kiss Metrics",
-    "createdAt": "2020-01-30T08:53:56.193Z",
-    "updatedAt": "2020-07-22T07:18:36.866Z"
-  },
-  {
-    "config": {
-      "destConfig": {
-        "ios": [
-          "useNativeSDK"
-        ],
-        "web": [
-          "useNativeSDK",
-          "releaseStage",
-          "ssl"
-        ],
-        "android": [
-          "useNativeSDK"
-        ],
-        "defaultConfig": [
-          "apiKey"
-        ]
-      },
-      "excludeKeys": [
-
-      ],
-      "includeKeys": [
-        "apiKey",
-        "releaseStage",
-        "ssl"
-      ],
-      "supportedSourceTypes": [
-        "android",
-        "ios",
-        "web"
-      ]
-    },
-    "id": "1aIXpbUCb7VLzjr0nsde61Kcd7M",
-    "name": "BUGSNAG",
-    "displayName": "Bugsnag",
-    "createdAt": "2020-04-09T09:24:25.514Z",
-    "updatedAt": "2020-07-22T07:18:09.584Z"
+    "createdAt": "2019-12-23T13:13:45.811Z",
+    "updatedAt": "2020-08-07T07:03:40.048Z"
   },
   {
     "config": {
@@ -1093,33 +451,269 @@
           "useSSL"
         ]
       },
-      "excludeKeys": [
-
-      ],
-      "includeKeys": [
-
-      ],
-      "supportedSourceTypes": [
-        "android",
-        "ios",
-        "web",
-        "unity",
-        "amp",
-        "cloud"
-      ]
+      "secretKeys": ["accessKeyID", "secretAccessKey"],
+      "excludeKeys": [],
+      "includeKeys": [],
+      "supportedSourceTypes": ["android", "ios", "web", "unity", "amp", "cloud"]
     },
     "id": "1RtJJUdVrJgPt6t06Rjjquztzgh",
     "name": "MINIO",
     "displayName": "MinIO",
-    "createdAt": "2019-10-07T20:33:05.986Z",
-    "updatedAt": "2020-07-22T07:18:42.764Z"
+    "createdAt": "2019-10-07T20:33:05.985Z",
+    "updatedAt": "2020-08-07T07:03:42.155Z"
   },
   {
     "config": {
       "destConfig": {
-        "web": [
-          "useNativeSDK"
-        ],
+        "ios": ["useNativeSDK", "mobileApiKeyIOS"],
+        "web": ["useNativeSDK"],
+        "android": ["useNativeSDK", "mobileApiKeyAndroid"],
+        "defaultConfig": ["apiKey", "appId", "collectContext"]
+      },
+      "secretKeys": [],
+      "excludeKeys": [],
+      "includeKeys": ["appId", "mobileApiKeyAndroid", "mobileApiKeyIOS"],
+      "supportedSourceTypes": ["android", "ios", "web", "unity", "amp", "cloud"]
+    },
+    "id": "1X6kVsEiRgH8qGqMMuB1LltEQE1",
+    "name": "INTERCOM",
+    "displayName": "Intercom",
+    "createdAt": "2020-01-30T08:45:58.643Z",
+    "updatedAt": "2020-08-07T07:03:51.487Z"
+  },
+  {
+    "config": {
+      "destConfig": {
+        "ios": ["useNativeSDK", "appleAppId"],
+        "android": ["useNativeSDK", "androidAppId"],
+        "defaultConfig": ["devKey"]
+      },
+      "secretKeys": [],
+      "excludeKeys": [],
+      "includeKeys": ["devKey", "appleAppId"],
+      "supportedSourceTypes": ["android", "ios"]
+    },
+    "id": "1SNKkG47o5ydExyumrkRFrqWNJ0",
+    "name": "AF",
+    "displayName": "AppsFlyer",
+    "createdAt": "2019-10-18T11:39:14.800Z",
+    "updatedAt": "2020-08-07T07:03:45.714Z"
+  },
+  {
+    "config": {
+      "destConfig": {
+        "defaultConfig": [
+          "hostName",
+          "port",
+          "topic",
+          "sslEnabled",
+          "caCertificate"
+        ]
+      },
+      "excludeKeys": [],
+      "includeKeys": [],
+      "supportedSourceTypes": ["android", "ios", "web", "unity", "amp", "cloud"]
+    },
+    "id": "1c81NzcId5roSqvQ1R57zhIsC01",
+    "name": "KAFKA",
+    "displayName": "Apache Kafka",
+    "createdAt": "2020-05-19T13:36:10.776Z",
+    "updatedAt": "2020-07-22T07:18:31.898Z"
+  },
+  {
+    "config": {
+      "destConfig": {
+        "web": ["useNativeSDK"],
+        "defaultConfig": ["apiKey", "prefixProperties"]
+      },
+      "secretKeys": [],
+      "excludeKeys": [],
+      "includeKeys": ["apiKey", "prefixProperties"],
+      "supportedSourceTypes": ["android", "ios", "web", "unity", "amp", "cloud"]
+    },
+    "id": "1X6lTvySRXRVFRTPhQOn3YmkyB1",
+    "name": "KISSMETRICS",
+    "displayName": "Kiss Metrics",
+    "createdAt": "2020-01-30T08:53:56.193Z",
+    "updatedAt": "2020-08-07T07:03:59.150Z"
+  },
+  {
+    "config": {
+      "destConfig": { "web": ["useNativeSDK"], "defaultConfig": ["siteID"] },
+      "secretKeys": [],
+      "excludeKeys": [],
+      "includeKeys": ["siteID"],
+      "supportedSourceTypes": ["web"]
+    },
+    "id": "1SxbQXdfQ2NzIdqNO3GceshF4V0",
+    "name": "HOTJAR",
+    "displayName": "Hotjar",
+    "createdAt": "2019-10-31T07:49:37.450Z",
+    "updatedAt": "2020-08-07T07:03:47.246Z"
+  },
+  {
+    "config": {
+      "destConfig": {
+        "web": ["useNativeSDK"],
+        "defaultConfig": [
+          "conversionID",
+          "pageLoadConversions",
+          "clickEventConversions",
+          "defaultPageConversion"
+        ]
+      },
+      "secretKeys": [],
+      "excludeKeys": [],
+      "includeKeys": [
+        "conversionID",
+        "pageLoadConversions",
+        "clickEventConversions",
+        "defaultPageConversion"
+      ],
+      "supportedSourceTypes": ["web"]
+    },
+    "id": "1X6kXNpFwP2NmnjWGuVWb8qoJ8L",
+    "name": "GOOGLEADS",
+    "displayName": "Google Ads",
+    "createdAt": "2020-01-30T08:46:10.259Z",
+    "updatedAt": "2020-08-07T07:03:49.185Z"
+  },
+  {
+    "config": {
+      "destConfig": {
+        "defaultConfig": ["apiKey", "triggerId", "customMappings"]
+      },
+      "secretKeys": [],
+      "excludeKeys": [],
+      "includeKeys": [],
+      "supportedSourceTypes": ["android", "ios", "web", "unity", "amp", "cloud"]
+    },
+    "id": "1X6kVYgRUIsz6upwC0gN3m54C43",
+    "name": "AUTOPILOT",
+    "displayName": "Autopilot",
+    "createdAt": "2020-01-30T08:45:55.619Z",
+    "updatedAt": "2020-08-07T07:03:50.768Z"
+  },
+  {
+    "config": {
+      "destConfig": {
+        "ios": ["useNativeSDK"],
+        "web": ["useNativeSDK"],
+        "android": ["useNativeSDK"],
+        "defaultConfig": ["appKey", "dataCenter", "restApiKey"]
+      },
+      "secretKeys": ["restApiKey"],
+      "excludeKeys": [],
+      "includeKeys": ["appKey", "dataCenter"],
+      "supportedSourceTypes": ["android", "ios", "web", "unity", "amp", "cloud"]
+    },
+    "id": "1XQoHKJnI6Uf67wN20RlvAQSUB9",
+    "name": "BRAZE",
+    "displayName": "Braze",
+    "createdAt": "2020-02-06T11:13:09.246Z",
+    "updatedAt": "2020-08-07T07:03:54.622Z"
+  },
+  {
+    "config": {
+      "destConfig": {
+        "ios": ["useNativeSDK"],
+        "web": ["useNativeSDK", "releaseStage", "ssl"],
+        "android": ["useNativeSDK"],
+        "defaultConfig": ["apiKey"]
+      },
+      "secretKeys": ["apiKey"],
+      "excludeKeys": [],
+      "includeKeys": ["apiKey", "releaseStage", "ssl"],
+      "supportedSourceTypes": ["android", "ios", "web"]
+    },
+    "id": "1aIXpbUCb7VLzjr0nsde61Kcd7M",
+    "name": "BUGSNAG",
+    "displayName": "Bugsnag",
+    "createdAt": "2020-04-09T09:24:25.514Z",
+    "updatedAt": "2020-08-07T07:04:11.924Z"
+  },
+  {
+    "config": {
+      "destConfig": {
+        "web": ["useNativeSDK"],
+        "defaultConfig": ["fs_debug_mode", "fs_org"]
+      },
+      "secretKeys": [],
+      "excludeKeys": [],
+      "includeKeys": ["fs_debug_mode", "fs_org"],
+      "supportedSourceTypes": ["web"]
+    },
+    "id": "1aIY8UDEW1vZJ6n21ZO9BmRHgAp",
+    "name": "FULLSTORY",
+    "displayName": "Fullstory",
+    "createdAt": "2020-04-09T09:26:55.187Z",
+    "updatedAt": "2020-08-07T07:04:03.070Z"
+  },
+  {
+    "config": {
+      "destConfig": {
+        "defaultConfig": [
+          "region",
+          "stream",
+          "accessKeyID",
+          "accessKey",
+          "useMessageId"
+        ]
+      },
+      "secretKeys": ["accessKeyID", "accessKey"],
+      "excludeKeys": [],
+      "includeKeys": [],
+      "supportedSourceTypes": ["android", "ios", "web", "unity", "amp", "cloud"]
+    },
+    "id": "1aIXq4KRCBNvw6m2vTI2KRDjj3O",
+    "name": "KINESIS",
+    "displayName": "Amazon Kinesis",
+    "createdAt": "2020-04-09T09:24:28.395Z",
+    "updatedAt": "2020-08-07T07:04:10.627Z"
+  },
+  {
+    "config": {
+      "destConfig": {
+        "web": ["useNativeSDK"],
+        "defaultConfig": [
+          "domain",
+          "uid",
+          "sendNameAndCategoryAsTitle",
+          "video"
+        ]
+      },
+      "secretKeys": [],
+      "excludeKeys": [],
+      "includeKeys": ["domain", "uid", "sendNameAndCategoryAsTitle", "video"],
+      "supportedSourceTypes": ["web"]
+    },
+    "id": "1YL4iTQ63Nd7Z8tDQVGfVHNtIqn",
+    "name": "CHARTBEAT",
+    "displayName": "Chartbeat",
+    "createdAt": "2020-02-26T09:17:47.687Z",
+    "updatedAt": "2020-08-07T07:04:01.350Z"
+  },
+  {
+    "config": {
+      "destConfig": {
+        "ios": ["useNativeSDK"],
+        "android": ["useNativeSDK"],
+        "defaultConfig": ["trackKnownUsers", "nonInteraction", "listen"]
+      },
+      "excludeKeys": [],
+      "includeKeys": ["trackKnownUsers", "nonInteraction", "listen"],
+      "supportedSourceTypes": ["android", "ios"]
+    },
+    "id": "1g01au7cP5yy84VCKBSMNKKj8oA",
+    "name": "OPTIMIZELY_FULLSTACK",
+    "displayName": "Optimizely Fullstack",
+    "createdAt": "2020-08-12T12:52:42.084Z",
+    "updatedAt": "2020-08-12T12:52:42.084Z"
+  },
+  {
+    "config": {
+      "destConfig": {
+        "web": ["useNativeSDK"],
         "defaultConfig": [
           "blacklistPiiProperties",
           "categoryToContent",
@@ -1134,9 +728,7 @@
           "whitelistPiiProperties"
         ]
       },
-      "excludeKeys": [
-
-      ],
+      "excludeKeys": [],
       "includeKeys": [
         "blacklistPiiProperties",
         "categoryToContent",
@@ -1150,198 +742,13 @@
         "userIdAsPixelId",
         "whitelistPiiProperties"
       ],
-      "supportedSourceTypes": [
-        "web"
-      ]
+      "supportedSourceTypes": ["web"]
     },
     "id": "1aIXpsUVMU38nBFIE4QTiZu9Vxo",
     "name": "FACEBOOK_PIXEL",
     "displayName": "Facebook Pixel",
     "createdAt": "2020-04-09T09:24:27.173Z",
-    "updatedAt": "2020-07-22T07:18:16.062Z"
-  },
-  {
-    "config": {
-      "destConfig": {
-        "ios": [
-          "useNativeSDK",
-          "mobileApiKeyIOS"
-        ],
-        "web": [
-          "useNativeSDK"
-        ],
-        "android": [
-          "useNativeSDK",
-          "mobileApiKeyAndroid"
-        ],
-        "defaultConfig": [
-          "apiKey",
-          "appId",
-          "collectContext"
-        ]
-      },
-      "excludeKeys": [
-
-      ],
-      "includeKeys": [
-        "appId",
-        "mobileApiKeyAndroid",
-        "mobileApiKeyIOS"
-      ],
-      "supportedSourceTypes": [
-        "android",
-        "ios",
-        "web",
-        "unity",
-        "amp",
-        "cloud"
-      ]
-    },
-    "id": "1X6kVsEiRgH8qGqMMuB1LltEQE1",
-    "name": "INTERCOM",
-    "displayName": "Intercom",
-    "createdAt": "2020-01-30T08:45:58.644Z",
-    "updatedAt": "2020-07-22T07:18:29.519Z"
-  },
-  {
-    "config": {
-      "destConfig": {
-        "defaultConfig": [
-          "host",
-          "port",
-          "database",
-          "user",
-          "password",
-          "bucketName",
-          "accessKeyID",
-          "accessKey",
-          "prefix",
-          "namespace",
-          "syncFrequency",
-          "syncStartAt",
-          "enableSSE"
-        ]
-      },
-      "excludeKeys": [
-
-      ],
-      "includeKeys": [
-
-      ],
-      "supportedSourceTypes": [
-        "android",
-        "ios",
-        "web",
-        "unity",
-        "amp",
-        "cloud"
-      ]
-    },
-    "id": "1VNwiu2FEEj2BOny8ygGor2K16V",
-    "name": "RS",
-    "displayName": "Redshift",
-    "createdAt": "2019-12-23T13:16:30.606Z",
-    "updatedAt": "2020-07-22T07:18:47.353Z"
-  },
-  {
-    "config": {
-      "destConfig": {
-        "defaultConfig": [
-          "project",
-          "location",
-          "bucketName",
-          "credentials",
-          "prefix",
-          "namespace",
-          "syncFrequency",
-          "syncStartAt"
-        ]
-      },
-      "excludeKeys": [
-
-      ],
-      "includeKeys": [
-
-      ],
-      "supportedSourceTypes": [
-        "android",
-        "ios",
-        "web",
-        "unity",
-        "amp",
-        "cloud"
-      ]
-    },
-    "id": "1VNweG19HekyfdmJ24jOLxK9VmQ",
-    "name": "BQ",
-    "displayName": "BigQuery",
-    "createdAt": "2019-12-23T13:15:53.527Z",
-    "updatedAt": "2020-07-22T07:18:06.294Z"
-  },
-  {
-    "config": {
-      "destConfig": {
-        "defaultConfig": [
-          "eventChannelSettings",
-          "identifyTemplate",
-          "eventTemplateSettings",
-          "webhookUrl",
-          "whitelistedTraitsSettings"
-        ]
-      },
-      "excludeKeys": [
-
-      ],
-      "includeKeys": [
-
-      ],
-      "supportedSourceTypes": [
-        "android",
-        "ios",
-        "web",
-        "unity",
-        "amp",
-        "cloud"
-      ]
-    },
-    "id": "1aIY8Oz9p3DqGQZQdHqHvUuUJjS",
-    "name": "SLACK",
-    "displayName": "Slack",
-    "createdAt": "2020-04-09T09:26:54.183Z",
-    "updatedAt": "2020-07-22T07:18:52.102Z"
-  },
-  {
-    "config": {
-      "destConfig": {
-        "defaultConfig": [
-          "email",
-          "apiToken",
-          "domain",
-          "createUsersAsVerified",
-          "sendGroupCallsWithoutUserId",
-          "removeUsersFromOrganization"
-        ]
-      },
-      "excludeKeys": [
-
-      ],
-      "includeKeys": [
-
-      ],
-      "supportedSourceTypes": [
-        "android",
-        "ios",
-        "web",
-        "unity",
-        "amp",
-        "cloud"
-      ]
-    },
-    "id": "1aIXpSzPrmx4Y5SBkIKdpRAFBgd",
-    "name": "ZENDESK",
-    "displayName": "Zendesk",
-    "createdAt": "2020-04-09T09:24:23.490Z",
-    "updatedAt": "2020-07-22T07:18:56.788Z"
+    "updatedAt": "2020-07-22T07:18:16.061Z"
   },
   {
     "config": {
@@ -1368,63 +775,85 @@
           "enableSSE"
         ]
       },
-      "excludeKeys": [
-
-      ],
-      "includeKeys": [
-
-      ],
-      "supportedSourceTypes": [
-        "android",
-        "ios",
-        "web",
-        "unity",
-        "amp",
-        "cloud"
-      ]
+      "secretKeys": ["password", "accessKeyID", "accessKey"],
+      "excludeKeys": [],
+      "includeKeys": [],
+      "supportedSourceTypes": ["android", "ios", "web", "unity", "amp", "cloud"]
     },
     "id": "1XnZdQcNWNUwtPLr669L8F6KdJu",
     "name": "SNOWFLAKE",
     "displayName": "Snowflake",
-    "createdAt": "2020-02-14T12:38:25.478Z",
-    "updatedAt": "2020-07-22T07:18:53.233Z"
+    "createdAt": "2020-02-14T12:38:25.477Z",
+    "updatedAt": "2020-08-07T07:03:44.933Z"
   },
   {
     "config": {
       "destConfig": {
         "defaultConfig": [
-          "userName",
-          "password",
-          "initialAccessToken"
+          "project",
+          "location",
+          "bucketName",
+          "credentials",
+          "prefix",
+          "namespace",
+          "syncFrequency",
+          "syncStartAt"
         ]
       },
-      "excludeKeys": [
-
-      ],
-      "includeKeys": [
-
-      ],
-      "supportedSourceTypes": [
-        "android",
-        "ios",
-        "web",
-        "unity",
-        "amp",
-        "cloud"
-      ]
+      "secretKeys": ["credentials"],
+      "excludeKeys": [],
+      "includeKeys": [],
+      "supportedSourceTypes": ["android", "ios", "web", "unity", "amp", "cloud"]
     },
-    "id": "1T99nYr8QMzkAm9sSylOnegLlv2",
-    "name": "SALESFORCE",
-    "displayName": "Salesforce",
-    "createdAt": "2019-11-04T10:00:11.962Z",
-    "updatedAt": "2020-07-22T07:18:49.468Z"
+    "id": "1VNweG19HekyfdmJ24jOLxK9VmQ",
+    "name": "BQ",
+    "displayName": "BigQuery",
+    "createdAt": "2019-12-23T13:15:53.527Z",
+    "updatedAt": "2020-08-07T07:03:44.197Z"
   },
   {
     "config": {
       "destConfig": {
-        "web": [
-          "useNativeSDK"
-        ],
+        "defaultConfig": ["userName", "password", "initialAccessToken"]
+      },
+      "secretKeys": ["password", "initialAccessToken"],
+      "excludeKeys": [],
+      "includeKeys": [],
+      "supportedSourceTypes": ["android", "ios", "web", "unity", "amp", "cloud"]
+    },
+    "id": "1T99nYr8QMzkAm9sSylOnegLlv2",
+    "name": "SALESFORCE",
+    "displayName": "Salesforce",
+    "createdAt": "2019-11-04T10:00:11.961Z",
+    "updatedAt": "2020-08-07T07:03:48.462Z"
+  },
+  {
+    "config": {
+      "destConfig": {
+        "defaultConfig": [
+          "email",
+          "apiToken",
+          "domain",
+          "createUsersAsVerified",
+          "sendGroupCallsWithoutUserId",
+          "removeUsersFromOrganization"
+        ]
+      },
+      "secretKeys": ["apiToken"],
+      "excludeKeys": [],
+      "includeKeys": [],
+      "supportedSourceTypes": ["android", "ios", "web", "unity", "amp", "cloud"]
+    },
+    "id": "1aIXpSzPrmx4Y5SBkIKdpRAFBgd",
+    "name": "ZENDESK",
+    "displayName": "Zendesk",
+    "createdAt": "2020-04-09T09:24:23.490Z",
+    "updatedAt": "2020-08-07T07:04:09.747Z"
+  },
+  {
+    "config": {
+      "destConfig": {
+        "web": ["useNativeSDK"],
         "defaultConfig": [
           "accountId",
           "isSPA",
@@ -1435,9 +864,8 @@
           "useExistingJquery"
         ]
       },
-      "excludeKeys": [
-
-      ],
+      "secretKeys": [],
+      "excludeKeys": [],
       "includeKeys": [
         "accountId",
         "isSPA",
@@ -1447,15 +875,67 @@
         "settingsTolerance",
         "useExistingJquery"
       ],
-      "supportedSourceTypes": [
-        "web"
-      ]
+      "supportedSourceTypes": ["web"]
     },
     "id": "1X6kXqLXfUAh8Uei0WCeR2tXktG",
     "name": "VWO",
     "displayName": "VWO",
     "createdAt": "2020-01-30T08:46:13.322Z",
-    "updatedAt": "2020-07-22T07:18:54.376Z"
+    "updatedAt": "2020-08-07T07:03:55.420Z"
+  },
+  {
+    "config": {
+      "destConfig": {
+        "web": ["useNativeSDK"],
+        "defaultConfig": [
+          "projectID",
+          "writeKey",
+          "ipAddon",
+          "uaAddon",
+          "urlAddon",
+          "referrerAddon"
+        ]
+      },
+      "secretKeys": [],
+      "excludeKeys": [],
+      "includeKeys": [
+        "projectID",
+        "writeKey",
+        "ipAddon",
+        "uaAddon",
+        "urlAddon",
+        "referrerAddon"
+      ],
+      "supportedSourceTypes": ["android", "ios", "web", "unity", "amp", "cloud"]
+    },
+    "id": "1X6kYCYjIyt3CTNK3LDmZQPYdAr",
+    "name": "KEEN",
+    "displayName": "Keen",
+    "createdAt": "2020-01-30T08:46:16.302Z",
+    "updatedAt": "2020-08-07T07:03:57.477Z"
+  },
+  {
+    "config": {
+      "destConfig": {
+        "ios": ["useNativeSDK", "useNativeSDKToSend"],
+        "android": ["useNativeSDK", "useNativeSDKToSend"],
+        "defaultConfig": ["applicationId", "clientKey", "isDevelop"]
+      },
+      "secretKeys": ["clientKey"],
+      "excludeKeys": [],
+      "includeKeys": [
+        "applicationId",
+        "clientKey",
+        "isDevelop",
+        "useNativeSDKToSend"
+      ],
+      "supportedSourceTypes": ["android", "ios", "unity", "amp", "cloud"]
+    },
+    "id": "1YL4ioNzlDRqku9HK9QIJ3WNgXp",
+    "name": "LEANPLUM",
+    "displayName": "Leanplum",
+    "createdAt": "2020-02-26T09:17:50.696Z",
+    "updatedAt": "2020-08-07T07:04:04.090Z"
   },
   {
     "config": {
@@ -1494,25 +974,15 @@
         "secretAccessKey",
         "credentials"
       ],
-      "excludeKeys": [
-
-      ],
-      "includeKeys": [
-
-      ],
-      "supportedSourceTypes": [
-        "android",
-        "ios",
-        "web",
-        "unity",
-        "cloud"
-      ]
+      "excludeKeys": [],
+      "includeKeys": [],
+      "supportedSourceTypes": ["android", "ios", "web", "unity", "cloud"]
     },
     "id": "1emQpmUoKL9hUQySclLOgsY2KRB",
     "name": "CLICKHOUSE",
     "displayName": "ClickHouse",
-    "createdAt": "2020-07-16T18:34:33.934Z",
-    "updatedAt": "2020-07-25T08:49:29.75Z"
+    "createdAt": "2020-07-16T18:34:33.933Z",
+    "updatedAt": "2020-07-25T08:49:29.754Z"
   },
   {
     "config": {
@@ -1525,66 +995,77 @@
           "trackNamedPages"
         ]
       },
-      "excludeKeys": [
-
-      ],
-      "includeKeys": [
-
-      ],
-      "supportedSourceTypes": [
-        "android",
-        "ios",
-        "web",
-        "unity",
-        "amp",
-        "cloud"
-      ]
+      "excludeKeys": [],
+      "includeKeys": [],
+      "supportedSourceTypes": ["android", "ios", "web", "unity", "amp", "cloud"]
     },
     "id": "1dg9eJVZe7gik3os5wD7LPi2Sb4",
     "name": "ITERABLE",
     "displayName": "Iterable",
     "createdAt": "2020-06-22T14:26:02.921Z",
-    "updatedAt": "2020-07-22T07:18:30.794Z"
+    "updatedAt": "2020-07-22T07:18:30.793Z"
   },
   {
     "config": {
       "destConfig": {
-        "ios": [
-          "useNativeSDK",
-          "useNativeSDKToSend"
-        ],
-        "android": [
-          "useNativeSDK",
-          "useNativeSDKToSend"
-        ],
+        "amp": ["useNativeSDK"],
+        "ios": ["useNativeSDK"],
+        "web": ["useNativeSDK"],
+        "android": ["useNativeSDK"],
         "defaultConfig": [
-          "applicationId",
-          "clientKey",
-          "isDevelop"
+          "bcpUrlSettingsPixel",
+          "bcpUrlSettingsIframe",
+          "dspUrlSettingsPixel",
+          "dspUrlSettingsIframe",
+          "mappings"
         ]
       },
-      "excludeKeys": [
-
-      ],
+      "secretKeys": [],
+      "excludeKeys": [],
       "includeKeys": [
-        "applicationId",
-        "clientKey",
-        "isDevelop",
-        "useNativeSDKToSend"
+        "bcpUrlSettingsPixel",
+        "bcpUrlSettingsIframe",
+        "dspUrlSettingsPixel",
+        "dspUrlSettingsIframe",
+        "mappings"
       ],
-      "supportedSourceTypes": [
-        "android",
-        "ios",
-        "unity",
-        "amp",
-        "cloud"
-      ]
+      "supportedSourceTypes": ["web", "android", "ios", "amp"]
     },
-    "id": "1YL4ioNzlDRqku9HK9QIJ3WNgXp",
-    "name": "LEANPLUM",
-    "displayName": "Leanplum",
-    "createdAt": "2020-02-26T09:17:50.697Z",
-    "updatedAt": "2020-07-22T07:18:39.461Z"
+    "id": "1ZcHYyvQGJTZnJGx6rxrmEtLZnv",
+    "name": "LOTAME",
+    "displayName": "Lotame",
+    "createdAt": "2020-03-25T10:18:33.495Z",
+    "updatedAt": "2020-08-07T07:04:07.066Z"
+  },
+  {
+    "config": {
+      "destConfig": {
+        "defaultConfig": [
+          "host",
+          "port",
+          "database",
+          "user",
+          "password",
+          "bucketName",
+          "accessKeyID",
+          "accessKey",
+          "prefix",
+          "namespace",
+          "syncFrequency",
+          "syncStartAt",
+          "enableSSE"
+        ]
+      },
+      "secretKeys": ["password", "accessKeyID", "accessKey"],
+      "excludeKeys": [],
+      "includeKeys": [],
+      "supportedSourceTypes": ["android", "ios", "web", "unity", "amp", "cloud"]
+    },
+    "id": "1VNwiu2FEEj2BOny8ygGor2K16V",
+    "name": "RS",
+    "displayName": "Redshift",
+    "createdAt": "2019-12-23T13:16:30.606Z",
+    "updatedAt": "2020-08-07T07:03:43.373Z"
   },
   {
     "config": {
@@ -1598,20 +1079,9 @@
           "resourceID"
         ]
       },
-      "excludeKeys": [
-
-      ],
-      "includeKeys": [
-
-      ],
-      "supportedSourceTypes": [
-        "android",
-        "ios",
-        "web",
-        "unity",
-        "amp",
-        "cloud"
-      ]
+      "excludeKeys": [],
+      "includeKeys": [],
+      "supportedSourceTypes": ["android", "ios", "web", "unity", "amp", "cloud"]
     },
     "id": "1ed9rHy1qMMkxvmSXJqN87yHMd8",
     "name": "EVENTBRIDGE",
@@ -1622,79 +1092,39 @@
   {
     "config": {
       "destConfig": {
-        "defaultConfig": [
-          "mapEvents",
-          "region",
-          "accessKeyID",
-          "accessKey"
-        ]
+        "defaultConfig": ["mapEvents", "region", "accessKeyID", "accessKey"]
       },
-      "excludeKeys": [
-
-      ],
-      "includeKeys": [
-
-      ],
-      "supportedSourceTypes": [
-        "android",
-        "ios",
-        "web",
-        "unity",
-        "amp",
-        "cloud"
-      ]
+      "excludeKeys": [],
+      "includeKeys": [],
+      "supportedSourceTypes": ["android", "ios", "web", "unity", "amp", "cloud"]
     },
     "id": "1ed9u01TgyKb1f76QTGFejp65KV",
     "name": "FIREHOSE",
     "displayName": "Amazon Kinesis Firehose",
-    "createdAt": "2020-07-13T11:47:01.101Z",
-    "updatedAt": "2020-07-22T07:18:19.410Z"
+    "createdAt": "2020-07-13T11:47:01.100Z",
+    "updatedAt": "2020-07-22T07:18:19.409Z"
   },
   {
     "config": {
       "destConfig": {
-        "amp": [
-          "useNativeSDK"
-        ],
-        "ios": [
-          "useNativeSDK"
-        ],
-        "web": [
-          "useNativeSDK"
-        ],
-        "android": [
-          "useNativeSDK"
-        ],
         "defaultConfig": [
-          "bcpUrlSettingsPixel",
-          "bcpUrlSettingsIframe",
-          "dspUrlSettingsPixel",
-          "dspUrlSettingsIframe",
-          "mappings"
+          "eventChannelSettings",
+          "identifyTemplate",
+          "eventTemplateSettings",
+          "webhookUrl",
+          "whitelistedTraitsSettings"
         ]
       },
-      "excludeKeys": [
-
-      ],
-      "includeKeys": [
-        "bcpUrlSettingsPixel",
-        "bcpUrlSettingsIframe",
-        "dspUrlSettingsPixel",
-        "dspUrlSettingsIframe",
-        "mappings"
-      ],
-      "supportedSourceTypes": [
-        "web",
-        "android",
-        "ios",
-        "amp"
-      ]
+      "secretKeys": [],
+      "excludeKeys": [],
+      "includeKeys": [],
+      "supportedSourceTypes": ["android", "ios", "web", "unity", "amp", "cloud"]
     },
-    "id": "1ZcHYyvQGJTZnJGx6rxrmEtLZnv",
-    "name": "LOTAME",
-    "displayName": "Lotame",
-    "createdAt": "2020-03-25T10:18:33.496Z",
-    "updatedAt": "2020-07-22T07:18:40.627Z"
+    "id": "1aIY8Oz9p3DqGQZQdHqHvUuUJjS",
+    "name": "SLACK",
+    "displayName": "Slack",
+    "createdAt": "2020-04-09T09:26:54.182Z",
+    "updatedAt": "2020-08-07T07:04:08.109Z"
   },
   {
     "config": {
@@ -1713,6 +1143,7 @@
           "accountName",
           "accountKey",
           "credentials",
+          "namespace",
           "secretAccessKey",
           "useSSL",
           "containerName",
@@ -1721,33 +1152,20 @@
           "syncStartAt"
         ]
       },
-      "excludeKeys": [
-
-      ],
-      "includeKeys": [
-
-      ],
-      "supportedSourceTypes": [
-        "android",
-        "ios",
-        "web",
-        "unity",
-        "amp",
-        "cloud"
-      ]
+      "excludeKeys": [],
+      "includeKeys": [],
+      "supportedSourceTypes": ["android", "ios", "web", "unity", "amp", "cloud"]
     },
     "id": "1clMtkrCRQa2kTdiyPCZlD9wXmY",
     "name": "POSTGRES",
     "displayName": "Postgres",
     "createdAt": "2020-06-02T11:55:43.060Z",
-    "updatedAt": "2020-07-22T07:18:46.260Z"
+    "updatedAt": "2020-08-08T12:37:23.116Z"
   },
   {
     "config": {
       "destConfig": {
-        "web": [
-          "useNativeSDK"
-        ],
+        "web": ["useNativeSDK"],
         "defaultConfig": [
           "trackingID",
           "customMappings",
@@ -1775,9 +1193,8 @@
           "useGoogleAmpClientId"
         ]
       },
-      "excludeKeys": [
-
-      ],
+      "secretKeys": [],
+      "excludeKeys": [],
       "includeKeys": [
         "trackingID",
         "customMappings",
@@ -1804,19 +1221,13 @@
         "sendUserId",
         "useGoogleAmpClientId"
       ],
-      "supportedSourceTypes": [
-        "android",
-        "ios",
-        "web",
-        "unity",
-        "amp",
-        "cloud"
-      ]
+      "supportedSourceTypes": ["android", "ios", "web", "unity", "amp", "cloud"]
     },
     "id": "1QGzNyNSA4alXixnhDcq4C10ac2",
     "name": "GA",
     "displayName": "Google Analytics",
     "createdAt": "2019-09-02T08:08:04.178Z",
-    "updatedAt": "2020-07-22T07:18:21.633Z"
+    "updatedAt": "2020-08-07T07:03:32.474Z"
   }
 ]
+
