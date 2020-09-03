@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 import FormGroup from '../../common/formGroup';
-import formTemplatesMap from './destinationSettings.json';
+import { destinationList as formTemplatesMap} from '../destinationList/dst';
 import { Container } from './styles';
 
 export interface IDestinationSettingsProps {

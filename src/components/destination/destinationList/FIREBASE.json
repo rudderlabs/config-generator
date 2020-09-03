@@ -1,0 +1,1 @@
+[{"title":"1. Native SDK","fields":[{"type":"defaultCheckbox","label":"Use native SDK to send events","value":"useNativeSDK","default":true}]}]

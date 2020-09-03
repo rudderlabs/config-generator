@@ -1,4 +1,9 @@
 import React from 'react';
+// config-gen-import-statement
+import { ReactComponent as OPTIMIZELY_FULLSTACK } from '@svg/optimizely_fullstack.svg';
+import { ReactComponent as DIGITAL_OCEAN_SPACES } from '@svg/digital_ocean_spaces.svg';
+import { ReactComponent as INDICATIVE } from '@svg/indicative.svg';
+import { ReactComponent as OPTIMIZELY } from '@svg/optimizely.svg';
 import { ReactComponent as GA } from '@svg/ga.svg';
 import { ReactComponent as Amplitude } from '@svg/am.svg';
 import { ReactComponent as Mixpanel } from '@svg/mp.svg';
@@ -63,6 +68,15 @@ const DestinationIcon = (props: any) => {
   let width = props.width || theme.iconSize.medium;
 
   switch (props.destination.toLowerCase()) {
+    // config-gen-case
+case 'optimizely_fullstack': 
+return <OPTIMIZELY_FULLSTACK width={width} height={height} />;
+case 'digital_ocean_spaces': 
+return <DIGITAL_OCEAN_SPACES width={width} height={height} />;
+case 'indicative': 
+return <INDICATIVE width={width} height={height} />;
+case 'optimizely': 
+return <OPTIMIZELY width={width} height={height} />;
     case 'am':
       return <Amplitude width={width} height={height} />;
     case 'ga':

@@ -1,0 +1,1 @@
+[{"title":"Connection Settings","fields":[{"type":"textInput","label":"Webhook URL","value":"webhookUrl","required":true,"placeholder":"http://www.abcd.com"},{"type":"dynamicForm","label":"Headers","labelLeft":"Key","labelRight":"Value","keyLeft":"from","keyRight":"to","placeholderLeft":"content-type","placeholderRight":"application/json","value":"headers"}]}]
