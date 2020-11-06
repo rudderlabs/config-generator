@@ -1,0 +1,1 @@
+[{"title":"1. Connection Settings","fields":[{"type":"textInput","label":"Branch Key","value":"branchKey","regex":".*","required":true,"placeholder":"e.g: key_live_mfMJCn7WLNeXte2aZIDOeobdrvmbZpgD"}]},{"title":"2. Native SDK","fields":[{"type":"checkbox","label":"Use native SDK to send events","value":"useNativeSDK","default":false}]}]

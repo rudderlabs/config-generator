@@ -16,7 +16,7 @@ import queryString from 'query-string';
 import * as React from 'react';
 import { RouteComponentProps, withRouter } from 'react-router';
 import { withTheme } from 'styled-components';
-import formTemplatesMap from '../destination/destinationSettings/destinationSettings.json';
+import { destinationList as formTemplatesMap} from '../destination/destinationList/dst';
 
 import {
   AddDestDialogBody,

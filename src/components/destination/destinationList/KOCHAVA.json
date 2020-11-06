@@ -1,0 +1,1 @@
+[{"title":"Connection Settings","fields":[{"type":"textInput","label":"Kochava Api Key","value":"apiKey","regex":".*","required":true,"placeholder":"e.g: kotestapplication-xxxxxxxx"}]}]

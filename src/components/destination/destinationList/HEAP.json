@@ -1,0 +1,1 @@
+[{"title":"Connection Settings","fields":[{"type":"textInput","label":"App Id","value":"appId","regex":".*","required":true,"placeholder":"e.g: 3138654182"}]}]

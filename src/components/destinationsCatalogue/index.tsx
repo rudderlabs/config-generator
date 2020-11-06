@@ -10,7 +10,7 @@ import theme from '@css/theme';
 import IconCardList from '@components/iconCardList';
 import { Drawer } from 'antd';
 import DestinationConfigure from './destinationsConfigure/index';
-import formTemplatesMap from '../destination/destinationSettings/destinationSettings.json';
+import { destinationList as formTemplatesMap} from '../destination/destinationList/dst';
 
 export interface IDestinationsCatalogueProps {
   destinationDefsListStore?: IDestinationDefsListStore;

@@ -1,0 +1,1 @@
+[{"title":"Connection Settings","fields":[{"type":"textInput","label":"APP ID","value":"appID","regex":".*","required":true,"placeholder":"e.g: bSjsdGYsOo9sjw23Shj"}]},{"title":"Native SDK","fields":[{"type":"checkbox","label":"Use native SDK to send events","value":"useNativeSDK","default":false}]}]
