@@ -1,1 +1,52 @@
-[{"title":"Connection Settings","fields":[{"type":"textInput","label":"Application ID","value":"applicationId","regex":".*","required":true,"placeholder":"e.g: ABCDEFG"},{"type":"textInput","label":"Client Key","value":"clientKey","regex":".*","required":true,"placeholder":"e.g: ABCDEFG","secret":true}]},{"title":"Native SDK","fields":[{"type":"checkbox","label":"Initialize Native SDK to send automated events","value":"useNativeSDK","default":true},{"type":"checkbox","label":"Use native SDK to send user generated events","value":"useNativeSDKToSend","default":false}]},{"title":"Development Mode","fields":[{"type":"checkbox","label":"Use in Development Environment","value":"isDevelop","default":false}]}]
+[
+  {
+    "title": "Connection Settings",
+    "fields": [
+      {
+        "type": "textInput",
+        "label": "Application ID",
+        "value": "applicationId",
+        "regex": ".*",
+        "required": true,
+        "placeholder": "e.g: ABCDEFG"
+      },
+      {
+        "type": "textInput",
+        "label": "Client Key",
+        "value": "clientKey",
+        "regex": ".*",
+        "required": true,
+        "placeholder": "e.g: ABCDEFG",
+        "secret": true
+      }
+    ]
+  },
+  {
+    "title": "Native SDK",
+    "fields": [
+      {
+        "type": "checkbox",
+        "label": "Initialize Native SDK to send automated events",
+        "value": "useNativeSDK",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "label": "Use native SDK to send user generated events",
+        "value": "useNativeSDKToSend",
+        "default": false
+      }
+    ]
+  },
+  {
+    "title": "Development Mode",
+    "fields": [
+      {
+        "type": "checkbox",
+        "label": "Use in Development Environment",
+        "value": "isDevelop",
+        "default": false
+      }
+    ]
+  }
+]

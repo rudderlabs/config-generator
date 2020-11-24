@@ -1,1 +1,40 @@
-[{"title":"Connection Settings","fields":[{"type":"textInput","label":"Azure Blob Storage Container Name","value":"containerName","regex":".*","required":true,"placeholder":"e.g: azure-blob-event-logs"},{"type":"textInput","label":"Prefix","value":"prefix","regex":".*","required":false,"placeholder":""},{"type":"textInput","label":"Azure Blob Storage Account Name","value":"accountName","regex":".*","required":true,"placeholder":"e.g: account-name"},{"type":"textInput","label":"Azure Blob Storage Account Key","value":"accountKey","regex":".*","required":true,"placeholder":"e.g: account-key","secret":true}]}]
+[
+  {
+    "title": "Connection Settings",
+    "fields": [
+      {
+        "type": "textInput",
+        "label": "Azure Blob Storage Container Name",
+        "value": "containerName",
+        "regex": ".*",
+        "required": true,
+        "placeholder": "e.g: azure-blob-event-logs"
+      },
+      {
+        "type": "textInput",
+        "label": "Prefix",
+        "value": "prefix",
+        "regex": ".*",
+        "required": false,
+        "placeholder": ""
+      },
+      {
+        "type": "textInput",
+        "label": "Azure Blob Storage Account Name",
+        "value": "accountName",
+        "regex": ".*",
+        "required": true,
+        "placeholder": "e.g: account-name"
+      },
+      {
+        "type": "textInput",
+        "label": "Azure Blob Storage Account Key",
+        "value": "accountKey",
+        "regex": ".*",
+        "required": true,
+        "placeholder": "e.g: account-key",
+        "secret": true
+      }
+    ]
+  }
+]

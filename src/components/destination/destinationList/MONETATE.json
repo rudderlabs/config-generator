@@ -1,0 +1,19 @@
+[
+  {
+    "title": "Connection Settings",
+    "fields": [
+      {
+        "type": "textInput",
+        "label": "Monetate Channel",
+        "value": "monetateChannel",
+        "required": true
+      },
+      {
+        "type": "textInput",
+        "label": "Retailer Short Name",
+        "value": "retailerShortName",
+        "required": true
+      }
+    ]
+  }
+]

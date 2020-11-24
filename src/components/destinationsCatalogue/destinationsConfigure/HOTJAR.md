@@ -1,21 +1,18 @@
-Sends data to Hotjar
+## Hotjar
 
-#### Best used for
+Hotjar is a popular behavior analytics platform for marketing teams and product managers to better understand and improve their product. It allows them to understand the behavior of their website's visitors through heat maps, surveys and conversion funnels.
 
-- Visitor Recordings - See what your users see
-- Conversion Funnels - Find the biggest opportunities for improvement and testing by identifying on which page and at which step most visitors are leaving your site.
+### Get More Out of Hotjar With RudderStack
 
-#### What you'll need
+RudderStack helps you integrate your website with Hotjar to auto-track all your user data. All you need is a Hotjar account and site ID for your website to get started!
 
-- Hotjar account and site ID for your website
+### Useful Links
 
-## Related links
-
-[Hotjar Website][]  
-[Documentation][]  
-[View on Github][]
+[Hotjar Website][]
+[Documentation and Setup guide][]
+[View on GitHub][]
 
 [//]: # "These are reference links used in the body of this note and get stripped out when the markdown processor does its job. There is no need to format nicely because it shouldn't be seen. Thanks SO - http://stackoverflow.com/questions/4823468/store-comments-in-markdown-syntax"
 [hotjar website]: https://www.hotjar.com/
-[documentation]: https://docs.rudderstack.com/
-[view on github]: https://github.com/rudderlabs/rudder-server
+[documentation and setup guide]: https://docs.rudderstack.com/destinations/hotjar
+[view on github]: https://github.com/rudderlabs/rudder-sdk-js/tree/master/integrations/Hotjar

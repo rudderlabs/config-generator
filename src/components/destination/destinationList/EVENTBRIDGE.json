@@ -1,1 +1,73 @@
-[{"title":"AWS Credentials","fields":[{"type":"textInput","label":"AWS Region","value":"region","regex":".*","required":true,"placeholder":"e.g: us-east-1"},{"type":"textInput","label":"AWS Access Key ID","value":"accessKeyID","regex":".*","required":false,"placeholder":"e.g: access-key-id","secret":true},{"type":"textInput","label":"AWS Secret Access Key","value":"accessKey","regex":".*","required":false,"placeholder":"e.g: secret-access-key","secret":true}]},{"title":"EventBridge Settings","fields":[{"type":"textInput","label":"Event Bus Name","value":"eventBusName","regex":".*","required":false,"placeholder":"e.g: event-bus-name"},{"type":"textInput","label":"Detail Type","value":"detailType","regex":".*","required":true,"placeholder":"e.g: detail-type"}]},{"title":"Amazon Resources","fields":[{"type":"dynamicCustomForm","value":"resourceID","customFields":[{"type":"textInput","label":"Amazon Resource Name","value":"arn","regex":".*","required":false,"placeholder":"e.g: arn"}]}]}]
+[
+  {
+    "title": "AWS Credentials",
+    "fields": [
+      {
+        "type": "textInput",
+        "label": "AWS Region",
+        "value": "region",
+        "regex": ".*",
+        "required": true,
+        "placeholder": "e.g: us-east-1"
+      },
+      {
+        "type": "textInput",
+        "label": "AWS Access Key ID",
+        "value": "accessKeyID",
+        "regex": ".*",
+        "required": false,
+        "placeholder": "e.g: access-key-id",
+        "secret": true
+      },
+      {
+        "type": "textInput",
+        "label": "AWS Secret Access Key",
+        "value": "accessKey",
+        "regex": ".*",
+        "required": false,
+        "placeholder": "e.g: secret-access-key",
+        "secret": true
+      }
+    ]
+  },
+  {
+    "title": "EventBridge Settings",
+    "fields": [
+      {
+        "type": "textInput",
+        "label": "Event Bus Name",
+        "value": "eventBusName",
+        "regex": ".*",
+        "required": false,
+        "placeholder": "e.g: event-bus-name"
+      },
+      {
+        "type": "textInput",
+        "label": "Detail Type",
+        "value": "detailType",
+        "regex": ".*",
+        "required": true,
+        "placeholder": "e.g: detail-type"
+      }
+    ]
+  },
+  {
+    "title": "Amazon Resources",
+    "fields": [
+      {
+        "type": "dynamicCustomForm",
+        "value": "resourceID",
+        "customFields": [
+          {
+            "type": "textInput",
+            "label": "Amazon Resource Name",
+            "value": "arn",
+            "regex": ".*",
+            "required": false,
+            "placeholder": "e.g: arn"
+          }
+        ]
+      }
+    ]
+  }
+]

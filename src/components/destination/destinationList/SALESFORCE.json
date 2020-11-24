@@ -1,1 +1,34 @@
-[{"title":"Connection Settings","fields":[{"type":"textInput","label":"User Name","value":"userName","regex":".*","required":true,"placeholder":"User name for salesforce login"},{"type":"textInput","label":"Password","value":"password","inputFieldType":"password","regex":".*","required":true,"placeholder":"Password for salesforce login","secret":true},{"type":"textInput","label":"Initial Access Token","value":"initialAccessToken","regex":".*","required":true,"placeholder":"Initial access token from salesforce","secret":true}]}]
+[
+  {
+    "title": "Connection Settings",
+    "fields": [
+      {
+        "type": "textInput",
+        "label": "User Name",
+        "value": "userName",
+        "regex": ".*",
+        "required": true,
+        "placeholder": "User name for salesforce login"
+      },
+      {
+        "type": "textInput",
+        "label": "Password",
+        "value": "password",
+        "inputFieldType": "password",
+        "regex": ".*",
+        "required": true,
+        "placeholder": "Password for salesforce login",
+        "secret": true
+      },
+      {
+        "type": "textInput",
+        "label": "Initial Access Token",
+        "value": "initialAccessToken",
+        "regex": ".*",
+        "required": true,
+        "placeholder": "Initial access token from salesforce",
+        "secret": true
+      }
+    ]
+  }
+]

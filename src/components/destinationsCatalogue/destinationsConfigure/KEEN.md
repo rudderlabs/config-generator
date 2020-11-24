@@ -1,17 +1,19 @@
-- Collect, configure, and analyze your data to reach the right audience.
-- Create custom reports.
+## Keen.io
 
-## Get more out of Keen with RudderStack!
+Keen.io is a customer analytics platform that allows you to collect, analyze and get invaluable marketing insights from your customer event data.
 
-Keen can be blocked by browsers, browser extensions, and firewalls. Use an on-prem hosted version of RudderStack to avoid this.
+### Get More Out of Keen With RudderStack
 
-## Related links
+RudderStack supports S2S (Server to Server) cloud mode and Web Native SDK for integration with Keen. This way, you can send your customer event data attached to Keen collections using RudderStack APIs.
+
+Keen.io can sometimes be blocked by browsers, browser extensions, and firewalls. Use an on-premise hosted version of RudderStack to avoid this.
+
+### Useful Links
 
 [Keen Website][]  
-[Documentation][]  
-[View on Github][]
+[Documentation and Setup guide][]  
+[View on GitHub][]
 
-[//]: # "These are reference links used in the body of this note and get stripped out when the markdown processor does its job. There is no need to format nicely because it shouldn't be seen. Thanks SO - http://stackoverflow.com/questions/4823468/store-comments-in-markdown-syntax"
 [keen website]: https://keen.io/
-[documentation]: https://docs.rudderstack.com/
-[view on github]: https://github.com/rudderlabs/rudder-transformer/tree/master/v0/keen
+[documentation and setup guide]: https://docs.rudderstack.com/destinations/keen
+[view on github]: https://github.com/rudderlabs/rudder-transformer/tree/master/v0/destinations/keen

@@ -1,1 +1,201 @@
-[{"title":"1. Connection Settings","fields":[{"type":"dynamicCustomForm","value":"blacklistPiiProperties","customFields":[{"type":"textInput","value":"blacklistPiiProperties","label":"Blacklist PII Properties","required":false},{"type":"checkbox","value":"blacklistPiiHash","label":"Blacklist PII Hash Property","required":false}]},{"type":"dynamicForm","label":"Map Categories to Facebook Content Types","required":false,"labelLeft":"category","labelRight":"Facebook content type","keyLeft":"from","keyRight":"to","value":"categoryToContent"},{"type":"textInput","label":"Pixel ID","value":"pixelId","required":true,"placeholder":"Your Pixel ID, from the snippet created on the Facebook Pixel creation page."},{"label":"Map Your Events to Standard Facebook Events"},{"type":"dynamicSelectForm","label":"Map your events with Facebook Standard Events","labelLeft":"Event Name","labelRight":"Standard Event Name","value":"eventsToEvents","keyLeft":"from","keyRight":"to","required":false,"placeholderLeft":"your event","options":[{"name":"ViewContent","value":"ViewContent"},{"name":"Search","value":"Search"},{"name":"AddToCart","value":"AddToCart"},{"name":"AddToWishlist","value":"AddToWishlist"},{"name":"InitiateCheckout","value":"InitiateCheckout"},{"name":"AddPaymentInfo","value":"AddPaymentInfo"},{"name":"Purchase","value":"Purchase"},{"name":"Lead","value":"Lead"},{"name":"CompleteRegistration","value":"CompleteRegistration"},{"name":"Contact","value":"Contact"},{"name":"CustomizeProduct","value":"CustomizeProduct"},{"name":"Donate","value":"Donate"},{"name":"FindLocation","value":"FindLocation"},{"name":"Schedule","value":"Schedule"},{"name":"StartTrial","value":"StartTrial"},{"name":"SubmitApplication","value":"SubmitApplication"},{"name":"Subscribe","value":"Subscribe"}]},{"type":"dynamicCustomForm","value":"eventCustomProperties","customFields":[{"type":"textInput","value":"eventCustomProperties","label":"Standard Events custom properties","required":false}]},{"type":"singleSelect","label":"Value Field Identifier","value":"valueFieldIdentifier","required":false,"options":[{"name":"properties.value","value":"properties.value"},{"name":"properties.price","value":"properties.price"}],"defaultOption":{"name":"","value":""}}]},{"title":"2. Native SDK","fields":[{"type":"defaultCheckbox","label":"Use native SDK to send events","value":"useNativeSDK","default":true}]},{"title":"3. Other Settings","fields":[{"type":"checkbox","label":"Enable Advanced Matching","value":"advancedMapping"},{"type":"textInput","label":"Client-Side Only: Advanced Match Trait Key for External ID","value":"traitKeyToExternalId","required":false,"placeholder":"Please indicated a user trait key which you would like RudderStack to use to send an external_id to Facebook Pixel using advanced matching. RudderStack will use the value of this trait to map it to Facebook Pixel's external_id."},{"type":"dynamicForm","label":"Legacy Conversion Pixel IDs","value":"legacyConversionPixelId","required":false,"keyLeft":"from","keyRight":"to","labelLeft":"Event Name","labelRight":"Pixel Id"},{"type":"checkbox","label":"Use UserId or Anonymous Id as External Id","value":"userIdAsPixelId"},{"type":"dynamicCustomForm","value":"whitelistPiiProperties","customFields":[{"type":"textInput","value":"whitelistPiiProperties","label":"Whitelist PII Properties","required":false}]}]}]
+[
+  {
+    "title": "1. Connection Settings",
+    "fields": [
+      {
+        "type": "dynamicCustomForm",
+        "value": "blacklistPiiProperties",
+        "customFields": [
+          {
+            "type": "textInput",
+            "value": "blacklistPiiProperties",
+            "label": "Blacklist PII Properties",
+            "required": false
+          },
+          {
+            "type": "checkbox",
+            "value": "blacklistPiiHash",
+            "label": "Blacklist PII Hash Property",
+            "required": false
+          }
+        ]
+      },
+      {
+        "type": "dynamicForm",
+        "label": "Map Categories to Facebook Content Types",
+        "required": false,
+        "labelLeft": "category",
+        "labelRight": "Facebook content type",
+        "keyLeft": "from",
+        "keyRight": "to",
+        "value": "categoryToContent"
+      },
+      {
+        "type": "textInput",
+        "label": "Pixel ID",
+        "value": "pixelId",
+        "required": true,
+        "placeholder": "Your Pixel ID, from the snippet created on the Facebook Pixel creation page."
+      },
+      {
+        "label": "Map Your Events to Standard Facebook Events"
+      },
+      {
+        "type": "dynamicSelectForm",
+        "label": "Map your events with Facebook Standard Events",
+        "labelLeft": "Event Name",
+        "labelRight": "Standard Event Name",
+        "value": "eventsToEvents",
+        "keyLeft": "from",
+        "keyRight": "to",
+        "required": false,
+        "placeholderLeft": "your event",
+        "options": [
+          {
+            "name": "ViewContent",
+            "value": "ViewContent"
+          },
+          {
+            "name": "Search",
+            "value": "Search"
+          },
+          {
+            "name": "AddToCart",
+            "value": "AddToCart"
+          },
+          {
+            "name": "AddToWishlist",
+            "value": "AddToWishlist"
+          },
+          {
+            "name": "InitiateCheckout",
+            "value": "InitiateCheckout"
+          },
+          {
+            "name": "AddPaymentInfo",
+            "value": "AddPaymentInfo"
+          },
+          {
+            "name": "Purchase",
+            "value": "Purchase"
+          },
+          {
+            "name": "Lead",
+            "value": "Lead"
+          },
+          {
+            "name": "CompleteRegistration",
+            "value": "CompleteRegistration"
+          },
+          {
+            "name": "Contact",
+            "value": "Contact"
+          },
+          {
+            "name": "CustomizeProduct",
+            "value": "CustomizeProduct"
+          },
+          {
+            "name": "Donate",
+            "value": "Donate"
+          },
+          {
+            "name": "FindLocation",
+            "value": "FindLocation"
+          },
+          {
+            "name": "Schedule",
+            "value": "Schedule"
+          },
+          {
+            "name": "StartTrial",
+            "value": "StartTrial"
+          },
+          {
+            "name": "SubmitApplication",
+            "value": "SubmitApplication"
+          },
+          {
+            "name": "Subscribe",
+            "value": "Subscribe"
+          }
+        ]
+      },
+      {
+        "type": "dynamicCustomForm",
+        "value": "eventCustomProperties",
+        "customFields": [
+          {
+            "type": "textInput",
+            "value": "eventCustomProperties",
+            "label": "Standard Events custom properties",
+            "required": false
+          }
+        ]
+      },
+      {
+        "type": "singleSelect",
+        "label": "Value Field Identifier",
+        "value": "valueFieldIdentifier",
+        "required": false,
+        "options": [
+          {
+            "name": "properties.value",
+            "value": "properties.value"
+          },
+          {
+            "name": "properties.price",
+            "value": "properties.price"
+          }
+        ],
+        "defaultOption": {
+          "name": "",
+          "value": ""
+        }
+      }
+    ]
+  },
+  {
+    "title": "2. Native SDK",
+    "fields": [
+      {
+        "type": "defaultCheckbox",
+        "label": "Use native SDK to send events",
+        "value": "useNativeSDK",
+        "default": true
+      }
+    ]
+  },
+  {
+    "title": "3. Other Settings",
+    "fields": [
+      {
+        "type": "checkbox",
+        "label": "Enable Advanced Matching",
+        "value": "advancedMapping"
+      },
+      {
+        "type": "dynamicForm",
+        "label": "Legacy Conversion Pixel IDs",
+        "value": "legacyConversionPixelId",
+        "required": false,
+        "keyLeft": "from",
+        "keyRight": "to",
+        "labelLeft": "Event Name",
+        "labelRight": "Pixel Id"
+      },
+      {
+        "type": "dynamicCustomForm",
+        "value": "whitelistPiiProperties",
+        "customFields": [
+          {
+            "type": "textInput",
+            "value": "whitelistPiiProperties",
+            "label": "Whitelist PII Properties",
+            "required": false
+          }
+        ]
+      }
+    ]
+  }
+]

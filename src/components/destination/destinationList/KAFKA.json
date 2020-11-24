@@ -1,1 +1,49 @@
-[{"title":"Connection Settings","fields":[{"type":"textInput","label":"Host Name","value":"hostName","regex":".*","required":true,"placeholder":"e.g: localhost"},{"type":"textInput","label":"Port","value":"port","regex":".*","required":true,"placeholder":"e.g: 9092"},{"type":"textInput","label":"Topic Name","value":"topic","regex":".*","required":true,"placeholder":"e.g: test-topic"},{"type":"checkbox","label":"SSL Enabled","value":"sslEnabled","default":true},{"type":"textareaInput","preRequisiteField":{"name":"sslEnabled","selectedValue":true},"label":"CA certificate","value":"caCertificate","regex":".*","required":true,"placeholder":"CA Certificate"}]}]
+[
+  {
+    "title": "Connection Settings",
+    "fields": [
+      {
+        "type": "textInput",
+        "label": "Host Name",
+        "value": "hostName",
+        "regex": ".*",
+        "required": true,
+        "placeholder": "e.g: localhost"
+      },
+      {
+        "type": "textInput",
+        "label": "Port",
+        "value": "port",
+        "regex": ".*",
+        "required": true,
+        "placeholder": "e.g: 9092"
+      },
+      {
+        "type": "textInput",
+        "label": "Topic Name",
+        "value": "topic",
+        "regex": ".*",
+        "required": true,
+        "placeholder": "e.g: test-topic"
+      },
+      {
+        "type": "checkbox",
+        "label": "SSL Enabled",
+        "value": "sslEnabled",
+        "default": true
+      },
+      {
+        "type": "textareaInput",
+        "preRequisiteField": {
+          "name": "sslEnabled",
+          "selectedValue": true
+        },
+        "label": "CA certificate",
+        "value": "caCertificate",
+        "regex": ".*",
+        "required": true,
+        "placeholder": "CA Certificate"
+      }
+    ]
+  }
+]

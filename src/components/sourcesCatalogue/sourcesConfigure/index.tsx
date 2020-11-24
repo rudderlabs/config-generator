@@ -20,9 +20,9 @@ export const markdown = {
   Customerio: raw('./Customerio.md'),
   Go: raw('./Go.md'),
   HTTP: raw('./HTTP.md'),
-  JAVA: raw('./JAVA.md'),
+  Java: raw('./JAVA.md'),
   Javascript: raw('./Javascript.md'),
-  LOOKER: raw('./LOOKER.md'),
+  Looker: raw('./LOOKER.md'),
   Node: raw('./Node.md'),
   Python: raw('./Python.md'),
   ReactNative: raw('./ReactNative.md'),
@@ -30,6 +30,8 @@ export const markdown = {
   Segment: raw('./SegmentSource.md'),
   Unity: raw('./Unity.md'),
   iOS: raw('./iOS.md'),
+  DotNet: raw('./DotNet.md'),
+  PHP: raw('./PHP.md'),
 };
 
 export interface ISourceConfigureProps {

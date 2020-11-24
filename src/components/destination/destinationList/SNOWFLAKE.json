@@ -1,1 +1,290 @@
-[{"title":"1. Connection Credentials","fields":[{"type":"textInput","label":"Account","value":"account","regex":".*","required":true},{"type":"textInput","label":"Database","value":"database","regex":".*","required":true},{"type":"textInput","label":"Warehouse","value":"warehouse","regex":".*","required":true},{"type":"textInput","label":"User","value":"user","regex":".*","required":true},{"type":"textInput","label":"Password","value":"password","inputFieldType":"password","regex":".*","required":true,"secret":true},{"type":"singleSelect","label":"Choose your Cloud","value":"cloudProvider","options":[{"name":"Amazon Web Services","value":"AWS"},{"name":"Google Cloud Platform","value":"GCP"},{"name":"Microsoft Azure","value":"AZURE"}],"defaultOption":{"name":"Amazon Web Services","value":"AWS"},"required":true},{"type":"textInput","preRequisiteField":{"name":"cloudProvider","selectedValue":"AWS"},"label":"Staging S3 Storage Bucket Name","labelNote":"S3 Bucket to storage data before loading into Snowflake","value":"bucketName","regex":".*","required":true,"footerNote":"Please make sure the bucket exists in your S3"},{"type":"textInput","label":"Namespace","labelNote":"Schema name for the warehouse where the tables are created","value":"namespace","regex":".*","required":false,"footerNote":"Default will be the source name"},{"type":"textInput","preRequisiteField":{"name":"cloudProvider","selectedValue":"GCP"},"label":"Staging GCS Object Storage Bucket Name","labelNote":"GCS Bucket to storage data before loading into Snowflake","value":"bucketName","regex":".*","required":true,"footerNote":"Please make sure the bucket exists in your GCS"},{"type":"textInput","preRequisiteField":{"name":"cloudProvider","selectedValue":"AZURE"},"label":"Staging Azure Blob Storage Container Name","labelNote":"Container to storage data before loading into Snowflake","value":"containerName","regex":".*","required":true,"footerNote":"Please make sure the container exists in your Azure Blob Storage"},{"type":"textInput","label":"Prefix","value":"prefix","regex":".*","required":false,"placeholder":""},{"type":"textInput","preRequisiteField":{"name":"cloudProvider","selectedValue":"AWS"},"label":"Storage Integration","value":"storageIntegration","regex":".*","placeholder":"e.g: aws_int","footerURL":{"link":"https://docs.snowflake.com/en/user-guide/data-load-s3-config.html#option-1-configuring-a-snowflake-storage-integration","text":"Instructions for setting up the integration"}},{"type":"textInput","preRequisiteField":{"name":"cloudProvider","selectedValue":"GCP"},"label":"Storage Integration","value":"storageIntegration","regex":".*","required":true,"placeholder":"e.g: gcs_int","footerURL":{"link":"https://docs.snowflake.com/en/user-guide/data-load-gcs-config.html","text":"Instructions for setting up the integration"}},{"type":"textInput","preRequisiteField":{"name":"cloudProvider","selectedValue":"AZURE"},"label":"Storage Integration","value":"storageIntegration","regex":".*","required":true,"placeholder":"e.g: azure_int","footerURL":{"link":"https://docs.snowflake.com/en/user-guide/data-load-azure-config.html#option-1-configuring-a-snowflake-storage-integration","text":"Instructions for setting up the integration"}},{"type":"textInput","preRequisiteField":{"name":"cloudProvider","selectedValue":"AWS"},"label":"AWS Access Key ID","value":"accessKeyID","regex":".*","required":true,"placeholder":"e.g: access-key-id","secret":true},{"type":"textInput","preRequisiteField":{"name":"cloudProvider","selectedValue":"AWS"},"label":"AWS Secret Access Key","value":"accessKey","regex":".*","required":true,"placeholder":"e.g: secret-access-key","secret":true},{"type":"checkbox","preRequisiteField":{"name":"cloudProvider","selectedValue":"AWS"},"label":"Enable Server Side Encryption For S3?","value":"enableSSE","default":false},{"type":"textInput","preRequisiteField":{"name":"cloudProvider","selectedValue":"AZURE"},"label":"Azure Blob Storage Account Name","value":"accountName","regex":".*","required":true,"placeholder":"e.g: account-name"},{"type":"textInput","preRequisiteField":{"name":"cloudProvider","selectedValue":"AZURE"},"label":"Azure Blob Storage Account Key","value":"accountKey","regex":".*","required":true,"placeholder":"e.g: account-key"},{"type":"textareaInput","preRequisiteField":{"name":"cloudProvider","selectedValue":"GCP"},"label":"Credentials","labelNote":"GCP Service Account credentials JSON for RudderStack to use in loading data into your Google Cloud Storage","value":"credentials","regex":".*","required":true,"footerNote":"Create a service account in your GCP Project for RudderStack with roles of 'storage.objectCreator'"},{"type":"singleSelect","label":"Sync Frequency","value":"syncFrequency","options":[{"name":"Every 30 minutes","value":"30"},{"name":"Every 1 hour","value":"60"},{"name":"Every 3 hours","value":"180"},{"name":"Every 12 hours","value":"360"},{"name":"Every 6 hours","value":"720"},{"name":"Every 24 hours","value":"1440"}],"defaultOption":{"name":"Every 30 minutes","value":"30"},"required":false},{"type":"timePicker","label":"Sync Starting At (Optional)","value":"syncStartAt","options":{"omitSeconds":true},"required":false,"footerNote":"Note: Please specify time in UTC"}]}]
+[
+  {
+    "title": "1. Connection Credentials",
+    "fields": [
+      {
+        "type": "textInput",
+        "label": "Account",
+        "value": "account",
+        "regex": ".*",
+        "required": true
+      },
+      {
+        "type": "textInput",
+        "label": "Database",
+        "value": "database",
+        "regex": ".*",
+        "required": true
+      },
+      {
+        "type": "textInput",
+        "label": "Warehouse",
+        "value": "warehouse",
+        "regex": ".*",
+        "required": true
+      },
+      {
+        "type": "textInput",
+        "label": "User",
+        "value": "user",
+        "regex": ".*",
+        "required": true
+      },
+      {
+        "type": "textInput",
+        "label": "Password",
+        "value": "password",
+        "inputFieldType": "password",
+        "regex": ".*",
+        "required": true,
+        "secret": true
+      },
+      {
+        "type": "singleSelect",
+        "label": "Choose your Cloud",
+        "value": "cloudProvider",
+        "options": [
+          {
+            "name": "Amazon Web Services",
+            "value": "AWS"
+          },
+          {
+            "name": "Google Cloud Platform",
+            "value": "GCP"
+          },
+          {
+            "name": "Microsoft Azure",
+            "value": "AZURE"
+          }
+        ],
+        "defaultOption": {
+          "name": "Amazon Web Services",
+          "value": "AWS"
+        },
+        "required": true
+      },
+      {
+        "type": "textInput",
+        "preRequisiteField": {
+          "name": "cloudProvider",
+          "selectedValue": "AWS"
+        },
+        "label": "Staging S3 Storage Bucket Name",
+        "labelNote": "S3 Bucket to storage data before loading into Snowflake",
+        "value": "bucketName",
+        "regex": ".*",
+        "required": true,
+        "footerNote": "Please make sure the bucket exists in your S3"
+      },
+      {
+        "type": "textInput",
+        "label": "Namespace",
+        "labelNote": "Schema name for the warehouse where the tables are created",
+        "value": "namespace",
+        "regex": ".*",
+        "required": false,
+        "footerNote": "Default will be the source name"
+      },
+      {
+        "type": "textInput",
+        "preRequisiteField": {
+          "name": "cloudProvider",
+          "selectedValue": "GCP"
+        },
+        "label": "Staging GCS Object Storage Bucket Name",
+        "labelNote": "GCS Bucket to storage data before loading into Snowflake",
+        "value": "bucketName",
+        "regex": ".*",
+        "required": true,
+        "footerNote": "Please make sure the bucket exists in your GCS"
+      },
+      {
+        "type": "textInput",
+        "preRequisiteField": {
+          "name": "cloudProvider",
+          "selectedValue": "AZURE"
+        },
+        "label": "Staging Azure Blob Storage Container Name",
+        "labelNote": "Container to storage data before loading into Snowflake",
+        "value": "containerName",
+        "regex": ".*",
+        "required": true,
+        "footerNote": "Please make sure the container exists in your Azure Blob Storage"
+      },
+      {
+        "type": "textInput",
+        "label": "Prefix",
+        "value": "prefix",
+        "regex": ".*",
+        "required": false,
+        "placeholder": ""
+      },
+      {
+        "type": "textInput",
+        "preRequisiteField": {
+          "name": "cloudProvider",
+          "selectedValue": "AWS"
+        },
+        "label": "Storage Integration",
+        "value": "storageIntegration",
+        "regex": ".*",
+        "placeholder": "e.g: aws_int",
+        "footerURL": {
+          "link": "https://docs.snowflake.com/en/user-guide/data-load-s3-config.html#option-1-configuring-a-snowflake-storage-integration",
+          "text": "Instructions for setting up the integration"
+        }
+      },
+      {
+        "type": "textInput",
+        "preRequisiteField": {
+          "name": "cloudProvider",
+          "selectedValue": "GCP"
+        },
+        "label": "Storage Integration",
+        "value": "storageIntegration",
+        "regex": ".*",
+        "required": true,
+        "placeholder": "e.g: gcs_int",
+        "footerURL": {
+          "link": "https://docs.snowflake.com/en/user-guide/data-load-gcs-config.html",
+          "text": "Instructions for setting up the integration"
+        }
+      },
+      {
+        "type": "textInput",
+        "preRequisiteField": {
+          "name": "cloudProvider",
+          "selectedValue": "AZURE"
+        },
+        "label": "Storage Integration",
+        "value": "storageIntegration",
+        "regex": ".*",
+        "required": true,
+        "placeholder": "e.g: azure_int",
+        "footerURL": {
+          "link": "https://docs.snowflake.com/en/user-guide/data-load-azure-config.html#option-1-configuring-a-snowflake-storage-integration",
+          "text": "Instructions for setting up the integration"
+        }
+      },
+      {
+        "type": "textInput",
+        "preRequisiteField": {
+          "name": "cloudProvider",
+          "selectedValue": "AWS"
+        },
+        "label": "AWS Access Key ID",
+        "value": "accessKeyID",
+        "regex": ".*",
+        "required": true,
+        "placeholder": "e.g: access-key-id",
+        "secret": true
+      },
+      {
+        "type": "textInput",
+        "preRequisiteField": {
+          "name": "cloudProvider",
+          "selectedValue": "AWS"
+        },
+        "label": "AWS Secret Access Key",
+        "value": "accessKey",
+        "regex": ".*",
+        "required": true,
+        "placeholder": "e.g: secret-access-key",
+        "secret": true
+      },
+      {
+        "type": "checkbox",
+        "preRequisiteField": {
+          "name": "cloudProvider",
+          "selectedValue": "AWS"
+        },
+        "label": "Enable Server Side Encryption For S3?",
+        "value": "enableSSE",
+        "default": false
+      },
+      {
+        "type": "textInput",
+        "preRequisiteField": {
+          "name": "cloudProvider",
+          "selectedValue": "AZURE"
+        },
+        "label": "Azure Blob Storage Account Name",
+        "value": "accountName",
+        "regex": ".*",
+        "required": true,
+        "placeholder": "e.g: account-name"
+      },
+      {
+        "type": "textInput",
+        "preRequisiteField": {
+          "name": "cloudProvider",
+          "selectedValue": "AZURE"
+        },
+        "label": "Azure Blob Storage Account Key",
+        "value": "accountKey",
+        "regex": ".*",
+        "required": true,
+        "placeholder": "e.g: account-key"
+      },
+      {
+        "type": "textareaInput",
+        "preRequisiteField": {
+          "name": "cloudProvider",
+          "selectedValue": "GCP"
+        },
+        "label": "Credentials",
+        "labelNote": "GCP Service Account credentials JSON for RudderStack to use in loading data into your Google Cloud Storage",
+        "value": "credentials",
+        "regex": ".*",
+        "required": true,
+        "footerNote": "Create a service account in your GCP Project for RudderStack with roles of 'storage.objectCreator'"
+      },
+      {
+        "type": "singleSelect",
+        "label": "Sync Frequency",
+        "value": "syncFrequency",
+        "options": [
+          {
+            "name": "Every 30 minutes",
+            "value": "30"
+          },
+          {
+            "name": "Every 1 hour",
+            "value": "60"
+          },
+          {
+            "name": "Every 3 hours",
+            "value": "180"
+          },
+          {
+            "name": "Every 6 hours",
+            "value": "360"
+          },
+          {
+            "name": "Every 12 hours",
+            "value": "720"
+          },
+          {
+            "name": "Every 24 hours",
+            "value": "1440"
+          }
+        ],
+        "defaultOption": {
+          "name": "Every 30 minutes",
+          "value": "30"
+        },
+        "required": false
+      },
+      {
+        "type": "timePicker",
+        "label": "Sync Starting At (Optional)",
+        "value": "syncStartAt",
+        "options": {
+          "omitSeconds": true
+        },
+        "required": false,
+        "footerNote": "Note: Please specify time in UTC"
+      }
+    ]
+  }
+]

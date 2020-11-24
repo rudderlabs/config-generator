@@ -1,1 +1,71 @@
-[{"title":"Connection Settings","fields":[{"type":"textInput","label":"Account Id","value":"accountId","regex":".*","required":true,"placeholder":"e.g: 410057"},{"type":"checkbox","label":"Single Page Application (SPA)?","value":"isSPA","default":false},{"type":"checkbox","label":"Send experiment viewed as track","value":"sendExperimentTrack","default":false},{"type":"checkbox","label":"Send experiment viewed as identify traits","value":"sendExperimentIdentify","default":false}]},{"title":"Use Native SDK","fields":[{"type":"defaultCheckbox","label":"Use native SDK to send events","value":"useNativeSDK","default":true}]},{"title":"Other Settings","fields":[{"type":"textInput","label":"Library Tolerance","value":"libraryTolerance","regex":".*","placeholder":"e.g: 2000","default":"2500"},{"type":"textInput","label":"Setting Tolerance","value":"settingsTolerance","regex":".*","placeholder":"e.g: 2000","default":"2000"},{"type":"checkbox","label":"Use Existing jquery","value":"useExistingJquery","default":false}]}]
+[
+  {
+    "title": "Connection Settings",
+    "fields": [
+      {
+        "type": "textInput",
+        "label": "Account Id",
+        "value": "accountId",
+        "regex": ".*",
+        "required": true,
+        "placeholder": "e.g: 410057"
+      },
+      {
+        "type": "checkbox",
+        "label": "Single Page Application (SPA)?",
+        "value": "isSPA",
+        "default": false
+      },
+      {
+        "type": "checkbox",
+        "label": "Send experiment viewed as track",
+        "value": "sendExperimentTrack",
+        "default": false
+      },
+      {
+        "type": "checkbox",
+        "label": "Send experiment viewed as identify traits",
+        "value": "sendExperimentIdentify",
+        "default": false
+      }
+    ]
+  },
+  {
+    "title": "Use Native SDK",
+    "fields": [
+      {
+        "type": "defaultCheckbox",
+        "label": "Use native SDK to send events",
+        "value": "useNativeSDK",
+        "default": true
+      }
+    ]
+  },
+  {
+    "title": "Other Settings",
+    "fields": [
+      {
+        "type": "textInput",
+        "label": "Library Tolerance",
+        "value": "libraryTolerance",
+        "regex": ".*",
+        "placeholder": "e.g: 2000",
+        "default": "2500"
+      },
+      {
+        "type": "textInput",
+        "label": "Setting Tolerance",
+        "value": "settingsTolerance",
+        "regex": ".*",
+        "placeholder": "e.g: 2000",
+        "default": "2000"
+      },
+      {
+        "type": "checkbox",
+        "label": "Use Existing jquery",
+        "value": "useExistingJquery",
+        "default": false
+      }
+    ]
+  }
+]

@@ -1,0 +1,24 @@
+[
+  {
+    "title": "Connection Settings",
+    "fields": [
+      {
+        "type": "textInput",
+        "label": "Team API KEY",
+        "value": "teamApiKey",
+        "regex": ".*",
+        "required": true,
+        "placeholder": "e.g: K_HlRyO3IE73-Tz4ch7LNDs0JGdwbknNGolFc3MdoAF",
+        "secret": true
+      },
+      {
+        "type": "textInput",
+        "label": "Instance URL",
+        "value": "yourInstance",
+        "regex": ".*",
+        "placeholder": "e.g: https://app.posthog.com",
+        "secret": true
+      }
+    ]
+  }
+]

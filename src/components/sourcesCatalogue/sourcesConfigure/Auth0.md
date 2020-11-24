@@ -4,6 +4,8 @@
 
 You can add an Auth0 Authentication API webhook in your Auth0 Extension page that points to RudderStack. This way, you can send events to RudderStack whenever Auth0 generates an authentication log.
 
+### Useful Links
+
 [Documentation](https://docs.rudderstack.com/sources/auth0)
 [View on GitHub](https://github.com/rudderlabs/rudderstack-auth0-extension)
 

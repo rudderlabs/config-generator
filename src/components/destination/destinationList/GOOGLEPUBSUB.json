@@ -1,0 +1,37 @@
+[
+  {
+    "title": "1. Connection Settings",
+    "fields": [
+      {
+        "type": "textInput",
+        "label": "Project ID",
+        "value": "projectId",
+        "regex": ".*",
+        "required": true,
+        "placeholder": ""
+      },
+      {
+        "type": "textareaInput",
+        "label": "Credentials",
+        "labelNote": "GCP Service Account credentials JSON for RudderStack to use in publishing data into your Google Pub/Sub",
+        "value": "credentials",
+        "regex": ".*",
+        "required": true,
+        "footerNote": "The credentials JSON is used by the client library to access the Pub/Sub API",
+        "secret": true
+      },
+      {
+        "type": "dynamicForm",
+        "label": "Send RudderStack events to Google pub/sub topics",
+        "footerNote": "Use asterics (*) to send all events to the particular topic.",
+        "labelLeft": "Event",
+        "labelRight": "Topic ID",
+        "keyLeft": "from",
+        "keyRight": "to",
+        "placeholderLeft": "e.g: page",
+        "placeholderRight": "e.g: topic_id",
+        "value": "eventToTopicMap"
+      }
+    ]
+  }
+]

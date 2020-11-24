@@ -4,9 +4,12 @@ With RudderStack’s React Native SDK, you can track your customer event data fr
 
 Check out our documentation and the GitHub codebase to get started. Also, make sure you have the React Native Development Environment set up on your system.
 
-[Documentation][]  
-[View on Github][]
+### Useful Links
+
+[Setting up the React Native development environment](https://reactnative.dev/docs/environment-setup)
+[Documentation][]
+[View on GitHub][]
 
 [//]: # "These are reference links used in the body of this note and get stripped out when the markdown processor does its job. There is no need to format nicely because it shouldn't be seen. Thanks SO - http://stackoverflow.com/questions/4823468/store-comments-in-markdown-syntax"
-[documentation]: https://docs.rudderstack.com/sdk-integration-guide/getting-started-with-react-native-sdk
+[documentation]: https://docs.rudderstack.com/rudderstack-sdk-integration-guides/rudderstack-react-native-sdk
 [view on github]: https://github.com/rudderlabs/rudder-sdk-react-native

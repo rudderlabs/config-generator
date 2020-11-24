@@ -1,1 +1,34 @@
-[{"title":"Connection Settings","fields":[{"type":"textInput","label":"Hub ID","value":"hubID","regex":".*","required":true,"placeholder":"e.g: 748991"},{"type":"textInput","label":"API Key","value":"apiKey","regex":".*","required":false,"placeholder":"e.g: 05afa518-132c-40db-830a-de0f688902f7"}]},{"title":"Native SDK","fields":[{"type":"checkbox","label":"Use native SDK to send events","value":"useNativeSDK","default":false}]}]
+[
+  {
+    "title": "Connection Settings",
+    "fields": [
+      {
+        "type": "textInput",
+        "label": "Hub ID",
+        "value": "hubID",
+        "regex": ".*",
+        "required": true,
+        "placeholder": "e.g: 748991"
+      },
+      {
+        "type": "textInput",
+        "label": "API Key",
+        "value": "apiKey",
+        "regex": ".*",
+        "required": false,
+        "placeholder": "e.g: 05afa518-132c-40db-830a-de0f688902f7"
+      }
+    ]
+  },
+  {
+    "title": "Native SDK",
+    "fields": [
+      {
+        "type": "checkbox",
+        "label": "Use native SDK to send events",
+        "value": "useNativeSDK",
+        "default": false
+      }
+    ]
+  }
+]

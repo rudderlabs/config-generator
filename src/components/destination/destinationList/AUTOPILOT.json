@@ -1,1 +1,23 @@
-[{"title":"Connection Settings","fields":[{"type":"textInput","label":"API Key","value":"apiKey","regex":".*","required":true,"placeholder":"e.g: 1d6583b196d34de28a3g19ahadde4b0z"},{"type":"textInput","label":"Trigger Id","value":"triggerId","regex":".*","required":true,"placeholder":"e.g: 00XX"}]},{"title":"Configure Custom Journey Mappings","fields":[{"type":"dynamicForm","labelLeft":"Trigger Id","labelsRight":"Event Name","keyLeft":"from","keyRight":"to","placeholderLeft":"e.g: 0001","placeholderRight":"e.g: Signup","value":"customMappings"}]}]
+[
+  {
+    "title": "Connection Settings",
+    "fields": [
+      {
+        "type": "textInput",
+        "label": "API Key",
+        "value": "apiKey",
+        "regex": ".*",
+        "required": true,
+        "placeholder": "e.g: 1d6583b196d34de28a3g19ahadde4b0z"
+      },
+      {
+        "type": "textInput",
+        "label": "Trigger Id",
+        "value": "triggerId",
+        "regex": ".*",
+        "required": true,
+        "placeholder": "e.g: 00XX"
+      }
+    ]
+  }
+]

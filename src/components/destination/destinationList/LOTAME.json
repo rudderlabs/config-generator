@@ -1,1 +1,94 @@
-[{"title":"BCP Url Settings","fields":[{"type":"dynamicCustomForm","value":"bcpUrlSettingsPixel","customFields":[{"type":"textInput","label":"BCP Url Template (Pixel)","value":"bcpUrlTemplate","regex":".*","required":false,"placeholder":"e.g: ABCDEFG"}]},{"type":"dynamicCustomForm","value":"bcpUrlSettingsIframe","customFields":[{"type":"textInput","label":"BCP Url Template (Iframe)","value":"bcpUrlTemplate","regex":".*","required":false,"placeholder":"e.g: ABCDEFG"}]}]},{"title":"DSP Url Settings","fields":[{"type":"dynamicCustomForm","value":"dspUrlSettingsPixel","customFields":[{"type":"textInput","label":"DSP Url Template (Pixel)","value":"dspUrlTemplate","regex":".*","required":false,"placeholder":"e.g: ABCDEFG"}]},{"type":"dynamicCustomForm","value":"dspUrlSettingsIframe","customFields":[{"type":"textInput","label":"DSP Url Template (IFrame)","value":"dspUrlTemplate","regex":".*","required":false,"placeholder":"e.g: ABCDEFG"}]}]},{"title":"Map all the fields: ","fields":[{"type":"dynamicForm","labelLeft":"Placeholder","labelRight":"Value","keyLeft":"key","keyRight":"value","placeholderLeft":"e.g: Client ID","placeholderRight":"e.g: 123456","value":"mappings"}]},{"title":"Native SDK","fields":[{"type":"defaultCheckbox","label":"Use native SDK to send events","value":"useNativeSDK","default":true}]}]
+[
+  {
+    "title": "BCP Url Settings",
+    "fields": [
+      {
+        "type": "dynamicCustomForm",
+        "value": "bcpUrlSettingsPixel",
+        "customFields": [
+          {
+            "type": "textInput",
+            "label": "BCP Url Template (Pixel)",
+            "value": "bcpUrlTemplate",
+            "regex": ".*",
+            "required": false,
+            "placeholder": "e.g: ABCDEFG"
+          }
+        ]
+      },
+      {
+        "type": "dynamicCustomForm",
+        "value": "bcpUrlSettingsIframe",
+        "customFields": [
+          {
+            "type": "textInput",
+            "label": "BCP Url Template (Iframe)",
+            "value": "bcpUrlTemplate",
+            "regex": ".*",
+            "required": false,
+            "placeholder": "e.g: ABCDEFG"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "DSP Url Settings",
+    "fields": [
+      {
+        "type": "dynamicCustomForm",
+        "value": "dspUrlSettingsPixel",
+        "customFields": [
+          {
+            "type": "textInput",
+            "label": "DSP Url Template (Pixel)",
+            "value": "dspUrlTemplate",
+            "regex": ".*",
+            "required": false,
+            "placeholder": "e.g: ABCDEFG"
+          }
+        ]
+      },
+      {
+        "type": "dynamicCustomForm",
+        "value": "dspUrlSettingsIframe",
+        "customFields": [
+          {
+            "type": "textInput",
+            "label": "DSP Url Template (IFrame)",
+            "value": "dspUrlTemplate",
+            "regex": ".*",
+            "required": false,
+            "placeholder": "e.g: ABCDEFG"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Map all the fields: ",
+    "fields": [
+      {
+        "type": "dynamicForm",
+        "labelLeft": "Placeholder",
+        "labelRight": "Value",
+        "keyLeft": "key",
+        "keyRight": "value",
+        "placeholderLeft": "e.g: Client ID",
+        "placeholderRight": "e.g: 123456",
+        "value": "mappings"
+      }
+    ]
+  },
+  {
+    "title": "Native SDK",
+    "fields": [
+      {
+        "type": "defaultCheckbox",
+        "label": "Use native SDK to send events",
+        "value": "useNativeSDK",
+        "default": true
+      }
+    ]
+  }
+]

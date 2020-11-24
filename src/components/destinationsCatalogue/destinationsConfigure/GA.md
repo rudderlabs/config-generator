@@ -1,17 +1,18 @@
-- Collect, configure, and analyze your data to reach the right audience.
-- Create custom reports.
+## Google Analytics
 
-## Get more out of Google Analytics with RudderStack!
+Google Analytics is the world's most popular analytics service that allows you to track and report your website traffic across a variety of sources.
 
-Google Analytics can be blocked by browsers, browser extensions, and firewalls. Use an on-prem hosted version of RudderStack to avoid this.
+### Get More Out of Google Analytics With RudderStack
 
-## Related links
+RudderStack supports sending events from RudderStack SDKs to the Google Analytics endpoints. Its uses the S2S (Server-to-Server) connection mode for making requests to Google Analytics endpoints, through Google Analytics' Measurement Protocol specification.
 
-[Google Analytics Website][]  
-[Documentation][]  
-[View on Github][]
+### Useful Links
+
+[Google Analytics Website][]
+[Documentation and Setup guide][]
+[View on GitHub][]
 
 [//]: # "These are reference links used in the body of this note and get stripped out when the markdown processor does its job. There is no need to format nicely because it shouldn't be seen. Thanks SO - http://stackoverflow.com/questions/4823468/store-comments-in-markdown-syntax"
 [google analytics website]: https://analytics.google.com/analytics/web/
-[documentation]: https://docs.rudderstack.com/
-[view on github]: https://github.com/rudderlabs/rudder-transformer/tree/master/v0/ga
+[documentation and setup guide]: https://docs.rudderstack.com/destinations/google-analytics-ga
+[view on github]: https://github.com/rudderlabs/rudder-sdk-js/tree/master/integrations/GA

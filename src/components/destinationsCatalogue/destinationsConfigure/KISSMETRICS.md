@@ -1,17 +1,18 @@
-- Collect, configure, and analyze your data to reach the right audience.
-- Create custom reports.
+## Kissmetrics
 
-## Get more out of Keen with RudderStack!
+Kissmetrics is a product analytics platform to help you increase conversion, as well as drive customer engagement and retention.
 
-Keen can be blocked by browsers, browser extensions, and firewalls. Use an on-prem hosted version of RudderStack to avoid this.
+### Get More Out of Kissmetrics With RudderStack
 
-## Related links
+Now you can send your events to Kissmetrics via RudderStack with minimum time and effort. Simply configure Kissmetrics as a destination on the RudderStack dashboard, and get started in no time!
 
-[KISSmetrics Website][]  
-[Documentation][]  
-[View on Github][]
+### Useful Links
+
+[Kissmetrics Website][]  
+[Documentation and Setup guide][]  
+[View on GitHub][]
 
 [//]: # "These are reference links used in the body of this note and get stripped out when the markdown processor does its job. There is no need to format nicely because it shouldn't be seen. Thanks SO - http://stackoverflow.com/questions/4823468/store-comments-in-markdown-syntax"
 [kissmetrics website]: https://www.kissmetricshq.com/
-[documentation]: https://docs.rudderstack.com/
-[view on github]: https://github.com/rudderlabs/rudder-transformer/tree/master/v0/kissmetrics
+[documentation and setup guide]: https://docs.rudderstack.com/destinations/kissmetrics
+[view on github]: https://github.com/rudderlabs/rudder-transformer/tree/master/v0/destinations/kissmetrics

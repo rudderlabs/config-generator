@@ -1,1 +1,15 @@
-[{"title":"Connection Settings","fields":[{"type":"textInput","label":"Segment Write Key","value":"writeKey","regex":".*","required":true,"placeholder":"e.g: bSjsdGYsOo9sjw23Shj"}]}]
+[
+  {
+    "title": "Connection Settings",
+    "fields": [
+      {
+        "type": "textInput",
+        "label": "Segment Write Key",
+        "value": "writeKey",
+        "regex": ".*",
+        "required": true,
+        "placeholder": "e.g: bSjsdGYsOo9sjw23Shj"
+      }
+    ]
+  }
+]

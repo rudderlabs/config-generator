@@ -1,12 +1,17 @@
-# DigitalOcean Spaces
+## DigitalOcean Spaces
 Spaces is an S3-compatible object storage service that lets you store and serve large amounts of data. Each Space is a bucket for you to store and serve files. The free, built-in Spaces CDN minimizes page load times, improves performance, and reduces bandwidth and infrastructure costs.
 
-## Features
-- DigitalOcean Spaces provide S3-compatible object storage which lets you store and serve large amounts of data. You can create them in a few seconds   and use them immediately with no configuration. Data transfer is automatically secured with HTTPS, and the available storage capacity scales seamlessly.
+### Get More Out of Spaces With RudderStack
 
-- Spaces are ideal for storing static, unstructured data like audio, video, and images as well as large amounts of text. Because Spaces are an object storage implementation, use cases like databases, applications written in server-side languages, and mission-critical applications will work best with local storage or block storage.
+RudderStack allows you to configure Spaces Object Storage as a destination to which you can dump your event data seamlessly.
 
-- If you use Spaces to serve static or dynamic content for your website, you can also benefit from using the Spaces CDN (Content Delivery Network), which is available at no additional cost. CDNs reduce page load times, improve performance, and reduce your bandwidth and infrastructure costs by caching your assets across a set of geographically distributed servers.
+### Useful Links
 
-## Documentation
-Check our [step by step guide](https://docs.rudderstack.com/destinations/digitalocean-spaces) to set up Amazon S3 as a destination in RudderStack.
+[DigitalOcean Spaces Website][]
+[Documentation and Setup guide][]
+[View on GitHub][]
+
+[//]: # "These are reference links used in the body of this note and get stripped out when the markdown processor does its job. There is no need to format nicely because it shouldn't be seen. Thanks SO - http://stackoverflow.com/questions/4823468/store-comments-in-markdown-syntax"
+[digitalocean spaces website]: https://www.digitalocean.com/products/spaces/
+[documentation and setup guide]: https://docs.rudderstack.com/destinations/digitalocean-spaces
+[view on github]: https://github.com/rudderlabs/rudder-transformer/tree/master/v0/destinations/digital_ocean_spaces

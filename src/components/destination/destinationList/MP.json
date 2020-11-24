@@ -1,1 +1,65 @@
-[{"title":"Connection Settings","fields":[{"type":"textInput","label":"Token","value":"token","regex":".*","required":true,"placeholder":"e.g: bSjsdGYsOo9sjw23Shj","secret":true},{"type":"textInput","label":"Api Secret","value":"apiSecret","regex":".*","required":false,"placeholder":"e.g: bSjsdGYsOo9sjw23Shj","secret":true},{"type":"textInput","label":"Group Key Name","value":"groupKey","regex":".*","required":false,"placeholder":"e.g: company","secret":false}]}]
+[
+  {
+    "title": "Connection Settings",
+    "fields": [
+      {
+        "type": "textInput",
+        "label": "API Token",
+        "value": "token",
+        "regex": ".*",
+        "required": true,
+        "placeholder": "c24f56ed817221606de5a5f0befe8b92",
+        "secret": true
+      },
+      {
+        "type": "textInput",
+        "label": "API Secret",
+        "value": "apiSecret",
+        "regex": ".*",
+        "required": false,
+        "placeholder": "f8a911adfbb6546cc43cdfe29e912a90",
+        "secret": true
+      },
+      {
+        "type": "singleSelect",
+        "label": "Data Residency",
+        "value": "dataResidency",
+        "options": [
+          {
+            "name": "US",
+            "value": "us"
+          },
+          {
+            "name": "EU",
+            "value": "eu"
+          }
+        ],
+        "defaultOption": {
+          "name": "US",
+          "value": "us"
+        },
+        "required": false
+      }
+    ]
+  },
+  {
+    "title": "Group Key Settings",
+    "fields": [
+      {
+        "type": "dynamicCustomForm",
+        "value": "groupKeySettings",
+        "label": "Group Keys",
+        "customFields": [
+          {
+            "type": "textInput",
+            "label": "Group Key",
+            "value": "groupKey",
+            "regex": ".*",
+            "required": false,
+            "placeholder": "company"
+          }
+        ]
+      }
+    ]
+  }
+]

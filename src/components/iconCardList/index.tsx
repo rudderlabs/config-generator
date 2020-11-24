@@ -117,7 +117,7 @@ export default class IconCardList extends React.Component<
       </Flex>
     ) : (
       <Flex wrap={true.toString()}>
-        <p>
+        <div>
           <h2>Please add a compatible {type} before making this connection!</h2>
           {destinationDefConfig ? (
             <p>
@@ -135,7 +135,8 @@ export default class IconCardList extends React.Component<
           ) : (
             ''
           )}
-        </p>
+        </div>
+
       </Flex>
     );
   }

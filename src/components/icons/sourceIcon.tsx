@@ -15,6 +15,8 @@ import { ReactComponent as Looker } from '@svg/looker.svg';
 import { ReactComponent as Java } from '@svg/java.svg';
 import { ReactComponent as Auth0 } from '@svg/auth0.svg';
 import { ReactComponent as Segment } from '@svg/segment.svg';
+import { ReactComponent as DotNet } from '@svg/dotnet.svg';
+import { ReactComponent as PHP } from '@svg/php.svg';
 import theme from '@css/theme';
 
 const SourceIcon = (props: any) => {
@@ -53,6 +55,10 @@ const SourceIcon = (props: any) => {
       return <Auth0 width={width} height={height} />;
     case 'segment':
       return <Segment width={width} height={height} />;
+    case 'dotnet':
+      return <DotNet width={width} height={height} />;
+    case 'php':
+      return <PHP width={width} height={height} />;
     default:
       break;
   }

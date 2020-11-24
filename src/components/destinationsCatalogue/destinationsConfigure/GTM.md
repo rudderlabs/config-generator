@@ -1,17 +1,18 @@
-- Collect, configure, and analyze your data to reach the right audience.
-- Create custom reports.
+## Google Tag Manager
 
-## Get more out of Google Tag Manager with RudderStack!
+Google Tag Manager is a popular tag management system that allows you to quickly update tags for your web or mobile applications. Once added to your project, it makes it easier for you to configure, deploy and measure your tags from a web-based UI without needing additional code.
 
-Google Tag Manager can be blocked by browsers, browser extensions, and firewalls. Use an on-prem hosted version of RudderStack to avoid this.
+### Get More Out of Google Tag Manager With RudderStack
 
-## Related links
+RudderStack enables you to send events to the Google Tag Manager dataLayer using its JavaScript SDK.
 
-[Google Tag Manager Website][]  
-[Documentation][]  
-[View on Github][]
+### Useful Links
+
+[Google Tag Manager Website][]
+[Documentation and Setup guide][]
+[View on GitHub][]
 
 [//]: # "These are reference links used in the body of this note and get stripped out when the markdown processor does its job. There is no need to format nicely because it shouldn't be seen. Thanks SO - http://stackoverflow.com/questions/4823468/store-comments-in-markdown-syntax"
 [google tag manager website]: https://tagmanager.google.com/
-[documentation]: https://docs.rudderstack.com/
-[view on github]: https://github.com/rudderlabs/rudder-sdk-js/blob/master/integrations/gtm/browser.js
+[documentation and setup guide]: https://docs.rudderstack.com/destinations/google-tag-manager
+[view on github]: https://github.com/rudderlabs/rudder-sdk-js/tree/master/integrations/GoogleTagManager

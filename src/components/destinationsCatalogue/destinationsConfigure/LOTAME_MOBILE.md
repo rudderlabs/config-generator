@@ -1,6 +1,6 @@
 Sends data to Lotame
 
-## Related links
+## Useful links
 
 [Lotame Website][]
 [Documentation][]

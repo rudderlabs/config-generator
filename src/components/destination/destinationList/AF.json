@@ -1,1 +1,42 @@
-[{"title":"Connection Settings","fields":[{"type":"textInput","label":"AppsFlyer Dev Key","value":"devKey","regex":".*","required":true,"placeholder":"e.g: bSjsdGYsOo9sjw23Shj"},{"type":"textInput","label":"Android App ID","value":"androidAppId","regex":".*","required":true,"placeholder":"com.mypackage.example"},{"type":"textInput","label":"Apple App ID","value":"appleAppId","regex":".*","required":true,"placeholder":"123456789"}]},{"title":"Native SDK","fields":[{"type":"defaultCheckbox","label":"Use native SDK to send events","value":"useNativeSDK","default":true}]}]
+[
+  {
+    "title": "Connection Settings",
+    "fields": [
+      {
+        "type": "textInput",
+        "label": "AppsFlyer Dev Key",
+        "value": "devKey",
+        "regex": ".*",
+        "required": true,
+        "placeholder": "e.g: bSjsdGYsOo9sjw23Shj"
+      },
+      {
+        "type": "textInput",
+        "label": "Android App ID",
+        "value": "androidAppId",
+        "regex": ".*",
+        "required": true,
+        "placeholder": "com.mypackage.example"
+      },
+      {
+        "type": "textInput",
+        "label": "Apple App ID",
+        "value": "appleAppId",
+        "regex": ".*",
+        "required": true,
+        "placeholder": "123456789"
+      }
+    ]
+  },
+  {
+    "title": "Native SDK",
+    "fields": [
+      {
+        "type": "checkbox",
+        "label": "Use native SDK to send events",
+        "value": "useNativeSDK",
+        "default": true
+      }
+    ]
+  }
+]
