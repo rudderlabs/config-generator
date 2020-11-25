@@ -9,7 +9,7 @@ const Container = styled.div`
   width: 475px;
 `;
 
-const SingleSelectDropdown = styled(Select)<any>`
+export const SingleSelectDropdown = styled(Select)<any>`
   &.ant-select {
     width: 100% !important;
   }

@@ -64,7 +64,7 @@ export default class DestinationSettings extends React.Component<
     const { destName, initialSettings, disabled } = this.props;
     const { formTemplate } = this.state;
     return (
-      <Container className="p-t-lg p-b-lg">
+      <Container className="p-t-lg p-b-lg" style={{ width: '475px' }}>
         {formTemplate.map((group: any) => (
           <FormGroup
             key={group.title}
