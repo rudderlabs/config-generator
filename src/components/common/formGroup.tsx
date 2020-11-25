@@ -9,32 +9,39 @@ import SingleSelect from './singleSelect';
 import TimePicker from './timePicker';
 import DynamicForm from './dynamicForm';
 import { toJS } from 'mobx';
+import ErrorLabel from '../auth/errorLabel';
 import DynamicCustomForm from './dynamicCustomForm';
 import DynamicSelectForm from './dynamicSelectForm';
-
+export interface CommonFieldProps {
+  defaultValue: string;
+  value: string;
+  default: string;
+  required: boolean;
+  label: string;
+}
 export interface IFormGroupProps {
   title: string;
   fields: any;
   theme: any;
   onStateChange: any;
-  disabled: boolean;
   initialSettings?: any;
+  secretConfig?: any;
+  disabled: boolean;
+  metadata?: { [i: string]: any }
 }
 
 export interface IFormGroupState {
   formData: any;
   error: boolean;
-  blurCount: number;
   errorMessage: string;
 }
 
-class FormGroup extends React.Component<IFormGroupProps, IFormGroupState> {
+class FormGroup extends React.PureComponent<IFormGroupProps, IFormGroupState> {
   constructor(props: IFormGroupProps) {
     super(props);
     this.state = {
       formData: {},
       error: false,
-      blurCount: 0,
       errorMessage: 'Wrong format',
     };
   }
@@ -47,25 +54,59 @@ class FormGroup extends React.Component<IFormGroupProps, IFormGroupState> {
           [label]: value,
         },
       }),
-      () => onStateChange(this.state.formData),
+      () => onStateChange(this.state.formData, false),
     );
   };
 
-  public onBlur = (regexJSON: any) => {
-    const { formData, blurCount } = this.state;
+  public handleValidation = (regexString: any) => {
+    const { formData } = this.state;
+    const { onStateChange } = this.props;
+
     let key = formData[Object.keys(formData)[0]];
-    var regex = RegExp(regexJSON);
-    if (blurCount === 0) {
-      this.setState({ blurCount: blurCount + 1 });
-    } else {
-      this.setState({ error: !regex.test(key), blurCount: blurCount + 1 });
+    const regex = RegExp(regexString);
+    const isValidInput = key && key.startsWith('env.') ? true : false;
+    this.setState({ error: false });
+
+    if (!isValidInput && !regex.test(key)) {
+      this.setState(
+        (prevState: any) => ({
+          formData: {
+            ...prevState.formData,
+          },
+          error: true,
+        }),
+        () => {
+          onStateChange(this.state.formData, true);
+        },
+      );
     }
   };
 
-  public renderField = (field: any) => {
-    const { initialSettings, title, disabled } = this.props;
+  public renderField = (field: any, fields: any) => {
+    const { initialSettings, secretConfig, disabled, metadata } = this.props;
     if (initialSettings && initialSettings[field.value] !== undefined) {
       field.default = toJS(initialSettings[field.value]);
+    }
+    let forceDisabled = false;
+    let preRequisiteValue;
+    if (field.preRequisiteField) {
+      if (
+        (field.preRequisiteField.selectedValue && this.state.formData[field.preRequisiteField.name] !==
+          field.preRequisiteField.selectedValue) ||
+        (!field.preRequisiteField.selectedValue &&
+          !this.state.formData[field.preRequisiteField.name])
+      ) {
+        // disabledMode if true this field will appear as disabled until the preRequisiteField has a value
+        // if false or not set the field will not appear in the ui until the preRequisiteField has a value
+        if (field.preRequisiteField.disabledMode) {
+          forceDisabled = true;
+        } else {
+          return null;
+        }
+      }
+      if (field.preRequisiteField.includeValue) {
+        preRequisiteValue = this.state.formData[field.preRequisiteField.name]
+      }
     }
     switch (field.type) {
       case 'textInput':
@@ -75,21 +116,24 @@ class FormGroup extends React.Component<IFormGroupProps, IFormGroupState> {
             <div
               className="width-100"
               onBlur={() => {
-                this.onBlur(field.regex);
+                this.handleValidation(field.regex);
               }}
             >
               <TextInputField
                 field={field}
                 onChange={this.onChange}
-                type={field.type === 'textInput' ? 'input' : 'textarea'}
-                disabled={disabled}
+                type={field.type == 'textInput' ? 'input' : 'textarea'}
+                disabled={disabled || forceDisabled}
+                secret={
+                  initialSettings && secretConfig && secretConfig[field.value]
+                }
               ></TextInputField>
-              {/* {this.state.error ? (
+              {this.state.error ? (
                 <ErrorLabel
                   error={this.state.error}
                   errorMessage={this.state.errorMessage}
                 />
-              ) : null} */}
+              ) : null}
               {field.footerNote && (
                 <div className="p-t-sm p-b-sm">{field.footerNote}</div>
               )}
@@ -132,7 +176,7 @@ class FormGroup extends React.Component<IFormGroupProps, IFormGroupState> {
               field={field}
               onChange={this.onChange}
               hidden={false}
-              disabled={disabled}
+              disabled={disabled || forceDisabled}
             ></SwitchInput>
             {field.footerNote && (
               <div className="p-t-sm p-b-sm">{field.footerNote}</div>
@@ -145,8 +189,8 @@ class FormGroup extends React.Component<IFormGroupProps, IFormGroupState> {
             <DynamicForm
               field={field}
               onChange={this.onChange}
-              disabled={disabled}
               hidden={field.hidden}
+              disabled={disabled || forceDisabled}
             ></DynamicForm>
             {field.footerNote && (
               <div className="p-t-sm p-b-sm">{field.footerNote}</div>
@@ -159,7 +203,7 @@ class FormGroup extends React.Component<IFormGroupProps, IFormGroupState> {
             <DynamicCustomForm
               field={field}
               onChange={this.onChange}
-              disabled={disabled}
+              disabled={disabled || forceDisabled}
             ></DynamicCustomForm>
             {field.footerNote && (
               <div className="p-t-sm p-b-sm">{field.footerNote}</div>
@@ -173,7 +217,7 @@ class FormGroup extends React.Component<IFormGroupProps, IFormGroupState> {
               field={field}
               onChange={this.onChange}
               options={field.options}
-              disabled={disabled}
+              disabled={disabled || forceDisabled}
             ></DynamicSelectForm>
             {field.footerNote && (
               <div className="p-t-sm p-b-sm">{field.footerNote}</div>
@@ -208,7 +252,9 @@ class FormGroup extends React.Component<IFormGroupProps, IFormGroupState> {
         <SubHeaderDiv color={theme.color.black} className="p-b-sm">
           {title}
         </SubHeaderDiv>
-        {fields.map((field: any) => this.renderField(field))}
+        {fields.map((field: any) =>
+          this.renderField(_.cloneDeep(field), fields),
+        )}
       </div>
     );
   }
