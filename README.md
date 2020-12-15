@@ -36,7 +36,5 @@ Update the [config](https://docs.rudderstack.com/administrators-guide/config-par
 After adding the required sources and destinations, export your source config for the sources. This source-config is required by the SDKs. After downloading the sourceConfig file, you need to host that file at a `/sourceConfig` end-point.
 Then you can specify that link as your `controlPlaneUrl` while initializing the SDK.
 
-Update the [config](https://docs.rudderstack.com/administrators-guide/config-parameters) variables `configFromFile` and `configJSONPath` in rudder-server to read workspace config from the exported JSON file.
-
 ## Contact Us
 If you come across any issues while configuring or using RudderStack, please feel free to [contact us](https://rudderstack.com/contact/) or start a conversation on our [Slack](https://resources.rudderstack.com/join-rudderstack-slack) channel. We will be happy to help you.
