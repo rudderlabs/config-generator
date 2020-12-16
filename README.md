@@ -22,11 +22,19 @@ On a successful setup, you should see the following
 After adding the required sources and destinations, export your workspace config. This workspace-config is required by the RudderStack Server.
 To learn more about adding sources and destinations in RudderStack, refer [Adding a Source and Destination in RudderStack](https://docs.rudderstack.com/getting-started/adding-source-and-destination-rudderstack)
 
-Update the [config](https://docs.rudderstack.com/administrators-guide/config-parameters) variables `configFromFile` and `configJSONPath` in rudder-server to read workspace config from the exported JSON file. 
+Update the [config](https://docs.rudderstack.com/administrators-guide/config-parameters) variables `configFromFile` and `configJSONPath` in rudder-server to read workspace config from the exported JSON file.
 
 # Start RudderStack with the workspace config file
 
-* Download the workspace config file on your machine. 
+* Download the workspace config file on your machine.
 * In `docker-compose.yml`, uncomment `volumes` section under `backend` service. Specify the path to your workspace config.
-* In `build/docker.env`, set the environment variable `RSERVER_BACKEND_CONFIG_CONFIG_FROM_FILE=true` 
+* In `build/docker.env`, set the environment variable `RSERVER_BACKEND_CONFIG_CONFIG_FROM_FILE=true`
 * Start RudderStack with `docker-compose up`
+
+# Export source config
+
+After adding the required sources and destinations, export your source config for the sources. This source-config is required by the SDKs. After downloading the sourceConfig file, you need to host that file at a `/sourceConfig` end-point.
+Then you can specify that link as your `controlPlaneUrl` while initializing the SDK.
+
+## Contact Us
+If you come across any issues while configuring or using RudderStack, please feel free to [contact us](https://rudderstack.com/contact/) or start a conversation on our [Slack](https://resources.rudderstack.com/join-rudderstack-slack) channel. We will be happy to help you.
