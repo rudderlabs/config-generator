@@ -56,6 +56,7 @@ const destinationList = {
   "SLACK": require('./SLACK.json'),
   "SNOWFLAKE": require('./SNOWFLAKE.json'),
   "TVSQUARED": require('./TVSQUARED.json'),
+  "USERLIST": require('./USERLIST.json'),
   "VWO": require('./VWO.json'),
   "WEBHOOK": require('./WEBHOOK.json'),
   "ZENDESK": require('./ZENDESK.json'),

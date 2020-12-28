@@ -70,6 +70,7 @@ const markdown = {
   SLACK: raw('./SLACK.md'),
   SNOWFLAKE: raw('./SNOWFLAKE.md'),
   TVSQUARED: raw('./TVSQUARED.md'),
+  USERLIST: raw('./USERLIST.md'),
   VWO: raw('./VWO.md'),
   WEBHOOK: raw('./WEBHOOK.md'),
   ZENDESK: raw('./ZENDESK.md'),
