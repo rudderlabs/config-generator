@@ -67,6 +67,7 @@ import { ReactComponent as ADOBE_ANALYTICS } from '@svg/adobe_analytics.svg';
 import { ReactComponent as REDIS } from '@svg/redis.svg';
 import { ReactComponent as MOENGAGE } from '@svg/moengage.svg';
 import { ReactComponent as POSTHOG } from '@svg/posthog.svg';
+import { ReactComponent as USERLIST } from '@svg/userlist.svg';
 import theme from '@css/theme';
 
 const DestinationIcon = (props: any) => {
@@ -209,6 +210,8 @@ const DestinationIcon = (props: any) => {
       return <MOENGAGE width={width} height={height} />;
     case 'posthog':
       return <POSTHOG width={width} height={height} />;
+    case 'userlist':
+      return <USERLIST width={width} height={height} />;
     default:
       break;
   }

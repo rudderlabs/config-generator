@@ -1,0 +1,15 @@
+[
+  {
+    "title": "Connection Settings",
+    "fields": [
+      {
+        "type": "textInput",
+        "label": "Userlist Push Key",
+        "value": "pushKey",
+        "regex": ".*",
+        "required": true,
+        "placeholder": "e.g: sk_UuCIkdGmSnN4OaBCCFOuJaBcb3O2wD8S"
+      }
+    ]
+  }
+]

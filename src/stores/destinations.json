@@ -180,6 +180,20 @@
     "updatedAt": "2020-10-30T09:35:23.487Z"
   },
   {
+    "config": {
+      "destConfig": { "defaultConfig": ["pushKey"] },
+      "secretKeys": ["pushKey"],
+      "excludeKeys": [],
+      "includeKeys": [],
+      "supportedSourceTypes": ["android", "ios", "web", "unity", "amp", "cloud", "reactnative"]
+    },
+    "id": "7noGIjo8yp7ssnfm4zsi8qcJYGu",
+    "name": "USERLIST",
+    "displayName": "Userlist",
+    "createdAt": "2020-12-28T11:38:43.000Z",
+    "updatedAt": "2020-12-28T11:38:43.000Z"
+  },
+  {
     "config": { "destConfig": { "defaultConfig": ["apiKey"] }, "secretKeys": [], "excludeKeys": [], "includeKeys": [], "supportedSourceTypes": ["android", "ios", "unity"] },
     "id": "1X6kXttCU0Ok9hZeoibVaPve8HF",
     "name": "KOCHAVA",
