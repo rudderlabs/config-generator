@@ -184,7 +184,7 @@
       "destConfig": { "defaultConfig": ["pushKey"] },
       "secretKeys": ["pushKey"],
       "excludeKeys": [],
-      "includeKeys": ["pushKey"],
+      "includeKeys": [],
       "supportedSourceTypes": ["android", "ios", "web", "unity", "amp", "cloud", "reactnative"]
     },
     "id": "7noGIjo8yp7ssnfm4zsi8qcJYGu",
