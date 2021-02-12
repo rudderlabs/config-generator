@@ -1,12 +1,29 @@
 [
   {
     "config": {
-      "destConfig": { "defaultConfig": ["apiKey", "audienceId", "datacenterId"] },
+      "destConfig": {
+        "defaultConfig": [
+          "apiKey",
+          "audienceId",
+          "datacenterId"
+        ]
+      },
       "secretKeys": [],
       "excludeKeys": [],
       "includeKeys": [],
-      "supportedSourceTypes": ["android", "ios", "web", "unity", "amp", "cloud", "reactnative"]
+      "transformAt": "processor",
+      "supportedSourceTypes": [
+        "android",
+        "ios",
+        "web",
+        "unity",
+        "amp",
+        "cloud",
+        "reactnative"
+      ],
+      "saveDestinationResponse": false
     },
+    "responseRules": null,
     "id": "1WhodbviDWg8unseq00IbQZuCgH",
     "name": "MAILCHIMP",
     "displayName": "Mailchimp",
@@ -16,7 +33,9 @@
   {
     "config": {
       "destConfig": {
-        "web": ["useNativeSDK"],
+        "web": [
+          "useNativeSDK"
+        ],
         "defaultConfig": [
           "sendExperimentTrack",
           "sendExperimentTrackAsNonInteractive",
@@ -27,6 +46,7 @@
           "customCampaignProperties"
         ]
       },
+      "secretKeys": [],
       "excludeKeys": [],
       "includeKeys": [
         "sendExperimentTrack",
@@ -37,8 +57,13 @@
         "sendExperimentIdentify",
         "customCampaignProperties"
       ],
-      "supportedSourceTypes": ["web"]
+      "transformAt": "processor",
+      "supportedSourceTypes": [
+        "web"
+      ],
+      "saveDestinationResponse": false
     },
+    "responseRules": null,
     "id": "1aIXqAvqyMZPvPWFx6bz0xZjuxm",
     "name": "OPTIMIZELY",
     "displayName": "Optimizely Web",
@@ -47,12 +72,35 @@
   },
   {
     "config": {
-      "destConfig": { "defaultConfig": ["accessKeyId", "secretAccessKey", "region", "trackingId", "eventName", "customMappings"] },
-      "secretKeys": ["accessKeyId", "secretAccessKey"],
+      "destConfig": {
+        "defaultConfig": [
+          "accessKeyId",
+          "secretAccessKey",
+          "region",
+          "trackingId",
+          "eventName",
+          "customMappings"
+        ]
+      },
+      "secretKeys": [
+        "accessKeyId",
+        "secretAccessKey"
+      ],
       "excludeKeys": [],
       "includeKeys": [],
-      "supportedSourceTypes": ["android", "ios", "web", "unity", "amp", "cloud", "reactnative"]
+      "transformAt": "processor",
+      "supportedSourceTypes": [
+        "android",
+        "ios",
+        "web",
+        "unity",
+        "amp",
+        "cloud",
+        "reactnative"
+      ],
+      "saveDestinationResponse": false
     },
+    "responseRules": null,
     "id": "1aIXpX96tdkzhA6bzbxEovHPs9F",
     "name": "PERSONALIZE",
     "displayName": "AWS Personalize",
@@ -61,12 +109,33 @@
   },
   {
     "config": {
-      "destConfig": { "web": ["useNativeSDK"], "defaultConfig": ["hubID", "apiKey"] },
+      "destConfig": {
+        "web": [
+          "useNativeSDK"
+        ],
+        "defaultConfig": [
+          "hubID",
+          "apiKey"
+        ]
+      },
       "secretKeys": [],
       "excludeKeys": [],
-      "includeKeys": ["hubID"],
-      "supportedSourceTypes": ["android", "ios", "web", "unity", "amp", "cloud", "reactnative"]
+      "includeKeys": [
+        "hubID"
+      ],
+      "transformAt": "processor",
+      "supportedSourceTypes": [
+        "android",
+        "ios",
+        "web",
+        "unity",
+        "amp",
+        "cloud",
+        "reactnative"
+      ],
+      "saveDestinationResponse": false
     },
+    "responseRules": null,
     "id": "1QmWb5LccF6r8U4cTkEV3UUDr5X",
     "name": "HS",
     "displayName": "HubSpot",
@@ -75,27 +144,107 @@
   },
   {
     "config": {
-      "destConfig": { "ios": ["useNativeSDK"], "android": ["useNativeSDK"], "defaultConfig": ["branchKey"] },
+      "destConfig": {
+        "ios": [
+          "useNativeSDK"
+        ],
+        "android": [
+          "useNativeSDK"
+        ],
+        "defaultConfig": [
+          "branchKey"
+        ]
+      },
       "secretKeys": [],
       "excludeKeys": [],
-      "includeKeys": ["branchKey"],
-      "supportedSourceTypes": ["android", "ios", "unity"]
+      "includeKeys": [
+        "branchKey"
+      ],
+      "transformAt": "processor",
+      "supportedSourceTypes": [
+        "android",
+        "ios",
+        "unity"
+      ],
+      "saveDestinationResponse": false
     },
+    "responseRules": null,
     "id": "1X1URNGSyBOs8aoIE5ZhcLoPl9d",
     "name": "BRANCH",
     "displayName": "Branch Metrics",
     "createdAt": "2020-01-28T12:04:44.965Z",
     "updatedAt": "2020-10-30T09:35:19.228Z"
   },
-  { "config": { "preview": true }, "id": "1hd6C0gcBgLHlKZQfB7G5elaamh", "name": "LYTICS", "displayName": "Lytics", "createdAt": "2020-09-17T07:41:30.274Z", "updatedAt": "2020-09-17T07:41:30.274Z" },
   {
     "config": {
-      "destConfig": { "defaultConfig": ["containerName", "prefix", "accountName", "accountKey"] },
-      "secretKeys": ["accountKey"],
+      "destConfig": {
+        "web": [
+          "useNativeSDK",
+          "accountId",
+          "blockload",
+          "loadid"
+        ],
+        "defaultConfig": [
+          "apiKey",
+          "stream"
+        ]
+      },
+      "secretKeys": [],
+      "excludeKeys": [],
+      "includeKeys": [
+        "accountId",
+        "apiKey",
+        "stream",
+        "blockload",
+        "loadid"
+      ],
+      "transformAt": "processor",
+      "supportedSourceTypes": [
+        "android",
+        "ios",
+        "web",
+        "unity",
+        "amp",
+        "cloud",
+        "reactnative"
+      ],
+      "saveDestinationResponse": false
+    },
+    "responseRules": null,
+    "id": "1hd6C0gcBgLHlKZQfB7G5elaamh",
+    "name": "LYTICS",
+    "displayName": "Lytics",
+    "createdAt": "2020-09-17T07:41:30.274Z",
+    "updatedAt": "2021-02-05T11:21:53.822Z"
+  },
+  {
+    "config": {
+      "destConfig": {
+        "defaultConfig": [
+          "containerName",
+          "prefix",
+          "accountName",
+          "accountKey"
+        ]
+      },
+      "secretKeys": [
+        "accountKey"
+      ],
       "excludeKeys": [],
       "includeKeys": [],
-      "supportedSourceTypes": ["android", "ios", "web", "unity", "amp", "cloud", "reactnative"]
+      "transformAt": "none",
+      "supportedSourceTypes": [
+        "android",
+        "ios",
+        "web",
+        "unity",
+        "amp",
+        "cloud",
+        "reactnative"
+      ],
+      "saveDestinationResponse": false
     },
+    "responseRules": null,
     "id": "1VNwDPD3UyIvbc08dhdfRtkvz2M",
     "name": "AZURE_BLOB",
     "displayName": "Azure Blob Storage",
@@ -104,12 +253,27 @@
   },
   {
     "config": {
-      "destConfig": { "defaultConfig": ["writeKey"] },
+      "destConfig": {
+        "defaultConfig": [
+          "writeKey"
+        ]
+      },
       "secretKeys": [],
       "excludeKeys": [],
       "includeKeys": [],
-      "supportedSourceTypes": ["android", "ios", "web", "unity", "amp", "cloud", "reactnative"]
+      "transformAt": "processor",
+      "supportedSourceTypes": [
+        "android",
+        "ios",
+        "web",
+        "unity",
+        "amp",
+        "cloud",
+        "reactnative"
+      ],
+      "saveDestinationResponse": false
     },
+    "responseRules": null,
     "id": "1X6kVr34ovq4pyj2T6xyewNwJUs",
     "name": "SEGMENT",
     "displayName": "Segment",
@@ -118,12 +282,35 @@
   },
   {
     "config": {
-      "destConfig": { "defaultConfig": ["bucketName", "prefix", "accessKeyID", "accessKey", "enableSSE"] },
-      "secretKeys": ["accessKeyID", "accessKey"],
+      "destConfig": {
+        "defaultConfig": [
+          "bucketName",
+          "prefix",
+          "accessKeyID",
+          "accessKey",
+          "enableSSE"
+        ]
+      },
+      "secretKeys": [
+        "accessKeyID",
+        "accessKey"
+      ],
       "excludeKeys": [],
       "includeKeys": [],
-      "supportedSourceTypes": ["android", "ios", "web", "unity", "amp", "cloud", "reactnative"]
+      "transformAt": "none",
+      "supportedSourceTypes": [
+        "android",
+        "ios",
+        "web",
+        "unity",
+        "amp",
+        "cloud",
+        "reactnative",
+        "cloudSource"
+      ],
+      "saveDestinationResponse": false
     },
+    "responseRules": null,
     "id": "1RGyRVfXNj5cpOYB6nz5qmWhC5G",
     "name": "S3",
     "displayName": "Amazon S3",
@@ -132,12 +319,41 @@
   },
   {
     "config": {
-      "destConfig": { "ios": ["useNativeSDK"], "unity": ["useNativeSDK"], "android": ["useNativeSDK"], "defaultConfig": ["appToken", "customMappings", "delay", "environment"] },
+      "destConfig": {
+        "ios": [
+          "useNativeSDK"
+        ],
+        "unity": [
+          "useNativeSDK"
+        ],
+        "android": [
+          "useNativeSDK"
+        ],
+        "defaultConfig": [
+          "appToken",
+          "customMappings",
+          "delay",
+          "environment"
+        ]
+      },
       "secretKeys": [],
       "excludeKeys": [],
-      "includeKeys": ["appToken", "customMappings", "delay"],
-      "supportedSourceTypes": ["android", "ios", "unity", "cloud", "reactnative"]
+      "includeKeys": [
+        "appToken",
+        "customMappings",
+        "delay"
+      ],
+      "transformAt": "processor",
+      "supportedSourceTypes": [
+        "android",
+        "ios",
+        "unity",
+        "cloud",
+        "reactnative"
+      ],
+      "saveDestinationResponse": false
     },
+    "responseRules": null,
     "id": "1QmWay7IJwRwBUk827WSEYvfyOb",
     "name": "ADJ",
     "displayName": "Adjust",
@@ -145,7 +361,27 @@
     "updatedAt": "2020-10-30T09:35:04.111Z"
   },
   {
-    "config": { "destConfig": { "web": ["useNativeSDK"], "defaultConfig": ["containerID"] }, "secretKeys": [], "excludeKeys": [], "includeKeys": ["containerID"], "supportedSourceTypes": ["web"] },
+    "config": {
+      "destConfig": {
+        "web": [
+          "useNativeSDK"
+        ],
+        "defaultConfig": [
+          "containerID"
+        ]
+      },
+      "secretKeys": [],
+      "excludeKeys": [],
+      "includeKeys": [
+        "containerID"
+      ],
+      "transformAt": "processor",
+      "supportedSourceTypes": [
+        "web"
+      ],
+      "saveDestinationResponse": false
+    },
+    "responseRules": null,
     "id": "1X6kXapk8Sf8yZTJn1dYZO3OXFt",
     "name": "GTM",
     "displayName": "Google Tag Manager",
@@ -154,11 +390,34 @@
   },
   {
     "config": {
-      "destConfig": { "ios": ["useNativeSDK"], "android": ["useNativeSDK"], "defaultConfig": ["bcpUrlSettingsPixel", "dspUrlSettingsPixel", "mappings"] },
+      "destConfig": {
+        "ios": [
+          "useNativeSDK"
+        ],
+        "android": [
+          "useNativeSDK"
+        ],
+        "defaultConfig": [
+          "bcpUrlSettingsPixel",
+          "dspUrlSettingsPixel",
+          "mappings"
+        ]
+      },
+      "secretKeys": [],
       "excludeKeys": [],
-      "includeKeys": ["bcpUrlSettingsPixel", "dspUrlSettingsPixel", "mappings"],
-      "supportedSourceTypes": ["android", "ios"]
+      "includeKeys": [
+        "bcpUrlSettingsPixel",
+        "dspUrlSettingsPixel",
+        "mappings"
+      ],
+      "transformAt": "processor",
+      "supportedSourceTypes": [
+        "android",
+        "ios"
+      ],
+      "saveDestinationResponse": false
     },
+    "responseRules": null,
     "id": "1fBa1LLyLbbwAnLDIrAs78Ymhax",
     "name": "LOTAME_MOBILE",
     "displayName": "Lotame Mobile",
@@ -167,12 +426,34 @@
   },
   {
     "config": {
-      "destConfig": { "web": ["useNativeSDK"], "defaultConfig": ["apiKey", "siteID"] },
+      "destConfig": {
+        "web": [
+          "useNativeSDK"
+        ],
+        "defaultConfig": [
+          "apiKey",
+          "siteID"
+        ]
+      },
       "secretKeys": [],
       "excludeKeys": [],
-      "includeKeys": ["apiKey", "siteID"],
-      "supportedSourceTypes": ["android", "ios", "web", "unity", "amp", "cloud", "reactnative"]
+      "includeKeys": [
+        "apiKey",
+        "siteID"
+      ],
+      "transformAt": "processor",
+      "supportedSourceTypes": [
+        "android",
+        "ios",
+        "web",
+        "unity",
+        "amp",
+        "cloud",
+        "reactnative"
+      ],
+      "saveDestinationResponse": false
     },
+    "responseRules": null,
     "id": "1YL4iM8nd0wYQY6zB29lOf8sALB",
     "name": "CUSTOMERIO",
     "displayName": "Customer IO",
@@ -181,12 +462,29 @@
   },
   {
     "config": {
-      "destConfig": { "defaultConfig": ["pushKey"] },
-      "secretKeys": ["pushKey"],
+      "destConfig": {
+        "defaultConfig": [
+          "pushKey"
+        ]
+      },
+      "secretKeys": [
+        "pushKey"
+      ],
       "excludeKeys": [],
       "includeKeys": [],
-      "supportedSourceTypes": ["android", "ios", "web", "unity", "amp", "cloud", "reactnative"]
+      "transformAt": "processor",
+      "supportedSourceTypes": [
+        "android",
+        "ios",
+        "web",
+        "unity",
+        "amp",
+        "cloud",
+        "reactnative"
+      ],
+      "saveDestinationResponse": false
     },
+    "responseRules": null,
     "id": "7noGIjo8yp7ssnfm4zsi8qcJYGu",
     "name": "USERLIST",
     "displayName": "Userlist",
@@ -194,7 +492,27 @@
     "updatedAt": "2020-12-28T11:38:43.000Z"
   },
   {
-    "config": { "destConfig": { "defaultConfig": ["apiKey"] }, "secretKeys": [], "excludeKeys": [], "includeKeys": [], "supportedSourceTypes": ["android", "ios", "unity"] },
+    "config": {
+      "destConfig": {
+        "defaultConfig": [
+          "apiKey"
+        ]
+      },
+      "secretKeys": [],
+      "excludeKeys": [],
+      "includeKeys": [],
+      "transformAt": "processor",
+      "supportedSourceTypes": [
+        "android",
+        "ios",
+        "unity",
+        "amp",
+        "cloud",
+        "reactnative"
+      ],
+      "saveDestinationResponse": false
+    },
+    "responseRules": null,
     "id": "1X6kXttCU0Ok9hZeoibVaPve8HF",
     "name": "KOCHAVA",
     "displayName": "Kochava",
@@ -203,12 +521,32 @@
   },
   {
     "config": {
-      "destConfig": { "defaultConfig": ["token", "groupKeySettings", "apiSecret", "dataResidency"] },
-      "secretKeys": ["token"],
+      "destConfig": {
+        "defaultConfig": [
+          "token",
+          "groupKeySettings",
+          "apiSecret",
+          "dataResidency"
+        ]
+      },
+      "secretKeys": [
+        "token"
+      ],
       "excludeKeys": [],
       "includeKeys": [],
-      "supportedSourceTypes": ["android", "ios", "web", "unity", "amp", "cloud", "reactnative"]
+      "transformAt": "processor",
+      "supportedSourceTypes": [
+        "android",
+        "ios",
+        "web",
+        "unity",
+        "amp",
+        "cloud",
+        "reactnative"
+      ],
+      "saveDestinationResponse": false
     },
+    "responseRules": null,
     "id": "1QmWaiefYgYqxl9JGUe5PQio6bx",
     "name": "MP",
     "displayName": "Mixpanel",
@@ -217,12 +555,27 @@
   },
   {
     "config": {
-      "destConfig": { "defaultConfig": ["appId"] },
+      "destConfig": {
+        "defaultConfig": [
+          "appId"
+        ]
+      },
       "secretKeys": [],
       "excludeKeys": [],
       "includeKeys": [],
-      "supportedSourceTypes": ["android", "ios", "web", "unity", "amp", "cloud", "reactnative"]
+      "transformAt": "processor",
+      "supportedSourceTypes": [
+        "android",
+        "ios",
+        "web",
+        "unity",
+        "amp",
+        "cloud",
+        "reactnative"
+      ],
+      "saveDestinationResponse": false
     },
+    "responseRules": null,
     "id": "1X6kW6RioSJQuXjk5N0zwfvxg3T",
     "name": "HEAP",
     "displayName": "Heap.io",
@@ -230,7 +583,10 @@
     "updatedAt": "2020-10-30T09:35:18.258Z"
   },
   {
-    "config": { "preview": true },
+    "config": {
+      "preview": true
+    },
+    "responseRules": null,
     "id": "1aIXpqAQTFgNXAjCkbqdMwaazoU",
     "name": "ADOBE_ANALYTICS",
     "displayName": "Adobe Analytics",
@@ -238,7 +594,10 @@
     "updatedAt": "2020-04-09T09:24:26.141Z"
   },
   {
-    "config": { "preview": true },
+    "config": {
+      "preview": true
+    },
+    "responseRules": null,
     "id": "1aIXpwwBsxUmZImmnISqa5i970I",
     "name": "TWITTER_ADS",
     "displayName": "Twitter Ads",
@@ -246,23 +605,75 @@
     "updatedAt": "2020-04-09T09:24:27.778Z"
   },
   {
-    "config": { "preview": true },
+    "config": {
+      "preview": true
+    },
+    "responseRules": null,
     "id": "1aIXqGvi6YgkvskBK3tG3O8Oxmp",
     "name": "TAPLYTICS",
     "displayName": "Taplytics",
     "createdAt": "2020-04-09T09:24:30.527Z",
     "updatedAt": "2020-04-09T09:24:30.527Z"
   },
-  { "config": { "preview": true }, "id": "1aIXqT6OdnoGGlRxuhOS6c61wHl", "name": "DRIFT", "displayName": "Drift", "createdAt": "2020-04-09T09:24:31.164Z", "updatedAt": "2020-04-09T09:24:31.164Z" },
-  { "config": { "preview": true }, "id": "1aIXqM806xAVm92nx07YwKbRrO9", "name": "MARKETO", "displayName": "Marketo", "createdAt": "2020-04-09T09:24:31.794Z", "updatedAt": "2020-04-09T09:24:31.794Z" },
-  { "config": { "preview": true }, "id": "1aIXqUw2VaNQMnJPg87Wr3YoJYT", "name": "PARDOT", "displayName": "Pardot", "createdAt": "2020-04-09T09:24:32.436Z", "updatedAt": "2020-04-09T09:24:32.436Z" },
   {
     "config": {
-      "destConfig": { "defaultConfig": ["hostName", "port", "topic", "sslEnabled", "caCertificate"] },
+      "preview": true
+    },
+    "responseRules": null,
+    "id": "1aIXqT6OdnoGGlRxuhOS6c61wHl",
+    "name": "DRIFT",
+    "displayName": "Drift",
+    "createdAt": "2020-04-09T09:24:31.164Z",
+    "updatedAt": "2020-04-09T09:24:31.164Z"
+  },
+  {
+    "config": {
+      "preview": true
+    },
+    "id": "1aIXqM806xAVm92nx07YwKbRrO9",
+    "name": "MARKETO",
+    "displayName": "Marketo",
+    "createdAt": "2020-04-09T09:24:31.794Z",
+    "updatedAt": "2020-04-09T09:24:31.794Z"
+  },
+  {
+    "config": {
+      "preview": true
+    },
+    "responseRules": null,
+    "id": "1aIXqUw2VaNQMnJPg87Wr3YoJYT",
+    "name": "PARDOT",
+    "displayName": "Pardot",
+    "createdAt": "2020-04-09T09:24:32.436Z",
+    "updatedAt": "2020-04-09T09:24:32.436Z"
+  },
+  {
+    "config": {
+      "destConfig": {
+        "defaultConfig": [
+          "hostName",
+          "port",
+          "topic",
+          "sslEnabled",
+          "caCertificate"
+        ]
+      },
+      "secretKeys": [],
       "excludeKeys": [],
       "includeKeys": [],
-      "supportedSourceTypes": ["android", "ios", "web", "unity", "amp", "cloud", "reactnative"]
+      "transformAt": "processor",
+      "supportedSourceTypes": [
+        "android",
+        "ios",
+        "web",
+        "unity",
+        "amp",
+        "cloud",
+        "reactnative"
+      ],
+      "saveDestinationResponse": false
     },
+    "responseRules": null,
     "id": "1c81NzcId5roSqvQ1R57zhIsC01",
     "name": "KAFKA",
     "displayName": "Apache Kafka",
@@ -270,7 +681,28 @@
     "updatedAt": "2020-10-22T12:44:01.795Z"
   },
   {
-    "config": { "destConfig": { "defaultConfig": ["apiKey"] }, "excludeKeys": [], "includeKeys": [], "supportedSourceTypes": ["android", "ios", "web", "unity", "amp", "cloud", "reactnative"] },
+    "config": {
+      "destConfig": {
+        "defaultConfig": [
+          "apiKey"
+        ]
+      },
+      "secretKeys": [],
+      "excludeKeys": [],
+      "includeKeys": [],
+      "transformAt": "processor",
+      "supportedSourceTypes": [
+        "android",
+        "ios",
+        "web",
+        "unity",
+        "amp",
+        "cloud",
+        "reactnative"
+      ],
+      "saveDestinationResponse": false
+    },
+    "responseRules": null,
     "id": "1faMelb2UpdCSCsrbLUSl6U9J9Y",
     "name": "INDICATIVE",
     "displayName": "Indicative",
@@ -279,12 +711,34 @@
   },
   {
     "config": {
-      "destConfig": { "defaultConfig": ["region", "stream", "accessKeyID", "accessKey", "useMessageId"] },
-      "secretKeys": ["accessKeyID", "accessKey"],
+      "destConfig": {
+        "defaultConfig": [
+          "region",
+          "stream",
+          "accessKeyID",
+          "accessKey",
+          "useMessageId"
+        ]
+      },
+      "secretKeys": [
+        "accessKeyID",
+        "accessKey"
+      ],
       "excludeKeys": [],
       "includeKeys": [],
-      "supportedSourceTypes": ["android", "ios", "web", "unity", "amp", "cloud", "reactnative"]
+      "transformAt": "processor",
+      "supportedSourceTypes": [
+        "android",
+        "ios",
+        "web",
+        "unity",
+        "amp",
+        "cloud",
+        "reactnative"
+      ],
+      "saveDestinationResponse": false
     },
+    "responseRules": null,
     "id": "1aIXq4KRCBNvw6m2vTI2KRDjj3O",
     "name": "KINESIS",
     "displayName": "Amazon Kinesis",
@@ -293,11 +747,33 @@
   },
   {
     "config": {
-      "destConfig": { "defaultConfig": ["endPoint", "accessKeyID", "accessKey", "bucketName", "prefix"] },
+      "destConfig": {
+        "defaultConfig": [
+          "endPoint",
+          "accessKeyID",
+          "accessKey",
+          "bucketName",
+          "prefix"
+        ]
+      },
+      "secretKeys": [
+        "accessKeyID",
+        "secretAccessKey"
+      ],
       "excludeKeys": [],
       "includeKeys": [],
-      "supportedSourceTypes": ["android", "ios", "web", "unity", "amp", "cloud"]
+      "transformAt": "none",
+      "supportedSourceTypes": [
+        "android",
+        "ios",
+        "web",
+        "unity",
+        "amp",
+        "cloud"
+      ],
+      "saveDestinationResponse": false
     },
+    "responseRules": null,
     "id": "1grNKbT6FlTQdEYZGE6EGquqXdC",
     "name": "DIGITAL_OCEAN_SPACES",
     "displayName": "DigitalOcean Spaces",
@@ -306,12 +782,34 @@
   },
   {
     "config": {
-      "destConfig": { "web": ["useNativeSDK"], "defaultConfig": ["apiKey", "prefixProperties"] },
+      "destConfig": {
+        "web": [
+          "useNativeSDK"
+        ],
+        "defaultConfig": [
+          "apiKey",
+          "prefixProperties"
+        ]
+      },
       "secretKeys": [],
       "excludeKeys": [],
-      "includeKeys": ["apiKey", "prefixProperties"],
-      "supportedSourceTypes": ["android", "ios", "web", "unity", "amp", "cloud", "reactnative"]
+      "includeKeys": [
+        "apiKey",
+        "prefixProperties"
+      ],
+      "transformAt": "processor",
+      "supportedSourceTypes": [
+        "android",
+        "ios",
+        "web",
+        "unity",
+        "amp",
+        "cloud",
+        "reactnative"
+      ],
+      "saveDestinationResponse": false
     },
+    "responseRules": null,
     "id": "1X6lTvySRXRVFRTPhQOn3YmkyB1",
     "name": "KISSMETRICS",
     "displayName": "Kiss Metrics",
@@ -320,10 +818,26 @@
   },
   {
     "config": {
-      "destConfig": { "defaultConfig": ["monetateChannel", "retailerShortName"] },
+      "destConfig": {
+        "defaultConfig": [
+          "monetateChannel",
+          "retailerShortName"
+        ]
+      },
       "secretKeys": [],
-      "supportedSourceTypes": ["android", "ios", "web", "cloud", "reactnative", "unity", "amp"]
+      "transformAt": "processor",
+      "supportedSourceTypes": [
+        "android",
+        "ios",
+        "web",
+        "cloud",
+        "reactnative",
+        "unity",
+        "amp"
+      ],
+      "saveDestinationResponse": false
     },
+    "responseRules": null,
     "id": "1hGP88qH9rGzXkCU82Vg2VKvzbB",
     "name": "MONETATE",
     "displayName": "Monetate",
@@ -332,12 +846,28 @@
   },
   {
     "config": {
-      "destConfig": { "defaultConfig": ["apiKey", "triggerId"] },
+      "destConfig": {
+        "defaultConfig": [
+          "apiKey",
+          "triggerId"
+        ]
+      },
       "secretKeys": [],
       "excludeKeys": [],
       "includeKeys": [],
-      "supportedSourceTypes": ["android", "ios", "web", "unity", "amp", "cloud", "reactnative"]
+      "transformAt": "processor",
+      "supportedSourceTypes": [
+        "android",
+        "ios",
+        "web",
+        "unity",
+        "amp",
+        "cloud",
+        "reactnative"
+      ],
+      "saveDestinationResponse": false
     },
+    "responseRules": null,
     "id": "1X6kVYgRUIsz6upwC0gN3m54C43",
     "name": "AUTOPILOT",
     "displayName": "Autopilot",
@@ -346,11 +876,29 @@
   },
   {
     "config": {
-      "destConfig": { "defaultConfig": ["bootstrapServer", "topic", "eventHubsConnectionString"] },
+      "destConfig": {
+        "defaultConfig": [
+          "bootstrapServer",
+          "topic",
+          "eventHubsConnectionString"
+        ]
+      },
+      "secretKeys": [],
       "excludeKeys": [],
       "includeKeys": [],
-      "supportedSourceTypes": ["android", "ios", "web", "unity", "amp", "cloud", "reactnative"]
+      "transformAt": "processor",
+      "supportedSourceTypes": [
+        "android",
+        "ios",
+        "web",
+        "unity",
+        "amp",
+        "cloud",
+        "reactnative"
+      ],
+      "saveDestinationResponse": false
     },
+    "responseRules": null,
     "id": "1cRiZGdoSLc70fDPj5fHndq5ZYm",
     "name": "AZURE_EVENT_HUB",
     "displayName": "Azure Event Hubs",
@@ -358,7 +906,27 @@
     "updatedAt": "2020-10-22T12:43:37.460Z"
   },
   {
-    "config": { "destConfig": { "web": ["useNativeSDK"], "defaultConfig": ["siteID"] }, "secretKeys": [], "excludeKeys": [], "includeKeys": ["siteID"], "supportedSourceTypes": ["web"] },
+    "config": {
+      "destConfig": {
+        "web": [
+          "useNativeSDK"
+        ],
+        "defaultConfig": [
+          "siteID"
+        ]
+      },
+      "secretKeys": [],
+      "excludeKeys": [],
+      "includeKeys": [
+        "siteID"
+      ],
+      "transformAt": "processor",
+      "supportedSourceTypes": [
+        "web"
+      ],
+      "saveDestinationResponse": false
+    },
+    "responseRules": null,
     "id": "1SxbQXdfQ2NzIdqNO3GceshF4V0",
     "name": "HOTJAR",
     "displayName": "Hotjar",
@@ -367,12 +935,28 @@
   },
   {
     "config": {
-      "destConfig": { "web": ["useNativeSDK"], "defaultConfig": ["fs_debug_mode", "fs_org"] },
+      "destConfig": {
+        "web": [
+          "useNativeSDK"
+        ],
+        "defaultConfig": [
+          "fs_debug_mode",
+          "fs_org"
+        ]
+      },
       "secretKeys": [],
       "excludeKeys": [],
-      "includeKeys": ["fs_debug_mode", "fs_org"],
-      "supportedSourceTypes": ["web"]
+      "includeKeys": [
+        "fs_debug_mode",
+        "fs_org"
+      ],
+      "transformAt": "processor",
+      "supportedSourceTypes": [
+        "web"
+      ],
+      "saveDestinationResponse": false
     },
+    "responseRules": null,
     "id": "1aIY8UDEW1vZJ6n21ZO9BmRHgAp",
     "name": "FULLSTORY",
     "displayName": "Fullstory",
@@ -381,12 +965,40 @@
   },
   {
     "config": {
-      "destConfig": { "ios": ["useNativeSDK"], "web": ["useNativeSDK", "releaseStage", "ssl"], "android": ["useNativeSDK"], "defaultConfig": ["apiKey"] },
-      "secretKeys": ["apiKey"],
+      "destConfig": {
+        "ios": [
+          "useNativeSDK"
+        ],
+        "web": [
+          "useNativeSDK",
+          "releaseStage",
+          "ssl"
+        ],
+        "android": [
+          "useNativeSDK"
+        ],
+        "defaultConfig": [
+          "apiKey"
+        ]
+      },
+      "secretKeys": [
+        "apiKey"
+      ],
       "excludeKeys": [],
-      "includeKeys": ["apiKey", "releaseStage", "ssl"],
-      "supportedSourceTypes": ["android", "ios", "web"]
+      "includeKeys": [
+        "apiKey",
+        "releaseStage",
+        "ssl"
+      ],
+      "transformAt": "processor",
+      "supportedSourceTypes": [
+        "android",
+        "ios",
+        "web"
+      ],
+      "saveDestinationResponse": false
     },
+    "responseRules": null,
     "id": "1aIXpbUCb7VLzjr0nsde61Kcd7M",
     "name": "BUGSNAG",
     "displayName": "Bugsnag",
@@ -395,11 +1007,33 @@
   },
   {
     "config": {
-      "destConfig": { "defaultConfig": ["project", "location", "bucketName", "credentials", "prefix", "namespace", "syncFrequency", "syncStartAt"] },
-      "secretKeys": ["credentials"],
+      "destConfig": {
+        "defaultConfig": [
+          "project",
+          "location",
+          "bucketName",
+          "credentials",
+          "prefix",
+          "namespace",
+          "syncFrequency",
+          "syncStartAt"
+        ]
+      },
+      "secretKeys": [
+        "credentials"
+      ],
       "excludeKeys": [],
       "includeKeys": [],
-      "supportedSourceTypes": ["android", "ios", "web", "unity", "amp", "cloud", "reactnative", "salesforce", "google_sheets"]
+      "transformAt": "processor",
+      "supportedSourceTypes": [
+        "android",
+        "ios",
+        "web",
+        "unity",
+        "amp",
+        "cloud",
+        "reactnative"
+      ]
     },
     "id": "1VNweG19HekyfdmJ24jOLxK9VmQ",
     "name": "BQ",
@@ -409,12 +1043,34 @@
   },
   {
     "config": {
-      "destConfig": { "ios": ["useNativeSDK"], "android": ["useNativeSDK"], "defaultConfig": ["appID"] },
+      "destConfig": {
+        "ios": [
+          "useNativeSDK"
+        ],
+        "android": [
+          "useNativeSDK"
+        ],
+        "defaultConfig": [
+          "appID"
+        ]
+      },
       "secretKeys": [],
       "excludeKeys": [],
-      "includeKeys": ["appID"],
-      "supportedSourceTypes": ["android", "ios", "unity", "amp", "cloud", "reactnative"]
+      "includeKeys": [
+        "appID"
+      ],
+      "transformAt": "processor",
+      "supportedSourceTypes": [
+        "android",
+        "ios",
+        "unity",
+        "amp",
+        "cloud",
+        "reactnative"
+      ],
+      "saveDestinationResponse": false
     },
+    "responseRules": null,
     "id": "1QmWamxaZqD8RquMRIAUL0fgcle",
     "name": "FB",
     "displayName": "Facebook App Events",
@@ -423,12 +1079,31 @@
   },
   {
     "config": {
-      "destConfig": { "web": ["useNativeSDK"], "defaultConfig": ["domain", "uid", "sendNameAndCategoryAsTitle", "video"] },
+      "destConfig": {
+        "web": [
+          "useNativeSDK"
+        ],
+        "defaultConfig": [
+          "domain",
+          "uid",
+          "sendNameAndCategoryAsTitle",
+          "video"
+        ]
+      },
       "secretKeys": [],
       "excludeKeys": [],
-      "includeKeys": ["domain", "uid", "sendNameAndCategoryAsTitle", "video"],
-      "supportedSourceTypes": ["web"]
+      "includeKeys": [
+        "domain",
+        "uid",
+        "sendNameAndCategoryAsTitle",
+        "video"
+      ],
+      "transformAt": "processor",
+      "supportedSourceTypes": [
+        "web"
+      ]
     },
+    "responseRules": null,
     "id": "1YL4iTQ63Nd7Z8tDQVGfVHNtIqn",
     "name": "CHARTBEAT",
     "displayName": "Chartbeat",
@@ -437,12 +1112,69 @@
   },
   {
     "config": {
-      "destConfig": { "defaultConfig": ["endPoint", "accessKeyID", "secretAccessKey", "bucketName", "prefix", "useSSL"] },
-      "secretKeys": ["accessKeyID", "secretAccessKey"],
+      "destConfig": {
+        "defaultConfig": [
+          "bootstrapServer",
+          "topic",
+          "apiKey",
+          "apiSecret"
+        ]
+      },
+      "secretKeys": [
+        "apiSecret"
+      ],
       "excludeKeys": [],
       "includeKeys": [],
-      "supportedSourceTypes": ["android", "ios", "web", "unity", "amp", "cloud", "reactnative"]
+      "transformAt": "processor",
+      "supportedSourceTypes": [
+        "android",
+        "ios",
+        "web",
+        "unity",
+        "amp",
+        "cloud",
+        "reactnative"
+      ],
+      "saveDestinationResponse": false
     },
+    "responseRules": null,
+    "id": "1krdmGu7Y36HNeL3Zk8pq33gOMJ",
+    "name": "CONFLUENT_CLOUD",
+    "displayName": "Confluent Cloud",
+    "createdAt": "2020-11-27T07:40:01.081Z",
+    "updatedAt": "2021-02-05T11:21:22.583Z"
+  },
+  {
+    "config": {
+      "destConfig": {
+        "defaultConfig": [
+          "endPoint",
+          "accessKeyID",
+          "secretAccessKey",
+          "bucketName",
+          "prefix",
+          "useSSL"
+        ]
+      },
+      "secretKeys": [
+        "accessKeyID",
+        "secretAccessKey"
+      ],
+      "excludeKeys": [],
+      "includeKeys": [],
+      "transformAt": "none",
+      "supportedSourceTypes": [
+        "android",
+        "ios",
+        "web",
+        "unity",
+        "amp",
+        "cloud",
+        "reactnative"
+      ],
+      "saveDestinationResponse": false
+    },
+    "responseRules": null,
     "id": "1RtJJUdVrJgPt6t06Rjjquztzgh",
     "name": "MINIO",
     "displayName": "MinIO",
@@ -451,11 +1183,28 @@
   },
   {
     "config": {
-      "destConfig": { "defaultConfig": ["teamApiKey", "yourInstance"] },
+      "destConfig": {
+        "defaultConfig": [
+          "teamApiKey",
+          "yourInstance"
+        ]
+      },
+      "secretKeys": [],
       "excludeKeys": [],
       "includeKeys": [],
-      "supportedSourceTypes": ["android", "ios", "web", "unity", "amp", "cloud", "reactnative"]
+      "transformAt": "processor",
+      "supportedSourceTypes": [
+        "android",
+        "ios",
+        "web",
+        "unity",
+        "amp",
+        "cloud",
+        "reactnative"
+      ],
+      "saveDestinationResponse": false
     },
+    "responseRules": null,
     "id": "1kFwq1W6mIA0COSvz7Zmqsn1DFB",
     "name": "POSTHOG",
     "displayName": "PostHog",
@@ -464,11 +1213,33 @@
   },
   {
     "config": {
-      "destConfig": { "ios": ["useNativeSDK"], "android": ["useNativeSDK"], "defaultConfig": ["trackKnownUsers", "nonInteraction", "listen"] },
+      "destConfig": {
+        "ios": [
+          "useNativeSDK"
+        ],
+        "android": [
+          "useNativeSDK"
+        ],
+        "defaultConfig": [
+          "trackKnownUsers",
+          "nonInteraction",
+          "listen"
+        ]
+      },
       "excludeKeys": [],
-      "includeKeys": ["trackKnownUsers", "nonInteraction", "listen"],
-      "supportedSourceTypes": ["android", "ios"]
+      "includeKeys": [
+        "trackKnownUsers",
+        "nonInteraction",
+        "listen"
+      ],
+      "transformAt": "processor",
+      "supportedSourceTypes": [
+        "android",
+        "ios"
+      ],
+      "saveDestinationResponse": false
     },
+    "responseRules": null,
     "id": "1g01au7cP5yy84VCKBSMNKKj8oA",
     "name": "OPTIMIZELY_FULLSTACK",
     "displayName": "Optimizely Fullstack",
@@ -477,12 +1248,60 @@
   },
   {
     "config": {
-      "destConfig": { "defaultConfig": ["bucketName", "prefix", "credentials"] },
-      "secretKeys": ["credentials"],
+      "destConfig": {
+        "web": [
+          "useNativeSDK"
+        ],
+        "defaultConfig": [
+          "apiKey"
+        ]
+      },
+      "secretKeys": [],
+      "excludeKeys": [],
+      "includeKeys": [
+        "apiKey"
+      ],
+      "transformAt": "processor",
+      "supportedSourceTypes": [
+        "web"
+      ],
+      "saveDestinationResponse": false
+    },
+    "responseRules": null,
+    "id": "1m1PzLueSIwPpDZwe2J21oWwBfD",
+    "name": "PENDO",
+    "displayName": "Pendo",
+    "createdAt": "2020-12-22T17:33:04.789Z",
+    "updatedAt": "2021-02-05T11:22:03.333Z"
+  },
+  {
+    "config": {
+      "destConfig": {
+        "defaultConfig": [
+          "bucketName",
+          "prefix",
+          "credentials"
+        ]
+      },
+      "secretKeys": [
+        "credentials"
+      ],
       "excludeKeys": [],
       "includeKeys": [],
-      "supportedSourceTypes": ["android", "ios", "web", "unity", "amp", "cloud", "reactnative"]
+      "transformAt": "none",
+      "supportedSourceTypes": [
+        "android",
+        "ios",
+        "web",
+        "unity",
+        "amp",
+        "cloud",
+        "reactnative",
+        "cloudSource"
+      ],
+      "saveDestinationResponse": false
     },
+    "responseRules": null,
     "id": "1VNwO6BXb2X71navTWFYEiUyXZz",
     "name": "GCS",
     "displayName": "Google Cloud Storage",
@@ -491,12 +1310,32 @@
   },
   {
     "config": {
-      "destConfig": { "web": ["useNativeSDK"], "defaultConfig": ["conversionID", "pageLoadConversions", "clickEventConversions", "defaultPageConversion"] },
+      "destConfig": {
+        "web": [
+          "useNativeSDK"
+        ],
+        "defaultConfig": [
+          "conversionID",
+          "pageLoadConversions",
+          "clickEventConversions",
+          "defaultPageConversion"
+        ]
+      },
       "secretKeys": [],
       "excludeKeys": [],
-      "includeKeys": ["conversionID", "pageLoadConversions", "clickEventConversions", "defaultPageConversion"],
-      "supportedSourceTypes": ["web"]
+      "includeKeys": [
+        "conversionID",
+        "pageLoadConversions",
+        "clickEventConversions",
+        "defaultPageConversion"
+      ],
+      "transformAt": "processor",
+      "supportedSourceTypes": [
+        "web"
+      ],
+      "saveDestinationResponse": false
     },
+    "responseRules": null,
     "id": "1X6kXNpFwP2NmnjWGuVWb8qoJ8L",
     "name": "GOOGLEADS",
     "displayName": "Google Ads",
@@ -505,12 +1344,47 @@
   },
   {
     "config": {
-      "destConfig": { "defaultConfig": ["host", "port", "database", "user", "password", "bucketName", "accessKeyID", "accessKey", "prefix", "namespace", "syncFrequency", "syncStartAt", "enableSSE"] },
-      "secretKeys": ["password", "accessKeyID", "accessKey"],
+      "destConfig": {
+        "defaultConfig": [
+          "host",
+          "port",
+          "database",
+          "user",
+          "password",
+          "bucketName",
+          "accessKeyID",
+          "accessKey",
+          "prefix",
+          "namespace",
+          "syncFrequency",
+          "syncStartAt",
+          "enableSSE",
+          "excludeWindow"
+        ]
+      },
+      "secretKeys": [
+        "password",
+        "accessKeyID",
+        "accessKey"
+      ],
       "excludeKeys": [],
       "includeKeys": [],
-      "supportedSourceTypes": ["android", "ios", "web", "unity", "amp", "cloud", "reactnative", "salesforce", "google_sheets"]
+      "transformAt": "processor",
+      "supportedSourceTypes": [
+        "android",
+        "ios",
+        "web",
+        "unity",
+        "amp",
+        "cloud",
+        "reactnative",
+        "salesforce",
+        "google_sheets",
+        "cloudSource"
+      ],
+      "saveDestinationResponse": false
     },
+    "responseRules": null,
     "id": "1VNwiu2FEEj2BOny8ygGor2K16V",
     "name": "RS",
     "displayName": "Redshift",
@@ -523,6 +1397,7 @@
         "defaultConfig": [
           "host",
           "database",
+          "cluster",
           "user",
           "password",
           "port",
@@ -543,14 +1418,33 @@
           "enableSSE",
           "secure",
           "skipVerify",
-          "caCertificate"
+          "caCertificate",
+          "excludeWindow"
         ]
       },
-      "secretKeys": ["password", "accessKeyID", "accessKey", "accountKey", "secretAccessKey", "credentials"],
+      "secretKeys": [
+        "password",
+        "accessKeyID",
+        "accessKey",
+        "accountKey",
+        "secretAccessKey",
+        "credentials"
+      ],
       "excludeKeys": [],
       "includeKeys": [],
-      "supportedSourceTypes": ["android", "ios", "web", "unity", "amp", "cloud", "reactnative"]
+      "transformAt": "processor",
+      "supportedSourceTypes": [
+        "android",
+        "ios",
+        "web",
+        "unity",
+        "amp",
+        "cloud",
+        "reactnative"
+      ],
+      "saveDestinationResponse": false
     },
+    "responseRules": null,
     "id": "1emQpmUoKL9hUQySclLOgsY2KRB",
     "name": "CLICKHOUSE",
     "displayName": "ClickHouse",
@@ -559,12 +1453,29 @@
   },
   {
     "config": {
-      "destConfig": { "defaultConfig": ["webhookUrl", "webhookMethod", "headers"] },
+      "destConfig": {
+        "defaultConfig": [
+          "webhookUrl",
+          "webhookMethod",
+          "headers"
+        ]
+      },
       "secretKeys": [],
       "excludeKeys": [],
       "includeKeys": [],
-      "supportedSourceTypes": ["android", "ios", "web", "unity", "amp", "cloud", "reactnative"]
+      "transformAt": "processor",
+      "supportedSourceTypes": [
+        "android",
+        "ios",
+        "web",
+        "unity",
+        "amp",
+        "cloud",
+        "reactnative"
+      ],
+      "saveDestinationResponse": false
     },
+    "responseRules": null,
     "id": "1aIXpUrvpGno4gEuF2GvI3O9dOe",
     "name": "WEBHOOK",
     "displayName": "Webhook",
@@ -573,12 +1484,69 @@
   },
   {
     "config": {
-      "destConfig": { "amp": ["useNativeSDK"], "web": ["useNativeSDK"], "defaultConfig": ["bcpUrlSettingsPixel", "bcpUrlSettingsIframe", "dspUrlSettingsPixel", "dspUrlSettingsIframe", "mappings"] },
+      "destConfig": {
+        "defaultConfig": [
+          "apiUrl",
+          "apiKey",
+          "eventKey",
+          "actid"
+        ]
+      },
+      "excludeKeys": [],
+      "includeKeys": [],
+      "transformAt": "processor",
+      "supportedSourceTypes": [
+        "android",
+        "ios",
+        "web",
+        "unity",
+        "amp",
+        "cloud",
+        "reactnative"
+      ],
+      "saveDestinationResponse": false
+    },
+    "responseRules": {},
+    "id": "1ngmcEc9bxQqpIQHb5RN2v2WsvW",
+    "name": "ACTIVE_CAMPAIGN",
+    "displayName": "ActiveCampaign",
+    "createdAt": "2021-01-28T07:49:45.248Z",
+    "updatedAt": "2021-02-05T11:21:05.568Z"
+  },
+  {
+    "config": {
+      "destConfig": {
+        "amp": [
+          "useNativeSDK"
+        ],
+        "web": [
+          "useNativeSDK"
+        ],
+        "defaultConfig": [
+          "bcpUrlSettingsPixel",
+          "bcpUrlSettingsIframe",
+          "dspUrlSettingsPixel",
+          "dspUrlSettingsIframe",
+          "mappings"
+        ]
+      },
       "secretKeys": [],
       "excludeKeys": [],
-      "includeKeys": ["bcpUrlSettingsPixel", "bcpUrlSettingsIframe", "dspUrlSettingsPixel", "dspUrlSettingsIframe", "mappings"],
-      "supportedSourceTypes": ["web", "amp"]
+      "includeKeys": [
+        "bcpUrlSettingsPixel",
+        "bcpUrlSettingsIframe",
+        "dspUrlSettingsPixel",
+        "dspUrlSettingsIframe",
+        "mappings"
+      ],
+      "transformAt": "processor",
+      "supportedSourceTypes": [
+        "web",
+        "amp"
+      ],
+      "saveDestinationResponse": false
     },
+    "responseRules": null,
     "id": "1ZcHYyvQGJTZnJGx6rxrmEtLZnv",
     "name": "LOTAME",
     "displayName": "Lotame",
@@ -587,12 +1555,31 @@
   },
   {
     "config": {
-      "destConfig": { "defaultConfig": ["eventChannelSettings", "identifyTemplate", "eventTemplateSettings", "webhookUrl", "whitelistedTraitsSettings"] },
+      "destConfig": {
+        "defaultConfig": [
+          "eventChannelSettings",
+          "identifyTemplate",
+          "eventTemplateSettings",
+          "webhookUrl",
+          "whitelistedTraitsSettings"
+        ]
+      },
       "secretKeys": [],
       "excludeKeys": [],
       "includeKeys": [],
-      "supportedSourceTypes": ["android", "ios", "web", "unity", "amp", "cloud", "reactnative"]
+      "transformAt": "processor",
+      "supportedSourceTypes": [
+        "android",
+        "ios",
+        "web",
+        "unity",
+        "amp",
+        "cloud",
+        "reactnative"
+      ],
+      "saveDestinationResponse": false
     },
+    "responseRules": null,
     "id": "1aIY8Oz9p3DqGQZQdHqHvUuUJjS",
     "name": "SLACK",
     "displayName": "Slack",
@@ -601,11 +1588,33 @@
   },
   {
     "config": {
-      "destConfig": { "defaultConfig": ["mapEvents", "region", "accessKeyID", "accessKey"] },
+      "destConfig": {
+        "defaultConfig": [
+          "mapEvents",
+          "region",
+          "accessKeyID",
+          "accessKey"
+        ]
+      },
+      "secretKeys": [
+        "accessKeyID",
+        "accessKey"
+      ],
       "excludeKeys": [],
       "includeKeys": [],
-      "supportedSourceTypes": ["android", "ios", "web", "unity", "amp", "cloud", "reactnative"]
+      "transformAt": "processor",
+      "supportedSourceTypes": [
+        "android",
+        "ios",
+        "web",
+        "unity",
+        "amp",
+        "cloud",
+        "reactnative"
+      ],
+      "saveDestinationResponse": false
     },
+    "responseRules": null,
     "id": "1ed9u01TgyKb1f76QTGFejp65KV",
     "name": "FIREHOSE",
     "displayName": "Amazon Kinesis Firehose",
@@ -614,11 +1623,35 @@
   },
   {
     "config": {
-      "destConfig": { "defaultConfig": ["region", "accessKeyID", "accessKey", "detailType", "eventBusName", "resourceID"] },
+      "destConfig": {
+        "defaultConfig": [
+          "region",
+          "accessKeyID",
+          "accessKey",
+          "detailType",
+          "eventBusName",
+          "resourceID"
+        ]
+      },
+      "secretKeys": [
+        "accessKeyID",
+        "accessKey"
+      ],
       "excludeKeys": [],
       "includeKeys": [],
-      "supportedSourceTypes": ["android", "ios", "web", "unity", "amp", "cloud", "reactnative"]
+      "transformAt": "processor",
+      "supportedSourceTypes": [
+        "android",
+        "ios",
+        "web",
+        "unity",
+        "amp",
+        "cloud",
+        "reactnative"
+      ],
+      "saveDestinationResponse": false
     },
+    "responseRules": null,
     "id": "1ed9rHy1qMMkxvmSXJqN87yHMd8",
     "name": "EVENTBRIDGE",
     "displayName": "AWS EventBridge",
@@ -627,12 +1660,38 @@
   },
   {
     "config": {
-      "destConfig": { "web": ["useNativeSDK"], "defaultConfig": ["accountId", "isSPA", "sendExperimentTrack", "sendExperimentIdentify", "libraryTolerance", "settingsTolerance", "useExistingJquery"] },
+      "destConfig": {
+        "web": [
+          "useNativeSDK"
+        ],
+        "defaultConfig": [
+          "accountId",
+          "isSPA",
+          "sendExperimentTrack",
+          "sendExperimentIdentify",
+          "libraryTolerance",
+          "settingsTolerance",
+          "useExistingJquery"
+        ]
+      },
       "secretKeys": [],
       "excludeKeys": [],
-      "includeKeys": ["accountId", "isSPA", "sendExperimentTrack", "sendExperimentIdentify", "libraryTolerance", "settingsTolerance", "useExistingJquery"],
-      "supportedSourceTypes": ["web"]
+      "includeKeys": [
+        "accountId",
+        "isSPA",
+        "sendExperimentTrack",
+        "sendExperimentIdentify",
+        "libraryTolerance",
+        "settingsTolerance",
+        "useExistingJquery"
+      ],
+      "transformAt": "processor",
+      "supportedSourceTypes": [
+        "web"
+      ],
+      "saveDestinationResponse": false
     },
+    "responseRules": null,
     "id": "1X6kXqLXfUAh8Uei0WCeR2tXktG",
     "name": "VWO",
     "displayName": "VWO",
@@ -641,12 +1700,32 @@
   },
   {
     "config": {
-      "destConfig": { "defaultConfig": ["userName", "password", "initialAccessToken"] },
-      "secretKeys": ["password", "initialAccessToken"],
+      "destConfig": {
+        "defaultConfig": [
+          "userName",
+          "password",
+          "initialAccessToken"
+        ]
+      },
+      "secretKeys": [
+        "password",
+        "initialAccessToken"
+      ],
       "excludeKeys": [],
       "includeKeys": [],
-      "supportedSourceTypes": ["android", "ios", "web", "unity", "amp", "cloud", "reactnative"]
+      "transformAt": "processor",
+      "supportedSourceTypes": [
+        "android",
+        "ios",
+        "web",
+        "unity",
+        "amp",
+        "cloud",
+        "reactnative"
+      ],
+      "saveDestinationResponse": false
     },
+    "responseRules": null,
     "id": "1T99nYr8QMzkAm9sSylOnegLlv2",
     "name": "SALESFORCE",
     "displayName": "Salesforce",
@@ -655,12 +1734,64 @@
   },
   {
     "config": {
-      "destConfig": { "defaultConfig": ["eventToTopicMap", "credentials", "projectId"] },
-      "secretKeys": ["credentials"],
+      "destConfig": {
+        "web": [
+          "useNativeSDK"
+        ],
+        "defaultConfig": [
+          "accountId"
+        ]
+      },
+      "excludeKeys": [],
+      "includeKeys": [
+        "accountId"
+      ],
+      "transformAt": "processor",
+      "supportedSourceTypes": [
+        "android",
+        "ios",
+        "web",
+        "unity",
+        "amp",
+        "cloud",
+        "reactnative"
+      ],
+      "saveDestinationResponse": false
+    },
+    "responseRules": null,
+    "id": "1mc0kINTIskyeeynZQTSsOlAR43",
+    "name": "APPCUES",
+    "displayName": "Appcues",
+    "createdAt": "2021-01-04T16:28:33.109Z",
+    "updatedAt": "2021-02-05T11:21:11.606Z"
+  },
+  {
+    "config": {
+      "destConfig": {
+        "defaultConfig": [
+          "eventToTopicMap",
+          "credentials",
+          "projectId"
+        ]
+      },
+      "secretKeys": [
+        "credentials"
+      ],
       "excludeKeys": [],
       "includeKeys": [],
-      "supportedSourceTypes": ["android", "ios", "web", "unity", "amp", "cloud", "reactnative"]
+      "transformAt": "processor",
+      "supportedSourceTypes": [
+        "android",
+        "ios",
+        "web",
+        "unity",
+        "amp",
+        "cloud",
+        "reactnative"
+      ],
+      "saveDestinationResponse": false
     },
+    "responseRules": null,
     "id": "1hHDthOPp5s5ULWfKcDfHtjLsNO",
     "name": "GOOGLEPUBSUB",
     "displayName": "Google Pub/Sub",
@@ -669,12 +1800,44 @@
   },
   {
     "config": {
-      "destConfig": { "ios": ["useNativeSDK", "useNativeSDKToSend"], "android": ["useNativeSDK", "useNativeSDKToSend"], "defaultConfig": ["applicationId", "clientKey", "isDevelop"] },
-      "secretKeys": ["clientKey"],
+      "destConfig": {
+        "ios": [
+          "useNativeSDK",
+          "useNativeSDKToSend"
+        ],
+        "android": [
+          "useNativeSDK",
+          "useNativeSDKToSend"
+        ],
+        "defaultConfig": [
+          "applicationId",
+          "clientKey",
+          "isDevelop"
+        ]
+      },
+      "secretKeys": [
+        "clientKey"
+      ],
       "excludeKeys": [],
-      "includeKeys": ["applicationId", "clientKey", "isDevelop", "useNativeSDKToSend"],
-      "supportedSourceTypes": ["android", "ios", "web", "unity", "amp", "cloud", "reactnative"]
+      "includeKeys": [
+        "applicationId",
+        "clientKey",
+        "isDevelop",
+        "useNativeSDKToSend"
+      ],
+      "transformAt": "processor",
+      "supportedSourceTypes": [
+        "android",
+        "ios",
+        "web",
+        "unity",
+        "amp",
+        "cloud",
+        "reactnative"
+      ],
+      "saveDestinationResponse": false
     },
+    "responseRules": null,
     "id": "1YL4ioNzlDRqku9HK9QIJ3WNgXp",
     "name": "LEANPLUM",
     "displayName": "Leanplum",
@@ -703,14 +1866,33 @@
           "prefix",
           "syncFrequency",
           "syncStartAt",
-          "enableSSE"
+          "enableSSE",
+          "excludeWindow"
         ]
       },
-      "secretKeys": ["password", "accessKeyID", "accessKey"],
+      "secretKeys": [
+        "password",
+        "accessKeyID",
+        "accessKey"
+      ],
       "excludeKeys": [],
       "includeKeys": [],
-      "supportedSourceTypes": ["android", "ios", "web", "unity", "amp", "cloud", "reactnative", "salesforce", "google_sheets"]
+      "transformAt": "processor",
+      "supportedSourceTypes": [
+        "android",
+        "ios",
+        "web",
+        "unity",
+        "amp",
+        "cloud",
+        "reactnative",
+        "salesforce",
+        "google_sheets",
+        "cloudSource"
+      ],
+      "saveDestinationResponse": false
     },
+    "responseRules": null,
     "id": "1XnZdQcNWNUwtPLr669L8F6KdJu",
     "name": "SNOWFLAKE",
     "displayName": "Snowflake",
@@ -719,12 +1901,34 @@
   },
   {
     "config": {
-      "destConfig": { "defaultConfig": ["email", "apiToken", "domain", "createUsersAsVerified", "sendGroupCallsWithoutUserId", "removeUsersFromOrganization"] },
-      "secretKeys": ["apiToken"],
+      "destConfig": {
+        "defaultConfig": [
+          "email",
+          "apiToken",
+          "domain",
+          "createUsersAsVerified",
+          "sendGroupCallsWithoutUserId",
+          "removeUsersFromOrganization"
+        ]
+      },
+      "secretKeys": [
+        "apiToken"
+      ],
       "excludeKeys": [],
       "includeKeys": [],
-      "supportedSourceTypes": ["android", "ios", "web", "unity", "amp", "cloud", "reactnative"]
+      "transformAt": "processor",
+      "supportedSourceTypes": [
+        "android",
+        "ios",
+        "web",
+        "unity",
+        "amp",
+        "cloud",
+        "reactnative"
+      ],
+      "saveDestinationResponse": false
     },
+    "responseRules": null,
     "id": "1aIXpSzPrmx4Y5SBkIKdpRAFBgd",
     "name": "ZENDESK",
     "displayName": "Zendesk",
@@ -733,12 +1937,42 @@
   },
   {
     "config": {
-      "destConfig": { "web": ["useNativeSDK"], "defaultConfig": ["projectID", "writeKey", "ipAddon", "uaAddon", "urlAddon", "referrerAddon"] },
+      "destConfig": {
+        "web": [
+          "useNativeSDK"
+        ],
+        "defaultConfig": [
+          "projectID",
+          "writeKey",
+          "ipAddon",
+          "uaAddon",
+          "urlAddon",
+          "referrerAddon"
+        ]
+      },
       "secretKeys": [],
       "excludeKeys": [],
-      "includeKeys": ["projectID", "writeKey", "ipAddon", "uaAddon", "urlAddon", "referrerAddon"],
-      "supportedSourceTypes": ["android", "ios", "web", "unity", "amp", "cloud", "reactnative"]
+      "includeKeys": [
+        "projectID",
+        "writeKey",
+        "ipAddon",
+        "uaAddon",
+        "urlAddon",
+        "referrerAddon"
+      ],
+      "transformAt": "processor",
+      "supportedSourceTypes": [
+        "android",
+        "ios",
+        "web",
+        "unity",
+        "amp",
+        "cloud",
+        "reactnative"
+      ],
+      "saveDestinationResponse": false
     },
+    "responseRules": null,
     "id": "1X6kYCYjIyt3CTNK3LDmZQPYdAr",
     "name": "KEEN",
     "displayName": "Keen",
@@ -747,11 +1981,31 @@
   },
   {
     "config": {
-      "destConfig": { "defaultConfig": ["apiKey", "mapToSingleEvent", "trackAllPages", "trackCategorisedPages", "trackNamedPages"] },
+      "destConfig": {
+        "defaultConfig": [
+          "apiKey",
+          "mapToSingleEvent",
+          "trackAllPages",
+          "trackCategorisedPages",
+          "trackNamedPages"
+        ]
+      },
+      "secretKeys": [],
       "excludeKeys": [],
       "includeKeys": [],
-      "supportedSourceTypes": ["android", "ios", "web", "unity", "amp", "cloud", "reactnative"]
+      "transformAt": "processor",
+      "supportedSourceTypes": [
+        "android",
+        "ios",
+        "web",
+        "unity",
+        "amp",
+        "cloud",
+        "reactnative"
+      ],
+      "saveDestinationResponse": false
     },
+    "responseRules": null,
     "id": "1dg9eJVZe7gik3os5wD7LPi2Sb4",
     "name": "ITERABLE",
     "displayName": "Iterable",
@@ -760,17 +2014,76 @@
   },
   {
     "config": {
-      "destConfig": { "ios": ["useNativeSDK", "appleAppId"], "android": ["useNativeSDK", "androidAppId"], "reactnative": ["useNativeSDK", "androidAppId", "appleAppId"], "defaultConfig": ["devKey"] },
+      "destConfig": {
+        "ios": [
+          "useNativeSDK",
+          "appleAppId"
+        ],
+        "android": [
+          "useNativeSDK",
+          "androidAppId"
+        ],
+        "reactnative": [
+          "useNativeSDK",
+          "androidAppId",
+          "appleAppId"
+        ],
+        "defaultConfig": [
+          "devKey"
+        ]
+      },
       "secretKeys": [],
       "excludeKeys": [],
-      "includeKeys": ["devKey", "appleAppId"],
-      "supportedSourceTypes": ["android", "ios", "reactnative", "cloud"]
+      "includeKeys": [
+        "devKey",
+        "appleAppId"
+      ],
+      "transformAt": "processor",
+      "supportedSourceTypes": [
+        "android",
+        "ios",
+        "reactnative",
+        "cloud"
+      ]
     },
     "id": "1SNKkG47o5ydExyumrkRFrqWNJ0",
     "name": "AF",
     "displayName": "AppsFlyer",
     "createdAt": "2019-10-18T11:39:14.800Z",
     "updatedAt": "2020-10-30T09:35:11.679Z"
+  },
+  {
+    "config": {
+      "destConfig": {
+        "web": [
+          "useNativeSDK"
+        ],
+        "defaultConfig": [
+          "measurementId",
+          "blockPageViewEvent",
+          "sendUserId",
+          "extendPageViewParams"
+        ]
+      },
+      "excludeKeys": [],
+      "includeKeys": [
+        "measurementId",
+        "blockPageViewEvent",
+        "sendUserId",
+        "extendPageViewParams"
+      ],
+      "transformAt": "processor",
+      "supportedSourceTypes": [
+        "web"
+      ],
+      "saveDestinationResponse": false
+    },
+    "responseRules": null,
+    "id": "1mQ0yXGAQM08MTdVxws7ENIPjYS",
+    "name": "GA4",
+    "displayName": "Google Analytics 4",
+    "createdAt": "2020-12-31T10:32:41.062Z",
+    "updatedAt": "2021-02-05T11:21:33.853Z"
   },
   {
     "config": {
@@ -795,13 +2108,30 @@
           "containerName",
           "endPoint",
           "syncFrequency",
-          "syncStartAt"
+          "syncStartAt",
+          "excludeWindow"
         ]
       },
-      "secretKeys": ["password", "accessKeyID", "accessKey", "accountKey", "secretAccessKey", "credentials"],
+      "secretKeys": [
+        "password",
+        "accessKeyID",
+        "accessKey",
+        "accountKey",
+        "secretAccessKey",
+        "credentials"
+      ],
       "excludeKeys": [],
       "includeKeys": [],
-      "supportedSourceTypes": ["android", "ios", "web", "unity", "amp", "cloud", "reactnative", "salesforce", "google_sheets"]
+      "transformAt": "processor",
+      "supportedSourceTypes": [
+        "android",
+        "ios",
+        "web",
+        "unity",
+        "amp",
+        "cloud",
+        "reactnative"
+      ]
     },
     "id": "1clMtkrCRQa2kTdiyPCZlD9wXmY",
     "name": "POSTGRES",
@@ -868,8 +2198,19 @@
         "useGoogleAmpClientId",
         "namedTracker"
       ],
-      "supportedSourceTypes": ["android", "ios", "web", "unity", "amp", "cloud", "reactnative"]
+      "transformAt": "processor",
+      "supportedSourceTypes": [
+        "android",
+        "ios",
+        "web",
+        "unity",
+        "amp",
+        "cloud",
+        "reactnative"
+      ],
+      "saveDestinationResponse": false
     },
+    "responseRules": null,
     "id": "1QGzNyNSA4alXixnhDcq4C10ac2",
     "name": "GA",
     "displayName": "Google Analytics",
@@ -879,7 +2220,48 @@
   {
     "config": {
       "destConfig": {
-        "web": ["useNativeSDK"],
+        "ios": [
+          "useNativeSDK"
+        ],
+        "android": [
+          "useNativeSDK"
+        ],
+        "defaultConfig": [
+          "appSecret",
+          "eventPriorityMap",
+          "transmissionLevel"
+        ]
+      },
+      "secretKeys": [
+        "appSecret"
+      ],
+      "excludeKeys": [],
+      "includeKeys": [
+        "appSecret",
+        "eventPriorityMap",
+        "transmissionLevel"
+      ],
+      "transformAt": "processor",
+      "supportedSourceTypes": [
+        "android",
+        "ios"
+      ],
+      "saveDestinationResponse": false
+    },
+    "responseRules": {},
+    "id": "1nR8SZvlMkpoKX4n6M07oPEdvcj",
+    "name": "APPCENTER",
+    "displayName": "App Center",
+    "createdAt": "2021-01-22T18:52:22.062Z",
+    "updatedAt": "2021-02-05T11:21:10.335Z"
+  },
+  {
+    "config": {
+      "destConfig": {
+        "web": [
+          "useNativeSDK",
+          "legacyConversionPixelId"
+        ],
         "defaultConfig": [
           "blacklistPiiProperties",
           "categoryToContent",
@@ -889,9 +2271,11 @@
           "valueFieldIdentifier",
           "advancedMapping",
           "legacyConversionPixelId",
-          "whitelistPiiProperties"
+          "whitelistPiiProperties",
+          "accessToken"
         ]
       },
+      "secretKeys": [],
       "excludeKeys": [],
       "includeKeys": [
         "blacklistPiiProperties",
@@ -904,8 +2288,13 @@
         "legacyConversionPixelId",
         "whitelistPiiProperties"
       ],
-      "supportedSourceTypes": ["web"]
+      "transformAt": "processor",
+      "supportedSourceTypes": [
+        "web"
+      ],
+      "saveDestinationResponse": false
     },
+    "responseRules": null,
     "id": "1aIXpsUVMU38nBFIE4QTiZu9Vxo",
     "name": "FACEBOOK_PIXEL",
     "displayName": "Facebook Pixel",
@@ -914,11 +2303,34 @@
   },
   {
     "config": {
-      "destConfig": { "web": ["useNativeSDK"], "defaultConfig": ["brandId", "clientId", "eventWhiteList", "customMetrics"] },
+      "destConfig": {
+        "web": [
+          "useNativeSDK"
+        ],
+        "defaultConfig": [
+          "brandId",
+          "clientId",
+          "eventWhiteList",
+          "customMetrics"
+        ]
+      },
+      "secretKeys": [
+        "credentials"
+      ],
       "excludeKeys": [],
-      "includeKeys": ["brandId", "clientId", "eventWhiteList", "customMetrics"],
-      "supportedSourceTypes": ["web"]
+      "includeKeys": [
+        "brandId",
+        "clientId",
+        "eventWhiteList",
+        "customMetrics"
+      ],
+      "transformAt": "processor",
+      "supportedSourceTypes": [
+        "web"
+      ],
+      "saveDestinationResponse": false
     },
+    "responseRules": null,
     "id": "1hJWMnICBqF0FfyOfGjQqT8wH89",
     "name": "TVSQUARED",
     "displayName": "TVSquared",
@@ -927,12 +2339,44 @@
   },
   {
     "config": {
-      "destConfig": { "ios": ["useNativeSDK", "mobileApiKeyIOS"], "web": ["useNativeSDK"], "android": ["useNativeSDK", "mobileApiKeyAndroid"], "defaultConfig": ["apiKey", "appId", "collectContext"] },
+      "destConfig": {
+        "ios": [
+          "useNativeSDK",
+          "mobileApiKeyIOS"
+        ],
+        "web": [
+          "useNativeSDK"
+        ],
+        "android": [
+          "useNativeSDK",
+          "mobileApiKeyAndroid"
+        ],
+        "defaultConfig": [
+          "apiKey",
+          "appId",
+          "collectContext"
+        ]
+      },
       "secretKeys": [],
       "excludeKeys": [],
-      "includeKeys": ["appId", "mobileApiKeyAndroid", "mobileApiKeyIOS"],
-      "supportedSourceTypes": ["android", "ios", "web", "unity", "amp", "cloud", "reactnative"]
+      "includeKeys": [
+        "appId",
+        "mobileApiKeyAndroid",
+        "mobileApiKeyIOS"
+      ],
+      "transformAt": "processor",
+      "supportedSourceTypes": [
+        "android",
+        "ios",
+        "web",
+        "unity",
+        "amp",
+        "cloud",
+        "reactnative"
+      ],
+      "saveDestinationResponse": false
     },
+    "responseRules": null,
     "id": "1X6kVsEiRgH8qGqMMuB1LltEQE1",
     "name": "INTERCOM",
     "displayName": "Intercom",
@@ -941,12 +2385,37 @@
   },
   {
     "config": {
-      "destConfig": { "defaultConfig": ["address", "database", "password", "prefix", "secure", "skipVerify", "caCertificate", "clusterMode"] },
-      "secretKeys": ["password", "caCertificate"],
+      "destConfig": {
+        "defaultConfig": [
+          "address",
+          "database",
+          "password",
+          "prefix",
+          "secure",
+          "skipVerify",
+          "caCertificate",
+          "clusterMode"
+        ]
+      },
+      "secretKeys": [
+        "password",
+        "caCertificate"
+      ],
       "excludeKeys": [],
       "includeKeys": [],
-      "supportedSourceTypes": ["android", "ios", "web", "unity", "amp", "cloud", "reactnative"]
+      "transformAt": "processor",
+      "supportedSourceTypes": [
+        "android",
+        "ios",
+        "web",
+        "unity",
+        "amp",
+        "cloud",
+        "reactnative"
+      ],
+      "saveDestinationResponse": false
     },
+    "responseRules": null,
     "id": "1jDtI6vwT7wGrWnuHcv4WFpfPaU",
     "name": "REDIS",
     "displayName": "Redis",
@@ -955,12 +2424,43 @@
   },
   {
     "config": {
-      "destConfig": { "ios": ["useNativeSDK"], "web": ["useNativeSDK"], "android": ["useNativeSDK"], "defaultConfig": ["appKey", "dataCenter", "restApiKey"] },
-      "secretKeys": ["restApiKey"],
+      "destConfig": {
+        "ios": [
+          "useNativeSDK"
+        ],
+        "web": [
+          "useNativeSDK"
+        ],
+        "android": [
+          "useNativeSDK"
+        ],
+        "defaultConfig": [
+          "appKey",
+          "dataCenter",
+          "restApiKey"
+        ]
+      },
+      "secretKeys": [
+        "restApiKey"
+      ],
       "excludeKeys": [],
-      "includeKeys": ["appKey", "dataCenter"],
-      "supportedSourceTypes": ["android", "ios", "web", "unity", "amp", "cloud", "reactnative"]
+      "includeKeys": [
+        "appKey",
+        "dataCenter"
+      ],
+      "transformAt": "processor",
+      "supportedSourceTypes": [
+        "android",
+        "ios",
+        "web",
+        "unity",
+        "amp",
+        "cloud",
+        "reactnative"
+      ],
+      "saveDestinationResponse": false
     },
+    "responseRules": null,
     "id": "1XQoHKJnI6Uf67wN20RlvAQSUB9",
     "name": "BRAZE",
     "displayName": "Braze",
@@ -969,12 +2469,34 @@
   },
   {
     "config": {
-      "destConfig": { "ios": ["useNativeSDK"], "unity": ["useNativeSDK"], "android": ["useNativeSDK"], "reactnative": ["useNativeSDK"], "defaultConfig": [] },
+      "destConfig": {
+        "ios": [
+          "useNativeSDK"
+        ],
+        "unity": [
+          "useNativeSDK"
+        ],
+        "android": [
+          "useNativeSDK"
+        ],
+        "reactnative": [
+          "useNativeSDK"
+        ],
+        "defaultConfig": []
+      },
       "secretKeys": [],
       "excludeKeys": [],
       "includeKeys": [],
-      "supportedSourceTypes": ["android", "ios", "unity", "reactnative"]
+      "transformAt": "processor",
+      "supportedSourceTypes": [
+        "android",
+        "ios",
+        "unity",
+        "reactnative"
+      ],
+      "saveDestinationResponse": false
     },
+    "responseRules": null,
     "id": "1YL4j4RpSLloVaMwKrOoXLfiryj",
     "name": "FIREBASE",
     "displayName": "Firebase",
@@ -983,12 +2505,45 @@
   },
   {
     "config": {
-      "destConfig": { "ios": ["useNativeSDK"], "web": ["useNativeSDK", "debug"], "android": ["useNativeSDK"], "defaultConfig": ["apiId", "apiKey", "region"] },
-      "secretKeys": ["apiKey"],
+      "destConfig": {
+        "ios": [
+          "useNativeSDK"
+        ],
+        "web": [
+          "useNativeSDK",
+          "debug"
+        ],
+        "android": [
+          "useNativeSDK"
+        ],
+        "defaultConfig": [
+          "apiId",
+          "apiKey",
+          "region"
+        ]
+      },
+      "secretKeys": [
+        "apiKey"
+      ],
       "excludeKeys": [],
-      "includeKeys": ["apiId", "region", "debug"],
-      "supportedSourceTypes": ["android", "ios", "web", "unity", "amp", "cloud", "reactnative"]
+      "includeKeys": [
+        "apiId",
+        "region",
+        "debug"
+      ],
+      "transformAt": "processor",
+      "supportedSourceTypes": [
+        "android",
+        "ios",
+        "web",
+        "unity",
+        "amp",
+        "cloud",
+        "reactnative"
+      ],
+      "saveDestinationResponse": false
     },
+    "responseRules": null,
     "id": "1j9dYVEplxUC5swbXkpK9fYT7u2",
     "name": "MOENGAGE",
     "displayName": "MoEngage",
@@ -1026,7 +2581,9 @@
           "versionName"
         ]
       },
-      "secretKeys": ["apiKey"],
+      "secretKeys": [
+        "apiKey"
+      ],
       "excludeKeys": [],
       "includeKeys": [
         "apiKey",
@@ -1052,7 +2609,15 @@
         "eventUploadThreshold",
         "versionName"
       ],
-      "supportedSourceTypes": ["android", "ios", "web", "unity", "amp", "cloud", "reactnative"]
+      "supportedSourceTypes": [
+        "android",
+        "ios",
+        "web",
+        "unity",
+        "amp",
+        "cloud",
+        "reactnative"
+      ]
     },
     "id": "1QGzO4fWSyq3lsyFHf4eQAMDSr9",
     "name": "AM",

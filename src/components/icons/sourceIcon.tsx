@@ -17,6 +17,8 @@ import { ReactComponent as Auth0 } from '@svg/auth0.svg';
 import { ReactComponent as Segment } from '@svg/segment.svg';
 import { ReactComponent as DotNet } from '@svg/dotnet.svg';
 import { ReactComponent as PHP } from '@svg/php.svg';
+import { ReactComponent as Salesforce}  from '@svg/salesforce.svg';
+import { ReactComponent as GoogleSheets}  from '@svg/google_sheets.svg';
 import theme from '@css/theme';
 
 const SourceIcon = (props: any) => {
@@ -55,6 +57,10 @@ const SourceIcon = (props: any) => {
       return <Auth0 width={width} height={height} />;
     case 'segment':
       return <Segment width={width} height={height} />;
+    case 'salesforce':
+      return <Salesforce width={width} height={height} />;
+    case 'google_sheets':
+      return <GoogleSheets width={width} height={height} />;
     case 'dotnet':
       return <DotNet width={width} height={height} />;
     case 'php':

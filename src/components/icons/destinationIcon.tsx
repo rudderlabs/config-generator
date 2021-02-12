@@ -2,6 +2,8 @@ import React from 'react';
 // config-gen-import-statement
 import { ReactComponent as GA } from '@svg/ga.svg';
 import { ReactComponent as AM } from '@svg/am.svg';
+import { ReactComponent as ACTIVECAMPAIGN } from '@svg/activecampaign.svg';
+import { ReactComponent as APPCUES } from '@svg/appcues.svg';
 import { ReactComponent as MP } from '@svg/mp.svg';
 import { ReactComponent as FB } from '@svg/fb.svg';
 import { ReactComponent as FACEBOOK_PIXEL } from '@svg/facebook_pixel.svg';
@@ -35,9 +37,11 @@ import { ReactComponent as KISSMETRICS } from '@svg/kissmetrics.svg';
 import { ReactComponent as CUSTOMERIO } from '@svg/customerio.svg';
 import { ReactComponent as CHARTBEAT } from '@svg/chartbeat.svg';
 import { ReactComponent as FIREBASE } from '@svg/firebase.svg';
+import { ReactComponent as GA4 } from '@svg/ga4.svg';
 import { ReactComponent as LEANPLUM } from '@svg/leanplum.svg';
 import { ReactComponent as FULLSTORY } from '@svg/fullstory.svg';
 import { ReactComponent as WEBHOOK } from '@svg/webhook.svg';
+import { ReactComponent as HUBSPOT } from '@svg/hubspot.svg';
 import { ReactComponent as PERSONALIZE } from '@svg/personalize.svg';
 import { ReactComponent as BUGSNAG } from '@svg/bugsnag.svg';
 import { ReactComponent as LOTAME } from '@svg/lotame.svg';
@@ -54,6 +58,7 @@ import { ReactComponent as DIGITAL_OCEAN_SPACES } from '@svg/digital_ocean_space
 import { ReactComponent as INDICATIVE } from '@svg/indicative.svg';
 import { ReactComponent as OPTIMIZELY } from '@svg/optimizely.svg';
 import { ReactComponent as OPTIMIZELY_FULLSTACK } from '@svg/optimizely_fullstack.svg';
+import { ReactComponent as PENDO } from '@svg/pendo.svg';
 import { ReactComponent as GOOGLEPUBSUB } from '@svg/googlepubsub.svg';
 import { ReactComponent as MONETATE } from '@svg/monetate.svg';
 import { ReactComponent as TVSQUARED } from '@svg/tvsquared.svg';
@@ -68,6 +73,9 @@ import { ReactComponent as REDIS } from '@svg/redis.svg';
 import { ReactComponent as MOENGAGE } from '@svg/moengage.svg';
 import { ReactComponent as POSTHOG } from '@svg/posthog.svg';
 import { ReactComponent as USERLIST } from '@svg/userlist.svg';
+import { ReactComponent as BIGQUERY } from '@svg/bigquery.svg';
+import { ReactComponent as CONFLUENTCLOUD } from '@svg/confluentcloud.svg';
+
 import theme from '@css/theme';
 
 const DestinationIcon = (props: any) => {
@@ -78,6 +86,10 @@ const DestinationIcon = (props: any) => {
   switch (props.destination.toLowerCase()) {
     case 'am':
       return <AM width={width} height={height} />;
+    case 'activecampaign':
+      return <ACTIVECAMPAIGN width={width} height={height} />;
+    case 'appcues':
+      return <APPCUES width={width} height={height} />;
     case 'ga':
       return <GA width={width} height={height} />;
     case 'mp':
@@ -112,8 +124,12 @@ const DestinationIcon = (props: any) => {
       return <MAILCHIMP width={width} height={height} />;
     case 'hotjar':
       return <HOTJAR width={width} height={height} />;
+    case 'ga4':
+      return <GA4 width={width} height={height} />;
     case 'salesforce':
       return <SALESFORCE width={width} height={height} />;
+    case 'hubspot':
+      return <HUBSPOT width={width} height={height} />;    
     case 'segment':
       return <SEGMENT width={width} height={height} />;
     case 'autopilot':
@@ -196,6 +212,8 @@ const DestinationIcon = (props: any) => {
       return <MARKETO width={width} height={height} />;
     case 'pardot':
       return <PARDOT width={width} height={height} />;
+    case 'pendo':
+      return <PENDO width={width} height={height} />
     case 'twitter_ads':
       return <TWITTER width={width} height={height} />;
     case 'taplytics':
@@ -212,6 +230,10 @@ const DestinationIcon = (props: any) => {
       return <POSTHOG width={width} height={height} />;
     case 'userlist':
       return <USERLIST width={width} height={height} />;
+    case 'bigquery':
+        return <BIGQUERY width={width} height={height} />;
+    case 'confluentcloud':
+        return <CONFLUENTCLOUD width={width} height={height} />;
     default:
       break;
   }
