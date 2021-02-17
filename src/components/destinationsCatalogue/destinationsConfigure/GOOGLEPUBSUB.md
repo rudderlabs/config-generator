@@ -8,6 +8,12 @@ With RudderStack, you can easily configure Google Pub/Sub as a destination and s
 
 ### Useful Links
 
-[Google Pub/Sub Website](https://cloud.google.com/pubsub/docs/overview)
-[Documentation and Setup guide](https://docs.rudderstack.com/destinations/google-pub-sub)
-[View on GitHub](https://github.com/rudderlabs/rudder-transformer/tree/master/v0/destinations/googlepubsub)
+[Google Pub/Sub Website][]  
+[Documentation and Setup guide][]  
+[View on GitHub][]
+
+[//]: # "These are reference links used in the body of this note and get stripped out when the markdown processor does its job. There is no need to format nicely because it shouldn't be seen. Thanks SO - http://stackoverflow.com/questions/4823468/store-comments-in-markdown-syntax"
+
+[google pub/sub website]: https://cloud.google.com/pubsub/docs/overview
+[Documentation and Setup guide]: https://docs.rudderstack.com/destinations/google-pub-sub
+[View on GitHub]: https://github.com/rudderlabs/rudder-transformer/tree/master/v0/destinations/googlepubsub
