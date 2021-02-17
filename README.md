@@ -11,8 +11,7 @@ Rudderstack has two components: _control plane_ and _data plane_.
 The data plane reliably delivers your event data, while the control plane manages the configuration of your sources and destinations.
 This configuration can also be read from a file instead of from the control plane, if you want remove an extra dependency.
 
-RudderStack Config Generator provides the UI to manage the source and destination configurations without needing to signup, etc.
-All the source and destination configuration stays on your local storage. You can export/import config to a JSON file.
+RudderStack Config Generator provides the UI to manage the source and destination configurations without needing to sign up. All the source and destination configuration stays on your local storage. You can export/import config to a JSON file.
 
 ## Setup
 
@@ -38,7 +37,7 @@ Update the [config](https://docs.rudderstack.com/administrators-guide/config-par
 * In `build/docker.env`, set the environment variable `RSERVER_BACKEND_CONFIG_CONFIG_FROM_FILE=true`
 * Start RudderStack with `docker-compose up`
 
-## Export source config
+## Export source configuration
 
 After adding the required sources and destinations, export your source config for the sources. This source config is required by the RudderStack SDKs. After downloading the source config file, you need to host that file at a `/sourceConfig` end-point.
 
