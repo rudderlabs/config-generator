@@ -6,10 +6,10 @@ Apache Kafka is a popular distributed streaming platform. It allows you to handl
 
 RudderStack allows you to configure Apache Kafka as a destination to which you can send your event data seamlessly.
 
-## Useful Links
+### Useful Links
 
-[Apache Kafka Website][]
-[Documentation and Setup guide][]
+[Apache Kafka Website][]  
+[Documentation and Setup guide][]  
 [View on GitHub][]
 
 [//]: # "These are reference links used in the body of this note and get stripped out when the markdown processor does its job. There is no need to format nicely because it shouldn't be seen. Thanks SO - http://stackoverflow.com/questions/4823468/store-comments-in-markdown-syntax"
