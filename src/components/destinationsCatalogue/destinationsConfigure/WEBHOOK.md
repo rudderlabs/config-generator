@@ -3,12 +3,12 @@ Webhooks allow you to send events generated via the RudderStack SDK to your own 
 
 ### Useful Links
 
-[Webhooks Wikipedia][]
-[Documentation and step-by-step guide][]
+[Webhooks Wikipedia][]  
+[Documentation and Setup guide][]  
 [View on GitHub][]
 
 [//]: # "These are reference links used in the body of this note and get stripped out when the markdown processor does its job. There is no need to format nicely because it shouldn't be seen. Thanks SO - http://stackoverflow.com/questions/4823468/store-comments-in-markdown-syntax"
+
 [webhooks wikipedia]: https://en.wikipedia.org/wiki/Webhook
-[documentation and step-by-step guide]: https://docs.rudderstack.com/destinations/webhooks
-[documentation]: https://docs.rudderstack.com/
+[documentation and setup guide]: https://docs.rudderstack.com/destinations/webhooks
 [view on github]: https://github.com/rudderlabs/rudder-transformer/tree/master/v0/destinations/webhook
