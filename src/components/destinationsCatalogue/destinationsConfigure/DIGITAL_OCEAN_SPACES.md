@@ -7,8 +7,8 @@ RudderStack allows you to configure Spaces Object Storage as a destination to wh
 
 ### Useful Links
 
-[DigitalOcean Spaces Website][]
-[Documentation and Setup guide][]
+[DigitalOcean Spaces Website][]  
+[Documentation and Setup guide][]  
 [View on GitHub][]
 
 [//]: # "These are reference links used in the body of this note and get stripped out when the markdown processor does its job. There is no need to format nicely because it shouldn't be seen. Thanks SO - http://stackoverflow.com/questions/4823468/store-comments-in-markdown-syntax"
