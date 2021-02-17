@@ -8,11 +8,12 @@ With RudderStack, you can easily send your event data to Heap.io for effective c
 
 ### Useful Links
 
-[Heap.io Website][]
-[Documentation and Setup guide][]
+[Heap.io Website][]  
+[Documentation and Setup guide][]  
 [View on GitHub][]
 
 [//]: # "These are reference links used in the body of this note and get stripped out when the markdown processor does its job. There is no need to format nicely because it shouldn't be seen. Thanks SO - http://stackoverflow.com/questions/4823468/store-comments-in-markdown-syntax"
-[heap.io website]: 
-[documentation and setup guide]: 
+
+[heap.io website]: https://heap.io/
+[documentation and setup guide]: https://docs.rudderstack.com/
 [view on github]: https://github.com/rudderlabs/rudder-transformer/tree/master/v0/destinations/heap
