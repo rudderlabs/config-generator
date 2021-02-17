@@ -12,6 +12,7 @@ import theme from '@css/theme';
 import { Link } from 'react-router-dom';
 
 const markdown = {
+  ACTIVE_CAMPAIGN: raw('./ACTIVE_CAMPAIGN.md')
   ADJ: raw('./ADJ.md'),
   AF: raw('./AF.md'),
   AM: raw('./AM.md'),
