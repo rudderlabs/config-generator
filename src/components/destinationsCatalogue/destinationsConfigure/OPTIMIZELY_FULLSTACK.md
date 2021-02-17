@@ -8,9 +8,10 @@ RudderStack supports Optimizely Full Stack as a destination to which you can sen
 
 ### Useful Links
 
-[Optimizely Website][]
-[Documentation and Setup guide][]
+[Optimizely Website][]  
+[Documentation and Setup guide][]  
 
 [//]: # "These are reference links used in the body of this note and get stripped out when the markdown processor does its job. There is no need to format nicely because it shouldn't be seen. Thanks SO - http://stackoverflow.com/questions/4823468/store-comments-in-markdown-syntax"
+
 [optimizely website]: https://www.optimizely.com/products/full-stack/
 [documentation and setup guide]: https://docs.rudderstack.com/destinations/optimizely-full-stack
