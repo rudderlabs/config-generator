@@ -2,7 +2,7 @@
 
 PostHog is a complete product analytics stack that lets you perform scalable, accurate analytics on your customer event data, while giving you full control over it. PostHog is open-source, and can be seamlessly deployed on your infrastructure. It is best suited for data analysts and managers, and provides a rich UI for performing fast, scalable analytics.
 
-### Get More Out of Adjust With RudderStack
+### Get More Out of PostHog With RudderStack
 
 RudderStack allows you to seamlessly configure PostHog as a destination to which you can send your event data seamlessly.
 
