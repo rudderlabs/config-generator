@@ -8,6 +8,11 @@ RudderStack allows you to configure Comscore as a destination on its dashboard. 
 
 ### Useful Links
 
-[Comscore Website](https://www.comscore.com/)
-[Documentation and Setup guide](): Coming Soon!
-[View on GitHub](https://github.com/rudderlabs/rudder-sdk-js/tree/master/integrations/Comscore)
+[Comscore Website][]  
+[Documentation and Setup guide](): Coming Soon!  
+[View on GitHub][]
+
+[//]: # "These are reference links used in the body of this note and get stripped out when the markdown processor does its job. There is no need to format nicely because it shouldn't be seen. Thanks SO - http://stackoverflow.com/questions/4823468/store-comments-in-markdown-syntax"
+
+[comscore website]: https://www.comscore.com/
+[view on github]: https://github.com/rudderlabs/rudder-sdk-js/tree/master/integrations/Comscore
