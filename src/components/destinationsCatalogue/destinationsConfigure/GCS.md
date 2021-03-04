@@ -10,11 +10,12 @@ RudderStack allows you to add Google Cloud Storage as a destination to which you
 
 ### Useful Links
 
-[Google Cloud Storage Website][]
-[Documentation and Setup guide][]
+[Google Cloud Storage Website][]  
+[Documentation and Setup guide][]  
 [View on GitHub][]
 
 [//]: # "These are reference links used in the body of this note and get stripped out when the markdown processor does its job. There is no need to format nicely because it shouldn't be seen. Thanks SO - http://stackoverflow.com/questions/4823468/store-comments-in-markdown-syntax"
+
 [google cloud storage website]: https://cloud.google.com/storage
 [documentation and setup guide]: https://docs.rudderstack.com/destinations/google-cloud-storage
 [view on github]: https://github.com/rudderlabs/rudder-transformer/tree/master/v0/destinations/gcs

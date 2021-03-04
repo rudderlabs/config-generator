@@ -1,0 +1,51 @@
+[
+  {
+    "title": "Connection Settings",
+    "fields": [
+      {
+        "type": "textInput",
+        "label": "Measurement Id",
+        "value": "measurementId",
+        "regex": ".*",
+        "required": true,
+        "placeholder": "e.g: G-AB1CD2E34F",
+        "secret": true
+      }
+    ]
+  },
+  {
+    "title": "Native SDK",
+    "fields": [
+      {
+        "type": "defaultCheckbox",
+        "label": "Use native SDK to send events",
+        "value": "useNativeSDK",
+        "default": true
+      }
+    ]
+  },
+  {
+    "title": "Other Settings",
+    "fields": [
+      {
+        "type": "checkbox",
+        "label": "Block a Page View Event",
+        "value": "blockPageViewEvent",
+        "default": false
+      },
+      {
+        "type": "checkbox",
+        "label": "Extend Page View Property",
+        "value": "extendPageViewParams",
+        "default": false
+      },
+      {
+        "type": "checkbox",
+        "label": "Send user-id to GA",
+        "value": "sendUserId",
+        "default": false
+      }
+    ]
+  }
+  
+]

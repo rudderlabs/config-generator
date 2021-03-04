@@ -8,11 +8,12 @@ Using RudderStack's APIs, you can easily send your customer event data to HubSpo
 
 ### Useful Links
 
-[HubSpot Website][]
-[Documentation and Setup guide][]
+[HubSpot Website][]  
+[Documentation and Setup guide][]  
 [View on GitHub][]
 
 [//]: # "These are reference links used in the body of this note and get stripped out when the markdown processor does its job. There is no need to format nicely because it shouldn't be seen. Thanks SO - http://stackoverflow.com/questions/4823468/store-comments-in-markdown-syntax"
+
 [hubspot website]: https://www.hubspot.com
 [documentation and setup guide]: https://docs.rudderstack.com/destinations/hubspot
 [view on github]: https://github.com/rudderlabs/rudder-transformer/tree/master/v0/destinations/hs

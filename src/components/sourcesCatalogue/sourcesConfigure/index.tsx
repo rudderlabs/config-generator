@@ -32,6 +32,8 @@ export const markdown = {
   iOS: raw('./iOS.md'),
   DotNet: raw('./DotNet.md'),
   PHP: raw('./PHP.md'),
+  Google_sheets: raw('./Google_sheets.md'),
+  Salesforce: raw('./Salesforce.md')
 };
 
 export interface ISourceConfigureProps {

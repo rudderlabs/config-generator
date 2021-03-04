@@ -8,11 +8,12 @@ RudderStack allows you to configure Snowflake as a destination to which you can 
 
 ### Useful Links
 
-[Snowflake Website][]
+[Snowflake Website][]  
+[Documentation and Setup guide][]  
 [RudderStack Warehouse Schema][]
-[Documentation and Setup guide][]
 
 [//]: # "These are reference links used in the body of this note and get stripped out when the markdown processor does its job. There is no need to format nicely because it shouldn't be seen. Thanks SO - http://stackoverflow.com/questions/4823468/store-comments-in-markdown-syntax"
+
 [snowflake website]: https://www.snowflake.com/
 [rudderstack warehouse schema]: https://docs.rudderstack.com/data-warehouse-integration-guides/warehouse-schemas
 [documentation and setup guide]: https://docs.rudderstack.com/data-warehouse-integrations/snowflake

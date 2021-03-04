@@ -8,9 +8,9 @@ RudderStack allows you to configure Amazon Personalize as a destination to which
 
 ### Useful Links
 
-[AWS Personalize][]
-[Documentation and Setup guide][]
+[AWS Personalize Website][]  
+[Documentation and Setup guide][]  
 
 [//]: # "These are reference links used in the body of this note and get stripped out when the markdown processor does its job. There is no need to format nicely because it shouldn't be seen. Thanks SO - http://stackoverflow.com/questions/4823468/store-comments-in-markdown-syntax"
-[aws personalize]: https://aws.amazon.com/personalize/
+[aws personalize website]: https://aws.amazon.com/personalize/
 [documentation and setup guide]: https://docs.rudderstack.com/destinations/aws-personalize
