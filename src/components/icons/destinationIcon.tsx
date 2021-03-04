@@ -2,7 +2,7 @@ import React from 'react';
 // config-gen-import-statement
 import { ReactComponent as GA } from '@svg/ga.svg';
 import { ReactComponent as AM } from '@svg/am.svg';
-import { ReactComponent as ACTIVECAMPAIGN } from '@svg/activecampaign.svg';
+import { ReactComponent as ACTIVE_CAMPAIGN } from '@svg/active_campaign.svg';
 import { ReactComponent as APPCUES } from '@svg/appcues.svg';
 import { ReactComponent as MP } from '@svg/mp.svg';
 import { ReactComponent as FB } from '@svg/fb.svg';
@@ -41,7 +41,7 @@ import { ReactComponent as GA4 } from '@svg/ga4.svg';
 import { ReactComponent as LEANPLUM } from '@svg/leanplum.svg';
 import { ReactComponent as FULLSTORY } from '@svg/fullstory.svg';
 import { ReactComponent as WEBHOOK } from '@svg/webhook.svg';
-import { ReactComponent as HUBSPOT } from '@svg/hubspot.svg';
+import { ReactComponent as HUBSPOT } from '@svg/hs.svg';
 import { ReactComponent as PERSONALIZE } from '@svg/personalize.svg';
 import { ReactComponent as BUGSNAG } from '@svg/bugsnag.svg';
 import { ReactComponent as LOTAME } from '@svg/lotame.svg';
@@ -73,8 +73,9 @@ import { ReactComponent as REDIS } from '@svg/redis.svg';
 import { ReactComponent as MOENGAGE } from '@svg/moengage.svg';
 import { ReactComponent as POSTHOG } from '@svg/posthog.svg';
 import { ReactComponent as USERLIST } from '@svg/userlist.svg';
-import { ReactComponent as BIGQUERY } from '@svg/bigquery.svg';
-import { ReactComponent as CONFLUENTCLOUD } from '@svg/confluentcloud.svg';
+import { ReactComponent as BIGQUERY } from '@svg/bq.svg';
+import { ReactComponent as CONFLUENT_CLOUD } from '@svg/confluentcloud.svg';
+import { ReactComponent as APPCENTER } from '@svg/appcenter.svg';
 
 import theme from '@css/theme';
 
@@ -86,8 +87,6 @@ const DestinationIcon = (props: any) => {
   switch (props.destination.toLowerCase()) {
     case 'am':
       return <AM width={width} height={height} />;
-    case 'activecampaign':
-      return <ACTIVECAMPAIGN width={width} height={height} />;
     case 'appcues':
       return <APPCUES width={width} height={height} />;
     case 'ga':
@@ -129,7 +128,7 @@ const DestinationIcon = (props: any) => {
     case 'salesforce':
       return <SALESFORCE width={width} height={height} />;
     case 'hubspot':
-      return <HUBSPOT width={width} height={height} />;    
+      return <HUBSPOT width={width} height={height} />;
     case 'segment':
       return <SEGMENT width={width} height={height} />;
     case 'autopilot':
@@ -197,9 +196,8 @@ const DestinationIcon = (props: any) => {
     case 'indicative':
       return <INDICATIVE width={width} height={height} />;
     case 'optimizely':
-      return <OPTIMIZELY width={width} height={height} />;
     case 'optimizely_fullstack':
-      return <OPTIMIZELY_FULLSTACK width={width} height={height} />;
+      return <OPTIMIZELY width={width} height={height} />;
     case 'googlepubsub':
       return <GOOGLEPUBSUB width={width} height={height} />;
     case 'monetate':
@@ -232,8 +230,12 @@ const DestinationIcon = (props: any) => {
       return <USERLIST width={width} height={height} />;
     case 'bigquery':
         return <BIGQUERY width={width} height={height} />;
-    case 'confluentcloud':
-        return <CONFLUENTCLOUD width={width} height={height} />;
+    case 'confluent_cloud':
+      return <CONFLUENT_CLOUD width={width} height={height} />;
+    case 'appcenter':
+      return <APPCENTER width={width} height={height} />;
+    case 'active_campaign':
+      return <ACTIVE_CAMPAIGN width={width} height={height} />;
     default:
       break;
   }

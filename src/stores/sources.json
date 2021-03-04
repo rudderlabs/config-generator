@@ -143,15 +143,6 @@
     "updatedAt": "2020-07-17T09:47:13.443Z"
   },
   {
-    "id": "1jEXvN08pLwYAGPMJJOhvIyA3F3",
-    "name": "Google_sheets",
-    "options": null,
-    "displayName": "Google Sheets",
-    "category": "cloud",
-    "createdAt": "2020-10-22T12:40:53.132Z",
-    "updatedAt": "2020-10-22T12:40:53.132Z"
-  },
-  {
     "id": "1jEXwajA1sUI7zkcsrByqLuXBSa",
     "name": "salesforce",
     "options": null,
