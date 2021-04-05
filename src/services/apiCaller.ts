@@ -11,4 +11,22 @@ const apiCaller = () => {
   });
 };
 
-export { apiCaller };
+const apiAuthCaller = () => {
+  const adminUser = process.env.ADMIN_USER || 'admin';
+  const adminPassword = process.env.ADMIN_PASSWORD || 'password';
+  let axiosInstance = Axios.create({
+    baseURL: '',
+    // timeout: timeout,
+    auth: {
+      username: adminUser,
+      password: adminPassword,
+    },
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    // withCredentials: true,
+  });
+  return axiosInstance;
+};
+
+export { apiCaller, apiAuthCaller };

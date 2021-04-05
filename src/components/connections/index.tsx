@@ -21,6 +21,7 @@ import { ButtonSmall } from '@components/common/button';
 import { IDestinationDefsListStore } from '../../stores/destinationDefsList';
 import { ButtonPrimary } from '../common/button';
 import { version } from '@services/version';
+import { apiAuthCaller } from '@services/apiCaller';
 var fileDownload = require('js-file-download');
 
 declare var LeaderLine: any;
@@ -87,7 +88,7 @@ class Connections extends Component<IConnectionsProps, any> {
     Object.values(this.linesMap).forEach((l: any) => l.remove());
   };
 
-  handleExportWorkspaceConfig = () => {
+  buildWorkspaceConfig = () => {
     const workspaceConfig = {
       sources: [] as any,
       metadata: {
@@ -124,10 +125,20 @@ class Connections extends Component<IConnectionsProps, any> {
       };
       workspaceConfig.sources.push(obj);
     });
+    return workspaceConfig;
+  };
+
+  handleExportWorkspaceConfig = () => {
+    const workspaceConfig = this.buildWorkspaceConfig();
     fileDownload(
       JSON.stringify(workspaceConfig, null, 2),
       'workspaceConfig.json',
     );
+  };
+
+  handleSaveWorkspaceConfig = () => {
+    const workspaceConfig = this.buildWorkspaceConfig();
+    apiAuthCaller().post('/saveToFile', { workspaceConfig });
   };
 
   handleFileChosen = (event: any) => {
@@ -155,6 +166,9 @@ class Connections extends Component<IConnectionsProps, any> {
   };
 
   public render() {
+    const isSaveToFileEnabled =
+      (process.env.REACT_APP_IS_SAVE_TO_FILE_ENABLED || '').toLowerCase() ===
+      'true';
     return (
       <Container>
         <Flex flexDirection="column">
@@ -171,6 +185,16 @@ class Connections extends Component<IConnectionsProps, any> {
                 >
                   Export
                 </ButtonPrimary>
+
+                {isSaveToFileEnabled && (
+                  <ButtonPrimary
+                    className="m-l-sm"
+                    onClick={this.handleSaveWorkspaceConfig}
+                    style={{ height: '40px', fontSize: theme.fontSize.sm }}
+                  >
+                    Save
+                  </ButtonPrimary>
+                )}
 
                 <ImportInputButton
                   type="file"
