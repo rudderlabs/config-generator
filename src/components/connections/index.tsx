@@ -21,7 +21,7 @@ import { ButtonSmall } from '@components/common/button';
 import { IDestinationDefsListStore } from '../../stores/destinationDefsList';
 import { ButtonPrimary } from '../common/button';
 import { version } from '@services/version';
-import { apiAuthCaller } from '@services/apiCaller';
+import { apiServerCaller } from '@services/apiCaller';
 var fileDownload = require('js-file-download');
 
 declare var LeaderLine: any;
@@ -138,7 +138,7 @@ class Connections extends Component<IConnectionsProps, any> {
 
   handleSaveWorkspaceConfig = () => {
     const workspaceConfig = this.buildWorkspaceConfig();
-    apiAuthCaller().post('/saveToFile', { workspaceConfig });
+    apiServerCaller().post('/saveToFile', { workspaceConfig });
   };
 
   handleFileChosen = (event: any) => {
