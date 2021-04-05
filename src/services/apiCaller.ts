@@ -11,4 +11,16 @@ const apiCaller = () => {
   });
 };
 
-export { apiCaller };
+const apiServerCaller = () => {
+  let axiosInstance = Axios.create({
+    baseURL: '',
+    // timeout: timeout,
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    // withCredentials: true,
+  });
+  return axiosInstance;
+};
+
+export { apiCaller, apiServerCaller };

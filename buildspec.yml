@@ -1,0 +1,24 @@
+version: 0.2
+env:
+  parameter-store:
+    dockerhub_passwd: "/prod/codebuild/dockerhub-password"
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 10
+  pre_build:
+    commands:
+      - docker login --username rudderlabs --password $dockerhub_passwd
+  build:
+    commands:
+      - VERSION="$(date '+%d%m%Y.%H%M%S')"
+      - docker build -t rudderlabs/rudder-config-generator:$VERSION -f Dockerfile .
+      - docker tag rudderlabs/rudder-config-generator:$VERSION rudderlabs/rudder-config-generator:latest
+  post_build:
+    commands:
+      - docker push rudderlabs/rudder-config-generator:$VERSION
+      - docker push rudderlabs/rudder-config-generator:latest
+artifacts:
+  files:
+    - "**/*"
