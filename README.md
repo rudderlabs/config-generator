@@ -50,4 +50,3 @@ For more information and documentation related to the RudderStack Config Generat
 ## Contact us
 
 If you come across any issues while configuring or using the RudderStack Config Generator, please feel free to start a conversation on our [Slack](https://resources.rudderstack.com/join-rudderstack-slack) channel. We will be happy to help you.
-
