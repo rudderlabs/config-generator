@@ -1,0 +1,3 @@
+## Freshdesk
+
+Freshdesk is a successful help desk and ticketing support SaaS tool. By integrating Freshdesk with RudderStack, you will be able to analyze ready-to-use analytics-friendly, customer support data in your data warehouse, and your BI. Go beyond Freshdesk’s vanilla dashboards and ask any question you want about your support data. Having your Freshdesk data in the same data warehouse as your marketing, and sales will help you get a holistic understanding of your business performance. Drill down to your data from your marketing channels, your revenue, and better understand how your customers engage with your products or fit your support plans.

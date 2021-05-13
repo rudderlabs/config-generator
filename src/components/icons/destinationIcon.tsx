@@ -4,6 +4,7 @@ import { ReactComponent as GA } from '@svg/ga.svg';
 import { ReactComponent as AM } from '@svg/am.svg';
 import { ReactComponent as ACTIVE_CAMPAIGN } from '@svg/active_campaign.svg';
 import { ReactComponent as APPCUES } from '@svg/appcues.svg';
+import { ReactComponent as CLEVERTAP } from '@svg/celever_tap.svg';
 import { ReactComponent as MP } from '@svg/mp.svg';
 import { ReactComponent as FB } from '@svg/fb.svg';
 import { ReactComponent as FACEBOOK_PIXEL } from '@svg/facebook_pixel.svg';
@@ -24,6 +25,7 @@ import { ReactComponent as SALESFORCE } from '@svg/salesforce.svg';
 import { ReactComponent as SEGMENT } from '@svg/segment.svg';
 import { ReactComponent as AUTOPILOT } from '@svg/autopilot.svg';
 import { ReactComponent as GOOGLEADS } from '@svg/googleads.svg';
+import { ReactComponent as GOOGLESHEETS } from '@svg/googlesheets.svg';
 import { ReactComponent as AZURE_BLOB } from '@svg/azure_blob.svg';
 import { ReactComponent as VWO } from '@svg/vwo.svg';
 import { ReactComponent as INTERCOM } from '@svg/intercom.svg';
@@ -34,6 +36,7 @@ import { ReactComponent as GTM } from '@svg/gtm.svg';
 import { ReactComponent as BRAZE } from '@svg/braze.svg';
 import { ReactComponent as KEEN } from '@svg/keen.svg';
 import { ReactComponent as KISSMETRICS } from '@svg/kissmetrics.svg';
+import { ReactComponent as KLAVIYO } from '@svg/klaviyo.svg';
 import { ReactComponent as CUSTOMERIO } from '@svg/customerio.svg';
 import { ReactComponent as CHARTBEAT } from '@svg/chartbeat.svg';
 import { ReactComponent as FIREBASE } from '@svg/firebase.svg';
@@ -48,6 +51,7 @@ import { ReactComponent as LOTAME } from '@svg/lotame.svg';
 import { ReactComponent as LOTAME_MOBILE } from '@svg/lotame_mobile.svg';
 import { ReactComponent as SLACK } from '@svg/slack.svg';
 import { ReactComponent as KINESIS } from '@svg/kinesis.svg';
+import { ReactComponent as KUSTOMER } from '@svg/kinesis.svg';
 import { ReactComponent as ZENDESK } from '@svg/zendesk.svg';
 import { ReactComponent as KAFKA } from '@svg/kafka.svg';
 import { ReactComponent as AZURE_EVENT_HUB } from '@svg/azure_event_hub.svg';
@@ -66,11 +70,13 @@ import { ReactComponent as LYTICS } from '@svg/lytics.svg';
 import { ReactComponent as DRIFT } from '@svg/drift.svg';
 import { ReactComponent as MARKETO } from '@svg/marketo.svg';
 import { ReactComponent as PARDOT } from '@svg/salesforce.svg';
+import { ReactComponent as PINTEREST_TAG } from '@svg/pinterest_tag.svg';
 import { ReactComponent as TWITTER } from '@svg/twitter.svg';
 import { ReactComponent as TAPLYTICS } from '@svg/taplytics.svg';
 import { ReactComponent as ADOBE_ANALYTICS } from '@svg/adobe_analytics.svg';
 import { ReactComponent as REDIS } from '@svg/redis.svg';
 import { ReactComponent as MOENGAGE } from '@svg/moengage.svg';
+import { ReactComponent as SPLITIO } from '@svg/splitio.svg';
 import { ReactComponent as POSTHOG } from '@svg/posthog.svg';
 import { ReactComponent as USERLIST } from '@svg/userlist.svg';
 import { ReactComponent as BIGQUERY } from '@svg/bq.svg';
@@ -89,6 +95,8 @@ const DestinationIcon = (props: any) => {
       return <AM width={width} height={height} />;
     case 'appcues':
       return <APPCUES width={width} height={height} />;
+    case 'clevertap':
+      return <CLEVERTAP width={width} height={height} />;  
     case 'ga':
       return <GA width={width} height={height} />;
     case 'mp':
@@ -125,6 +133,8 @@ const DestinationIcon = (props: any) => {
       return <HOTJAR width={width} height={height} />;
     case 'ga4':
       return <GA4 width={width} height={height} />;
+    case 'googlesheets':
+      return <GOOGLESHEETS width={width} height={height} />;
     case 'salesforce':
       return <SALESFORCE width={width} height={height} />;
     case 'hubspot':
@@ -155,6 +165,8 @@ const DestinationIcon = (props: any) => {
       return <KOCHAVA width={width} height={height} />;
     case 'kissmetrics':
       return <KISSMETRICS width={width} height={height} />;
+    case 'klaviyo':
+      return <KLAVIYO width={width} height={height} />;
     case 'customerio':
       return <CUSTOMERIO width={width} height={height} />;
     case 'chartbeat':
@@ -175,10 +187,14 @@ const DestinationIcon = (props: any) => {
       return <LOTAME width={width} height={height} />;
     case 'slack':
       return <SLACK width={width} height={height} />;
+    case 'sfmc':
+      return <SALESFORCE width={width} height={height} />;
     case 'bugsnag':
       return <BUGSNAG width={width} height={height} />;
     case 'kinesis':
       return <KINESIS width={width} height={height} />;
+    case 'kustomer':
+      return <KUSTOMER width={width} height={height} />;
     case 'zendesk':
       return <ZENDESK width={width} height={height} />;
     case 'kafka':
@@ -210,6 +226,8 @@ const DestinationIcon = (props: any) => {
       return <MARKETO width={width} height={height} />;
     case 'pardot':
       return <PARDOT width={width} height={height} />;
+    case 'pinterest_tag':
+      return <PINTEREST_TAG width={width} height={height} />;
     case 'pendo':
       return <PENDO width={width} height={height} />
     case 'twitter_ads':
@@ -226,6 +244,8 @@ const DestinationIcon = (props: any) => {
       return <MOENGAGE width={width} height={height} />;
     case 'posthog':
       return <POSTHOG width={width} height={height} />;
+    case 'splitio':
+      return <SPLITIO width={width} height={height} />;
     case 'userlist':
       return <USERLIST width={width} height={height} />;
     case 'bigquery':

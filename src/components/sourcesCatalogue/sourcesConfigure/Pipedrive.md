@@ -1,0 +1,1 @@
+Pipedrive is a web-based Sales CRM and pipeline management solution that enables businesses to plan their sales activities and monitor deals. Built using activity-based selling methodology, Pipedrive streamlines every action involved in converting a potential deal into a successful sale.

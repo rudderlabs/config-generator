@@ -1,0 +1,3 @@
+## Facebook Ads
+
+Facebook Ads is a popular advertising platform to generate engagement, awareness, or sales. By integrating Facebook Ads, you will be able to analyze ready-to-use analytics friendly advertisement data in your data warehouse and your BI. Go beyond Facebook Ads’ vanilla dashboards and ask any question you want about your advertisement data. Having your Facebook Ads in the same data warehouse as your marketing, support, and sales will help you get a holistic understanding of your ad spend, marketing ROI, and business performance. Drill down to your data from your advertisements, see how each ad performs, uncover if it converts new users, understand how they engage with your products or if they churn.
