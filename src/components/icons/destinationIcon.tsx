@@ -4,7 +4,7 @@ import { ReactComponent as GA } from '@svg/ga.svg';
 import { ReactComponent as AM } from '@svg/am.svg';
 import { ReactComponent as ACTIVE_CAMPAIGN } from '@svg/active_campaign.svg';
 import { ReactComponent as APPCUES } from '@svg/appcues.svg';
-import { ReactComponent as CLEVERTAP } from '@svg/celever_tap.svg';
+import { ReactComponent as CLEVERTAP } from '@svg/clever_tap.svg';
 import { ReactComponent as MP } from '@svg/mp.svg';
 import { ReactComponent as FB } from '@svg/fb.svg';
 import { ReactComponent as FACEBOOK_PIXEL } from '@svg/facebook_pixel.svg';
