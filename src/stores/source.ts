@@ -1,3 +1,4 @@
+import { version } from '@services/version';
 import { ISourceDefintion } from '@stores/sourceDefinitionsList';
 import { action, computed, observable, reaction, trace } from 'mobx';
 
@@ -14,6 +15,7 @@ export interface ISourceStore {
   sourceDef: ISourceDefintion;
   rootStore: IRootStore;
   destinations: IDestinationStore[];
+  configForSDK: any;
   setName(name: string): void;
   toggleEnabled(): void;
 }
@@ -53,6 +55,41 @@ export class SourceStore implements ISourceStore {
     return this.rootStore.destinationsListStore.destinations.filter(dest => {
       return destIds.indexOf(dest.id) > -1;
     });
+  }
+
+  @computed get configForSDK() {
+    return {
+      source: {
+        config: this.config,
+        id: this.id,
+        name: this.name,
+        writeKey: this.writeKey,
+        enabled: this.enabled,
+        sourceDefinitionId: this.sourceDefinitionId,
+        deleted: false,
+        createdAt: Date(),
+        updatedAt: Date(),
+        sourceDefinition: this.sourceDef,
+        // Filter only useNativeSDK enabled destinations and
+        // includes only includeKeys (from definition) in the config
+        destinations: this.destinations
+          .filter(dest => {
+            return dest.config ? dest.config.useNativeSDK : false;
+          })
+          .map(dest => {
+            return {
+              id: dest.id,
+              name: dest.name,
+              enabled: dest.enabled,
+              config: dest.filteredConfig(), // Very Very Important to use filterConfig instead of config
+              destinationDefinition: dest.destinationDefinition,
+            };
+          }),
+      },
+      metadata: {
+        version: version,
+      },
+    };
   }
 
   // useful for debugging

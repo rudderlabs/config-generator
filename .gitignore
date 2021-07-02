@@ -27,3 +27,5 @@ yarn-error.log*
 build/
 dist/
 node_modules/
+
+server/config/*

@@ -3,6 +3,8 @@ import { action, observable, trace, autorun, set, toJS } from 'mobx';
 import { IRootStore } from '.';
 import { ISourceStore } from './source';
 import { IDestinationStore } from './destination';
+import { apiServerCaller } from '@services/apiCaller';
+import { config } from '@services/config';
 
 export interface IConnectionsStore {
   connections: ISourceConnections;
@@ -40,8 +42,8 @@ export class ConnectionsStore implements IConnectionsStore {
     this.loadAndSave();
   }
 
-  public loadAndSave() {
-    this.load();
+  public async loadAndSave() {
+    await this.load();
     autoSave(this, this.save.bind(this));
   }
 
@@ -51,11 +53,19 @@ export class ConnectionsStore implements IConnectionsStore {
     return connectionsStore;
   }
 
-  public load() {
-    const connectionsStore = localStorage.getItem('connectionsStore');
-    if (connectionsStore) {
+  public async load() {
+    let connectionsStore;
+    if (config.persistanceMode === 'file') {
+      const resp = await apiServerCaller().get('/loadConnections');
+      connectionsStore = resp.data.connections;
+      console.log('connectionsStore', connectionsStore, resp.data);
+    } else {
+      connectionsStore = localStorage.getItem('connectionsStore');
+    }
+    if (connectionsStore && connectionsStore !== '{}') {
       const store: IConnectionsStore = JSON.parse(connectionsStore);
       set(this, store);
+      console.log(toJS(this.rootStore));
     }
   }
 
@@ -64,7 +74,11 @@ export class ConnectionsStore implements IConnectionsStore {
   }
 
   public save(json: string) {
-    localStorage.setItem('connectionsStore', json);
+    if (config.persistanceMode === 'file') {
+      apiServerCaller().post('/saveConnections', { connections: json });
+    } else {
+      localStorage.setItem('connectionsStore', json);
+    }
   }
 
   @action.bound

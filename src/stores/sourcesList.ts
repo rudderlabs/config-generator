@@ -2,6 +2,8 @@ import { IRootStore } from '@stores/index';
 import { ISourceStore, SourceStore } from '@stores/source';
 import { action, autorun, observable, set, toJS } from 'mobx';
 import KSUID from 'ksuid';
+import { apiServerCaller } from '@services/apiCaller';
+import { config } from '@services/config';
 
 export interface ISourcesListStore {
   sources: ISourceStore[];
@@ -41,8 +43,8 @@ export class SourcesListStore implements ISourcesListStore {
     this.rootStore = rootStore;
   }
 
-  public loadAndSave() {
-    this.load();
+  public async loadAndSave() {
+    await this.load();
     autoSave(this, this.save.bind(this));
   }
 
@@ -55,9 +57,16 @@ export class SourcesListStore implements ISourcesListStore {
     return sourcesListStore;
   }
 
-  public load() {
-    const sourcesListStore = localStorage.getItem('sourcesListStore');
-    if (sourcesListStore) {
+  public async load() {
+    let sourcesListStore;
+    if (config.persistanceMode === 'file') {
+      const resp = await apiServerCaller().get('/loadSources');
+      sourcesListStore = resp.data.sources;
+    } else {
+      sourcesListStore = localStorage.getItem('sourcesListStore');
+    }
+    console.log('sourcesListStore', sourcesListStore);
+    if (sourcesListStore && sourcesListStore !== '{}') {
       const store: ISourcesListStore = JSON.parse(sourcesListStore);
       this.sources = store.sources.map(
         source => new SourceStore(source, this.rootStore),
@@ -72,7 +81,11 @@ export class SourcesListStore implements ISourcesListStore {
   }
 
   public save(json: string) {
-    localStorage.setItem('sourcesListStore', json);
+    if (config.persistanceMode === 'file') {
+      apiServerCaller().post('/saveSources', { sources: json });
+    } else {
+      localStorage.setItem('sourcesListStore', json);
+    }
   }
 
   @action.bound
