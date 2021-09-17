@@ -58,14 +58,12 @@ export class ConnectionsStore implements IConnectionsStore {
     if (config.persistanceMode === 'file') {
       const resp = await apiServerCaller().get('/loadConnections');
       connectionsStore = resp.data.connections;
-      console.log('connectionsStore', connectionsStore, resp.data);
     } else {
       connectionsStore = localStorage.getItem('connectionsStore');
     }
     if (connectionsStore && connectionsStore !== '{}') {
       const store: IConnectionsStore = JSON.parse(connectionsStore);
       set(this, store);
-      console.log(toJS(this.rootStore));
     }
   }
 

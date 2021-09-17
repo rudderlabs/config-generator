@@ -65,7 +65,6 @@ export class SourcesListStore implements ISourcesListStore {
     } else {
       sourcesListStore = localStorage.getItem('sourcesListStore');
     }
-    console.log('sourcesListStore', sourcesListStore);
     if (sourcesListStore && sourcesListStore !== '{}') {
       const store: ISourcesListStore = JSON.parse(sourcesListStore);
       this.sources = store.sources.map(

@@ -83,7 +83,6 @@ export class DestinationsListStore implements IDestinationsListStore {
       this.destinations = store.destinations.map(
         destination => new DestinationStore(destination, this.rootStore),
       );
-      console.log(toJS(this.rootStore));
     }
   }
   public loadImportedFile(destinations: any) {
