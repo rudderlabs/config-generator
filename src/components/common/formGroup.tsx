@@ -35,7 +35,8 @@ export interface IFormGroupState {
   error: boolean;
   errorMessage: string;
 }
-
+let preReqFields = new Set();
+let neededFields = new Set();
 class FormGroup extends React.PureComponent<IFormGroupProps, IFormGroupState> {
   constructor(props: IFormGroupProps) {
     super(props);
@@ -48,8 +49,7 @@ class FormGroup extends React.PureComponent<IFormGroupProps, IFormGroupState> {
   public onChange = (label: string, value: string) => {
     const { onStateChange } = this.props;
     this.setState(
-      (prevState: any) => ({
-        formData: {
+      (prevState: any) => ({ formData: {
           ...prevState.formData,
           [label]: value,
         },
@@ -63,6 +63,7 @@ class FormGroup extends React.PureComponent<IFormGroupProps, IFormGroupState> {
     const { onStateChange } = this.props;
 
     let key = formData[Object.keys(formData)[0]];
+    console.log('handle validation', key);
     const regex = RegExp(regexString);
     const isValidInput = key && key.startsWith('env.') ? true : false;
     this.setState({ error: false });
@@ -101,8 +102,14 @@ class FormGroup extends React.PureComponent<IFormGroupProps, IFormGroupState> {
         if (field.preRequisiteField.disabledMode) {
           forceDisabled = true;
         } else {
+          preReqFields.add(field.value);
+          console.log(preReqFields);
           return null;
         }
+      }
+      else {
+        neededFields.add(field.value);
+        console.log(neededFields);
       }
       if (field.preRequisiteField.includeValue) {
         preRequisiteValue = this.state.formData[field.preRequisiteField.name]
