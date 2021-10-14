@@ -1,9 +1,9 @@
 import * as React from 'react';
-
 import FormGroup from '../../common/formGroup';
+import flat from 'flat';
 import { destinationList as formTemplatesMap} from '../destinationList/dst';
 import { Container } from './styles';
-
+import _ from 'lodash';
 export interface IDestinationSettingsProps {
   destName: string;
   onSettingsChange: any;
@@ -11,7 +11,14 @@ export interface IDestinationSettingsProps {
   disabled?: boolean;
   initialSettings?: any;
 }
-
+const isValidJson = (e: string): boolean => {
+  try {
+    JSON.parse(e);
+    return true;
+  } catch (e) {
+    return false;
+  }
+};
 export default class DestinationSettings extends React.Component<
   IDestinationSettingsProps,
   any
@@ -27,25 +34,53 @@ export default class DestinationSettings extends React.Component<
     };
   }
 
-  public onSettingsChange = (settings: any) => {
-    const { onSettingsChange, destName, setRequirementsState } = this.props;
-    const { formTemplate } = this.state;
-    onSettingsChange(settings);
-    const req = Object.entries(settings).map(([k, v]) => {
-      const fields = formTemplate.reduce(
-        (acc: any, curr: any) => acc.concat(curr.fields),
-        [],
-      );
-      if (!v) {
-        const field = fields.find((field: any) => field.value === k);
-        if (field.required) {
+  public validate = (settings: any, fields: any) => {
+    const req = Object.entries(settings).map(function val([k, value]: [string, any]): boolean {
+      const v = _.isString(value) ? value.trim() : value;
+      if (v) {
+        if (typeof v === 'object' && !Array.isArray(v)) {
+          return Object.entries(flat({ [k]: v }))
+            .map(val)
+            .every(Boolean);
+        } if (fields.some((field: any) => Object.values(field).includes(k) && field.subType === 'JSON')) {
+          return isValidJson(v);
+        }
+      } else if (!v) {
+        const field = fields.find(
+          (elem: any) => elem.value === k || k.endsWith(elem.value),
+        );
+        // if field has a preRequisiteField and its not active, do not do required validation
+        const preReqField = field.preRequisiteField;
+        if (preReqField) {
+          if (Array.isArray(preReqField)) {
+            if (preReqField.some((elem) => elem.hasOwnProperty('selectedValue') && settings[elem.name] !== elem.selectedValue)) {
+              return true;
+            }
+          } else if (
+            preReqField.hasOwnProperty('selectedValue')
+            && settings[preReqField.name] !== preReqField.selectedValue
+          ) {
+            return true;
+          }
+        }
+        if (field && field.required ) {
           return false;
         }
       }
       return true;
     });
-    const reqmtsMet = req.reduce((acc: any, curr: any) => acc && curr, true);
-    setRequirementsState(reqmtsMet);
+    return req.every(Boolean);
+  };
+
+  public onSettingsChange = (settings: any) => {
+    const { onSettingsChange, destName, setRequirementsState } = this.props;
+    const { formTemplate } = this.state;
+    onSettingsChange(settings);
+    const fields = formTemplate.reduce(
+      (acc: any, curr: any) => acc.concat(curr.fields),
+      [],
+    );
+    setRequirementsState(this.validate(settings,fields));
   };
 
   public onChange = (settings: any) => {

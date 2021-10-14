@@ -48,7 +48,7 @@ class FormGroup extends React.PureComponent<IFormGroupProps, IFormGroupState> {
   public onChange = (label: string, value: string) => {
     const { onStateChange } = this.props;
     this.setState(
-      (prevState: any) => ({
+      (prevState: any) => ({ 
         formData: {
           ...prevState.formData,
           [label]: value,
