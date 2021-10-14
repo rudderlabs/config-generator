@@ -35,8 +35,7 @@ export interface IFormGroupState {
   error: boolean;
   errorMessage: string;
 }
-let preReqFields = new Set();
-let neededFields = new Set();
+
 class FormGroup extends React.PureComponent<IFormGroupProps, IFormGroupState> {
   constructor(props: IFormGroupProps) {
     super(props);
@@ -102,14 +101,8 @@ class FormGroup extends React.PureComponent<IFormGroupProps, IFormGroupState> {
         if (field.preRequisiteField.disabledMode) {
           forceDisabled = true;
         } else {
-          preReqFields.add(field.value);
-          console.log(preReqFields);
           return null;
         }
-      }
-      else {
-        neededFields.add(field.value);
-        console.log(neededFields);
       }
       if (field.preRequisiteField.includeValue) {
         preRequisiteValue = this.state.formData[field.preRequisiteField.name]
