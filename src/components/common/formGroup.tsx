@@ -48,7 +48,8 @@ class FormGroup extends React.PureComponent<IFormGroupProps, IFormGroupState> {
   public onChange = (label: string, value: string) => {
     const { onStateChange } = this.props;
     this.setState(
-      (prevState: any) => ({ formData: {
+      (prevState: any) => ({ 
+        formData: {
           ...prevState.formData,
           [label]: value,
         },
@@ -62,7 +63,6 @@ class FormGroup extends React.PureComponent<IFormGroupProps, IFormGroupState> {
     const { onStateChange } = this.props;
 
     let key = formData[Object.keys(formData)[0]];
-    console.log('handle validation', key);
     const regex = RegExp(regexString);
     const isValidInput = key && key.startsWith('env.') ? true : false;
     this.setState({ error: false });
