@@ -3,7 +3,7 @@ import FormGroup from '../../common/formGroup';
 import flat from 'flat';
 import { destinationList as formTemplatesMap} from '../destinationList/dst';
 import { Container } from './styles';
-
+import _ from 'lodash';
 export interface IDestinationSettingsProps {
   destName: string;
   onSettingsChange: any;
@@ -19,7 +19,6 @@ const isValidJson = (e: string): boolean => {
     return false;
   }
 };
-export const isString = (elem: unknown) => typeof elem === 'string' || elem instanceof String;
 export default class DestinationSettings extends React.Component<
   IDestinationSettingsProps,
   any
@@ -37,7 +36,7 @@ export default class DestinationSettings extends React.Component<
 
   public validate = (settings: any, fields: any) => {
     const req = Object.entries(settings).map(function val([k, value]: [string, any]): boolean {
-      const v = isString(value) ? value.trim() : value;
+      const v = _.isString(value) ? value.trim() : value;
       if (v) {
         if (typeof v === 'object' && !Array.isArray(v)) {
           return Object.entries(flat({ [k]: v }))
