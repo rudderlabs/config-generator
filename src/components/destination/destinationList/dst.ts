@@ -1,6 +1,7 @@
 const destinationList = {
   "ACTIVE_CAMPAIGN": require('./ACTIVE_CAMPAIGN.json'),
   "ADJ": require('./ADJ.json'),
+  "ADOBE_ANALYTICS": require('./ADOBE_ANALYTICS.json'),
   "AF": require('./AF.json'),
   "AM": require('./AM.json'),
   "APPCENTER": require('./APPCENTER'),
