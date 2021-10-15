@@ -6,7 +6,8 @@
         "type": "textInput",
         "label": "Project ID",
         "value": "projectId",
-        "regex": ".*",
+        "regex": "^(.{0,100})$",
+        "regexErrorMessage": "Invalid Project ID",
         "required": true,
         "placeholder": ""
       },
@@ -31,6 +32,18 @@
         "placeholderLeft": "e.g: page",
         "placeholderRight": "e.g: topic_id",
         "value": "eventToTopicMap"
+      },
+      {
+        "type": "dynamicForm",
+        "label": "Map message properties to Google pub/sub message Attribute Key",
+        "footerNote": "Use asterics (*) to map for all events.",
+        "labelLeft": "Event",
+        "labelRight": "Field",
+        "keyLeft": "from",
+        "keyRight": "to",
+        "placeholderLeft": "e.g: event",
+        "placeholderRight": "e.g: key",
+        "value": "eventToAttributesMap"
       }
     ]
   }

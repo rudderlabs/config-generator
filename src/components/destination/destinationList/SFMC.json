@@ -7,7 +7,8 @@
         "label": "Client Id",
         "value": "clientId",
         "required": true,
-        "placeholder": "e.g. ow081701234iblovt1z0j8hm "
+        "placeholder": "e.g. ow081701234iblovt1z0j8hm",
+        "secret": true
       },
       {
         "type": "textInput",

@@ -6,7 +6,8 @@
         "type": "textInput",
         "label": "APP Token",
         "value": "appToken",
-        "regex": ".*",
+        "regex": "^(.{0,100})$",
+        "regexErrorMessage": "Invalid App Token",
         "required": true,
         "placeholder": "e.g: bSjsdGYsOo9sasdjw23Shj"
       },
@@ -22,8 +23,8 @@
     "title": "Native SDK",
     "fields": [
       {
-        "type": "defaultCheckbox",
-        "label": "Use native SDK to send events",
+        "type": "checkbox",
+        "label": "Use device-mode to send events",
         "value": "useNativeSDK",
         "default": false
       }
@@ -51,7 +52,8 @@
         "type": "textInput",
         "label": "Delay Time (in seconds)",
         "value": "delay",
-        "regex": ".*",
+        "regex": "^(.{0,100})$",
+        "regexErrorMessage": "Invalid Value",
         "required": false,
         "placeholder": "7"
       }

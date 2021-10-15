@@ -6,7 +6,8 @@
         "type": "textInput",
         "label": "Mailchimp Api Key",
         "value": "apiKey",
-        "regex": ".*",
+        "regex": "^(.{0,100})$",
+        "regexErrorMessage": "Invalid Mailchimp Api Key",
         "required": true,
         "placeholder": "e.g: 94f71917dald93kf897449b0c90caa4c-us20"
       },
@@ -14,7 +15,8 @@
         "type": "textInput",
         "label": "Mailchimp Audience Id",
         "value": "audienceId",
-        "regex": ".*",
+        "regex": "^(.{0,100})$",
+        "regexErrorMessage": "Invalid Mailchimp Audience Id",
         "required": true,
         "placeholder": "e.g: dn42a32d30"
       },
@@ -22,7 +24,8 @@
         "type": "textInput",
         "label": "Mailchimp DataCenter Id",
         "value": "datacenterId",
-        "regex": ".*",
+        "regex": "^(.{0,100})$",
+        "regexErrorMessage": "Invalid Mailchimp DataCenter Id",
         "required": true,
         "placeholder": "e.g: us20"
       }

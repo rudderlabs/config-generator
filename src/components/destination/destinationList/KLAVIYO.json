@@ -10,7 +10,7 @@
         "regex": ".*",
         "required": true,
         "placeholder": "e.g. WPqij9",
-        "footerNote": "Your Public API Key",
+        "footerNote":"Your Public API Key",
         "secret": false
       },
       {
@@ -97,7 +97,7 @@
     "fields": [
       {
         "type": "checkbox",
-        "label": "Use native SDK to send events",
+        "label": "Use device-mode to send events",
         "value": "useNativeSDK",
         "default": false
       }

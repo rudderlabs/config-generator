@@ -10,7 +10,8 @@
             "type": "textInput",
             "label": "Event Name",
             "value": "eventName",
-            "regex": ".*",
+            "regex": "^(.{0,100})$",
+            "regexErrorMessage": "Invalid Event Name",
             "required": false,
             "placeholder": "e.g: ABCDEFG"
           },
@@ -18,7 +19,8 @@
             "type": "textInput",
             "label": "Event Channel",
             "value": "eventChannel",
-            "regex": ".*",
+            "regex": "^(.{0,100})$",
+            "regexErrorMessage": "Invalid Event Channel",
             "required": false,
             "placeholder": "e.g: ABCDEFG"
           },
@@ -39,7 +41,8 @@
         "type": "textInput",
         "label": "Identify Template",
         "value": "identifyTemplate",
-        "regex": ".*",
+        "regex": "^(.{0,1000})$",
+        "regexErrorMessage": "Invalid Identify Template",
         "required": false,
         "placeholder": "e.g: ABCDEFG"
       }
@@ -56,7 +59,8 @@
             "type": "textInput",
             "label": "Event Name",
             "value": "eventName",
-            "regex": ".*",
+            "regex": "^(.{0,100})$",
+            "regexErrorMessage": "Invalid Event Name",
             "required": false,
             "placeholder": "e.g: ABCDEFG"
           },
@@ -64,7 +68,8 @@
             "type": "textInput",
             "label": "Event Template",
             "value": "eventTemplate",
-            "regex": ".*",
+            "regex": "^(.{0,1000})$",
+            "regexErrorMessage": "Invalid Event Template",
             "required": false,
             "placeholder": "e.g: ABCDEFG"
           },
@@ -85,7 +90,8 @@
         "type": "textInput",
         "label": "Webhook Url",
         "value": "webhookUrl",
-        "regex": ".*",
+        "regex": "^(.{0,100})$",
+        "regexErrorMessage": "Invalid Webhook Url",
         "required": false,
         "placeholder": "e.g: ABCDEFG"
       }
@@ -102,7 +108,8 @@
             "type": "textInput",
             "label": "Trait",
             "value": "trait",
-            "regex": ".*",
+            "regex": "^(.{0,100})$",
+            "regexErrorMessage": "Invalid Trait",
             "required": false,
             "placeholder": "e.g: ABCDEFG"
           }

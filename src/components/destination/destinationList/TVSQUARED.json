@@ -6,7 +6,8 @@
         "type": "textInput",
         "label": "Brand Id",
         "value": "brandId",
-        "regex": ".*",
+        "regex": "^(.{0,100})$",
+        "regexErrorMessage": "Invalid Brand Id",
         "required": true,
         "placeholder": "TV-54xxxx18-1"
       }
@@ -19,7 +20,8 @@
         "type": "textInput",
         "label": "Client ID",
         "value": "clientId",
-        "regex": ".*",
+        "regex": "^(.{0,100})$",
+        "regexErrorMessage": "Invalid Client ID",
         "required": true,
         "placeholder": "4659"
       }
@@ -37,7 +39,8 @@
             "type": "textInput",
             "label": "Event Name",
             "value": "event",
-            "regex": ".*",
+            "regex": "^(.{0,100})$",
+            "regexErrorMessage": "Invalid Event Name",
             "required": false,
             "placeholder": "e.g: Order Completed"
           }
@@ -57,7 +60,8 @@
             "type": "textInput",
             "label": "Property Name",
             "value": "propertyName",
-            "regex": ".*",
+            "regex": "^(.{0,100})$",
+            "regexErrorMessage": "Invalid Property Name",
             "required": false,
             "placeholder": "e.g: browser"
           }
@@ -70,7 +74,7 @@
     "fields": [
       {
         "type": "defaultCheckbox",
-        "label": "Use native SDK to send events",
+        "label": "Use device-mode to send events",
         "value": "useNativeSDK",
         "default": true
       }

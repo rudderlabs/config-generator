@@ -10,7 +10,8 @@
             "type": "textInput",
             "label": "BCP Url Template (Pixel)",
             "value": "bcpUrlTemplate",
-            "regex": ".*",
+            "regex": "^(.{0,100})$",
+            "regexErrorMessage": "Invalid BCP Url Template (Pixel)",
             "required": false,
             "placeholder": "e.g: ABCDEFG"
           }
@@ -29,7 +30,8 @@
             "type": "textInput",
             "label": "DSP Url Template (Pixel)",
             "value": "dspUrlTemplate",
-            "regex": ".*",
+            "regex": "^(.{0,100})$",
+            "regexErrorMessage": "Invalid DSP Url Template (Pixel)",
             "required": false,
             "placeholder": "e.g: ABCDEFG"
           }
@@ -57,7 +59,7 @@
     "fields": [
       {
         "type": "defaultCheckbox",
-        "label": "Use native SDK to send events",
+        "label": "Use device-mode to send events",
         "value": "useNativeSDK",
         "default": true
       }

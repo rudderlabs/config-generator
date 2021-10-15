@@ -40,6 +40,13 @@
         "footerNote": "Enable this option to track anonymous users"
       },
       {
+        "type": "checkbox",
+        "label": "Use Clevertap ObjectId for Mapping",
+        "value": "enableObjectIdMapping",
+        "default": false,
+        "footerNote": "Enable this option to use Clevertap objectId for mapping, please refer to docs for further info"
+      },
+      {
         "type": "singleSelect",
         "label": "Region",
         "value": "region",
@@ -78,7 +85,7 @@
     "fields": [
       {
         "type": "checkbox",
-        "label": "Use native SDK to send events",
+        "label": "Use device-mode to send events",
         "value": "useNativeSDK",
         "default": false
       }

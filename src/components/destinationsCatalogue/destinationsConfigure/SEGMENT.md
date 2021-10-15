@@ -9,9 +9,10 @@ You can now use RudderStack to capture your event data across various sources, a
 ### Useful Links
 
 [Segment Website][]  
-Documentation and Setup guide: Coming Soon  
+[Documentation and Setup guide](): Coming Soon  
 [View on GitHub][]
 
 [//]: # "These are reference links used in the body of this note and get stripped out when the markdown processor does its job. There is no need to format nicely because it shouldn't be seen. Thanks SO - http://stackoverflow.com/questions/4823468/store-comments-in-markdown-syntax"
+
 [segment website]: https://segment.com/
 [view on github]: https://github.com/rudderlabs/rudder-server

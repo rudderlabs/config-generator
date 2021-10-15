@@ -6,9 +6,10 @@
         "type": "textInput",
         "label": "User Name",
         "value": "userName",
-        "regex": ".*",
+        "regex": "^(.{0,100})$",
+        "regexErrorMessage": "Invalid User Name",
         "required": true,
-        "placeholder": "User name for salesforce login"
+        "placeholder": "e.g. user_name"
       },
       {
         "type": "textInput",
@@ -17,17 +18,35 @@
         "inputFieldType": "password",
         "regex": ".*",
         "required": true,
-        "placeholder": "Password for salesforce login",
+        "placeholder": "e.g. password",
         "secret": true
       },
       {
         "type": "textInput",
-        "label": "Initial Access Token",
+        "label": "Security Token",
         "value": "initialAccessToken",
-        "regex": ".*",
+        "regex": "^(.{0,100})$",
+        "regexErrorMessage": "Invalid Security Token",
         "required": true,
-        "placeholder": "Initial access token from salesforce",
+        "placeholder": "e.g. ISnPS2LcOtn9bHf6Id6vG0jgh",
         "secret": true
+      }
+    ]
+  },
+  {
+    "title": "Other Settings",
+    "fields": [
+      {
+        "type": "checkbox",
+        "label": "Map Rudder Properties to Salesforce Properties",
+        "value": "mapProperties",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "label": "Sandbox mode",
+        "value": "sandbox",
+        "default": false
       }
     ]
   }

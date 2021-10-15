@@ -103,6 +103,7 @@ const destinationList = {
   WEBHOOK: require('./WEBHOOK.json'),
   ZENDESK: require('./ZENDESK.json'),
 };
+
 export {
   destinationList
 }

@@ -6,6 +6,8 @@
         "type": "textInput",
         "label": "BugSnag Api Key",
         "value": "apiKey",
+        "regex": "^(.{0,100})$",
+        "regexErrorMessage": "Invalid BugSnag Api Key",
         "required": true,
         "placeholder": "e.g: ••••••••••5c0d"
       }
@@ -16,7 +18,7 @@
     "fields": [
       {
         "type": "defaultCheckbox",
-        "label": "Use native SDK to send events",
+        "label": "Use device-mode to send events",
         "value": "useNativeSDK",
         "default": true
       }

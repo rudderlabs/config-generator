@@ -6,7 +6,8 @@
         "type": "textInput",
         "label": "FS ORG",
         "value": "fs_org",
-        "regex": ".*",
+        "regex": "^(.{0,100})$",
+        "regexErrorMessage": "Invalid FS ORG",
         "required": true,
         "placeholder": "e.g: dd412940"
       },
@@ -23,7 +24,7 @@
     "fields": [
       {
         "type": "defaultCheckbox",
-        "label": "Use native SDK to send events",
+        "label": "Use device-mode to send events",
         "value": "useNativeSDK",
         "default": true
       }

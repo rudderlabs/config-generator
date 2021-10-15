@@ -6,7 +6,8 @@
         "type": "textInput",
         "label": "App Key",
         "value": "appKey",
-        "regex": ".*",
+        "regex": "^(.{0,100})$",
+        "regexErrorMessage": "Invalid App Key",
         "required": true,
         "placeholder": "e.g: f2c7c97a-48d1-11ea-8e07-faffc22c7c7f"
       },
@@ -14,7 +15,8 @@
         "type": "textInput",
         "label": "Rest Api Key",
         "value": "restApiKey",
-        "regex": ".*",
+        "regex": "^(.{0,100})$",
+        "regexErrorMessage": "Invalid Rest Api Key",
         "required": true,
         "placeholder": "e.g: 06c19c59-48d2-11ea-b27a-faffc22c7c7f",
         "secret": true
@@ -23,18 +25,36 @@
         "type": "textInput",
         "label": "Data Center",
         "value": "dataCenter",
-        "regex": ".*",
+        "regex": "^(.{0,100})$",
+        "regexErrorMessage": "Invalid Data Center",
         "required": true,
         "placeholder": "e.g: EU-01"
       }
     ]
   },
   {
-    "title": "2. Native SDK",
+    "title": "2. Custom html settings",
     "fields": [
       {
         "type": "checkbox",
-        "label": "Use native SDK to send events",
+        "label": "Enable html in app messages",
+        "value": "enableHtmlInAppMessages", 
+        "default": false
+      },
+      {
+        "type": "checkbox",
+        "label": "Allow User Supplied Javascript",
+        "value": "allowUserSuppliedJavascript",
+        "default": false
+      }
+    ]
+  },
+  {
+    "title": "3. Native SDK",
+    "fields": [
+      {
+        "type": "checkbox",
+        "label": "Use device-mode to send events",
         "value": "useNativeSDK",
         "default": true
       }
