@@ -1,6 +1,7 @@
 import Svg from '@svg/index';
 import * as React from 'react';
 import { RouteComponentProps, withRouter } from 'react-router';
+import { Tooltip } from 'antd';
 
 import {
   AvatarContainer,
@@ -34,6 +35,22 @@ class Sidebar extends React.Component<ISidebarProps> {
             <Svg name="destination" />
             <span>Destinations</span>
           </SidebarLink>
+          <Tooltip placement="right" title="Please try Ruderstack Control Plane for this feature">
+            <div>
+          <SidebarLink dim to="/transformation">            
+            <Svg name="transformation" />
+            <span>Transformations</span>
+          </SidebarLink>
+          </div>
+          </Tooltip>
+          <Tooltip placement="bottom" title="Please try Ruderstack Control Plane for this feature">
+            <div>
+          <SidebarLink dim to="/syncs">
+            <Svg name="sync" />
+            <span>Syncs Dashboard</span>
+          </SidebarLink>
+          </div>
+          </Tooltip>         
         </SidebarLinksContainer>
       </Sider>
     );

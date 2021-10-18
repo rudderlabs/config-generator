@@ -56,6 +56,7 @@ import { ReactComponent as Profile } from './profile.svg';
 import { ReactComponent as SidebarSettings } from './settings.svg';
 import { ReactComponent as ChevronRight } from './chevron_right.svg';
 import { ReactComponent as UserCircle } from './user_circle.svg';
+import {ReactComponent as Sync } from './sync.svg';
 
 interface SvgProps extends React.SVGAttributes<any> {
   name: string;
@@ -230,6 +231,9 @@ const Svg: React.FC<SvgProps> = ({ name, size, ...svgProps }: any) => {
     case 'user_circle':
       Icon = UserCircle;
       break;
+    case 'sync':
+        Icon = Sync;
+        break; 
     default:
       break;
   }

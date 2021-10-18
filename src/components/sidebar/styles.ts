@@ -1,6 +1,7 @@
 import { Avatar, Layout, Menu } from 'antd';
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
+import is from 'typescript-styled-is';
 
 // const { Header, Sider as Sode, Content } = Layout;
 
@@ -40,6 +41,7 @@ export const SidebarLinksContainer = styled.div`
 
 interface IProps {
   active?: boolean;
+  dim?: boolean
 }
 
 export const SidebarLink = styled(NavLink) <IProps>`
@@ -73,6 +75,11 @@ export const SidebarLink = styled(NavLink) <IProps>`
       color: ${({ theme }) => theme.color.yellow300};
     }
   }
+  &&${is('dim')`
+    color: ${({ theme }) => theme.color.grey};
+    cursor: not-allowed;
+    pointer-events:none;
+  `}
 `;
 
 export const MenuItem = styled(Menu.Item)`
