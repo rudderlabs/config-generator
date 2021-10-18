@@ -82,6 +82,7 @@ import { ReactComponent as USERLIST } from '@svg/userlist.svg';
 import { ReactComponent as BIGQUERY } from '@svg/bq.svg';
 import { ReactComponent as CONFLUENT_CLOUD } from '@svg/confluentcloud.svg';
 import { ReactComponent as APPCENTER } from '@svg/appcenter.svg';
+import {ReactComponent as ALGOLIA} from '@svg/algolia.svg';
 
 import theme from '@css/theme';
 
@@ -95,6 +96,8 @@ const DestinationIcon = (props: any) => {
       return <AM width={width} height={height} />;
     case 'appcues':
       return <APPCUES width={width} height={height} />;
+    case 'algolia':
+      return <ALGOLIA width={width} height={height} />;
     case 'clevertap':
       return <CLEVERTAP width={width} height={height} />;  
     case 'ga':

@@ -10,9 +10,10 @@ import { IDestinationDefsListStore } from '@stores/destinationDefsList';
 import { IDestinationsListStore } from '@stores/destinationsList';
 import { ISourceDefinitionsListStore } from '@stores/sourceDefinitionsList';
 import { ISourcesListStore } from '@stores/sourcesList';
-import { Layout, Skeleton, Card } from 'antd';
+import { Layout, Skeleton, Card, Button } from 'antd';
 import { inject, observer } from 'mobx-react';
 import React, { Component, useEffect } from 'react';
+import { Label } from '@components/common/typography';
 import { message, Alert } from 'antd';
 import {
   BrowserRouter as Router,
@@ -47,7 +48,14 @@ export const StyledNotification = styled.div`
   left: 30vw;
   top: 0px;
 `;
-
+export const Container = styled.div`
+display: flex;
+align-items: center;
+width: 100%;
+background-color: #FFF8E4;
+height: 120px; 
+padding: 20px;
+`
 const RenderLayout = withRouter(({ history }) => {
   // useEffect(
   //   () =>
@@ -64,6 +72,13 @@ const RenderLayout = withRouter(({ history }) => {
   // );
 
   return (
+    <>
+    <Container> 
+      <Label color="#FF0000"> 
+        <span>Please Move to Rudderstack Control Plane for more features such as Transformations, Syncs Dashboard and recent upgrades. </span>
+        <Button href="https://app.rudderstack.com"> Try Now </Button>  
+      </Label> 
+    </Container>
     <Layout>
       <Switch>
         <Route path="/home" exact={true} component={Connections} />
@@ -91,6 +106,7 @@ const RenderLayout = withRouter(({ history }) => {
         />
       </Switch>
     </Layout>
+    </>
   );
 });
 
