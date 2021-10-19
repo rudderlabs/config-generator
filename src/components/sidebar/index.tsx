@@ -2,6 +2,7 @@ import Svg from '@svg/index';
 import * as React from 'react';
 import { RouteComponentProps, withRouter } from 'react-router';
 import { Tooltip } from 'antd';
+import { inject, observer } from 'mobx-react';
 
 import {
   AvatarContainer,
@@ -11,11 +12,21 @@ import {
   Sider,
   UserName,
 } from './styles';
+import { IMessageStore } from '@stores/messages';
 
-export interface ISidebarProps extends RouteComponentProps<any> {}
+export interface ISidebarProps extends RouteComponentProps {
+  messagesStore? : IMessageStore;
+}
 
+@inject(
+  'messagesStore',
+) 
+
+@observer
 class Sidebar extends React.Component<ISidebarProps> {
+
   public render() {
+    const {messagesStore} = this.props;
     return (
       <Sider trigger={null} collapsible={true} collapsed={false}>
         <AvatarContainer>
@@ -36,7 +47,8 @@ class Sidebar extends React.Component<ISidebarProps> {
             <span>Destinations</span>
           </SidebarLink>
           <Tooltip placement="right" title="Please try Ruderstack Control Plane for this feature">
-            <div>
+            <div onClick = {()=> {if(messagesStore) { 
+              messagesStore.setIsAnimating(true)}}} >
           <SidebarLink dim to="/transformation">            
             <Svg name="transformation" />
             <span>Transformations</span>
@@ -44,7 +56,8 @@ class Sidebar extends React.Component<ISidebarProps> {
           </div>
           </Tooltip>
           <Tooltip placement="bottom" title="Please try Ruderstack Control Plane for this feature">
-            <div>
+          <div onClick = {()=> {if(messagesStore) { 
+              messagesStore.setIsAnimating(true)}}} >
           <SidebarLink dim to="/syncs">
             <Svg name="sync" />
             <span>Syncs Dashboard</span>

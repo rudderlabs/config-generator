@@ -4,6 +4,7 @@ export interface IMessageStore {
   isError: boolean;
   isSuccess: boolean;
   infoString: string;
+  isAnimating: boolean;
   setError(value: boolean): void;
   setSuccess(value: boolean): void;
   setInfoString(value: string): void;
@@ -11,12 +12,14 @@ export interface IMessageStore {
   showErrorMessage(value: string): void;
   removeSuccessMessage(): void;
   removeErrorMessage(): void;
+  setIsAnimating(value:boolean) : void;
 }
 
 export class MessagesStore implements IMessageStore {
   @observable public isError: boolean;
   @observable public isSuccess: boolean;
   @observable public infoString: string;
+  @observable public isAnimating: boolean = true;
 
   constructor() {
     this.isError = false;
@@ -37,6 +40,12 @@ export class MessagesStore implements IMessageStore {
   @action.bound
   public setInfoString(value: string): void {
     this.infoString = value;
+  }
+
+  @action.bound 
+  public setIsAnimating(value:boolean) : void {
+    console.log('animaitng');    
+    this.isAnimating = value;
   }
 
   @action.bound
