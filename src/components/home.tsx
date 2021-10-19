@@ -56,7 +56,6 @@ background-color: #FFF8E4;
 height: 120px; 
 padding: 20px;
 flex-direction: column;
-justify-content: flex-start;
 `
 const RenderLayout = withRouter(({ history }) => {
   // useEffect(
@@ -77,9 +76,11 @@ const RenderLayout = withRouter(({ history }) => {
     <>
     <Container > 
       <Label color="#FF0000"> 
-        <span>Please Move to Rudderstack Control Plane for more features such as Transformations, Syncs Dashboard and recent upgrades. </span>
+        Please Move to Rudderstack Control Plane for more features such as Transformations, Syncs Dashboard and recent upgrades.
       </Label> 
-      <Button href="https://app.rudderstack.com"> Try Now </Button>
+      <Flex style={{paddingTop:'20px'}}>
+      <Button type="primary" shape="round" href="https://app.rudderstack.com"> Try Now </Button>
+      </Flex>
     </Container>
     <Layout>
       <Switch>
