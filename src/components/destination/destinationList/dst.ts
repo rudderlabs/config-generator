@@ -4,6 +4,7 @@ const destinationList = {
   ADOBE_ANALYTICS: require('./ADOBE_ANALYTICS.json'),
   AF: require('./AF.json'),
   ALGOLIA: require('./ALGOLIA.json'),
+  AWIN: require('./AWIN.json'),
   AM: require('./AM.json'),
   APPCENTER: require('./APPCENTER.json'),
   APPCUES: require('./APPCUES.json'),

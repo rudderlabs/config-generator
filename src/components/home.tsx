@@ -219,7 +219,7 @@ class Home extends Component<IHomeProps> {
           <Layout>
           <Container move={messagesStore.isAnimating} onAnimationEnd={()=>{messagesStore.setIsAnimating(false)}}> 
             <Label color="#FF0000"> 
-              Please Move to Rudderstack Control Plane for more features such as Transformations, Syncs Dashboard and recent upgrades.
+            We highly recommend signing up for RudderStack Cloud to get access to features such as Transformations, Live Events, Warehouse Syncs, and more.
             </Label> 
             <Flex style={{paddingTop:'20px'}}>
             <Button type="primary" shape="round" href="https://app.rudderstack.com"> Try Now </Button>

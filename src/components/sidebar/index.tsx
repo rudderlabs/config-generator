@@ -60,7 +60,7 @@ class Sidebar extends React.Component<ISidebarProps> {
               messagesStore.setIsAnimating(true)}}} >
           <SidebarLink dim to="/syncs">
             <Svg name="sync" />
-            <span>Syncs Dashboard</span>
+            <span> Syncs </span>
           </SidebarLink>
           </div>
           </Tooltip>         

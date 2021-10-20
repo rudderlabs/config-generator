@@ -75,8 +75,9 @@ export const SidebarLink = styled(NavLink) <IProps>`
       color: ${({ theme }) => theme.color.yellow300};
     }
   }
-  &&${is('dim')`
-    color: ${({ theme }) => theme.color.grey};
+  ${is('dim')`
+    background-color: ${({ theme }) => theme.color.primary200};
+    border-radius: 20px;
     cursor: not-allowed;
     pointer-events:none;
   `}
@@ -84,6 +85,6 @@ export const SidebarLink = styled(NavLink) <IProps>`
 
 export const MenuItem = styled(Menu.Item)`
   &.ant-menu-item-selected {
-    background-color: ${({ theme }) => theme.color.primary400};
+    background-color: ${({ theme }) => theme.color.primary300};
   }
 `;
