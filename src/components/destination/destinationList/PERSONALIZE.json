@@ -7,7 +7,7 @@
         "label": "Access Key Id",
         "value": "accessKeyId",
         "regex": "(?<![A-Z0-9])[A-Z0-9]{20}(?![A-Z0-9])",
-        "required": true,
+        "required": false,
         "placeholder": "e.g: bSjsdGYsOo9sjw23Shj",
         "secret": true
       },
@@ -16,7 +16,7 @@
         "label": "Secret Access Key",
         "value": "secretAccessKey",
         "regex": "(?<![A-Za-z0-9/+=])[A-Za-z0-9/+=]{40}(?![A-Za-z0-9/+=])",
-        "required": true,
+        "required": false,
         "placeholder": "e.g: 1d6583b196d34de28a3g19ahadde4b0z",
         "secret": true
       },
@@ -25,7 +25,9 @@
         "label": "Region",
         "value": "region",
         "required": true,
-        "placeholder": "e.g: us-east-1"
+        "placeholder": "e.g: us-east-1",
+        "regex": "^(.{0,100})$",
+        "regexErrorMessage": "Invalid Region"
       }
     ]
   },
@@ -36,13 +38,49 @@
         "type": "textInput",
         "label": "TrackingId",
         "value": "trackingId",
-        "required": true
+        "placeholder": "e.g: f9e6789b-5211-490a-823c-668d204561f7",
+        "required": false,
+        "regex": "^(.{0,100})$",
+        "regexErrorMessage": "Invalid TrackingId"
       },
+    {
+      "type": "textInput",
+      "label": "Dataset ARN",
+      "value": "datasetARN",
+      "placeholder": "e.g: arn:aws:personalize:us-east-1:454533227350:dataset/putTest_DataSetGroup/ITEMS",
+      "required": false,
+      "regex": "arn:([a-z/d-]+):personalize:.*:.*:.+",
+      "regexErrorMessage": "Invalid Dataset ARN"
+      }
+    ]
+  },
+  {
+    "title": "3. Operational Choice",
+    "fields": [
       {
-        "type": "textInput",
-        "label": "Type Of Event",
-        "value": "eventName",
-        "required": true
+        "type": "singleSelect",
+        "label": "Personalize Events",
+        "value": "eventChoice",
+        "placeholder": "PutEvents",
+        "mode": "single",
+        "options": [
+          {
+            "name": "PutEvents",
+            "value": "PutEvents"
+          },
+          {
+            "name": "PutUsers",
+            "value": "PutUsers"
+          },
+          {
+            "name": "PutItems",
+            "value":"PutItems"
+          }
+        ],
+        "defaultOption": {
+          "name": "PutEvents",
+          "value": "PutEvents"
+        }
       }
     ]
   },
@@ -55,7 +93,7 @@
         "labelRight": "Mapped Field",
         "keyLeft": "from",
         "keyRight": "to",
-        "placeholderLeft": "e.g: USER_ID",
+        "placeholderLeft": "e.g: ITEM_ID",
         "placeholderRight": "e.g: anonymous_id",
         "value": "customMappings"
       }

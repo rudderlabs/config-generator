@@ -6,7 +6,8 @@
         "type": "textInput",
         "label": "Account Id",
         "value": "accountId",
-        "regex": ".*",
+        "regex": "^(.{0,100})$",
+        "regexErrorMessage": "Invalid Account Id",
         "required": true,
         "placeholder": "e.g: 410057"
       },
@@ -31,11 +32,11 @@
     ]
   },
   {
-    "title": "Use Native SDK",
+    "title": "Native SDK",
     "fields": [
       {
         "type": "defaultCheckbox",
-        "label": "Use native SDK to send events",
+        "label": "Use device-mode to send events",
         "value": "useNativeSDK",
         "default": true
       }
@@ -48,7 +49,8 @@
         "type": "textInput",
         "label": "Library Tolerance",
         "value": "libraryTolerance",
-        "regex": ".*",
+        "regex": "^(.{0,100})$",
+        "regexErrorMessage": "Invalid Library Tolerance",
         "placeholder": "e.g: 2000",
         "default": "2500"
       },
@@ -56,7 +58,8 @@
         "type": "textInput",
         "label": "Setting Tolerance",
         "value": "settingsTolerance",
-        "regex": ".*",
+        "regex": "^(.{0,100})$",
+        "regexErrorMessage": "Invalid Setting Tolerance",
         "placeholder": "e.g: 2000",
         "default": "2000"
       },

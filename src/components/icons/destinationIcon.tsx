@@ -82,6 +82,30 @@ import { ReactComponent as USERLIST } from '@svg/userlist.svg';
 import { ReactComponent as BIGQUERY } from '@svg/bq.svg';
 import { ReactComponent as CONFLUENT_CLOUD } from '@svg/confluentcloud.svg';
 import { ReactComponent as APPCENTER } from '@svg/appcenter.svg';
+import { ReactComponent as ALGOLIA } from '@svg/algolia.svg';
+import { ReactComponent as AWIN } from '@svg/awin.svg';
+import { ReactComponent as BINGADS } from '@svg/bingads.svg';
+import { ReactComponent as CRITEO } from '@svg/criteo.svg';
+import { ReactComponent as DELIGHTED } from '@svg/delighted.svg';
+import { ReactComponent as DRIP } from '@svg/drip.svg';
+import { ReactComponent as FB_CUSTOM_AUDIENCE } from '@svg/facebook_ads.svg';
+import { ReactComponent as GAINSIGHT } from '@svg/gainsight_cs.svg';
+import { ReactComponent as GAINSIGHT_PX } from '@svg/gainsight_px.svg';
+import { ReactComponent as LINKEDIN_INSIGHT_TAG } from '@svg/linkedin_ads.svg';
+import { ReactComponent as MARKETO_BULK_UPLOAD } from '@svg/marketo.svg';
+import { ReactComponent as MSSQL } from '@svg/mssql.svg';
+import { ReactComponent as OMETRIA } from '@svg/ometria.svg';
+import { ReactComponent as PIPEDRIVE } from '@svg/pipedrive.svg';
+import { ReactComponent as PROFITWELL } from '@svg/profitwell.svg';
+import { ReactComponent as QUALTRICS } from '@svg/qualtrics.svg';
+import { ReactComponent as QUANTUMMETRIC } from '@svg/quantummetric.svg';
+import { ReactComponent as RECURLY } from '@svg/recurly.svg';
+import { ReactComponent as REDDIT_PIXEL } from '@svg/reddit_pixel.svg';
+import { ReactComponent as S3_DATALAKE } from '@svg/s3_datalake.svg';
+import { ReactComponent as SENDGRID } from '@svg/sendgrid.svg';
+import { ReactComponent as SENTRY } from '@svg/sentry.svg';
+import { ReactComponent as SNAP_PIXEL } from '@svg/snap_pixel.svg';
+import { ReactComponent as TRENGO } from '@svg/trengo.svg';
 
 import theme from '@css/theme';
 
@@ -95,8 +119,56 @@ const DestinationIcon = (props: any) => {
       return <AM width={width} height={height} />;
     case 'appcues':
       return <APPCUES width={width} height={height} />;
+    case 'algolia':
+      return <ALGOLIA width={width} height={height} />;
+    case 'awin':
+      return <AWIN width={width} height={height} />;
+    case 'bingads':
+      return <BINGADS width={width} height={height} />;
+    case 'criteo':
+      return <CRITEO width={width} height={height} />;
     case 'clevertap':
-      return <CLEVERTAP width={width} height={height} />;  
+      return <CLEVERTAP width={width} height={height} />;
+    case 'delighted':
+      return <DELIGHTED width={width} height={height} />;
+    case 'drip':
+      return <DRIP width={width} height={height} />;
+    case 'fb_custom_audience':
+      return <FB_CUSTOM_AUDIENCE width={width} height={height} />;
+    case 'linkedin_insight_tag':
+      return <LINKEDIN_INSIGHT_TAG width={width} height={height} />;
+    case 'marketo_bulk_upload':
+      return <MARKETO_BULK_UPLOAD width={width} height={height} />;
+    case 'mssql':
+      return <MSSQL width={width} height={height} />;
+    case 'ometria':
+      return <OMETRIA width={width} height={height} />;
+    case 'pipedrive':
+      return <PIPEDRIVE width={width} height={height} />;
+    case 'profitwell':
+      return <PROFITWELL width={width} height={height} />;
+    case 'qualtrics':
+      return <QUALTRICS width={width} height={height} />;
+    case 'quantummetric':
+      return <QUANTUMMETRIC width={width} height={height} />;
+    case 'recurly':
+      return <RECURLY width={width} height={height} />;
+    case 'reddit_pixel':
+      return <REDDIT_PIXEL width={width} height={height} />;
+    case 's3_datalake':
+      return <S3_DATALAKE width={width} height={height} />;
+    case 'sendgrid':
+      return <SENDGRID width={width} height={height} />;
+    case 'sentry':
+      return <SENTRY width={width} height={height} />;
+    case 'snap_pixel':
+      return <SNAP_PIXEL width={width} height={height} />;
+    case 'trengo':
+      return <TRENGO width={width} height={height} />;
+    case 'gainsight':
+      return <GAINSIGHT width={width} height={height} />;
+    case 'gainsight_px':
+      return <GAINSIGHT_PX width={width} height={height} />;
     case 'ga':
       return <GA width={width} height={height} />;
     case 'mp':
@@ -249,7 +321,7 @@ const DestinationIcon = (props: any) => {
     case 'userlist':
       return <USERLIST width={width} height={height} />;
     case 'bigquery':
-        return <BIGQUERY width={width} height={height} />;
+      return <BIGQUERY width={width} height={height} />;
     case 'confluent_cloud':
       return <CONFLUENT_CLOUD width={width} height={height} />;
     case 'appcenter':

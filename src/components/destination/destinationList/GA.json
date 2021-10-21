@@ -6,7 +6,8 @@
         "type": "textInput",
         "label": "Tracking ID",
         "value": "trackingID",
-        "regex": "^(UA|YT|MO)-\\d+-\\d+$",
+        "regex": "^(UA|YT|MO)-\\d+-\\d{0,100}$",
+        "regexErrorMessage": "Invalid Tracking ID",
         "required": true,
         "placeholder": "e.g: UA-125934xxx-1"
       }
@@ -17,7 +18,7 @@
     "fields": [
       {
         "type": "checkbox",
-        "label": "Use native SDK to send events",
+        "label": "Use device-mode to send events",
         "value": "useNativeSDK",
         "default": false
       }
@@ -70,13 +71,17 @@
         "type": "textInput",
         "label": "Sample Rate",
         "value": "sampleRate",
-        "default": "100"
+        "default": "100",
+        "regex": "^(.{0,100})$",
+        "regexErrorMessage": "Invalid Sample Rate"
       },
       {
         "type": "textInput",
         "label": "Site Speed Sample Rate",
         "value": "siteSpeedSampleRate",
-        "default": "1"
+        "default": "1",
+        "regex": "^(.{0,100})$",
+        "regexErrorMessage": "Invalid Site Speed Sample Rate"
       }
     ]
   },
@@ -112,7 +117,9 @@
             "label": "Reset dimensions on Page calls",
             "value": "resetCustomDimensionsOnPage",
             "required": false,
-            "default": []
+            "default": [],
+            "regex": "^(.{0,100})$",
+            "regexErrorMessage": "Invalid dimensions"
           }
         ]
       },
@@ -152,24 +159,34 @@
         "type": "textInput",
         "label": "Server Side Identify Event Category",
         "value": "serverSideIdentifyEventCategory",
-        "default": ""
+        "default": "",
+        "regex": "^(.{0,100})$",
+        "regexErrorMessage": "Invalid Server Side Identify Event Category"
       },
       {
         "type": "textInput",
         "label": "Server Side Identify Event Action",
         "value": "serverSideIdentifyEventAction",
-        "default": ""
+        "default": "",
+        "regex": "^(.{0,100})$",
+        "regexErrorMessage": "Invalid Server Side Identify Event Action"
       }
     ]
   },
   {
-    "title": "Other Setttings",
+    "title": "Other Settings",
     "fields": [
       {
         "type": "checkbox",
         "label": "Use Named Tracker",
         "value": "namedTracker",
         "footerNote": "Turn this on to send events with track name rudderGATracker.",
+        "default": false
+      },
+      {
+        "type": "checkbox",
+        "label": "Disable Md5 encryption from Client ID",
+        "value": "disableMd5",
         "default": false
       },
       {
@@ -182,7 +199,9 @@
         "type": "textInput",
         "label": "Cookie Domain Name",
         "value": "domain",
-        "default": "auto"
+        "default": "auto",
+        "regex": "^(.{0,100})$",
+        "regexErrorMessage": "Invalid Cookie Domain Name"
       },
       {
         "type": "checkbox",
@@ -200,7 +219,9 @@
         "type": "textInput",
         "label": "Optimize Container ID",
         "value": "optimize",
-        "default": ""
+        "default": "",
+        "regex": "^(.{0,100})$",
+        "regexErrorMessage": "Optimize Container ID"
       },
       {
         "type": "checkbox",

@@ -6,7 +6,8 @@
         "type": "textInput",
         "label": "AppsFlyer Dev Key",
         "value": "devKey",
-        "regex": ".*",
+        "regex": "^(.{0,100})$",
+        "regexErrorMessage": "Invalid AppsFlyer Dev Key",
         "required": true,
         "placeholder": "e.g: bSjsdGYsOo9sjw23Shj"
       },
@@ -14,7 +15,8 @@
         "type": "textInput",
         "label": "Android App ID",
         "value": "androidAppId",
-        "regex": ".*",
+        "regex": "^(.{0,100})$",
+        "regexErrorMessage": "Invalid Android App ID",
         "required": true,
         "placeholder": "com.mypackage.example"
       },
@@ -22,9 +24,21 @@
         "type": "textInput",
         "label": "Apple App ID",
         "value": "appleAppId",
-        "regex": ".*",
+        "regex": "^(.{0,100})$",
+        "regexErrorMessage": "Invalid Apple App ID",
         "required": true,
         "placeholder": "123456789"
+      },
+      {
+        "type": "textInput",
+        "label": "Sharing Filter",
+        "value": "sharingFilter",
+        "regex": "^(.{0,100})$",
+        "regexErrorMessage": "Invalid sharing filter. Default value is used",
+        "required": false,
+        "placeholder": "['googleadwords_int', 'adcolony_int']",
+        "default": "all",
+        "footerNote": "Use the filter to fulfill regulatory requirements like GDPR and CCPA, to comply with user opt-out mechanisms, and for other business logic reasons. "
       }
     ]
   },
@@ -33,7 +47,7 @@
     "fields": [
       {
         "type": "checkbox",
-        "label": "Use native SDK to send events",
+        "label": "Use device-mode to send events",
         "value": "useNativeSDK",
         "default": true
       }

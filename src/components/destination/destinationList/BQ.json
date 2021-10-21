@@ -7,7 +7,9 @@
         "label": "Project",
         "labelNote": "GCP Project ID where your BigQuery database is located",
         "value": "project",
-        "regex": ".*",
+        "regex": "^(.{0,100})$",
+        "regexErrorMessage": "Invalid Project",
+        "placeholder": "my-sample-project-191923",
         "required": true
       },
       {
@@ -15,7 +17,8 @@
         "label": "Location",
         "labelNote": "GCP region for your BigQuery datasets",
         "value": "location",
-        "regex": ".*",
+        "regex": "^(.{0,100})$",
+        "regexErrorMessage": "Invalid Location",
         "placeholder": "US, EU, asia-southeast1",
         "required": false,
         "footerNote": "Examples: US, EU, asia-south1"
@@ -23,9 +26,11 @@
       {
         "type": "textInput",
         "label": "Staging GCS Storage Bucket Name",
-        "labelNote": "GCS Bucket to storage data before loading into BigQuery",
+        "labelNote": "GCS Bucket to store data before loading into BigQuery",
         "value": "bucketName",
-        "regex": ".*",
+        "regex": "^(.{0,100})$",
+        "regexErrorMessage": "Invalid Staging GCS Storage Bucket Name",
+        "placeholder": "e.g: gcs-event-logs",
         "required": true,
         "footerNote": "Please make sure the bucket exists in your GCP Project in the same region as bigquery dataset"
       },
@@ -33,21 +38,25 @@
         "type": "textInput",
         "label": "Prefix",
         "value": "prefix",
-        "regex": ".*",
+        "regex": "^(.{0,100})$",
+        "regexErrorMessage": "Invalid Prefix",
         "required": false,
-        "placeholder": ""
+        "placeholder": "e.g: ruddder"
       },
       {
         "type": "textInput",
         "label": "Namespace",
         "labelNote": "Schema name for the warehouse where the tables are created",
         "value": "namespace",
-        "regex": ".*",
+        "regex": "^(.{0,100})$",
+        "regexErrorMessage": "Invalid Namespace",
         "required": false,
+        "placeholder": "eg: dataset name",
         "footerNote": "Default will be the source name"
       },
       {
         "type": "textareaInput",
+        "subType": "JSON",
         "label": "Credentials",
         "labelNote": "GCP Service Account credentials JSON for RudderStack to use in loading data into your BigQuery database",
         "value": "credentials",
@@ -97,7 +106,27 @@
         "label": "Sync Starting At (Optional)",
         "value": "syncStartAt",
         "options": {
-          "omitSeconds": true
+          "omitSeconds": true,
+          "minuteStep": 15
+        },
+        "required": false,
+        "footerNote": "Note: Please specify time in UTC"
+      },
+      {
+        "type": "timeRangePicker",
+        "label": "Exclude window (Optional)",
+        "value": "excludeWindow",
+        "startTime": {
+          "label": "start time",
+          "value": "excludeWindowStartTime"
+        },
+        "endTime": {
+          "label": "end time",
+          "value": "excludeWindowEndTime"
+        },
+        "options": {
+          "omitSeconds": true,
+          "minuteStep": 1
         },
         "required": false,
         "footerNote": "Note: Please specify time in UTC"

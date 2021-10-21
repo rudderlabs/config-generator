@@ -6,6 +6,8 @@
         "type": "textInput",
         "label": "API ID",
         "value": "apiId",
+        "regex": "^(.{0,100})$",
+        "regexErrorMessage": "Invalid API ID",
         "placeholder": "e.g: W0ZHNMPI204KHJ84ZILZACRB",
         "required": true
       },
@@ -14,7 +16,9 @@
         "label": "API Key",
         "value": "apiKey",
         "placeholder": "e.g: uUIHmnX66ctEDjD__bjlSCOOO",
-        "required": true
+        "required": true,
+        "regex": "^(.{0,100})$",
+        "regexErrorMessage": "Invalid API Key"
       },
       {
         "type": "singleSelect",
@@ -42,7 +46,7 @@
       },
       {
         "type": "checkbox",
-        "label": "Use native SDK to send events",
+        "label": "Use device-mode to send events",
         "value": "useNativeSDK",
         "default": false
       },

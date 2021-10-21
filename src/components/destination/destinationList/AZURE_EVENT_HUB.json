@@ -6,7 +6,8 @@
         "type": "textInput",
         "label": "Bootstrap server",
         "value": "bootstrapServer",
-        "regex": ".*",
+        "regex": "^(.{0,100})$",
+        "regexErrorMessage": "Invalid Bootstrap server",
         "required": true,
         "placeholder": "e.g: NAMESPACENAME.servicebus.windows.net:9093"
       },
@@ -14,7 +15,8 @@
         "type": "textInput",
         "label": "Topic Name",
         "value": "topic",
-        "regex": ".*",
+        "regex": "^(.{0,100})$",
+        "regexErrorMessage": "Invalid Topic Name",
         "required": true,
         "placeholder": "e.g: test-topic"
       },
@@ -22,7 +24,8 @@
         "type": "textInput",
         "label": "Event Hubs ConnectionString",
         "value": "eventHubsConnectionString",
-        "regex": ".*",
+        "regex": "^(.{0,300})$",
+        "regexErrorMessage": "Invalid Event Hubs ConnectionString",
         "required": true,
         "placeholder": "e.g: Endpoint=sb://..."
       }

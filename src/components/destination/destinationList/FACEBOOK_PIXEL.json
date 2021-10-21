@@ -3,27 +3,37 @@
     "title": "1. Connection Settings",
     "fields": [
       {
-        "type": "dynamicCustomForm",
-        "value": "blacklistPiiProperties",
-        "customFields": [
-          {
-            "type": "textInput",
-            "value": "blacklistPiiProperties",
-            "label": "Blacklist PII Properties",
-            "required": false
-          },
-          {
-            "type": "checkbox",
-            "value": "blacklistPiiHash",
-            "label": "Blacklist PII Hash Property",
-            "required": false
-          }
-        ]
+        "type": "textInput",
+        "label": "Pixel ID",
+        "value": "pixelId",
+        "regex": "^(.{0,100})$",
+        "regexErrorMessage": "Invalid Pixel ID",
+        "required": true,
+        "placeholder": "e.g: 1234567898765",
+        "footerNote": "Your Pixel ID, from the snippet created on the Facebook Pixel creation page."
       },
+      {
+        "type": "textInput",
+        "label": "Business Access Token",
+        "value": "accessToken",
+        "regex": "^(.{0,208})$",
+        "regexErrorMessage": "Invalid Business Access Token",
+        "required": false,
+        "secret": true,
+        "placeholder": "e.g: EAALPFdyOVl4BAKEXmVR...",
+        "footerNote": "Your Businssed Access token from your Business Account. Required for cloud-mode."
+      }
+    ]
+  },
+  {
+    "title": "2. Event Settings",
+    "fields": [
       {
         "type": "dynamicForm",
         "label": "Map Categories to Facebook Content Types",
         "required": false,
+        "placeholderLeft": "e.g. Product Searched",
+        "placeholderRight": "Product",
         "labelLeft": "category",
         "labelRight": "Facebook content type",
         "keyLeft": "from",
@@ -31,14 +41,10 @@
         "value": "categoryToContent"
       },
       {
-        "type": "textInput",
-        "label": "Pixel ID",
-        "value": "pixelId",
-        "required": true,
-        "placeholder": "Your Pixel ID, from the snippet created on the Facebook Pixel creation page."
-      },
-      {
-        "label": "Map Your Events to Standard Facebook Events"
+        "type": "checkbox",
+        "label": "Enable Standard Event (PageView) for all Page and Screen Calls",
+        "value": "standardPageCall",
+        "default":false
       },
       {
         "type": "dynamicSelectForm",
@@ -49,7 +55,7 @@
         "keyLeft": "from",
         "keyRight": "to",
         "required": false,
-        "placeholderLeft": "your event",
+        "placeholderLeft": "e.g. Product Searched",
         "options": [
           {
             "name": "ViewContent",
@@ -78,6 +84,10 @@
           {
             "name": "Purchase",
             "value": "Purchase"
+          },
+          {
+            "name": "PageView",
+            "value":"PageView"
           },
           {
             "name": "Lead",
@@ -127,8 +137,11 @@
         "customFields": [
           {
             "type": "textInput",
+            "placeholder": "e.g. product_id",
             "value": "eventCustomProperties",
             "label": "Standard Events custom properties",
+            "regex": "^(.{0,100})$",
+            "regexErrorMessage": "Invalid Standard Events custom properties",
             "required": false
           }
         ]
@@ -149,40 +162,40 @@
           }
         ],
         "defaultOption": {
-          "name": "",
-          "value": ""
+          "name": "properties.price",
+          "value": "properties.price"
         }
-      }
-    ]
-  },
-  {
-    "title": "2. Native SDK",
-    "fields": [
-      {
-        "type": "defaultCheckbox",
-        "label": "Use native SDK to send events",
-        "value": "useNativeSDK",
-        "default": true
-      }
-    ]
-  },
-  {
-    "title": "3. Other Settings",
-    "fields": [
+      },
       {
         "type": "checkbox",
         "label": "Enable Advanced Matching",
         "value": "advancedMapping"
-      },
+      }
+    ]
+  },
+  {
+    "title": "3. PII Properties Settings",
+    "fields": [
       {
-        "type": "dynamicForm",
-        "label": "Legacy Conversion Pixel IDs",
-        "value": "legacyConversionPixelId",
-        "required": false,
-        "keyLeft": "from",
-        "keyRight": "to",
-        "labelLeft": "Event Name",
-        "labelRight": "Pixel Id"
+        "type": "dynamicCustomForm",
+        "value": "blacklistPiiProperties",
+        "customFields": [
+          {
+            "type": "textInput",
+            "value": "blacklistPiiProperties",
+            "label": "Blacklist PII Properties",
+            "regex": "^(.{0,100})$",
+            "regexErrorMessage": "Invalid Blacklist PII Properties",
+            "placeholder": "e.g. phone",
+            "required": false
+          },
+          {
+            "type": "checkbox",
+            "value": "blacklistPiiHash",
+            "label": "Blacklist PII Hash Property",
+            "required": false
+          }
+        ]
       },
       {
         "type": "dynamicCustomForm",
@@ -190,12 +203,64 @@
         "customFields": [
           {
             "type": "textInput",
+            "placeholder": "e.g. email",
             "value": "whitelistPiiProperties",
             "label": "Whitelist PII Properties",
-            "required": false
+            "required": false,
+            "regex": "^(.{0,100})$",
+            "regexErrorMessage": "Invalid Whitelist PII Properties"
           }
         ]
       }
     ]
+  },
+  {
+    "title": "4. Other Settings",
+    "fields": [
+      {
+        "type": "dynamicForm",
+        "label": "Legacy Conversion Pixel IDs",
+        "value": "legacyConversionPixelId",
+        "required": false,
+        "keyLeft": "from",
+        "keyRight": "to",
+        "placeholderLeft": "e.g. Product Searched",
+        "placeholderRight": "e.g 12345678987654",
+        "labelLeft": "Event Name",
+        "labelRight": "Pixel Id"
+      },
+      {
+        "type": "checkbox",
+        "label": "Limited Data Usage",
+        "value": "limitedDataUSage"
+      },
+      {
+        "type": "checkbox",
+        "label": "Use as Test Destination",
+        "value": "testDestination",
+        "default": false
+      },
+      {
+        "type": "textInput",
+        "label": "Test Event Code",
+        "value": "testEventCode",
+        "regex": "^(.{0,100})$",
+        "required": false,
+        "placeholder": "e.g: TEST80569",
+        "footerNote": "Your test event code from your Facebook Pixel dashboard. Required if Test Destination flag is turned ON"
+      }
+    ]
+  },
+  {
+    "title": "5. Native SDK",
+    "fields": [
+      {
+        "type": "checkbox",
+        "label": "Use device-mode to send events",
+        "value": "useNativeSDK",
+        "default": false
+      }
+    ]
   }
 ]
+

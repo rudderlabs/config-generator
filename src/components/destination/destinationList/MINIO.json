@@ -6,7 +6,8 @@
         "type": "textInput",
         "label": "MinIO Endpoint",
         "value": "endPoint",
-        "regex": ".*",
+        "regex": "^(.{0,100})$",
+        "regexErrorMessage": "Invalid MinIO Endpoint",
         "required": true,
         "placeholder": "e.g: play.min.io:9000"
       },
@@ -14,7 +15,8 @@
         "type": "textInput",
         "label": "MinIO Access Key ID",
         "value": "accessKeyID",
-        "regex": ".*",
+        "regex": "^(.{0,100})$",
+        "regexErrorMessage": "Invalid MinIO Access Key ID",
         "required": true,
         "placeholder": "e.g: Q3AM3UQ867SPQQA43P2F",
         "secret": true
@@ -23,7 +25,8 @@
         "type": "textInput",
         "label": "MinIO Secret Access Key",
         "value": "secretAccessKey",
-        "regex": ".*",
+        "regex": "^(.{0,100})$",
+        "regexErrorMessage": "Invalid MinIO Secret Access Key",
         "required": true,
         "placeholder": "e.g: zuf+tfteSlswRu7BJ86wekitnifILbZam1KYY3TG",
         "secret": true
@@ -32,7 +35,8 @@
         "type": "textInput",
         "label": "MINIO Bucket Name",
         "value": "bucketName",
-        "regex": ".*",
+        "regex": "^(.{0,100})$",
+        "regexErrorMessage": "Invalid MINIO Bucket Name",
         "required": true,
         "placeholder": "e.g: minio-event-logs"
       },
@@ -40,9 +44,10 @@
         "type": "textInput",
         "label": "Prefix",
         "value": "prefix",
-        "regex": ".*",
+        "regex": "^(.{0,100})$",
+        "regexErrorMessage": "Invalid Prefix",
         "required": false,
-        "placeholder": ""
+        "placeholder": "e.g: rudder"
       },
       {
         "type": "checkbox",

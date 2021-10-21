@@ -6,7 +6,8 @@
         "type": "textInput",
         "label": "Domain",
         "value": "domain",
-        "regex": ".*",
+        "regex": "^(.{0,100})$",
+        "regexErrorMessage": "Invalid Domain",
         "required": true,
         "placeholder": "e.g: ABCDEFG"
       },
@@ -14,7 +15,8 @@
         "type": "textInput",
         "label": "UID",
         "value": "uid",
-        "regex": ".*",
+        "regex": "^(.{0,100})$",
+        "regexErrorMessage": "Invalid UID",
         "required": true,
         "placeholder": "e.g: ABCDEFG"
       }
@@ -25,7 +27,7 @@
     "fields": [
       {
         "type": "defaultCheckbox",
-        "label": "Use native SDK to send events",
+        "label": "Use device-mode to send events",
         "value": "useNativeSDK",
         "default": true
       }

@@ -6,7 +6,8 @@
         "type": "textInput",
         "label": "Email",
         "value": "email",
-        "regex": ".*",
+        "regex": "^(.{0,100})$",
+        "regexErrorMessage": "Invalid Email Address",
         "required": true,
         "placeholder": "e.g: abc@xyz.com"
       },
@@ -14,18 +15,20 @@
         "type": "textInput",
         "label": "API Token",
         "value": "apiToken",
-        "regex": ".*",
+        "regex": "^(.{0,100})$",
+        "regexErrorMessage": "Invalid API Token",
         "required": true,
         "placeholder": "API Token for Zendesk login",
         "secret": true
       },
       {
         "type": "textInput",
-        "label": "Zendesk Domain",
+        "label": "Zendesk Subdomain",
         "value": "domain",
-        "regex": ".*",
+        "regex": "^(.{0,100})$",
+        "regexErrorMessage": "Invalid Zendesk Subdomain",
         "required": true,
-        "placeholder": "Your Zendesk Domain"
+        "placeholder": "Subdomain only not including .zendesk.com"
       },
       {
         "type": "checkbox",

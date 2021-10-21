@@ -6,7 +6,8 @@
         "type": "textInput",
         "label": "Application ID",
         "value": "applicationId",
-        "regex": ".*",
+        "regex": "^(.{0,100})$",
+        "regexErrorMessage": "Invalid Application ID",
         "required": true,
         "placeholder": "e.g: ABCDEFG"
       },
@@ -14,7 +15,8 @@
         "type": "textInput",
         "label": "Client Key",
         "value": "clientKey",
-        "regex": ".*",
+        "regex": "^(.{0,100})$",
+        "regexErrorMessage": "Invalid Client Key",
         "required": true,
         "placeholder": "e.g: ABCDEFG",
         "secret": true
@@ -32,7 +34,7 @@
       },
       {
         "type": "checkbox",
-        "label": "Use native SDK to send user generated events",
+        "label": "Use device-mode to send user generated events",
         "value": "useNativeSDKToSend",
         "default": false
       }

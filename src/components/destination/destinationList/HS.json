@@ -6,7 +6,8 @@
         "type": "textInput",
         "label": "Hub ID",
         "value": "hubID",
-        "regex": ".*",
+        "regex": "^(.{0,100})$",
+        "regexErrorMessage": "Invalid Hub ID",
         "required": true,
         "placeholder": "e.g: 748991"
       },
@@ -14,8 +15,9 @@
         "type": "textInput",
         "label": "API Key",
         "value": "apiKey",
-        "regex": ".*",
-        "required": false,
+        "regex": "^(.{0,100})$",
+        "regexErrorMessage": "Invalid API Key",
+        "required": true,
         "placeholder": "e.g: 05afa518-132c-40db-830a-de0f688902f7"
       }
     ]
@@ -25,7 +27,7 @@
     "fields": [
       {
         "type": "checkbox",
-        "label": "Use native SDK to send events",
+        "label": "Use device-mode to send events",
         "value": "useNativeSDK",
         "default": false
       }

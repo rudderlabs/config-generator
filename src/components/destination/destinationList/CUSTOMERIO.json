@@ -1,22 +1,31 @@
 [
   {
-    "title": "Connection Settings",
+    "title": "1. Connection Settings",
     "fields": [
       {
         "type": "textInput",
-        "label": "API Key",
-        "value": "apiKey",
-        "regex": ".*",
+        "label": "Site ID",
+        "value": "siteID",
+        "regex": "^(.{0,100})$",
+        "regexErrorMessage": "Invalid Site ID",
         "required": true,
         "placeholder": "e.g: ABCDEFG"
       },
       {
         "type": "textInput",
-        "label": "Site ID",
-        "value": "siteID",
-        "regex": ".*",
+        "label": "API Key",
+        "value": "apiKey",
+        "regex": "^(.{0,100})$",
+        "regexErrorMessage": "Invalid API Key",
         "required": true,
         "placeholder": "e.g: ABCDEFG"
+      },
+      {
+        "type": "checkbox",
+        "label": "Account based in the EU data center?",
+        "value": "datacenterEU",
+        "default": false,
+        "footerNote": "Turn it ON if you want to send data to EU servers"
       }
     ]
   },
@@ -25,7 +34,7 @@
     "fields": [
       {
         "type": "checkbox",
-        "label": "Use native SDK to send events",
+        "label": "Use device-mode to send events",
         "value": "useNativeSDK",
         "default": false
       }

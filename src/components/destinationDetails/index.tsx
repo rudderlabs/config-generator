@@ -10,6 +10,9 @@ import { CardsView, Container, PageTitle, Spacing } from './styles';
 import { ISourceStore } from '@stores/source';
 import { IDestinationStore } from '@stores/destination';
 import { IMessageStore } from '@stores/messages';
+import { Tooltip, Button } from 'antd';
+import { PlayCircleOutlined } from '@ant-design/icons';
+import { Flex } from '@components/common/misc';
 
 interface IConfiguredDestinationsProps extends RouteComponentProps<any> {
   sourcesListStore: ISourcesListStore;
@@ -62,7 +65,7 @@ class DestinationDetails extends Component<IConfiguredDestinationsProps, any> {
 
   public render() {
     const { destinationId } = this.state;
-    const { destinationsListStore } = this.props;
+    const { destinationsListStore, messagesStore } = this.props;
     const { destinations } = destinationsListStore;
     const destination = destinations.find(
       destination => destination.id === destinationId,
@@ -70,7 +73,17 @@ class DestinationDetails extends Component<IConfiguredDestinationsProps, any> {
     if (destination) {
       return (
         <Container>
-          <PageTitle>Destination Details</PageTitle>
+          <Flex flexDirection="row" spaceBetween>
+            <PageTitle>Destination Details</PageTitle>
+            <div onClick={() => { messagesStore.setIsAnimating(true) }}>
+              <Tooltip title={"Please try Rudderstack Control Plane for this feature"}>
+                <Button disabled >
+                  <PlayCircleOutlined />
+                Live events
+              </Button>
+              </Tooltip>
+            </div>
+          </Flex>
           <CardsView>
             <Spacing>
               <DestinationView

@@ -6,7 +6,8 @@
         "type": "textInput",
         "label": "Site ID",
         "value": "siteID",
-        "regex": ".*",
+        "regex": "^(.{0,100})$",
+        "regexErrorMessage": "Invalid Site ID",
         "required": true,
         "placeholder": "e.g: dd412940"
       }
@@ -17,7 +18,7 @@
     "fields": [
       {
         "type": "defaultCheckbox",
-        "label": "Use native SDK to send events",
+        "label": "Use device-mode to send events",
         "value": "useNativeSDK",
         "default": true
       }

@@ -6,7 +6,8 @@
         "type": "textInput",
         "label": "Google Cloud Storage Bucket Name",
         "value": "bucketName",
-        "regex": ".*",
+        "regex": "^(.{0,100})$",
+        "regexErrorMessage": "Invalid Google Cloud Storage Bucket Name",
         "required": true,
         "placeholder": "e.g: gcs-event-logs"
       },
@@ -14,9 +15,10 @@
         "type": "textInput",
         "label": "Prefix",
         "value": "prefix",
-        "regex": ".*",
+        "regex": "^(.{0,100})$",
+        "regexErrorMessage": "Invalid Prefix",
         "required": false,
-        "placeholder": ""
+        "placeholder": "e.g: rudder"
       },
       {
         "type": "textareaInput",

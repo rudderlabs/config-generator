@@ -81,7 +81,7 @@
     "fields": [
       {
         "type": "defaultCheckbox",
-        "label": "Use native SDK to send events",
+        "label": "Use device-mode to send events",
         "value": "useNativeSDK",
         "default": true
       }

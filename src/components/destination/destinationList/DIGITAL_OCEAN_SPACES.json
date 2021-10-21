@@ -6,7 +6,8 @@
         "type": "textInput",
         "label": "DigitalOcean Spaces Endpoint",
         "value": "endPoint",
-        "regex": ".*",
+        "regex": "^(.{0,100})$",
+        "regexErrorMessage": "Invalid DigitalOcean Spaces Endpoint",
         "required": true,
         "placeholder": "e.g: sgp1.digitaloceanspaces.com",
         "footerNote": "Please make sure to include region in endpoint"
@@ -15,7 +16,8 @@
         "type": "textInput",
         "label": "Spaces Access Key ID",
         "value": "accessKeyID",
-        "regex": ".*",
+        "regex": "^(.{0,100})$",
+        "regexErrorMessage": "Invalid Spaces Access Key ID",
         "required": true,
         "placeholder": "e.g: CYKPHWDRAFHTHABAVGF6",
         "secret": true
@@ -24,7 +26,8 @@
         "type": "textInput",
         "label": "Spaces Access Key Secret",
         "value": "accessKey",
-        "regex": ".*",
+        "regex": "^(.{0,100})$",
+        "regexErrorMessage": "Invalid Spaces Access Key Secret",
         "required": true,
         "placeholder": "e.g: zuftfteSlswRu7BJ86wekitnifILbZam1KYY3TG",
         "secret": true
@@ -33,7 +36,8 @@
         "type": "textInput",
         "label": "Spaces Bucket Name",
         "value": "bucketName",
-        "regex": ".*",
+        "regex": "^(.{0,100})$",
+        "regexErrorMessage": "Invalid Spaces Bucket Name",
         "required": true,
         "placeholder": "e.g: event-bucket"
       },
@@ -41,9 +45,10 @@
         "type": "textInput",
         "label": "Prefix",
         "value": "prefix",
-        "regex": ".*",
+        "regex": "^(.{0,100})$",
+        "regexErrorMessage": "Invalid Prefix",
         "required": false,
-        "placeholder": ""
+        "placeholder": "rudder"
       }
     ]
   }

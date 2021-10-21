@@ -6,7 +6,8 @@
         "type": "textInput",
         "label": "Host Name",
         "value": "hostName",
-        "regex": ".*",
+        "regex": "^(.{0,100})$",
+        "regexErrorMessage": "Invalid Host Name",
         "required": true,
         "placeholder": "e.g: localhost"
       },
@@ -14,7 +15,8 @@
         "type": "textInput",
         "label": "Port",
         "value": "port",
-        "regex": ".*",
+        "regex": "^(.{0,100})$",
+        "regexErrorMessage": "Invalid Port",
         "required": true,
         "placeholder": "e.g: 9092"
       },
@@ -22,7 +24,8 @@
         "type": "textInput",
         "label": "Topic Name",
         "value": "topic",
-        "regex": ".*",
+        "regex": "^(.{0,100})$",
+        "regexErrorMessage": "Invalid Topic Name",
         "required": true,
         "placeholder": "e.g: test-topic"
       },
@@ -43,6 +46,73 @@
         "regex": ".*",
         "required": true,
         "placeholder": "CA Certificate"
+      }
+    ]
+  },
+  {
+    "title": "SASL Authentication",
+    "fields": [
+      {
+        "type": "checkbox",
+        "label": "Enable SASL with SSL",
+        "value": "useSASL",
+        "default": false
+      },
+      {
+        "type": "singleSelect",
+        "preRequisiteField": {
+          "name": "useSASL",
+          "selectedValue": true
+        },
+        "label": "SASL Type",
+        "value": "saslType",
+        "options": [
+          {
+            "name": "Plain",
+            "value": "plain"
+          },
+          {
+            "name": "SCRAM SHA-512",
+            "value": "sha512"
+          },
+          {
+            "name": "SCRAM SHA-256",
+            "value": "sha256"
+          }
+        ],
+        "defaultOption": {
+          "name": "Plain",
+          "value": "plain"
+        },
+        "required": true
+      },
+      {
+        "type": "textInput",
+        "preRequisiteField": {
+          "name": "useSASL",
+          "selectedValue": true
+        },
+        "label": "Username",
+        "value": "username",
+        "regex": "^(.{0,100})$",
+        "regexErrorMessage": "Invalid User Name",
+        "required": true,
+        "placeholder": "e.g: userjohn"
+      },
+      {
+        "type": "textInput",
+        "preRequisiteField": {
+          "name": "useSASL",
+          "selectedValue": true
+        },
+        "label": "Password",
+        "value": "password",
+        "regex": "^(.{0,100})$",
+        "regexErrorMessage": "Invalid Password",
+        "required": true,
+        "placeholder": "e.g: 1jdu234nasfa",
+        "inputFieldType": "password",
+        "secret": true
       }
     ]
   }

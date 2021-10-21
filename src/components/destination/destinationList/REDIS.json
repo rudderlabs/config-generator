@@ -6,7 +6,8 @@
         "type": "textInput",
         "label": "Address",
         "value": "address",
-        "regex": ".*",
+        "regex": "^(.{0,100})$",
+        "regexErrorMessage": "Invalid Address",
         "required": true,
         "placeholder": "e.g: localhost:6379"
       },
@@ -23,7 +24,8 @@
         "type": "textInput",
         "label": "Database",
         "value": "database",
-        "regex": ".*",
+        "regex": "^(.{0,100})$",
+        "regexErrorMessage": "Invalid Database",
         "required": false,
         "placeholder": "",
         "preRequisiteField": {
@@ -71,7 +73,8 @@
         "type": "textInput",
         "label": "Prefix",
         "value": "prefix",
-        "regex": ".*",
+        "regex": "^(.{0,100})$",
+        "regexErrorMessage": "Invalid Prefix",
         "required": false,
         "placeholder": ""
       }

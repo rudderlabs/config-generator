@@ -6,16 +6,10 @@
         "type": "textInput",
         "label": "Account Id",
         "value": "accountId",
-        "regex": ".*",
+        "regex": "^(.{0,100})$",
+        "regexErrorMessage": "Invalid Account Id",
         "required": true,
         "placeholder": "e.g: 81429"
-      },
-      {
-        "type": "textInput",
-        "label": "API Key",
-        "value": "apiKey",
-        "required": true,
-        "placeholder": "e.g: 445122be-6544-4369-8871-caab9dca4015"
       }
     ]
   },
@@ -23,16 +17,10 @@
     "title": "Native SDK",
     "fields": [
       {
-        "type": "defaultCheckbox",
-        "label": "Use native SDK to send events",
+        "type": "checkbox",
+        "label": "Use device-mode to send events",
         "value": "useNativeSDK",
         "default": true
-      },
-      {
-        "type": "checkbox",
-        "label": "Send Appcues flow events to all other destinations of this source (Except Appcues)",
-        "value": "sendToAll",
-        "default": false
       }
     ]
   }

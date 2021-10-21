@@ -56,6 +56,32 @@ import { ReactComponent as Profile } from './profile.svg';
 import { ReactComponent as SidebarSettings } from './settings.svg';
 import { ReactComponent as ChevronRight } from './chevron_right.svg';
 import { ReactComponent as UserCircle } from './user_circle.svg';
+import { ReactComponent as Sync } from './sync.svg';
+import { ReactComponent as Algolia } from './algolia.svg';
+import { ReactComponent as Awin } from './awin.svg';
+import { ReactComponent as Bingads } from './bingads.svg';
+import { ReactComponent as Criteo } from './criteo.svg';
+import { ReactComponent as Delighted } from './delighted.svg';
+import { ReactComponent as Drip } from './drip.svg';
+import { ReactComponent as FbCustomAudience } from './facebook_ads.svg';
+import { ReactComponent as Gainsight } from './gainsight_cs.svg';
+import { ReactComponent as GainsightPx } from './gainsight_px.svg';
+import { ReactComponent as LinkedinInsightTag } from './linkedin_ads.svg';
+import { ReactComponent as MarketoBulkUpload } from './marketo.svg';
+import { ReactComponent as Mssql } from './mssql.svg';
+import { ReactComponent as Ometria } from './ometria.svg';
+import { ReactComponent as Pipedrive } from './pipedrive.svg';
+import { ReactComponent as Profitwell } from './profitwell.svg';
+import { ReactComponent as Qualtrics } from './qualtrics.svg';
+import { ReactComponent as Quantummetric } from './quantummetric.svg';
+import { ReactComponent as Recurly } from './recurly.svg';
+import { ReactComponent as RedditPixel } from './reddit_pixel.svg';
+import { ReactComponent as S3Datalake } from './s3_datalake.svg';
+import { ReactComponent as Sendgrid } from './sendgrid.svg';
+import { ReactComponent as Sentry } from './sentry.svg';
+import { ReactComponent as SnapPixel } from './snap_pixel.svg';
+import { ReactComponent as Trengo } from './trengo.svg';
+
 
 interface SvgProps extends React.SVGAttributes<any> {
   name: string;
@@ -67,6 +93,98 @@ const Svg: React.FC<SvgProps> = ({ name, size, ...svgProps }: any) => {
   switch (name) {
     case 'chart':
       Icon = ChartBar;
+      break;
+    case 'algolia':
+      Icon = Algolia;
+      break;
+    case 'awin':
+      Icon = Awin;
+      break;
+    case 'bingads':
+      Icon = Bingads;
+      break;
+    case 'criteo':
+      Icon = Criteo;
+      break;
+
+    case 'delighted':
+      Icon = Delighted;
+      break;
+
+    case 'drip':
+      Icon = Drip;
+      break;
+
+    case 'fb_custom_audience':
+      Icon = FbCustomAudience;
+      break;
+
+    case 'gainsight':
+      Icon = Gainsight;
+      break;
+
+    case 'gainsight_px':
+      Icon = GainsightPx;
+      break;
+
+    case 'linkedin_insight_tag':
+      Icon = LinkedinInsightTag;
+      break;
+
+    case 'marketo_bulk_upload':
+      Icon = MarketoBulkUpload;
+      break;
+
+    case 'mssql':
+      Icon = Mssql;
+      break;
+
+    case 'ometria':
+      Icon = Ometria;
+      break;
+
+    case 'pipedrive':
+      Icon = Pipedrive;
+      break;
+
+    case 'profitwell':
+      Icon = Profitwell;
+      break;
+
+    case 'qualtrics':
+      Icon = Qualtrics;
+      break;
+
+    case 'quantummetric':
+      Icon = Quantummetric;
+      break;
+
+    case 'recurly':
+      Icon = Recurly;
+      break;
+
+    case 'reddit_pixel':
+      Icon = RedditPixel;
+      break;
+
+    case 's3_datalake':
+      Icon = S3Datalake;
+      break;
+
+    case 'sendgrid':
+      Icon = Sendgrid;
+      break;
+
+    case 'sentry':
+      Icon = Sentry;
+      break;
+
+    case 'snap_pixel':
+      Icon = SnapPixel;
+      break;
+
+    case 'trengo':
+      Icon = Trengo;
       break;
     case 'rudder':
       Icon = Rudder;
@@ -163,6 +281,7 @@ const Svg: React.FC<SvgProps> = ({ name, size, ...svgProps }: any) => {
       break;
     case 'play':
       Icon = Play;
+      break;
     case 'warning':
       Icon = Warning;
       break;
@@ -174,11 +293,13 @@ const Svg: React.FC<SvgProps> = ({ name, size, ...svgProps }: any) => {
       break;
     case 'enabledclock':
       Icon = EnabledClock;
+      break;
     case 'disabledclock':
       Icon = DisabledClock;
       break;
     case 'tick':
       Icon = Tick;
+      break;
     case 'cloud':
       Icon = Cloud;
       break;
@@ -229,6 +350,9 @@ const Svg: React.FC<SvgProps> = ({ name, size, ...svgProps }: any) => {
       break;
     case 'user_circle':
       Icon = UserCircle;
+      break;
+    case 'sync':
+      Icon = Sync;
       break;
     default:
       break;
