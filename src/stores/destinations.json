@@ -556,11 +556,9 @@
   {
     "config": {
       "destConfig": {
-        "defaultConfig": [
-        ]
+        "defaultConfig": []
       },
-      "secretKeys": [
-      ],
+      "secretKeys": [],
       "excludeKeys": [],
       "includeKeys": [],
       "transformAt": "processor",
@@ -2606,178 +2604,177 @@
   {
     "config": {},
     "id": "1zlOn5GhZjAEfZ2ddQGdXQDZHIc",
-    "name":"BINGADS",
-    "displayName":"Bingads",
+    "name": "BINGADS",
+    "displayName": "Bingads",
     "createdAt": "2019-09-02T08:08:05.613Z",
-    "updatedAt":"2021-10-20T18:06:26.219Z"
-    },
-    {
-      "config": {},
-      "id": "1zlRBiszBrPYDN3yMssmpZsw0GL",
-      "name":"CRITEO",
-      "displayName":"Criteo",
-      "createdAt": "2019-09-02T08:08:05.613Z",
-      "updatedAt":"2021-10-20T18:06:26.219Z"
-    },
-    {
-      "config": {},
-      "id": "1zlRBjThc0roKETyYEFVt9rzQNo",
-      "name":"DELIGHTED",
-      "displayName":"Delighted",
-      "createdAt": "2019-09-02T08:08:05.613Z",
-      "updatedAt":"2021-10-20T18:06:26.219Z"
-      },  
-      {
-        "config": {},
-        "id": "1zlRBljb5JalyvJq8J4SjyLrpLy",
-        "name":"DRIP",
-        "displayName":"Drip",
-        "createdAt": "2019-09-02T08:08:05.613Z",
-        "updatedAt":"2021-10-20T18:06:26.219Z"
-        },
-      {
-        "config": {},
-        "id": "1zlRBjaHTjImYgHQkUnzGvxYZTS",
-        "name":"FB_CUSTOM_AUDIENCE",
-        "displayName":"Fb Custom Audience",
-        "createdAt": "2019-09-02T08:08:05.613Z",
-        "updatedAt":"2021-10-20T18:06:26.219Z"
-        },
-      {
-        "config": {},
-        "id": "1zlRBkdqRu3YtJZ4vgm8V9NiDZ5",
-        "name":"GAINSIGHT",
-        "displayName":"Gainsight",
-        "createdAt": "2019-09-02T08:08:05.613Z",
-        "updatedAt":"2021-10-20T18:06:26.219Z"
-        },
-      {
-        "config": {},
-        "id": "1zlRBqAJFRykgluFT14b8D8LJo8",
-        "name":"GAINSIGHT_PX",
-        "displayName":"Gainsight_px",
-        "createdAt": "2019-09-02T08:08:05.613Z",
-        "updatedAt":"2021-10-20T18:06:26.219Z"
-        },
-      {
-        "config": {},
-        "id": "1zlRBp2nSdFcc2vfLezmSyK038D",
-        "name":"LINKEDIN_INSIGHT_TAG",
-        "displayName":"Linkedin",
-        "createdAt": "2019-09-02T08:08:05.613Z",
-        "updatedAt":"2021-10-20T18:06:26.219Z"
-        },
-      {
-        "config": {},
-        "id": "1zlRBo7WGEVStUuggW8SOiyNdVG",
-        "name":"MARKETO_BULK_UPLOAD",
-        "displayName":"Marketo Bulk Upload",
-        "createdAt": "2019-09-02T08:08:05.613Z",
-        "updatedAt":"2021-10-20T18:06:26.219Z"
-        },
-      {
-        "config": {},
-        "id": "1zlRBkk377cq03oRmGmauZ9dWy1",
-        "name":"MSSQL",
-        "displayName":"Mssql",
-        "createdAt": "2019-09-02T08:08:05.613Z",
-        "updatedAt":"2021-10-20T18:06:26.219Z"
-        },
-        {
-          "config": {},
-          "id": "1zlRBkWbJc4ZCq3QpiURInDNbZn",
-          "name":"OMETRIA",
-          "displayName":"Ometria",
-          "createdAt": "2019-09-02T08:08:05.613Z",
-          "updatedAt":"2021-10-20T18:06:26.219Z"
-          },
-          {
-          "config": {},
-          "id": "1zlRBodzTbjJN6JU9juhroHgVDO",
-          "name":"PIPEDRIVE",
-          "displayName":"Pipedrive",
-          "createdAt": "2019-09-02T08:08:05.613Z",
-          "updatedAt":"2021-10-20T18:06:26.219Z"
-          },
-          {
-          "config": {},
-          "id": "1zlRBlejii6B0qkiZPHCUKw9lUa",
-          "name":"PROFITWELL",
-          "displayName":"Profitwell",
-          "createdAt": "2019-09-02T08:08:05.613Z",
-          "updatedAt":"2021-10-20T18:06:26.219Z"
-          },
-          {
-          "config": {},
-          "id": "1zlRBmR3LGbHHEoyNxw7WtwLBFB",
-          "name":"QUALTRICS",
-          "displayName":"Qualtrics",
-          "createdAt": "2019-09-02T08:08:05.613Z",
-          "updatedAt":"2021-10-20T18:06:26.219Z"
-          },
-          {
-          "config": {},
-          "id": "1zlRBpCpmao7vt1RFEQGWqUV2CH",
-          "name":"QUANTUMMETRIC",
-          "displayName":"Quantummetric",
-          "createdAt": "2019-09-02T08:08:05.613Z",
-          "updatedAt":"2021-10-20T18:06:26.219Z"
-          },
-          {
-          "config": {},
-          "id": "1zlRBmqSg4S5wsB6NDW1d3ZUo42",
-          "name":"RECURLY",
-          "displayName":"Recurly",
-          "createdAt": "2019-09-02T08:08:05.613Z",
-          "updatedAt":"2021-10-20T18:06:26.219Z"
-          },
-        {
-          "config": {},
-          "id": "1zlRBmdd2C9LhiX4wWykbLppkuW",
-          "name":"REDDIT_PIXEL",
-          "displayName":"Reddit Pixel",
-          "createdAt": "2019-09-02T08:08:05.613Z",
-          "updatedAt":"2021-10-20T18:06:26.219Z"
-          },
-          {
-            "config": {},
-            "id": "1zlRBkF0sWAF8DdzmIDCxPPMfjC",
-            "name":"S3_DATALAKE",
-            "displayName":"S3 Datalake",
-            "createdAt": "2019-09-02T08:08:05.613Z",
-            "updatedAt":"2021-10-20T18:06:26.219Z"
-            },
-            {
-            "config": {},
-            "id": "1zlRBiem6EF3shU62xfdOU573aq",
-            "name":"SENDGRID",
-            "displayName":"Sendgrid",
-            "createdAt": "2019-09-02T08:08:05.613Z",
-            "updatedAt":"2021-10-20T18:06:26.219Z"
-            },
-            {
-            "config": {},
-            "id": "1zlRBizph6uqjF2WtZsAgld5fvl",
-            "name":"SENTRY",
-            "displayName":"Sentry",
-            "createdAt": "2019-09-02T08:08:05.613Z",
-            "updatedAt":"2021-10-20T18:06:26.219Z"
-            },
-            {
-            "config": {},
-            "id": "1zlRBmGgUoB9FLJzbJPP6F6QWQv",
-            "name":"SNAP_PIXEL",
-            "displayName":"Snap Pixel",
-            "createdAt": "2019-09-02T08:08:05.613Z",
-            "updatedAt":"2021-10-20T18:06:26.219Z"
-            },
-            {
-            "config": {},
-            "id": "1zlRBpQNlLcJyMexo4BjkAOjwwc",
-            "name":"TRENGO",
-            "displayName":"Trengo",
-            "createdAt": "2019-09-02T08:08:05.613Z",
-            "updatedAt":"2021-10-20T18:06:26.219Z"
-            }      
-
+    "updatedAt": "2021-10-20T18:06:26.219Z"
+  },
+  {
+    "config": {},
+    "id": "1zlRBiszBrPYDN3yMssmpZsw0GL",
+    "name": "CRITEO",
+    "displayName": "Criteo",
+    "createdAt": "2019-09-02T08:08:05.613Z",
+    "updatedAt": "2021-10-20T18:06:26.219Z"
+  },
+  {
+    "config": {},
+    "id": "1zlRBjThc0roKETyYEFVt9rzQNo",
+    "name": "DELIGHTED",
+    "displayName": "Delighted",
+    "createdAt": "2019-09-02T08:08:05.613Z",
+    "updatedAt": "2021-10-20T18:06:26.219Z"
+  },
+  {
+    "config": {},
+    "id": "1zlRBljb5JalyvJq8J4SjyLrpLy",
+    "name": "DRIP",
+    "displayName": "Drip",
+    "createdAt": "2019-09-02T08:08:05.613Z",
+    "updatedAt": "2021-10-20T18:06:26.219Z"
+  },
+  {
+    "config": {},
+    "id": "1zlRBjaHTjImYgHQkUnzGvxYZTS",
+    "name": "FB_CUSTOM_AUDIENCE",
+    "displayName": "Fb Custom Audience",
+    "createdAt": "2019-09-02T08:08:05.613Z",
+    "updatedAt": "2021-10-20T18:06:26.219Z"
+  },
+  {
+    "config": {},
+    "id": "1zlRBkdqRu3YtJZ4vgm8V9NiDZ5",
+    "name": "GAINSIGHT",
+    "displayName": "Gainsight",
+    "createdAt": "2019-09-02T08:08:05.613Z",
+    "updatedAt": "2021-10-20T18:06:26.219Z"
+  },
+  {
+    "config": {},
+    "id": "1zlRBqAJFRykgluFT14b8D8LJo8",
+    "name": "GAINSIGHT_PX",
+    "displayName": "Gainsight_px",
+    "createdAt": "2019-09-02T08:08:05.613Z",
+    "updatedAt": "2021-10-20T18:06:26.219Z"
+  },
+  {
+    "config": {},
+    "id": "1zlRBp2nSdFcc2vfLezmSyK038D",
+    "name": "LINKEDIN_INSIGHT_TAG",
+    "displayName": "Linkedin",
+    "createdAt": "2019-09-02T08:08:05.613Z",
+    "updatedAt": "2021-10-20T18:06:26.219Z"
+  },
+  {
+    "config": {},
+    "id": "1zlRBo7WGEVStUuggW8SOiyNdVG",
+    "name": "MARKETO_BULK_UPLOAD",
+    "displayName": "Marketo Bulk Upload",
+    "createdAt": "2019-09-02T08:08:05.613Z",
+    "updatedAt": "2021-10-20T18:06:26.219Z"
+  },
+  {
+    "config": {},
+    "id": "1zlRBkk377cq03oRmGmauZ9dWy1",
+    "name": "MSSQL",
+    "displayName": "Mssql",
+    "createdAt": "2019-09-02T08:08:05.613Z",
+    "updatedAt": "2021-10-20T18:06:26.219Z"
+  },
+  {
+    "config": {},
+    "id": "1zlRBkWbJc4ZCq3QpiURInDNbZn",
+    "name": "OMETRIA",
+    "displayName": "Ometria",
+    "createdAt": "2019-09-02T08:08:05.613Z",
+    "updatedAt": "2021-10-20T18:06:26.219Z"
+  },
+  {
+    "config": {},
+    "id": "1zlRBodzTbjJN6JU9juhroHgVDO",
+    "name": "PIPEDRIVE",
+    "displayName": "Pipedrive",
+    "createdAt": "2019-09-02T08:08:05.613Z",
+    "updatedAt": "2021-10-20T18:06:26.219Z"
+  },
+  {
+    "config": {},
+    "id": "1zlRBlejii6B0qkiZPHCUKw9lUa",
+    "name": "PROFITWELL",
+    "displayName": "Profitwell",
+    "createdAt": "2019-09-02T08:08:05.613Z",
+    "updatedAt": "2021-10-20T18:06:26.219Z"
+  },
+  {
+    "config": {},
+    "id": "1zlRBmR3LGbHHEoyNxw7WtwLBFB",
+    "name": "QUALTRICS",
+    "displayName": "Qualtrics",
+    "createdAt": "2019-09-02T08:08:05.613Z",
+    "updatedAt": "2021-10-20T18:06:26.219Z"
+  },
+  {
+    "config": {},
+    "id": "1zlRBpCpmao7vt1RFEQGWqUV2CH",
+    "name": "QUANTUMMETRIC",
+    "displayName": "Quantummetric",
+    "createdAt": "2019-09-02T08:08:05.613Z",
+    "updatedAt": "2021-10-20T18:06:26.219Z"
+  },
+  {
+    "config": {},
+    "id": "1zlRBmqSg4S5wsB6NDW1d3ZUo42",
+    "name": "RECURLY",
+    "displayName": "Recurly",
+    "createdAt": "2019-09-02T08:08:05.613Z",
+    "updatedAt": "2021-10-20T18:06:26.219Z"
+  },
+  {
+    "config": {},
+    "id": "1zlRBmdd2C9LhiX4wWykbLppkuW",
+    "name": "REDDIT_PIXEL",
+    "displayName": "Reddit Pixel",
+    "createdAt": "2019-09-02T08:08:05.613Z",
+    "updatedAt": "2021-10-20T18:06:26.219Z"
+  },
+  {
+    "config": {},
+    "id": "1zlRBkF0sWAF8DdzmIDCxPPMfjC",
+    "name": "S3_DATALAKE",
+    "displayName": "S3 Datalake",
+    "createdAt": "2019-09-02T08:08:05.613Z",
+    "updatedAt": "2021-10-20T18:06:26.219Z"
+  },
+  {
+    "config": {},
+    "id": "1zlRBiem6EF3shU62xfdOU573aq",
+    "name": "SENDGRID",
+    "displayName": "Sendgrid",
+    "createdAt": "2019-09-02T08:08:05.613Z",
+    "updatedAt": "2021-10-20T18:06:26.219Z"
+  },
+  {
+    "config": {},
+    "id": "1zlRBizph6uqjF2WtZsAgld5fvl",
+    "name": "SENTRY",
+    "displayName": "Sentry",
+    "createdAt": "2019-09-02T08:08:05.613Z",
+    "updatedAt": "2021-10-20T18:06:26.219Z"
+  },
+  {
+    "config": {},
+    "id": "1zlRBmGgUoB9FLJzbJPP6F6QWQv",
+    "name": "SNAP_PIXEL",
+    "displayName": "Snap Pixel",
+    "createdAt": "2019-09-02T08:08:05.613Z",
+    "updatedAt": "2021-10-20T18:06:26.219Z"
+  },
+  {
+    "config": {},
+    "id": "1zlRBpQNlLcJyMexo4BjkAOjwwc",
+    "name": "TRENGO",
+    "displayName": "Trengo",
+    "createdAt": "2019-09-02T08:08:05.613Z",
+    "updatedAt": "2021-10-20T18:06:26.219Z"
+  }
 ]
