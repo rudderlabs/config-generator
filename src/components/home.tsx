@@ -65,7 +65,7 @@ background-color: #FFF8E4;
 height: 120px; 
 padding: 20px;
 flex-direction: column;
-animation-name: ${props => (props.move? breatheAnimation : null) };
+animation-name: ${props => (props.move ? breatheAnimation : null)};
  animation-duration: 1s;
  animation-iteration-count: 1;
 `
@@ -84,7 +84,7 @@ const RenderLayout = withRouter(({ history }) => {
   //     }),
   //   [],
   // );
-  
+
   return (
     <Layout >
       <Switch>
@@ -217,14 +217,14 @@ class Home extends Component<IHomeProps> {
         <Layout style={{ minHeight: '100vh' }}>
           <Sidebar />
           <Layout>
-          <Container move={messagesStore.isAnimating} onAnimationEnd={()=>{messagesStore.setIsAnimating(false)}}> 
-            <Label color="#FF0000"> 
-            We highly recommend signing up for RudderStack Cloud to get access to features such as Transformations, Live Events, Warehouse Syncs, and more.
-            </Label> 
-            <Flex style={{paddingTop:'20px'}}>
-            <Button type="primary" shape="round" href="https://app.rudderstack.com"> Try Now </Button>
-            </Flex>
-         </Container >
+            <Container move={messagesStore.isAnimating} onAnimationEnd={() => { messagesStore.setIsAnimating(false) }}>
+              <Label color="#FF0000">
+                We highly recommend signing up for RudderStack Cloud to get access to features such as Transformations, Live Events, Warehouse Syncs, and more.
+            </Label>
+              <Flex style={{ paddingTop: '20px' }}>
+                <Button type="primary" shape="round" href="https://app.rudderstack.com"> Try Now </Button>
+              </Flex>
+            </Container >
             {this.getAlertContainer(messagesStore)}
             {this.renderLayout()}
           </Layout>

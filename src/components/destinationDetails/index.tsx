@@ -74,16 +74,16 @@ class DestinationDetails extends Component<IConfiguredDestinationsProps, any> {
       return (
         <Container>
           <Flex flexDirection="row" spaceBetween>
-          <PageTitle>Destination Details</PageTitle>
-          <div onClick={()=> {messagesStore.setIsAnimating(true)}}>
-          <Tooltip title={"Please try Rudderstack Control Plane for this feature"}>
-              <Button disabled >
-              <PlayCircleOutlined />
+            <PageTitle>Destination Details</PageTitle>
+            <div onClick={() => { messagesStore.setIsAnimating(true) }}>
+              <Tooltip title={"Please try Rudderstack Control Plane for this feature"}>
+                <Button disabled >
+                  <PlayCircleOutlined />
                 Live events
               </Button>
-            </Tooltip>
+              </Tooltip>
             </div>
-            </Flex>
+          </Flex>
           <CardsView>
             <Spacing>
               <DestinationView
