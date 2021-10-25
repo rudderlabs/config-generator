@@ -32,8 +32,17 @@ export const markdown = {
   iOS: raw('./iOS.md'),
   DotNet: raw('./DotNet.md'),
   PHP: raw('./PHP.md'),
-  Google_sheets: raw('./Google_sheets.md'),
-  Salesforce: raw('./Salesforce.md')
+  Salesforce: raw('./Salesforce.md'),
+  Bq: raw('./Bq.md'),
+  Cordova: raw('./Cordova.md'),
+  Custom: raw('./Custom.md'),
+  GoogleSheets: raw('./GoogleSheets.md'),
+  Hubspot: raw('./Hubspot.md'),
+  Mssql: raw('./Mssql.md'),
+  Rs: raw('./Rs.md'),
+  Webhook: raw('./Webhook.md'),
+  Zendesk: raw('./Zendesk.md'),
+
 };
 
 export interface ISourceConfigureProps {

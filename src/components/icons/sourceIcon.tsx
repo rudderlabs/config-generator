@@ -37,11 +37,17 @@ import { ReactComponent as Segment } from '@svg/segment.svg';
 import { ReactComponent as DotNet } from '@svg/dotnet.svg';
 import { ReactComponent as PHP } from '@svg/php.svg';
 import { ReactComponent as Pipedrive } from '@svg/pipedrive.svg';
-import { ReactComponent as Salesforce}  from '@svg/salesforce.svg';
-import { ReactComponent as Snowflake}  from '@svg/snowflake.svg';
-import { ReactComponent as Stripe}  from '@svg/stripe.svg';
-import { ReactComponent as GoogleSheets}  from '@svg/google_sheets.svg';
-import { ReactComponent as Zendesk}  from '@svg/zendesk.svg';
+import { ReactComponent as Salesforce } from '@svg/salesforce.svg';
+import { ReactComponent as Snowflake } from '@svg/snowflake.svg';
+import { ReactComponent as Stripe } from '@svg/stripe.svg';
+import { ReactComponent as GoogleSheets } from '@svg/google_sheets.svg';
+import { ReactComponent as Zendesk } from '@svg/zendesk.svg';
+import { ReactComponent as Bq } from '@svg/bq.svg';
+import { ReactComponent as Cordova } from '@svg/cordova.svg';
+import { ReactComponent as Custom } from '@svg/custom.svg';
+import { ReactComponent as Mssql } from '@svg/mssql.svg';
+import { ReactComponent as Rs } from '@svg/rs.svg';
+import { ReactComponent as Webhook } from '@svg/webhook.svg';
 
 import theme from '@css/theme';
 
@@ -68,7 +74,7 @@ const SourceIcon = (props: any) => {
     case 'freshdesk':
       return <FreshDesk width={width} height={height} />;
     case 'google_adwords':
-      return <GoogleAdwords width={width} height={height} />;    
+      return <GoogleAdwords width={width} height={height} />;
     case 'googleanalytics':
       return <GoogleAnalytics width={width} height={height} />;
     case 'google_search_console':
@@ -83,8 +89,8 @@ const SourceIcon = (props: any) => {
       return <Javascript width={width} height={height} />;
     case 'mailchimp':
       return <MailChimp width={width} height={height} />;
-      case 'mixpanel':
-        return <MixPanel width={width} height={height} />;  
+    case 'mixpanel':
+      return <MixPanel width={width} height={height} />;
     case 'unity':
       return <Unity width={width} height={height} />;
     case 'ruby':
@@ -110,9 +116,9 @@ const SourceIcon = (props: any) => {
     case 'looker':
       return <Looker width={width} height={height} />;
     case 'postgres':
-      return <Postgres width={width} height={height} />;  
+      return <Postgres width={width} height={height} />;
     case 'pipedrive':
-      return <Pipedrive width={width} height={height} />;  
+      return <Pipedrive width={width} height={height} />;
     case 'java':
       return <Java width={width} height={height} />;
     case 'auth0':
@@ -135,6 +141,19 @@ const SourceIcon = (props: any) => {
       return <Snowflake width={width} height={height} />;
     case 'zendesk':
       return <Zendesk width={width} height={height} />;
+    case 'bq':
+      return <Bq width={width} height={height} />;
+    case 'cordova':
+      return <Cordova width={width} height={height} />;
+    case 'custom':
+      return <Custom width={width} height={height} />;
+    case 'mssql':
+      return <Mssql width={width} height={height} />;
+    case 'rs':
+      return <Rs width={width} height={height} />;
+    case 'webhook':
+      return <Webhook width={width} height={height} />;
+
     default:
       break;
   }

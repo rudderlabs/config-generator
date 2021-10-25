@@ -47,6 +47,11 @@ Then you can specify that link as your `controlPlaneUrl` while initializing the 
 
 For more information and documentation related to the RudderStack Config Generator, check out our [documentation](https://docs.rudderstack.com/how-to-guides/rudderstack-config-generator).
 
+We can make use of the addDestinationSource.js file in the src/scripts to generate the config code required automatically. 
+Make use of the print functions to generate the code in the required format. 
+Can alter the printConfig function to generate the config for either source/ destination. 
+Can refer rudder stack webapp for more 
+
 ## Contact us
 
 If you come across any issues while configuring or using the RudderStack Config Generator, please feel free to start a conversation on our [Slack](https://resources.rudderstack.com/join-rudderstack-slack) channel. We will be happy to help you.
