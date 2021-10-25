@@ -144,7 +144,7 @@
   },
   {
     "id": "1jEXwajA1sUI7zkcsrByqLuXBSa",
-    "name": "salesforce",
+    "name": "Salesforce",
     "options": null,
     "displayName": "Salesforce",
     "category": "cloud",
@@ -162,7 +162,7 @@
   },
   {
     "id": "1k7JZrvZQ7OPBAnHzogYIpansx2",
-    "name": "PHP",
+    "name": "Php",
     "options": null,
     "displayName": "PHP",
     "category": "",
@@ -173,7 +173,7 @@
     "options": null,
     "category":null,
     "id": "1zzw6NWkShmitwBwti1HRJEIJMN",
-    "name":"APPCENTER",
+    "name":"AppCenter",
     "displayName":"Appcenter",
     "createdAt": "2019-09-02T08:08:05.613Z",
     "updatedAt":"2021-10-20T18:06:26.219Z"
@@ -181,17 +181,8 @@
 {
     "options": null,
     "category":null,
-    "id": "1zzw6MJpviLJoZdCiAAoCEEfET0",
-    "name":"BQ",
-    "displayName":"Bq",
-    "createdAt": "2019-09-02T08:08:05.613Z",
-    "updatedAt":"2021-10-20T18:06:26.219Z"
-  },
-{
-    "options": null,
-    "category":null,
     "id": "1zzw6OOU6hcA2Y9dGDxweevjCRT",
-    "name":"CORDOVA",
+    "name":"Cordova",
     "displayName":"Cordova",
     "createdAt": "2019-09-02T08:08:05.613Z",
     "updatedAt":"2021-10-20T18:06:26.219Z"
@@ -200,7 +191,7 @@
     "options": null,
     "category":null,
     "id": "1zzw6HsESKHBbmM6BqwETeR2go5",
-    "name":"CUSTOM",
+    "name":"Custom",
     "displayName":"Custom",
     "createdAt": "2019-09-02T08:08:05.613Z",
     "updatedAt":"2021-10-20T18:06:26.219Z"
@@ -209,7 +200,7 @@
     "options": null,
     "category":null,
     "id": "1zzw6KDURuQ9Jr2SgrQfqTo92C4",
-    "name":"GOOGLE_SHEETS",
+    "name":"GoogleSheets",
     "displayName":"Google_sheets",
     "createdAt": "2019-09-02T08:08:05.613Z",
     "updatedAt":"2021-10-20T18:06:26.219Z"
@@ -218,7 +209,7 @@
     "options": null,
     "category":null,
     "id": "1zzw6N3vUAPxnqZU6lg6BZcl4fy",
-    "name":"HUBSPOT",
+    "name":"Hubspot",
     "displayName":"Hubspot",
     "createdAt": "2019-09-02T08:08:05.613Z",
     "updatedAt":"2021-10-20T18:06:26.219Z"
@@ -227,7 +218,7 @@
     "options": null,
     "category":null,
     "id": "1zzw6LwLHMDzmzj4A3wefPfBDyx",
-    "name":"MSSQL",
+    "name":"Mssql",
     "displayName":"Mssql",
     "createdAt": "2019-09-02T08:08:05.613Z",
     "updatedAt":"2021-10-20T18:06:26.219Z"
@@ -235,17 +226,8 @@
 {
     "options": null,
     "category":null,
-    "id": "1zzw6MdWVPNPSjDHREs7tykwOE6",
-    "name":"RS",
-    "displayName":"Rs",
-    "createdAt": "2019-09-02T08:08:05.613Z",
-    "updatedAt":"2021-10-20T18:06:26.219Z"
-  },
-{
-    "options": null,
-    "category":null,
     "id": "1zzw6MFgfciS5OPmzvxwkJVqSsL",
-    "name":"SALESFORCE",
+    "name":"Salesforce",
     "displayName":"Salesforce",
     "createdAt": "2019-09-02T08:08:05.613Z",
     "updatedAt":"2021-10-20T18:06:26.219Z"
@@ -254,7 +236,7 @@
     "options": null,
     "category":null,
     "id": "1zzw6PRPohUx7XTwgWBoLy5xSWe",
-    "name":"WEBHOOK",
+    "name":"Webhook",
     "displayName":"Webhook",
     "createdAt": "2019-09-02T08:08:05.613Z",
     "updatedAt":"2021-10-20T18:06:26.219Z"
@@ -263,7 +245,7 @@
     "options": null,
     "category":null,
     "id": "1zzw6L6H67ODG7VsjeexCCLHQs5",
-    "name":"ZENDESK",
+    "name":"Zendesk",
     "displayName":"Zendesk",
     "createdAt": "2019-09-02T08:08:05.613Z",
     "updatedAt":"2021-10-20T18:06:26.219Z"
