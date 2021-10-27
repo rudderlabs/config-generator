@@ -10,10 +10,9 @@ import { IDestinationDefsListStore } from '@stores/destinationDefsList';
 import { IDestinationsListStore } from '@stores/destinationsList';
 import { ISourceDefinitionsListStore } from '@stores/sourceDefinitionsList';
 import { ISourcesListStore } from '@stores/sourcesList';
-import { Layout, Skeleton, Card, Button } from 'antd';
+import { Layout, Skeleton } from 'antd';
 import { inject, observer } from 'mobx-react';
-import React, { Component, useEffect, useState } from 'react';
-import { Label } from '@components/common/typography';
+import React, { Component } from 'react';
 import { message, Alert } from 'antd';
 import {
   BrowserRouter as Router,
@@ -25,9 +24,9 @@ import {
 
 import AddDestination from './destination/addDestination';
 import { IMessageStore, MessagesStore } from '@stores/messages';
-import styled, { keyframes } from 'styled-components';
-import { Flex } from './common/misc';
+import styled from 'styled-components';
 import { IConnectionsStore } from '../stores/connections';
+import Banner from '@components/common/banner';
 
 interface IHomeProps extends RouteComponentProps {
   sourcesListStore: ISourcesListStore;
@@ -42,33 +41,12 @@ interface IRouterProps extends RouteComponentProps {
   messagesStore: MessagesStore;
 }
 
-const breatheAnimation = keyframes`
- 0% {  height:120px; width: 100%; transform: translate(0,-20px); }
- 50% {  width: 100%; transform:translate(0,20px); }
- 100% {margin-top:0px; height:120px; width: 100%; transform: translate(0,0px); }
-`
 export const StyledNotification = styled.div`
   position: fixed;
   width: 45vw;
   left: 30vw;
   top: 0px;
 `;
-
-type animate = {
-  move?: boolean;
-}
-export const Container = styled.div<animate>`
-display: flex;
-align-items: center;
-width: 100%;
-background-color: #FFF8E4;
-height: 120px; 
-padding: 20px;
-flex-direction: column;
-animation-name: ${props => (props.move ? breatheAnimation : null)};
- animation-duration: 1s;
- animation-iteration-count: 1;
-`
 
 const RenderLayout = withRouter(({ history }) => {
   // useEffect(
@@ -217,14 +195,7 @@ class Home extends Component<IHomeProps> {
         <Layout style={{ minHeight: '100vh' }}>
           <Sidebar />
           <Layout>
-            <Container move={messagesStore.isAnimating} onAnimationEnd={() => { messagesStore.setIsAnimating(false) }}>
-              <Label color="#FF0000">
-                We highly recommend signing up for RudderStack Cloud to get access to features such as Transformations, Live Events, Warehouse Syncs, and more.
-            </Label>
-              <Flex style={{ paddingTop: '20px' }}>
-                <Button type="primary" shape="round" href="https://app.rudderstack.com"> Try Now </Button>
-              </Flex>
-            </Container >
+            <Banner/>
             {this.getAlertContainer(messagesStore)}
             {this.renderLayout()}
           </Layout>
@@ -235,7 +206,4 @@ class Home extends Component<IHomeProps> {
 }
 
 export default withRouter(Home);
-function UseState<T>(arg0: number): [any, any] {
-  throw new Error('Function not implemented.');
-}
 
