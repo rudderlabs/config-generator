@@ -17,7 +17,7 @@ const markdown = {
   ADOBE_ANALYTICS: raw('./ADOBE_ANALYTICS.md'),
   AF: raw('./AF.md'),
   ALGOLIA: raw('./ALGOLIA.md'),
-  AWIN: raw('./AWIN.MD'),
+  AWIN: raw('./AWIN.md'),
   AM: raw('./AM.md'),
   APPCENTER: raw('./APPCENTER.md'),
   APPCUES: raw('./APPCUES.md'),
