@@ -1,0 +1,15 @@
+[
+  {
+    "title": "Connection Settings",
+    "fields": [
+      {
+        "type": "textInput",
+        "label": "Server Secret Key",
+        "value": "secretKey",
+        "required": true,
+        "placeholder": "XXXXXXXXXXXX",
+        "secret": true
+      }
+    ]
+  }
+]
