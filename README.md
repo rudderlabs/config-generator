@@ -21,7 +21,8 @@ RudderStack Config Generator provides the UI to manage the source and destinatio
 RudderStack config generator starts on the default port i.e., http://localhost:3000.
 On a successful setup, you should see the following
 
-![image](https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-Lq586FOQtfjJPKbd01W%2F-M0LidOVklHOkLYEulS4%2F-M0M3fzyrb-UHiNBG7j0%2FScreenshot%202020-02-18%20at%2012.20.57%20PM.png?alt=media&token=a3f24ad8-fe72-4fed-8953-8e4c790f6cfd)
+![configGenScreenshot](https://user-images.githubusercontent.com/9196093/139224985-28c795cb-d130-4525-a41f-451dba0ac384.png)
+
 
 ## Export workspace config
 
