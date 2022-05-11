@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 210.49 210.49">
+  <defs>
+    <style>
+      .cls-1 { fill: #fff; }
+      .cls-2 { fill: #5ebf8b; }
+    </style>
+  </defs>
+  <title>AttributionApp Logo in Circle</title>
+  <g id="Layer_1-2" data-name="Layer 1">
+    <circle class="cls-1" cx="105.25" cy="105.25" r="104.75"/>
+    <circle class="cls-2" cx="149.99" cy="140.94" r="30.84"/>
+    <path class="cls-2" d="M129.61,85.69A30.84,30.84,0,1,0,87.93,57h0a60.36,60.36,0,0,1-39.1,56.24h0a30.83,30.83,0,1,0,42.25,29v0A60.38,60.38,0,0,1,129.62,85.7Z"/>
+  </g>
+</svg>

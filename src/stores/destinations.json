@@ -2776,5 +2776,34 @@
     "displayName": "Trengo",
     "createdAt": "2019-09-02T08:08:05.613Z",
     "updatedAt": "2021-10-20T18:06:26.219Z"
+  },
+  {
+    "config": {
+      "destConfig": {
+        "defaultConfig": [
+          "writeKey"
+        ]
+      },
+      "secretKeys": [],
+      "excludeKeys": [],
+      "includeKeys": [],
+      "transformAt": "processor",
+      "supportedSourceTypes": [
+        "android",
+        "ios",
+        "web",
+        "unity",
+        "amp",
+        "cloud",
+        "reactnative"
+      ],
+      "saveDestinationResponse": false
+    },
+    "responseRules": null,
+    "id": "TODO",
+    "name": "ATTRIBUTION",
+    "displayName": "Attribution",
+    "createdAt": "2021-05-11T11:54:00.000Z",
+    "updatedAt": "2021-05-11T11:54:00.000Z"
   }
 ]

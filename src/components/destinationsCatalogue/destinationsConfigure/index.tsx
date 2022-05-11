@@ -21,6 +21,7 @@ const markdown = {
   AM: raw('./AM.md'),
   APPCENTER: raw('./APPCENTER.md'),
   APPCUES: raw('./APPCUES.md'),
+  ATTRIBUTION: raw('./ATTRIBUTION.md'),
   AUTOPILOT: raw('./AUTOPILOT.md'),
   AZURE_BLOB: raw('./AZURE_BLOB.md'),
   AZURE_EVENT_HUB: raw('./AZURE_EVENT_HUB.md'),
