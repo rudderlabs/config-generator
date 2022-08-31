@@ -52,7 +52,7 @@ After adding the required sources and destinations, export your source config fo
 
 ## More information
 
-For more information and documentation related to the RudderStack Config Generator, refer to the [RudderStack documentation](https://www.rudderstack.com/docs/get-started/rudderstack-open-source/control-plane-lite/).
+For more information and documentation related to the RudderStack Control Plane Lite, refer to the [RudderStack documentation](https://www.rudderstack.com/docs/get-started/rudderstack-open-source/control-plane-lite/).
 
 Some more points to note:
 
