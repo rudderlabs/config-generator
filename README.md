@@ -18,6 +18,8 @@ RudderStack's Control Plane Lite utility provides the UI to self-host and manage
 
 ## Setup
 
+Requirement: Use `Node.js v14` for the best experience. (`Node v16` and higher versions are not supported)
+
 To set up the RudderStack Control Plane Lite, run the following commands:
 
 1. `npm install`
