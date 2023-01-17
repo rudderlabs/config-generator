@@ -4,17 +4,10 @@
     "fields": [
       {
         "type": "textInput",
-        "label": "Webhook URL",
-        "value": "webhookUrl",
-        "required": true,
-        "placeholder": "https://your-org.vitally.io",
-        "regex": ".*"
-      },
-      {
-        "type": "textInput",
-        "label": "Authorization Header Value",
+        "label": "API Key",
+        "labelNote": "Copy this from your Vitally integration dashboard",
         "inputFieldType": "password",
-        "value": "authHeader",
+        "value": "apiKey",
         "required": true,
         "placeholder": "",
         "regex": ".*",

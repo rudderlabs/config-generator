@@ -4,7 +4,7 @@ Vitally is a Customer Success Platform for B2B SaaS companies that wraps your un
 
 ### Get More Out of Vitally With RudderStack
 
-Pairing Vitally with RudderStack allows you to start organizing and analyzing your customers in Vitally within seconds. You simply need to sign up for Vitally and click the “Enable with RudderStack button in our RudderStack integration page to get started. That’s it - from there, RudderStack will start auto-forwarding your users, accounts, traits, and events to Vitally. Vitally automatically processes that data in real-time, auto-organizing it under the users and accounts it belongs to. This means you do not need custom code or a developer to start exploring our Customer Success tools and analytics.
+Pairing Vitally with RudderStack allows you to start organizing and analyzing your customers in Vitally within seconds. You simply need to sign up for Vitally and click the "Enable with RudderStack" button in our RudderStack integration page to get started. That’s it - from there, RudderStack will start auto-forwarding your users, accounts, traits, and events to Vitally. Vitally automatically processes that data in real-time, auto-organizing it under the users and accounts it belongs to. This means you do not need custom code or a developer to start exploring our Customer Success tools and analytics.
 
 If you have access to RudderStack's data replay capabilities, Vitally is also built to handle historical imports of your RudderStack data. This means you’ll have immediate insight into how customers are engaging with your business and product, both historically as well as moving forward.
 
