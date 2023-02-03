@@ -3489,5 +3489,22 @@
         }
       ]
     }
+  ],
+  "COURIER": [
+    {
+      "title": "Connection credentials",
+      "fields": [
+        {
+          "type": "textInput",
+          "label": "Courier API Key",
+          "value": "apiKey",
+          "inputFieldType": "password",
+          "regex": ".*",
+          "required": true,
+          "placeholder": "e.g: pk_prod_1BR12G4ZH94WNXMYFCTZR8ES62GP",
+          "secret": true
+        }
+      ]
+    }
   ]
 }
