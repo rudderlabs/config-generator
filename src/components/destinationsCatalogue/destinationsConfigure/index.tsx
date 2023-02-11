@@ -114,6 +114,7 @@ const markdown = {
   VWO: raw('./VWO.md'),
   WEBHOOK: raw('./WEBHOOK.md'),
   ZENDESK: raw('./ZENDESK.md'),
+  LEMNISK_MARKETING_AUTOMATION: raw('./LEMNISK_MARKETING_AUTOMATION.md')
 };
 
 export interface IDestinationConfigureProps {
