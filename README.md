@@ -1,3 +1,7 @@
+
+  <h2 align="center">⚠️ DEPRECATED</h2>
+  <p align="center">This repository is not maintained anymore. Read <a href="https://github.com/rudderlabs/config-generator/issues/49">this issue for more details</a></p>
+
 # What is RudderStack?
 
 [RudderStack](https://rudderstack.com/) is a **customer data pipeline** tool for collecting, routing and processing data from your websites, apps, cloud tools, and data warehouse.
