@@ -106,6 +106,7 @@ import { ReactComponent as SENDGRID } from '@svg/sendgrid.svg';
 import { ReactComponent as SENTRY } from '@svg/sentry.svg';
 import { ReactComponent as SNAP_PIXEL } from '@svg/snap_pixel.svg';
 import { ReactComponent as TRENGO } from '@svg/trengo.svg';
+import { ReactComponent as VITALLY} from '@svg/vitally.svg';
 
 import theme from '@css/theme';
 
@@ -328,6 +329,8 @@ const DestinationIcon = (props: any) => {
       return <APPCENTER width={width} height={height} />;
     case 'active_campaign':
       return <ACTIVE_CAMPAIGN width={width} height={height} />;
+    case 'vitally':
+      return <VITALLY width={width} height={height} />;
     default:
       break;
   }
