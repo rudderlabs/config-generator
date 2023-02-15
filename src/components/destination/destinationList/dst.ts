@@ -21,6 +21,7 @@ const destinationList = {
   CLEVERTAP: require('./CLEVERTAP.json'),
   CLICKHOUSE: require('./CLICKHOUSE.json'),
   CONFLUENT_CLOUD: require('./CONFLUENT_CLOUD.json'),
+  COURIER: require('./COURIER.json'),
   CRITEO: require('./CRITEO.json'),
   CUSTOMERIO: require('./CUSTOMERIO.json'),
   DELIGHTED: require('./DELIGHTED.json'),
@@ -105,6 +106,4 @@ const destinationList = {
   ZENDESK: require('./ZENDESK.json'),
 };
 
-export {
-  destinationList
-}
+export { destinationList };

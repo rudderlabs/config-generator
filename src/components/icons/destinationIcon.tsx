@@ -106,6 +106,7 @@ import { ReactComponent as SENDGRID } from '@svg/sendgrid.svg';
 import { ReactComponent as SENTRY } from '@svg/sentry.svg';
 import { ReactComponent as SNAP_PIXEL } from '@svg/snap_pixel.svg';
 import { ReactComponent as TRENGO } from '@svg/trengo.svg';
+import { ReactComponent as COURIER } from '@svg/courier.svg';
 
 import theme from '@css/theme';
 
@@ -301,7 +302,7 @@ const DestinationIcon = (props: any) => {
     case 'pinterest_tag':
       return <PINTEREST_TAG width={width} height={height} />;
     case 'pendo':
-      return <PENDO width={width} height={height} />
+      return <PENDO width={width} height={height} />;
     case 'twitter_ads':
       return <TWITTER width={width} height={height} />;
     case 'taplytics':
@@ -328,6 +329,8 @@ const DestinationIcon = (props: any) => {
       return <APPCENTER width={width} height={height} />;
     case 'active_campaign':
       return <ACTIVE_CAMPAIGN width={width} height={height} />;
+    case 'courier':
+      return <COURIER width={width} height={height} />;
     default:
       break;
   }

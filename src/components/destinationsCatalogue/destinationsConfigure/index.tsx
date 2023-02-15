@@ -34,6 +34,7 @@ const markdown = {
   CLICKHOUSE: raw('./CLICKHOUSE.md'),
   COMSCORE: raw('./COMSCORE.md'),
   CONFLUENT_CLOUD: raw('./CONFLUENT_CLOUD.md'),
+  COURIER: raw('./COURIER.md'),
   CRITEO: raw('./CRITEO.md'),
   CUSTOMERIO: raw('./CUSTOMERIO.md'),
   DELIGHTED: raw('./DELIGHTED.md'),
