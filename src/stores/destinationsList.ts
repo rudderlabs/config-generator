@@ -5,6 +5,8 @@ import { DestinationStore, IDestinationStore } from './destination';
 import { ISourceStore } from './source';
 import KSUID from 'ksuid';
 import { RootStore } from './index';
+import { apiServerCaller } from '@services/apiCaller';
+import { config } from '@services/config';
 
 export interface IDestinationsListStore {
   destinations: IDestinationStore[];
@@ -52,8 +54,8 @@ export class DestinationsListStore implements IDestinationsListStore {
     this.destinations = destinations;
   }
 
-  public loadAndSave() {
-    this.load();
+  public async loadAndSave() {
+    await this.load();
     autoSave(this, this.save.bind(this));
   }
 
@@ -68,9 +70,15 @@ export class DestinationsListStore implements IDestinationsListStore {
     return destinationsListStore;
   }
 
-  public load() {
-    const destinationsListStore = localStorage.getItem('destinationsListStore');
-    if (destinationsListStore) {
+  public async load() {
+    let destinationsListStore;
+    if (config.persistanceMode === 'file') {
+      const resp = await apiServerCaller().get('/loadDestinations');
+      destinationsListStore = resp.data.destinations;
+    } else {
+      destinationsListStore = localStorage.getItem('destinationsListStore');
+    }
+    if (destinationsListStore && destinationsListStore !== '{}') {
       const store: IDestinationsListStore = JSON.parse(destinationsListStore);
       this.destinations = store.destinations.map(
         destination => new DestinationStore(destination, this.rootStore),
@@ -84,7 +92,11 @@ export class DestinationsListStore implements IDestinationsListStore {
   }
 
   public save(json: string) {
-    localStorage.setItem('destinationsListStore', json);
+    if (config.persistanceMode === 'file') {
+      apiServerCaller().post('/saveDestinations', { destinations: json });
+    } else {
+      localStorage.setItem('destinationsListStore', json);
+    }
   }
 
   @action.bound
@@ -99,9 +111,10 @@ export class DestinationsListStore implements IDestinationsListStore {
       config: dest.config,
       name: dest.name,
       enabled: true,
-      destinationDefinition: this.rootStore.destinationDefsListStore.getDestinationDef(
-        dest.destinationDefinitionId,
-      ),
+      destinationDefinition:
+        this.rootStore.destinationDefsListStore.getDestinationDef(
+          dest.destinationDefinitionId,
+        ),
       id: KSUID.randomSync().string,
       createdAt: Date(),
       updatedAt: Date(),

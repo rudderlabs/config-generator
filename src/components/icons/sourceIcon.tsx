@@ -7,7 +7,7 @@ import { ReactComponent as ClickHouse } from '@svg/clickhouse.svg';
 import { ReactComponent as Extole } from '@svg/extole.svg';
 import { ReactComponent as FacebookAds } from '@svg/facebook_ads.svg';
 import { ReactComponent as Flutter } from '@svg/flutter.svg';
-import { ReactComponent as FreshDesk } from '@svg/freshDesk.svg';
+import { ReactComponent as FreshDesk } from '@svg/freshdesk.svg';
 import { ReactComponent as GoogleAdwords } from '@svg/googleads.svg';
 import { ReactComponent as GoogleAnalytics } from '@svg/googleanalytics.svg';
 import { ReactComponent as GoogleSearchConsole } from '@svg/google_search_console.svg';
