@@ -1,0 +1,16 @@
+[
+  {
+    "title": "Connection Settings",
+    "fields": [
+      {
+        "type": "textInput",
+        "label": "API Key",
+        "value": "api_key",
+        "regex": "^(.{0,61})$",
+        "regexErrorMessage": "Invalid API Key",
+        "required": true,
+        "placeholder": "e.g: Tudc...5G4z"
+      }
+    ]
+  }
+]
