@@ -31,6 +31,7 @@ import { ReactComponent as VWO } from '@svg/vwo.svg';
 import { ReactComponent as INTERCOM } from '@svg/intercom.svg';
 import { ReactComponent as HEAP } from '@svg/heap.svg';
 import { ReactComponent as BRANCH } from '@svg/branch.svg';
+import { ReactComponent as KOALA } from '@svg/koala.svg';
 import { ReactComponent as KOCHAVA } from '@svg/kochava.svg';
 import { ReactComponent as GTM } from '@svg/gtm.svg';
 import { ReactComponent as BRAZE } from '@svg/braze.svg';
@@ -233,6 +234,8 @@ const DestinationIcon = (props: any) => {
       return <BRAZE width={width} height={height} />;
     case 'keen':
       return <KEEN width={width} height={height} />;
+    case 'koala':
+      return <KOALA width={width} height={height} />;
     case 'kochava':
       return <KOCHAVA width={width} height={height} />;
     case 'kissmetrics':
