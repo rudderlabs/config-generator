@@ -54,6 +54,7 @@ const destinationList = {
   KINESIS: require('./KINESIS.json'),
   KISSMETRICS: require('./KISSMETRICS.json'),
   KLAVIYO: require('./KLAVIYO.json'),
+  KOALA: require('./KOALA.json'),
   KOCHAVA: require('./KOCHAVA.json'),
   KUSTOMER: require('./KUSTOMER.json'),
   LEANPLUM: require('./LEANPLUM.json'),
