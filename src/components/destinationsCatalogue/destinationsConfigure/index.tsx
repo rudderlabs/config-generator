@@ -67,6 +67,7 @@ const markdown = {
   KINESIS: raw('./KINESIS.md'),
   KISSMETRICS: raw('./KISSMETRICS.md'),
   KLAVIYO: raw('./KLAVIYO.md'),
+  KOALA: raw('./KOALA.md'),
   KOCHAVA: raw('./KOCHAVA.md'),
   KUSTOMER: raw('./KUSTOMER.md'),
   LEANPLUM: raw('./LEANPLUM.md'),
