@@ -2578,6 +2578,22 @@
     "updatedAt": "2020-11-14T09:42:38.800Z"
   },
   {
+    "config": {
+      "destConfig": {
+        "defaultConfig": [
+          "publicKey"
+        ]
+      },
+      "transformAt": "processor"
+    },
+    "responseRules": null,
+    "id": "4a56db709b503e5e2bdfe622b6d600d8",
+    "name": "KOALA",
+    "displayName": "Koala",
+    "createdAt": "2024-02-23T23:16:58.643Z",
+    "updatedAt": "2024-02-23T23:16:58.589Z"
+  },
+  {
     "config": {},
     "id": "1QGzO4fWSyq3lsyFHf4eQAMDSr9",
     "name": "AM",
