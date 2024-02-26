@@ -2,7 +2,7 @@
 
 Koala is a customer intent platform. It is the best way to surface real-time intent signals and alert your sales team about prospects/customers showing buying intent.
 
-### Get More Out of Amazon Kinesis With RudderStack
+### Get More Out of Koala With RudderStack
 
 With RudderStack, integrating Koala as a destination for your event data is both seamless and straightforward. The entire configuration process takes just a few minutes: simply input Koala's workspace public key into the RudderStack dashboard. Once that's done, you're all set to start sending your data!
 
