@@ -7,7 +7,7 @@
         "label": "Public Key",
         "value": "publicKey",
         "inputFieldType": "password",
-        "regex": ".*",
+        "regex": "(^\\{\\{.*\\|\\|(.*)\\}\\}$)|(^env[.].+)|^(.{1,100})$",
         "required": true,
         "placeholder": "e.g. pk_8f4be4ed132f36509b964ab0af2dca01bb13",
         "secret": true,
