@@ -9,7 +9,7 @@
         "inputFieldType": "password",
         "regex": "(^\\{\\{.*\\|\\|(.*)\\}\\}$)|(^env[.].+)|^(.{1,100})$",
         "required": true,
-        "placeholder": "e.g. pk_8f4be4ed132f36509b964ab0af2dca01bb13",
+        "placeholder": "e.g. pk_***1bb1*",
         "secret": true,
         "footerNote": "Public key from koala's workspace."
       }
