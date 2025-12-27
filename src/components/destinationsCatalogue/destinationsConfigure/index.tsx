@@ -111,6 +111,7 @@ const markdown = {
   TVSQUARED: raw('./TVSQUARED.md'),
   USERLIST: raw('./USERLIST.md'),
   VARIANCE: raw('./VARIANCE.md'),
+  VITALLY: raw('./VITALLY.md'),
   VWO: raw('./VWO.md'),
   WEBHOOK: raw('./WEBHOOK.md'),
   ZENDESK: raw('./ZENDESK.md'),

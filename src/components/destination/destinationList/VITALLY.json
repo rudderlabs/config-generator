@@ -1,0 +1,18 @@
+[
+  {
+    "title": "Connection Settings",
+    "fields": [
+      {
+        "type": "textInput",
+        "label": "API Key",
+        "labelNote": "Copy this from your Vitally integration dashboard",
+        "inputFieldType": "password",
+        "value": "apiKey",
+        "required": true,
+        "placeholder": "",
+        "regex": ".*",
+        "secret": true
+      }
+    ]
+  }
+]

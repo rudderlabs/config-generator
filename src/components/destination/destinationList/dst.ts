@@ -100,6 +100,7 @@ const destinationList = {
   TVSQUARED: require('./TVSQUARED.json'),
   USERLIST: require('./USERLIST.json'),
   VARIANCE: require('./VARIANCE.json'),
+  VITALLY: require('./VITALLY.json'),
   VWO: require('./VWO.json'),
   WEBHOOK: require('./WEBHOOK.json'),
   ZENDESK: require('./ZENDESK.json'),
