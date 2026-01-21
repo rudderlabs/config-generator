@@ -106,40 +106,8 @@ class SourceDetails extends Component<IConfiguredSourcesProps, any> {
     const { sources } = sourcesListStore;
     const source = sources.find(source => source.id === sourceId);
     if (source) {
-      const sourceConfig = {
-        source: {
-          config: source.config,
-          id: source.id,
-          name: source.name,
-          writeKey: source.writeKey,
-          enabled: source.enabled,
-          sourceDefinitionId: source.sourceDefinitionId,
-          deleted: false,
-          createdAt: Date(),
-          updatedAt: Date(),
-          sourceDefinition: source.sourceDef,
-          // Filter only useNativeSDK enabled destinations and
-          // includes only includeKeys (from definition) in the config
-          destinations: source.destinations
-            .filter(dest => {
-              return dest.config ? dest.config.useNativeSDK : false;
-            })
-            .map(dest => {
-              return {
-                id: dest.id,
-                name: dest.name,
-                enabled: dest.enabled,
-                config: dest.filteredConfig(), // Very Very Important to use filterConfig instead of config
-                destinationDefinition: dest.destinationDefinition,
-              };
-            }),
-        },
-        metadata: {
-          version: version,
-        },
-      };
       fileDownload(
-        JSON.stringify(sourceConfig, null, 2),
+        JSON.stringify(source.configForSDK, null, 2),
         `${source.name}_Source_Config.json`,
       );
     }

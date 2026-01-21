@@ -112,9 +112,9 @@ class Home extends Component<IHomeProps> {
       sourceDefinitionsListStore,
       destinationDefsListStore,
     } = this.props;
-    sourcesListStore.loadAndSave();
-    destinationsListStore.loadAndSave();
-    connectionsStore.loadAndSave();
+    await sourcesListStore.loadAndSave();
+    await destinationsListStore.loadAndSave();
+    await connectionsStore.loadAndSave();
     await Promise.all([
       sourceDefinitionsListStore.getSourceDefinitions(),
       destinationDefsListStore.getDestinationDefs(),

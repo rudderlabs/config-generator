@@ -5,6 +5,7 @@ import theme from '@css/theme';
 import { IDestinationsListStore } from '@stores/destinationsList';
 import { ISourceDefinitionsListStore } from '@stores/sourceDefinitionsList';
 import { ISourcesListStore } from '@stores/sourcesList';
+import { ISourceStore } from '@stores/source';
 import { IConnectionsStore } from '@stores/connections';
 import { inject, observer } from 'mobx-react';
 import React, { Component } from 'react';
@@ -93,7 +94,8 @@ class Connections extends Component<IConnectionsProps, any> {
       sources: [] as any,
       metadata: {
         sourceListStore: this.props.sourcesListStore.returnWithoutRootStore(),
-        destinationListStore: this.props.destinationsListStore.returnWithoutRootStore(),
+        destinationListStore:
+          this.props.destinationsListStore.returnWithoutRootStore(),
         connectionsStore: this.props.connectionsStore.returnWithoutRootStore(),
         version,
       },
@@ -137,8 +139,13 @@ class Connections extends Component<IConnectionsProps, any> {
   };
 
   handleSaveWorkspaceConfig = () => {
+    const { sourcesListStore } = this.props;
     const workspaceConfig = this.buildWorkspaceConfig();
-    apiServerCaller().post('/saveToFile', { workspaceConfig });
+    let sourcesConfig: any = {};
+    sourcesListStore.sources.forEach((source: ISourceStore) => {
+      sourcesConfig[source.writeKey] = source.configForSDK;
+    });
+    apiServerCaller().post('/saveToFile', { workspaceConfig, sourcesConfig });
   };
 
   handleFileChosen = (event: any) => {
