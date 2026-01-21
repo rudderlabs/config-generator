@@ -16,6 +16,7 @@ import { Header, TextDiv } from '../../common/typography';
 export const markdown = {
   AMP: raw('./AMP.md'),
   Android: raw('./Android.md'),
+  Attribution: raw('./Attribution.md'),
   Auth0: raw('./Auth0.md'),
   Customerio: raw('./Customerio.md'),
   Go: raw('./Go.md'),

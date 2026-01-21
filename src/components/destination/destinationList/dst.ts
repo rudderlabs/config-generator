@@ -8,6 +8,7 @@ const destinationList = {
   AM: require('./AM.json'),
   APPCENTER: require('./APPCENTER.json'),
   APPCUES: require('./APPCUES.json'),
+  ATTRIBUTION: require('./ATTRIBUTION.json'),
   AUTOPILOT: require('./AUTOPILOT.json'),
   AZURE_BLOB: require('./AZURE_BLOB.json'),
   AZURE_EVENT_HUB: require('./AZURE_EVENT_HUB.json'),
