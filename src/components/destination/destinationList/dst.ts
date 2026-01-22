@@ -103,6 +103,7 @@ const destinationList = {
   VWO: require('./VWO.json'),
   WEBHOOK: require('./WEBHOOK.json'),
   ZENDESK: require('./ZENDESK.json'),
+  LEMNISK_MARKETING_AUTOMATION: require('./LEMNISK_MARKETING_AUTOMATION.json')
 };
 
 export {

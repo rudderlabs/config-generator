@@ -1,0 +1,98 @@
+[
+  {
+    "title": "1. Web Device Mode Settings",
+    "fields": [
+      {
+        "type": "textInput",
+        "label": "Client ID",
+        "value": "accountId",
+        "placeholder": "e.g: 4648",
+        "required": false,
+        "labelNote": "Enter the Client ID provided by Lemnisk"
+      },
+      {
+        "type": "textInput",
+        "label": "Write Key",
+        "value": "deviceModeWriteKey",
+        "placeholder": "e.g: 2IotciVg4XIaAhhYqCEuSDozsum",
+        "required": false,
+        "labelNote": "Enter the Write Key for the source created at Lemnisk",
+        "footerNote": "Please enter this section only if you are setting up Lemnisk destination as Device Mode"
+      },
+      {
+        "type": "checkbox",
+        "label": "Use device-mode to send events",
+        "value": "useNativeSDK",
+        "default": true
+      }
+    ]
+  },
+  {
+    "title": "2. Web Cloud Mode Settings",
+    "fields": [
+      {
+        "type": "textInput",
+        "label": "Write Key",
+        "value": "writeKey",
+        "placeholder": "e.g: 2IotciVg4XIaAhhYqCEuSDozsum",
+        "required": false,
+        "labelNote": "Enter the Write Key for the source created at Lemnisk"
+      },
+      {
+        "type": "textInput",
+        "label": "Region URL",
+        "value": "pl",
+        "placeholder": "e.g: https://mu-pl.lemnisk.co/analyze/analyze.php",
+        "required": false,
+        "labelNote": "Enter the Region URL provided by Lemnisk",
+        "footerNote": "Please enter this section only if you are setting up Lemnisk destination for Web in cloud mode"
+      }
+    ]
+  },
+  {
+    "title": "3. Server-side Cloud Mode Settings",
+    "fields": [
+      {
+        "type": "textInput",
+        "label": "X-API-PASSKEY",
+        "value": "passkey",
+        "placeholder": "e.g: UleCnOxRCz0XP6jg9uUm",
+        "required": false,
+        "labelNote": "Enter the X-API-PASSKEY provided by Lemnisk"
+      },
+      {
+        "type": "textInput",
+        "label": "X-API-KEY",
+        "value": "apiKey",
+        "placeholder": "e.g: RzWW5mwo4h8XufeFn6v3I4oCC7izQL6U3zzILDqz",
+        "required": false,
+        "labelNote": "Enter the X-API-KEY provided by Lemnisk"
+      },
+      {
+        "type": "textInput",
+        "label": "Write Key",
+        "value": "wk",
+        "placeholder": "e.g: 2IotciVg4XIaAhhYqCEuSDozsum",
+        "required": false,
+        "labelNote": "Enter the Write Key provided by Lemnisk"
+      },
+      {
+        "type": "textInput",
+        "label": "Source ID",
+        "value": "srcId",
+        "placeholder": "e.g: 31",
+        "required": false,
+        "labelNote": "Enter the Source ID provided by Lemnisk"
+      },
+      {
+        "type": "textInput",
+        "label": "Region URL",
+        "value": "diapi",
+        "placeholder": "e.g: https://crux.lemnisk.co/v3/data",
+        "required": false,
+        "labelNote": "Enter the Region URL provided by Lemnisk",
+        "footerNote": "Please enter this section only if you are setting up Lemnisk destination for Server-side Cloud Mode"
+      }
+    ]
+  }
+]
